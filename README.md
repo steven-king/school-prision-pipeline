@@ -11,7 +11,7 @@ Requirements:
 	Multiple visualizations using D3.js or similar library
 	Sortable and comparable data
 	Views:
-		Overview visualizations
-		List Views
-		Detail of each county (school if available)
+		-Overview visualizations
+		-List Views
+		-Detail of each county (school if available)
 
