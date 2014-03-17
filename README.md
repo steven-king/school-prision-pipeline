@@ -8,10 +8,17 @@ This database should show relationships among important data points and allow us
 You will be working with the Documentary Storytelling class to implement this into the project.
 
 Requirements:
+
 	Multiple visualizations using D3.js or similar library
+	
 	Sortable and comparable data
+	
 	Views:
+	
 		-Overview visualizations
+		
 		-List Views
+		
 		-Detail of each county (school if available)
+		
 
