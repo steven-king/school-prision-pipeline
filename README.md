@@ -1,6 +1,10 @@
 school-prision-pipeline
 =======================
 
+Class assigment for UNC jSchool 583 Advanced Media Programing
+
+Django Bootstrap HTML5/CSS/3 JavaScript
+
 Django Interactive data visualization that allows users to search and view various comparison of education, social and police records.
 
 This database should show relationships among important data points and allow user to drill-down into the data and discover information on their own.
