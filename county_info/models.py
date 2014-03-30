@@ -1,18 +1,18 @@
 from django.db import models
 
 # Create your models here.
-class DistrictManager(models.Manager):
-    def get_by_natural_key(self, lea_code, lea_school_year):
-        return self.get(lea_code=lea_code, lea_school_year=lea_school_year)
+# class DistrictManager(models.Manager):
+    # def get_by_natural_key(self, lea_code, lea_school_year):
+        # return self.get(lea_code=lea_code, lea_school_year=lea_school_year)
 
 class District(models.Model):
-	objects = DistrictManager()
+	# objects = DistrictManager()
 
-	lea_code = models.CharField(max_length=4, verbose_name="Code")
+	lea_code = models.CharField(max_length=3, verbose_name="Code", primary_key=True)
 	lea_name = models.CharField(max_length=150, verbose_name="Name")
 	lea_city = models.CharField(max_length=150, verbose_name="City")
 	lea_state = models.CharField(max_length=150, verbose_name="State")
-	lea_school_year = models.CharField(max_length=10, verbose_name="School Year")
+	# lea_school_year = models.CharField(max_length=10, verbose_name="School Year")
 	lea_type = models.CharField(max_length=1, verbose_name="Type")
 	lea_email = models.CharField(max_length=100, null=True, verbose_name="Email")
 	lea_superintendent = models.CharField(max_length=100, null=True, verbose_name="Superintendent")
@@ -21,19 +21,19 @@ class District(models.Model):
 	class Meta(object):
 		verbose_name = "School District"
 		verbose_name_plural = "School Districts"
-		ordering = ('lea_name', 'lea_school_year')
-		unique_together = (('lea_code', 'lea_school_year'),)
+		ordering = ('lea_name',)
+		# unique_together = (('lea_code', 'lea_school_year'),)
 
 	def __unicode__(self):
-		return U'%s (%s)' %(self.lea_name, self.lea_school_year)
+		return U'%s (%s)' %(self.lea_name, self.lea_code)
 
-	def natural_key(self):
-		return (self.lea_code, self.lea_school_year)
+	# def natural_key(self):
+		# return (self.lea_code, self.lea_school_year)
 
 class Graduation(models.Model):
-	# code = models.CharField(max_length=4, verbose_name="Code")
-	# school_year = models.CharField(max_length=10, verbose_name="School Year")
 	district = models.ForeignKey('District')
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
+	# district = models.ForeignKey('District')
 	graduation_rate = models.DecimalField(max_digits=6, decimal_places=5, null=True)
 	female_graduation_rate = models.DecimalField(max_digits=6, decimal_places=5, null=True)
 	male_graduation_rate = models.DecimalField(max_digits=6, decimal_places=5, null=True)
@@ -48,8 +48,9 @@ class Graduation(models.Model):
 	
 
 	class Meta(object):
-		verbose_name = "District Graduation Rate"
-		verbose_name_plural = "District Graduation Rates"
+		verbose_name = "Graduation Rates"
+		verbose_name_plural = "Graduation Rates"
+		ordering = ('district__lea_name', '-school_year')
 
 	def __unicode__(self):
-		return U'%s (%s)' %(district.lea_name, district.lea_school_year)
+		return U'%s (%s)' %(self.district.lea_name, self.school_year)
