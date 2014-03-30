@@ -36,3 +36,4 @@ nosetests.xml
 .pydevproject
 
 settings_secret.py
+/data_spreadsheets/
