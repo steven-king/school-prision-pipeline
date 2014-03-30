@@ -1,3 +1,8 @@
 from django.contrib import admin
+from county_info.models import District
 
 # Register your models here.
+class DistrictAdmin(admin.ModelAdmin):
+	search_fields = ('lea_name', 'lea_city')
+
+admin.site.register(District, DistrictAdmin)
