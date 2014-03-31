@@ -104,3 +104,36 @@ class Attendance(models.Model):
 	def __unicode__(self):
 		return U'%s (%s)' %(self.district.lea_name, self.school_year)
 
+
+class GradeLevel(models.Model):
+	district = models.ForeignKey('District')
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
+	percent_on_grade_level = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	percent_freelunch_on_grade_level = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	percent_notfreelunch_on_grade_level = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	percent_black_on_grade_level = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	percent_hispanic_on_grade_level = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+
+	class Meta(object):
+		verbose_name = "Students At Grade Level"
+		verbose_name_plural = "Students At Grade Level"
+		ordering = ('district__lea_name', '-school_year')
+
+	def __unicode__(self):
+		return U'%s (%s)' %(self.district.lea_name, self.school_year)
+
+
+class SpecialCourses(models.Model):
+	district = models.ForeignKey('District')
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
+	advanced_course_enrollment = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	vocational_course_enrollment = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+
+	class Meta(object):
+		verbose_name = "AP/IB & Vocational Enrollment"
+		verbose_name_plural = "AP/IB & Vocational Enrollment"
+		ordering = ('district__lea_name', '-school_year')
+
+	def __unicode__(self):
+		return U'%s (%s)' %(self.district.lea_name, self.school_year)
+
