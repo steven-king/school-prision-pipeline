@@ -86,3 +86,21 @@ class Demographics(models.Model):
 	def __unicode__(self):
 		return U'%s (%s) - %s' %(self.district.lea_name, self.school_year, self.category)
 
+
+class Attendance(models.Model):
+	district = models.ForeignKey('District')
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
+	total_attendance_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	freelunch_attendance_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	notfreelunch_attendance_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	black_attendance_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	hispanic_attendance_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+
+	class Meta(object):
+		verbose_name = "Attendance Rate"
+		verbose_name_plural = "Attendance Rates"
+		ordering = ('district__lea_name', '-school_year')
+
+	def __unicode__(self):
+		return U'%s (%s)' %(self.district.lea_name, self.school_year)
+
