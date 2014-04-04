@@ -15,7 +15,8 @@
 		"percent_white": 0.528,
 		"percent_female": 0.533,
 		"percent_male": 0.467,
-		"percent_pacific_islander": null
+		"percent_pacific_islander": null,
+		"percent_needy": null
 	}
 },
 {
@@ -34,7 +35,8 @@
 		"percent_white": 0.576,
 		"percent_female": 0.488,
 		"percent_male": 0.512,
-		"percent_pacific_islander": null
+		"percent_pacific_islander": null,
+		"percent_needy": null
 	}
 },
 {
@@ -53,7 +55,8 @@
 		"percent_white": null,
 		"percent_female": null,
 		"percent_male": null,
-		"percent_pacific_islander": null
+		"percent_pacific_islander": null,
+		"percent_needy": null
 	}
 },
 {
@@ -72,7 +75,8 @@
 		"percent_white": 0.594,
 		"percent_female": 0.488,
 		"percent_male": 0.512,
-		"percent_pacific_islander": null
+		"percent_pacific_islander": null,
+		"percent_needy": null
 	}
 },
 {
@@ -91,7 +95,8 @@
 		"percent_white": 0.585,
 		"percent_female": 0.484,
 		"percent_male": 0.512,
-		"percent_pacific_islander": null
+		"percent_pacific_islander": null,
+		"percent_needy": null
 	}
 },
 {
@@ -110,7 +115,8 @@
 		"percent_white": 0.558,
 		"percent_female": 0.49,
 		"percent_male": 0.51,
-		"percent_pacific_islander": null
+		"percent_pacific_islander": null,
+		"percent_needy": 0.485
 	}
 },
 {
@@ -129,7 +135,8 @@
 		"percent_white": 0.55,
 		"percent_female": 0.49,
 		"percent_male": 0.51,
-		"percent_pacific_islander": null
+		"percent_pacific_islander": null,
+		"percent_needy": 0.484
 	}
 },
 {
@@ -148,7 +155,8 @@
 		"percent_white": 0.544,
 		"percent_female": 0.49,
 		"percent_male": 0.51,
-		"percent_pacific_islander": null
+		"percent_pacific_islander": null,
+		"percent_needy": 0.499
 	}
 },
 {
@@ -167,7 +175,8 @@
 		"percent_white": 0.541,
 		"percent_female": 0.49,
 		"percent_male": 0.51,
-		"percent_pacific_islander": null
+		"percent_pacific_islander": null,
+		"percent_needy": 0.537
 	}
 },
 {
@@ -186,7 +195,8 @@
 		"percent_white": 0.533,
 		"percent_female": 0.49,
 		"percent_male": 0.51,
-		"percent_pacific_islander": 0.001
+		"percent_pacific_islander": 0.001,
+		"percent_needy": 0.539
 	}
 },
 {
@@ -205,7 +215,8 @@
 		"percent_white": 0.527,
 		"percent_female": 0.488,
 		"percent_male": 0.512,
-		"percent_pacific_islander": 0.001
+		"percent_pacific_islander": 0.001,
+		"percent_needy": 0.559
 	}
 },
 {
@@ -224,6 +235,7 @@
 		"percent_white": 0.521,
 		"percent_female": 0.488,
 		"percent_male": 0.512,
-		"percent_pacific_islander": 0.001
+		"percent_pacific_islander": 0.001,
+		"percent_needy": 0.561
 	}
 }]

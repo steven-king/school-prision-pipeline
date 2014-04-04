@@ -181,10 +181,11 @@ class StateDemographics(models.Model):
 	percent_pacific_islander = models.DecimalField(max_digits=6, decimal_places=3, null=True)
 	percent_male = models.DecimalField(max_digits=6, decimal_places=3, null=True)
 	percent_female = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	percent_needy = models.DecimalField(max_digits=6, decimal_places=3, null=True)
 
 	class Meta(object):
-		verbose_name = "State Averages for Student Demographics"
-		verbose_name_plural = "State Averages for Student Demographics"
+		verbose_name = "State Average Student Demographics"
+		verbose_name_plural = "State Average Student Demographics"
 		ordering = ('state__state_name', '-school_year')
 
 	def __unicode__(self):
@@ -207,6 +208,80 @@ class StateGraduation(models.Model):
 	class Meta(object):
 		verbose_name = "State Average Graduation Rates"
 		verbose_name_plural = "State Average Graduation Rates"
+		ordering = ('state__state_name', '-school_year')
+
+	def __unicode__(self):
+		return U'%s' %(self.state)
+
+
+class StateAttendance(models.Model):
+	state = models.ForeignKey('State')
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
+	total_attendance_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	freelunch_attendance_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	notfreelunch_attendance_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	black_attendance_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	hispanic_attendance_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	asian_attendance_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	native_american_attendance_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	multiracial_attendance_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	white_attendance_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+
+	class Meta(object):
+		verbose_name = "State Average Attendance Rate"
+		verbose_name_plural = "State Average Attendance Rates"
+		ordering = ('state__state_name', '-school_year')
+
+	def __unicode__(self):
+		return U'%s' %(self.state)
+
+
+class StateGradeLevel(models.Model):
+	state = models.ForeignKey('State')
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
+	percent_on_grade_level = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	percent_freelunch_on_grade_level = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	percent_notfreelunch_on_grade_level = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	percent_black_on_grade_level = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	percent_hispanic_on_grade_level = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+
+	class Meta(object):
+		verbose_name = "State Average Students At Grade Level"
+		verbose_name_plural = "State Average Students At Grade Level"
+		ordering = ('state__state_name', '-school_year')
+
+	def __unicode__(self):
+		return U'%s' %(self.state)
+
+
+class StateSpecialCourses(models.Model):
+	state = models.ForeignKey('State')
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
+	advanced_course_enrollment = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	vocational_course_enrollment = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+
+	class Meta(object):
+		verbose_name = "State Average AP/IB & Vocational Enrollment"
+		verbose_name_plural = "State Average AP/IB & Vocational Enrollment"
+		ordering = ('state__state_name', '-school_year')
+
+	def __unicode__(self):
+		return U'%s' %(self.state)
+
+
+class StateDiscipline(models.Model):
+	state = models.ForeignKey('State')
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
+	category = models.CharField(max_length=1)
+	school_improvement_percent = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+	short_suspensions = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")
+	long_suspensions = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")
+	expulsions = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")
+	crime = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")
+
+	class Meta(object):
+		verbose_name = "State Average Discipline Rates"
+		verbose_name_plural = "State Average Discipline Rates"
 		ordering = ('state__state_name', '-school_year')
 
 	def __unicode__(self):

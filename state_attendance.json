@@ -1,0 +1,151 @@
+[
+{
+	"model": "county_info.StateAttendance",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2003-2004",
+		"total_attendance_rate": 0.954,
+		"native_american_attendance_rate": 0.946,
+		"asian_attendance_rate": 0.974,
+		"black_attendance_rate": 0.954,
+		"hispanic_attendance_rate": 0.955,
+		"multiracial_attendance_rate": 0.952,
+		"white_attendance_rate": 0.953,
+		"freelunch_attendance_rate": 0.946
+	}
+},
+{
+	"model": "county_info.StateAttendance",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2004-2005",
+		"total_attendance_rate": 0.955,
+		"native_american_attendance_rate": 0.947,
+		"asian_attendance_rate": 0.975,
+		"black_attendance_rate": 0.955,
+		"hispanic_attendance_rate": 0.957,
+		"multiracial_attendance_rate": 0.953,
+		"white_attendance_rate": 0.954,
+		"freelunch_attendance_rate": 0.947
+	}
+},
+{
+	"model": "county_info.StateAttendance",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2005-2006",
+		"total_attendance_rate": 0.954,
+		"native_american_attendance_rate": 0.946,
+		"asian_attendance_rate": 0.975,
+		"black_attendance_rate": 0.955,
+		"hispanic_attendance_rate": 0.956,
+		"multiracial_attendance_rate": 0.953,
+		"white_attendance_rate": 0.954,
+		"freelunch_attendance_rate": 0.947
+	}
+},
+{
+	"model": "county_info.StateAttendance",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2006-2007",
+		"total_attendance_rate": 0.953,
+		"native_american_attendance_rate": 0.943,
+		"asian_attendance_rate": 0.972,
+		"black_attendance_rate": 0.953,
+		"hispanic_attendance_rate": 0.955,
+		"multiracial_attendance_rate": 0.951,
+		"white_attendance_rate": 0.952,
+		"freelunch_attendance_rate": 0.946
+	}
+},
+{
+	"model": "county_info.StateAttendance",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2007-2008",
+		"total_attendance_rate": 0.956,
+		"native_american_attendance_rate": 0.945,
+		"asian_attendance_rate": 0.976,
+		"black_attendance_rate": 0.956,
+		"hispanic_attendance_rate": 0.96,
+		"multiracial_attendance_rate": 0.954,
+		"white_attendance_rate": 0.955,
+		"freelunch_attendance_rate": 0.949
+	}
+},
+{
+	"model": "county_info.StateAttendance",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2008-2009",
+		"total_attendance_rate": 0.959,
+		"native_american_attendance_rate": 0.947,
+		"asian_attendance_rate": 0.975,
+		"black_attendance_rate": 0.96,
+		"hispanic_attendance_rate": 0.964,
+		"multiracial_attendance_rate": 0.956,
+		"white_attendance_rate": 0.957,
+		"freelunch_attendance_rate": 0.953
+	}
+},
+{
+	"model": "county_info.StateAttendance",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2009-2010",
+		"total_attendance_rate": 0.957,
+		"native_american_attendance_rate": 0.945,
+		"asian_attendance_rate": 0.973,
+		"black_attendance_rate": 0.958,
+		"hispanic_attendance_rate": 0.962,
+		"multiracial_attendance_rate": 0.953,
+		"white_attendance_rate": 0.955,
+		"freelunch_attendance_rate": 0.951
+	}
+},
+{
+	"model": "county_info.StateAttendance",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2010-2011",
+		"total_attendance_rate": 0.958,
+		"native_american_attendance_rate": 0.947,
+		"asian_attendance_rate": 0.975,
+		"black_attendance_rate": 0.96,
+		"hispanic_attendance_rate": 0.963,
+		"multiracial_attendance_rate": 0.955,
+		"white_attendance_rate": 0.956,
+		"freelunch_attendance_rate": 0.953
+	}
+},
+{
+	"model": "county_info.StateAttendance",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2011-2012",
+		"total_attendance_rate": 0.961,
+		"native_american_attendance_rate": 0.949,
+		"asian_attendance_rate": 0.978,
+		"black_attendance_rate": 0.962,
+		"hispanic_attendance_rate": 0.965,
+		"multiracial_attendance_rate": 0.959,
+		"white_attendance_rate": 0.96,
+		"freelunch_attendance_rate": 0.956
+	}
+},
+{
+	"model": "county_info.StateAttendance",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2012-2013",
+		"total_attendance_rate": 0.956,
+		"native_american_attendance_rate": null,
+		"asian_attendance_rate": null,
+		"black_attendance_rate": null,
+		"hispanic_attendance_rate": null,
+		"multiracial_attendance_rate": null,
+		"white_attendance_rate": null,
+		"freelunch_attendance_rate": null
+	}
+}]
