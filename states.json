@@ -1,0 +1,9 @@
+[
+	{
+		"model": "county_info.State",
+		"fields": {
+			"state_name": "North Carolina",
+			"state_abbreviation": "NC"
+		}
+	}
+]

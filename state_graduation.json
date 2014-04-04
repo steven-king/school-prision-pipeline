@@ -1,0 +1,177 @@
+[
+{
+	"model": "county_info.StateGraduation",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2008-2009",
+		"graduation_rate": 0.717,
+		"native_american_graduation_rate": 0.6,
+		"asian_graduation_rate": 0.836,
+		"black_graduation_rate": 0.632,
+		"hispanic_graduation_rate": 0.589,
+		"multiracial_graduation_rate": 0.715,
+		"white_graduation_rate": 0.777,
+		"freelunch_graduation_rate": 0.618,
+		"notfreelunch_graduation_rate": null
+	}
+},
+{
+	"model": "county_info.StateGraduation",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2005-2006",
+		"graduation_rate": 0.978,
+		"native_american_graduation_rate": 0.964,
+		"asian_graduation_rate": 0.99,
+		"black_graduation_rate": 0.961,
+		"hispanic_graduation_rate": 0.955,
+		"multiracial_graduation_rate": 0.98,
+		"white_graduation_rate": 0.985,
+		"freelunch_graduation_rate": 0.962,
+		"notfreelunch_graduation_rate": null
+	}
+},
+{
+	"model": "county_info.StateGraduation",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2004-2005",
+		"graduation_rate": 0.961,
+		"native_american_graduation_rate": 0.958,
+		"asian_graduation_rate": 0.959,
+		"black_graduation_rate": 0.931,
+		"hispanic_graduation_rate": 0.918,
+		"multiracial_graduation_rate": 0.968,
+		"white_graduation_rate": 0.976,
+		"freelunch_graduation_rate": 0.94,
+		"notfreelunch_graduation_rate": null
+	}
+},
+{
+	"model": "county_info.StateGraduation",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2003-2004",
+		"graduation_rate": 0.957,
+		"native_american_graduation_rate": 0.938,
+		"asian_graduation_rate": 0.959,
+		"black_graduation_rate": 0.922,
+		"hispanic_graduation_rate": 0.907,
+		"multiracial_graduation_rate": 0.964,
+		"white_graduation_rate": 0.973,
+		"freelunch_graduation_rate": 0.927,
+		"notfreelunch_graduation_rate": null
+	}
+},
+{
+	"model": "county_info.StateGraduation",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2002-2003",
+		"graduation_rate": 0.97,
+		"native_american_graduation_rate": 0.958,
+		"asian_graduation_rate": 0.963,
+		"black_graduation_rate": 0.946,
+		"hispanic_graduation_rate": 0.941,
+		"multiracial_graduation_rate": 0.96,
+		"white_graduation_rate": 0.98,
+		"freelunch_graduation_rate": 0.946,
+		"notfreelunch_graduation_rate": 0.975
+	}
+},
+{
+	"model": "county_info.StateGraduation",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2006-2007",
+		"graduation_rate": null,
+		"native_american_graduation_rate": null,
+		"asian_graduation_rate": null,
+		"black_graduation_rate": null,
+		"hispanic_graduation_rate": null,
+		"multiracial_graduation_rate": null,
+		"white_graduation_rate": null,
+		"freelunch_graduation_rate": null,
+		"notfreelunch_graduation_rate": null
+	}
+},
+{
+	"model": "county_info.StateGraduation",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2007-2008",
+		"graduation_rate": 0.703,
+		"native_american_graduation_rate": 0.538,
+		"asian_graduation_rate": 0.81,
+		"black_graduation_rate": 0.627,
+		"hispanic_graduation_rate": 0.564,
+		"multiracial_graduation_rate": 0.684,
+		"white_graduation_rate": 0.757,
+		"freelunch_graduation_rate": 0.592,
+		"notfreelunch_graduation_rate": null
+	}
+},
+{
+	"model": "county_info.StateGraduation",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2009-2010",
+		"graduation_rate": 0.742,
+		"native_american_graduation_rate": 0.68,
+		"asian_graduation_rate": 0.852,
+		"black_graduation_rate": 0.669,
+		"hispanic_graduation_rate": 0.614,
+		"multiracial_graduation_rate": 0.711,
+		"white_graduation_rate": 0.796,
+		"freelunch_graduation_rate": 0.662,
+		"notfreelunch_graduation_rate": null
+	}
+},
+{
+	"model": "county_info.StateGraduation",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2010-2011",
+		"graduation_rate": 0.779,
+		"native_american_graduation_rate": 0.697,
+		"asian_graduation_rate": 0.869,
+		"black_graduation_rate": 0.715,
+		"hispanic_graduation_rate": 0.688,
+		"multiracial_graduation_rate": 0.772,
+		"white_graduation_rate": 0.826,
+		"freelunch_graduation_rate": 0.712,
+		"notfreelunch_graduation_rate": null
+	}
+},
+{
+	"model": "county_info.StateGraduation",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2011-2012",
+		"graduation_rate": 0.804,
+		"native_american_graduation_rate": 0.737,
+		"asian_graduation_rate": 0.875,
+		"black_graduation_rate": 0.747,
+		"hispanic_graduation_rate": 0.73,
+		"multiracial_graduation_rate": 0.806,
+		"white_graduation_rate": 0.847,
+		"freelunch_graduation_rate": 0.747,
+		"notfreelunch_graduation_rate": null
+	}
+},
+{
+	"model": "county_info.StateGraduation",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2012-2013",
+		"graduation_rate": 0.825,
+		"native_american_graduation_rate": 0.773,
+		"asian_graduation_rate": 0.899,
+		"black_graduation_rate": 0.775,
+		"hispanic_graduation_rate": 0.752,
+		"multiracial_graduation_rate": 0.815,
+		"white_graduation_rate": 0.862,
+		"freelunch_graduation_rate": 0.761,
+		"notfreelunch_graduation_rate": null
+	}
+}]

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from county_info.models import District, Graduation, DisciplineRate, Demographics, Attendance, GradeLevel, SpecialCourses, FreeLunch
+from county_info.models import District, Graduation, DisciplineRate, Demographics, Attendance, GradeLevel, SpecialCourses, FreeLunch, State, StateDemographics, StateGraduation
 
 # Register your models here.
 class DistrictAdmin(admin.ModelAdmin):
@@ -55,3 +55,21 @@ class FreeLunchAdmin(admin.ModelAdmin):
 	search_fields = ('district__lea_name', 'school_year')
 
 admin.site.register(FreeLunch, FreeLunchAdmin)
+
+class StateAdmin(admin.ModelAdmin):
+	list_display = ('state_name', 'state_abbreviation')
+	search_fields = ('state_name', 'state_abbreviation')
+
+admin.site.register(State, StateAdmin)
+
+class StateDemographicsAdmin(admin.ModelAdmin):
+	list_display = ('state', 'school_year', 'sat_average_score', 'percent_native_american', 'percent_asian', 'percent_black', 'percent_hispanic', 'percent_white', 'percent_multiracial')
+	search_fields = ('state__state_name', 'state__state_abbreviation', 'school_year')
+
+admin.site.register(StateDemographics, StateDemographicsAdmin)
+
+class StateGraduationAdmin(admin.ModelAdmin):
+	list_display = ('state', 'school_year', 'graduation_rate', 'freelunch_graduation_rate', 'black_graduation_rate', 'hispanic_graduation_rate', 'white_graduation_rate')
+	search_fields = ('state__state_name', 'state__state_abbreviation', 'school_year')
+
+admin.site.register(StateGraduation, StateGraduationAdmin)
