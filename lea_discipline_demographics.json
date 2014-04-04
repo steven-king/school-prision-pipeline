@@ -1,0 +1,27 @@
+[
+	{
+		"model": "county_info.DisciplineDemographics",
+		"fields": {
+			"district": "010",
+			"school_year": "2011-2012",
+			"native_american_shortsuspensions": ,
+			"native_american_longsuspensions": ,
+			"native_american_expulsions": ,
+			"asian_shortsuspensions": ,
+			"asian_longsuspensions": ,
+			"asian_expulsions": ,
+			"hispanic_shortsuspensions": ,
+			"hispanic_longsuspensions": ,
+			"hispanic_expulsions": ,
+			"black_shortsuspensions": ,
+			"black_longsuspensions": ,
+			"black_expulsions": ,
+			"white_shortsuspensions": ,
+			"white_longsuspensions": ,
+			"white_expulsions": ,
+			"multiracial_shortsuspensions": ,
+			"multiracial_longsuspensions": ,
+			"multiracial_expulsions": 
+		}
+	},
+]

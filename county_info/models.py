@@ -84,7 +84,7 @@ class Demographics(models.Model):
 		ordering = ('district__lea_name', '-school_year')
 
 	def __unicode__(self):
-		return U'%s (%s) - %s' %(self.district.lea_name, self.school_year, self.category)
+		return U'%s (%s)' %(self.district.lea_name, self.school_year)
 
 
 class Attendance(models.Model):
@@ -136,4 +136,33 @@ class SpecialCourses(models.Model):
 
 	def __unicode__(self):
 		return U'%s (%s)' %(self.district.lea_name, self.school_year)
+
+
+class FreeLunch(models.Model):
+	district = models.ForeignKey('District')
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
+	adm = models.IntegerField(max_length=6, null=True, verbose_name="Average Daily Members")
+	reduced_applications = models.IntegerField(max_length=6, null=True)
+	free_applications = models.IntegerField(max_length=6, null=True)
+	percent_needy = models.DecimalField(max_digits=6, decimal_places=3, null=True)
+
+	class Meta(object):
+		verbose_name = "Free & Reduced Lunch Statistics"
+		verbose_name_plural = "Free & Reduced Lunch Statistics"
+		ordering = ('district__lea_name', '-school_year')
+
+	def __unicode__(self):
+		return U'%s (%s)' %(self.district.lea_name, self.school_year)
+
+
+class State(models.Model):
+	state_name = models.CharField(max_length=150, verbose_name="Name", primary_key=True)
+	state_abbreviation = models.CharField(max_length=150, verbose_name="Abbreviation")
+
+	class Meta(object):
+		ordering = ('state_name',)
+
+	def __unicode__(self):
+		return U'%s' %(self.state_name)
+
 
