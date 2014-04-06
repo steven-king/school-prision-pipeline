@@ -25,6 +25,20 @@ def home(request):
 
 def mobile(request):
 	context = {
-		'districts': District.objects.all()
+		'northcarolina': State.objects.get(state_name="North Carolina"),
+		'districts': District.objects.all(),
+		'graduation_rates': Graduation.objects.all(),
+		'discipline_rates': DisciplineRate.objects.all(),
+		'demographics': Demographics.objects.all(),
+		'attendance_rates': Attendance.objects.all(),
+		'gradelevel_rates': GradeLevel.objects.all(),
+		'specialcourse_rates': SpecialCourses.objects.all(),
+		'freelunch_rates': FreeLunch.objects.all(),
+		'stategraduation_rates': StateGraduation.objects.all(),
+		'statediscipline_rates': StateDiscipline.objects.all(),
+		'statedemographics': StateDemographics.objects.all(),
+		'stateattendance_rates': StateAttendance.objects.all(),
+		'stategradelevel_rates': StateGradeLevel.objects.all(),
+		'statespecialcourse_rates': StateSpecialCourses.objects.all(),
 	}
 	return render(request, "county_info/mobile.html", context)
