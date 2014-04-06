@@ -45,8 +45,8 @@ class Graduation(models.Model):
 
 
 class DisciplineRate(models.Model):
-	district = models.ForeignKey('District')
-	school_year = models.CharField(max_length=10, verbose_name="School Year", related_name="discipline_rates")
+	district = models.ForeignKey('District', related_name="discipline_rates")
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
 	category = models.CharField(max_length=1)
 	school_improvement_percent = models.DecimalField(max_digits=6, decimal_places=3, null=True)
 	short_suspensions = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")
@@ -64,8 +64,8 @@ class DisciplineRate(models.Model):
 
 
 class Demographics(models.Model):
-	district = models.ForeignKey('District')
-	school_year = models.CharField(max_length=10, verbose_name="School Year", related_name="demographics")
+	district = models.ForeignKey('District', related_name="demographics")
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
 	sat_participation = models.DecimalField(max_digits=6, decimal_places=3, null=True)
 	sat_average_score = models.IntegerField(max_length=4, null=True)
 	expenses_per_pupil = models.DecimalField(max_digits=8, decimal_places=2, null=True)
@@ -88,8 +88,8 @@ class Demographics(models.Model):
 
 
 class Attendance(models.Model):
-	district = models.ForeignKey('District')
-	school_year = models.CharField(max_length=10, verbose_name="School Year", related_name="attendance_rates")
+	district = models.ForeignKey('District', related_name="attendance_rates")
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
 	total_attendance_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
 	freelunch_attendance_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
 	notfreelunch_attendance_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
@@ -106,8 +106,8 @@ class Attendance(models.Model):
 
 
 class GradeLevel(models.Model):
-	district = models.ForeignKey('District')
-	school_year = models.CharField(max_length=10, verbose_name="School Year", related_name="gradelevel_rates")
+	district = models.ForeignKey('District', related_name="gradelevel_rates")
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
 	percent_on_grade_level = models.DecimalField(max_digits=6, decimal_places=3, null=True)
 	percent_freelunch_on_grade_level = models.DecimalField(max_digits=6, decimal_places=3, null=True)
 	percent_notfreelunch_on_grade_level = models.DecimalField(max_digits=6, decimal_places=3, null=True)
@@ -124,8 +124,8 @@ class GradeLevel(models.Model):
 
 
 class SpecialCourses(models.Model):
-	district = models.ForeignKey('District')
-	school_year = models.CharField(max_length=10, verbose_name="School Year", related_name="specialcourse_rates")
+	district = models.ForeignKey('District', related_name="specialcourse_rates")
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
 	advanced_course_enrollment = models.DecimalField(max_digits=6, decimal_places=3, null=True)
 	vocational_course_enrollment = models.DecimalField(max_digits=6, decimal_places=3, null=True)
 
@@ -139,8 +139,8 @@ class SpecialCourses(models.Model):
 
 
 class FreeLunch(models.Model):
-	district = models.ForeignKey('District')
-	school_year = models.CharField(max_length=10, verbose_name="School Year", related_name="freelunch_rates")
+	district = models.ForeignKey('District', related_name="freelunch_rates")
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
 	adm = models.IntegerField(max_length=6, null=True, verbose_name="Average Daily Members")
 	reduced_applications = models.IntegerField(max_length=6, null=True)
 	free_applications = models.IntegerField(max_length=6, null=True)
@@ -167,8 +167,8 @@ class State(models.Model):
 
 
 class StateDemographics(models.Model):
-	state = models.ForeignKey('State')
-	school_year = models.CharField(max_length=10, verbose_name="School Year", related_name="statedemographics")
+	state = models.ForeignKey('State', related_name="statedemographics")
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
 	sat_participation = models.DecimalField(max_digits=6, decimal_places=3, null=True)
 	sat_average_score = models.IntegerField(max_length=4, null=True)
 	expenses_per_pupil = models.DecimalField(max_digits=8, decimal_places=2, null=True)
@@ -193,8 +193,8 @@ class StateDemographics(models.Model):
 
 
 class StateGraduation(models.Model):
-	state = models.ForeignKey('State')
-	school_year = models.CharField(max_length=10, verbose_name="School Year", related_name="stategraduation_rates")
+	state = models.ForeignKey('State', related_name="stategraduation_rates")
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
 	graduation_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
 	native_american_graduation_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
 	asian_graduation_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
@@ -215,8 +215,8 @@ class StateGraduation(models.Model):
 
 
 class StateAttendance(models.Model):
-	state = models.ForeignKey('State')
-	school_year = models.CharField(max_length=10, verbose_name="School Year", related_name="stateattendance_rates")
+	state = models.ForeignKey('State', related_name="stateattendance_rates")
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
 	total_attendance_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
 	freelunch_attendance_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
 	notfreelunch_attendance_rate = models.DecimalField(max_digits=6, decimal_places=3, null=True)
@@ -237,8 +237,8 @@ class StateAttendance(models.Model):
 
 
 class StateGradeLevel(models.Model):
-	state = models.ForeignKey('State')
-	school_year = models.CharField(max_length=10, verbose_name="School Year", related_name="stategradelevel_rates")
+	state = models.ForeignKey('State', related_name="stategradelevel_rates")
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
 	percent_on_grade_level = models.DecimalField(max_digits=6, decimal_places=3, null=True)
 	percent_freelunch_on_grade_level = models.DecimalField(max_digits=6, decimal_places=3, null=True)
 	percent_notfreelunch_on_grade_level = models.DecimalField(max_digits=6, decimal_places=3, null=True)
@@ -255,8 +255,8 @@ class StateGradeLevel(models.Model):
 
 
 class StateSpecialCourses(models.Model):
-	state = models.ForeignKey('State')
-	school_year = models.CharField(max_length=10, verbose_name="School Year", related_name="statespecialcourse_rates")
+	state = models.ForeignKey('State', related_name="statespecialcourse_rates")
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
 	advanced_course_enrollment = models.DecimalField(max_digits=6, decimal_places=3, null=True)
 	vocational_course_enrollment = models.DecimalField(max_digits=6, decimal_places=3, null=True)
 
@@ -270,8 +270,8 @@ class StateSpecialCourses(models.Model):
 
 
 class StateDiscipline(models.Model):
-	state = models.ForeignKey('State')
-	school_year = models.CharField(max_length=10, verbose_name="School Year", related_name="statediscipline_rates")
+	state = models.ForeignKey('State', related_name="statediscipline_rates")
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
 	category = models.CharField(max_length=1)
 	school_improvement_percent = models.DecimalField(max_digits=6, decimal_places=3, null=True)
 	short_suspensions = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")

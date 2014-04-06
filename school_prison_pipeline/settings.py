@@ -60,8 +60,7 @@ ROOT_URLCONF = 'school_prison_pipeline.urls'
 
 WSGI_APPLICATION = 'school_prison_pipeline.wsgi.application'
 
-
-
+SECRET_KEY = '0tlgzoep7lfj2zqry*f&(r==3kkisc4-9l%+y)amew846(=fob'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
