@@ -1,5 +1,7 @@
 from django.conf.urls import patterns, include, url
+from county_info import views
 
 urlpatterns = patterns('',
-    # url(r'^$', 'school_prison_pipeline.views.home', name='home'),
+	url(r'^$', views.home, name='map_home'),
+	url(r'^mobile/$', views.mobile, name='mobile_home'),
 )
