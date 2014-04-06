@@ -88,11 +88,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
 MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static_media'),
+    os.path.join(BASE_DIR, 'school_prison_pipeline/static_media'),
 )
 
 TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'templates'),
+    os.path.join(BASE_DIR, 'school_prison_pipeline/templates'),
 )
 
 
