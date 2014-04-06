@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 {% load humanize %}
-
+{% load county_info_extras %}
 
 {% block content %}
 
 <div class="row">
 	<div class="col-sm-12">
 		<div class="district-wrapper">
+		<h1>{{ northcarolina.state_name }} School Districts</h1>
 		{% for district in districts %}
 			<h3>{{ district.lea_name }}</h3>
 			<p><strong>Graduation Rates:</strong></p>
@@ -14,14 +15,14 @@
 			<ul>
 				<li>{{ graduation_rate.school_year }}
 					<ul>
-						<li>Total: {{ graduation_rate.graduation_rate }}</li>
-						<li>Students Receiving Free/Reduced Lunch: {{ graduation_rate.freelunch_graduation_rate }}</li>
-						<li>Black: {{ graduation_rate.black_graduation_rate }}</li>
-						<li>Hispanic: {{ graduation_rate.hispanic_graduation_rate }}</li>
-						<li>White: {{ graduation_rate.white_graduation_rate }}</li>
-						<li>Asian: {{ graduation_rate.asian_graduation_rate }}</li>
-						<li>Native American: {{ graduation_rate.native_american_graduation_rate }}</li>
-						<li>Multircial: {{ graduation_rate.multiracial_graduation_rate }}</li>
+						<li>Total: {{ graduation_rate.graduation_rate|multiply:100|floatformat:1 }}%</li>
+						<li>Students Receiving Free/Reduced Lunch: {{ graduation_rate.freelunch_graduation_rate|multiply:100|floatformat:1 }}%</li>
+						<li>Black: {{ graduation_rate.black_graduation_rate|multiply:100|floatformat:1 }}%</li>
+						<li>Hispanic: {{ graduation_rate.hispanic_graduation_rate|multiply:100|floatformat:1 }}%</li>
+						<li>White: {{ graduation_rate.white_graduation_rate|multiply:100|floatformat:1 }}%</li>
+						<li>Asian: {{ graduation_rate.asian_graduation_rate|multiply:100|floatformat:1 }}%</li>
+						<li>Native American: {{ graduation_rate.native_american_graduation_rate|multiply:100|floatformat:1 }}%</li>
+						<li>Multircial: {{ graduation_rate.multiracial_graduation_rate|multiply:100|floatformat:1 }}%</li>
 					</ul>
 				</li>
 			</ul>

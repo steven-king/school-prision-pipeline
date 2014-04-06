@@ -5,6 +5,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # Create your views here.
 def home(request):
 	context = {
+		'northcarolina': State.objects.get(state_name="North Carolina"),
 		'districts': District.objects.all(),
 		'graduation_rates': Graduation.objects.all()
 	}
