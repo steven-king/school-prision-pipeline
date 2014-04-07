@@ -37,3 +37,7 @@ nosetests.xml
 
 settings_secret.py
 /data_spreadsheets/
+
+venv
+*.pyc
+staticfiles
