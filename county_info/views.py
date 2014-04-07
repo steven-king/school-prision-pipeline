@@ -10,7 +10,7 @@ def home(request):
 		'northcarolina': northcarolina,
 		'districts': District.objects.all(),
 	}
-	ipdb.set_trace()
+	# ipdb.set_trace()
 
 	# district_input = "Orange County Schools"
 	# school_year_input = "2012-2013"
