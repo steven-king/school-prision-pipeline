@@ -7,8 +7,10 @@ import ipdb
 def home(request):
 	northcarolina = State.objects.get(state_name="North Carolina")
 	context = {
+<<<<<<< HEAD
 		'northcarolina': northcarolina,
 		'districts': District.objects.all(),
+>>>>>>> 0fd62a88351ed5e968080759e2724ecb9c790cc7
 	}
 	ipdb.set_trace()
 
