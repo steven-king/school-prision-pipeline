@@ -4,15 +4,69 @@
 {% block content %}
 
 <div id="map"class="row">
-	<div class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
+	<div class="col-sm-12 col-md-12 col-lg-12">
 		<h1 class="title">The possibilities are endless</h1>
 		<p id="intro">Introductory text herey herey here. Narwhal trust fund food truck, selfies viral  cliche B banjo dreamcatcher Portland. literally Portland vinyl Echo Park put a bird on it. Blog bitters Tumblr, bicycle rights  deep v High Life dreamcatcher street art Etsy post-ironic Williamsburg biodiesel mixtape.</p>
 		<img src="{{ STATIC_URL }}NC_district_map.svg">
-
-		
+		<div id="map-selector">
+			<p>Choose a variable...</p>
+			<div class="styled-select">
+				<select>
+				  <option value="discipline">Disciplinary Rate</option>
+				  <option value="sat">Average SAT score</option>
+				  <option value="graduation">Graduation Rate</option>
+				  <option value="lunch">Free/reduced lunch rate</option>
+				  <option value="expenses">Expenses per student</option>
+				</select>
+			</div>
+		</div>
+		<div id="map-key">
+			<p>Per 1,000 students</p>
+			<ul>
+				<li><div class="yellow key"></div><p>0 - 160</p></li>
+				<li><div class="blue key"></div><p>161 - 320</p></li>
+				<li><div class="orange key"></div><p>321 - 480</p></li>
+				<li><div class="gray key"></div><p>481 - 640</p></li>
+				<li><div class="brown key"></div><p>641 - 800</p></li>
+		</div>
 	</div>
 </div>
 <div id="tabs"class="row">
+	<div class="col-sm-12 col-md-12 col-lg-12" id="tab-view">
+		<div class="tab orange">
+			District Profile
+		</div>
+		<div class="tab blue">
+			Compare Districts
+		</div>
+		<ul id="profile-list">
+			<li>
+				<div class="left"></div>
+				<div class="middle">Orange County</div>
+				<div class="right">State Average</div>
+			</li>
+			<li>
+				<div class="left">Total expenses per student:</div>
+				<div class="middle">$8,536</div>
+				<div class="right">$7,749</div>
+			</li>
+			<li>
+				<div class="left">Average SAT score:</div>
+				<div class="middle">1570</div>
+				<div class="right">1460</div>
+			</li>
+			<li>
+				<div class="left">Percent who take the SAT:</div>
+				<div class="middle">67%</div>
+				<div class="right">59%</div>
+			</li>
+			<li>
+				<div class="left">Percent of students on reduced lunch:</div>
+				<div class="middle">21%</div>
+				<div class="right">36%</div>
+			</li>
+	</div>
+
 
 <div>
 

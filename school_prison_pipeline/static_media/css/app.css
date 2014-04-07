@@ -30,23 +30,213 @@
     font-weight: normal;
     font-style: normal;
 }
-
-body {
-    background-color: #C2D1D9;
+.yellow {
+    background-color: #C19438;
+}
+.blue {
+    background-color: #004E79;
+}
+.orange {
+    background-color: #D16436;
+}
+.gray {
+    background-color: #BDAA91;
+}
+.brown {
+    background-color: #88765D;
 }
 
+body {
+  
+    background-color: #C2D1D9;
+}
+.container {
+    padding:0;
+}
+#map {
+    height:600px;
+}
 h1 {
 	font-family:roboto_slabregular;
     text-align: center;
     font-size:56px;
 }
+p {
+   font-family:latoregular; 
+   font-size:16px;
+   margin-bottom:5px;
+   color:#626262;
+}
 #intro {
-    font-family:latoregular;
     width:70%;
-    margin:20px 15%;
-    font-size:16px;
+    margin:20px 15% 0 15%;
 }
 
 img {
-    width:100%;
+    width:80%;
+    margin-left:20%;
+    z-index:1;
+    margin-right:-20px;
 }
+#map-selector {
+    z-index:50;
+    position:relative;
+    top:-420px;
+    
+}
+    #map-selector .styled-select {
+        width: 220px;
+        height: 34px;
+        overflow: hidden;
+        margin-left:-5px;
+        background: url(../down-arrow.png) no-repeat right #fff;
+        border: 1px solid #ccc;
+    }
+        #map-selector .styled-select select {
+            font-family:latolight;
+            background: transparent;
+            width: 238px;
+            padding: 3px 0px 3px 10px;
+            font-size: 16px;
+            line-height: 1;
+            border: 0;
+            border-radius: 0;
+            height: 34px;
+            -webkit-appearance: none;
+        }
+#map-key {
+    z-index:50;
+    position:relative;
+    top:-360px;
+}
+    #map-key ul {
+        list-style-type: none;
+        padding-left:5px;
+    }
+        #map-key li p {
+            color:#000;
+        }
+        #map-key li .key {
+            width:20px;
+            height:20px;
+            float:left;
+            margin-right:10px;
+        }
+#tabs {
+    border:4px solid #D16436;
+    width:100%;
+    margin-left:1%;
+    height:500px;
+    background-color:#fff;
+    z-index:-1;
+    border-radius:20px;
+    border-top-left-radius:0px;
+}
+    .tab {
+        position:relative;
+        top:-45px;
+        width:200px;
+        height:53px;
+        border-radius:10px;
+        float:left;
+        padding:10px 15px;
+        color:#fff;
+        font-family:latolight;
+        font-size:20px;
+        z-index:-50;
+    }
+    #tabs .tab:first-child {
+        margin-left:-19px;
+    }
+    #profile-list {
+        list-style-type: none;
+        padding-left:0px;
+        position: relative;
+        float:left;
+        width:100%;
+    }
+    #profile-list li {
+        padding:10px;
+        border-bottom:2px solid #ccc;
+        height:65px;
+        width:98%;
+        margin:0 1%;
+        font-family:latoregular;
+    }
+    #profile-list li div {
+        float:left;
+        height:100%;
+    }
+    #profile-list li .left {
+        color:#828282;
+        font-size:18px;
+        line-height:22px;
+        width:20%;
+        margin-right:10%;
+
+    }
+    #profile-list li .middle,  #profile-list li .right {
+        color:#D16436;
+        font-size:30px;
+        width:35%;
+        text-align: center;
+    }
+    #profile-list li:nth-child(5){
+        height:90px;
+    }
+    #profile-list li:nth-child(5) .middle, #profile-list li:nth-child(5) .right{
+        padding-top: 12px
+    }
+
+    #profile-list li:first-child {
+        border:none;
+        height:50px;
+        color:#000;
+        font-family:latolight;
+        
+    }
+    #profile-list li:first-child .left {
+        
+    }
+    #profile-list li:first-child .middle {
+        color:#000;
+        font-size:30px;
+    }
+    #profile-list li:first-child .right {
+        color:#000;
+        font-size:30px;
+    }
+
+@media screen and (min-width: 1200px) {
+    #map-selector {
+        top:-480px;
+    }
+    #map-key {
+        top:-420px;
+    }
+    #map {
+        height:700px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #map-selector {
+        top:-340px;
+    }
+    #map-key {
+        top:-300px;
+    }
+    h1 {
+        font-size:52px;
+    }
+    p {
+        font-size:14px;
+    }
+    #map-selector .styled-select select {
+        font-size: 14px;
+    }
+    #map {
+        height:520px;
+    }
+}
+
