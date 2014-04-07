@@ -10,7 +10,7 @@
 			<h1>{{ northcarolina.state_name }} School Districts</h1>
 			{% for district in districts %}
 				<div class="row district-wrapper">
-					<h3>{{ district.name }}</h3>
+					<h3>{{ district.lea_name }}</h3>
 					<div class="col-sm-4">
 						<p><strong>Graduation Rates:</strong></p>
 						{% for graduation_rate in district.graduation_rates.all %}
