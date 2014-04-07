@@ -1,4 +1,4 @@
-school-prision-pipeline
+school-discipline
 =======================
 
 Class assigment for UNC jSchool 583 Advanced Media Programing

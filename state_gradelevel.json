@@ -1,0 +1,145 @@
+[
+{
+	"model": "county_info.StateGradeLevel",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2008-2009",
+		"percent_on_grade_level": 0.714,
+		"percent_black_on_grade_level": 0.532,
+		"percent_hispanic_on_grade_level": 0.636,
+		"percent_freelunch_on_grade_level": 0.58,
+		"percent_notfreelunch_on_grade_level": 0.791
+	}
+},
+{
+	"model": "county_info.StateGradeLevel",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2005-2006",
+		"percent_on_grade_level": 0.718,
+		"percent_black_on_grade_level": 0.529,
+		"percent_hispanic_on_grade_level": 0.601,
+		"percent_freelunch_on_grade_level": 0.579,
+		"percent_notfreelunch_on_grade_level": 0.781
+	}
+},
+{
+	"model": "county_info.StateGradeLevel",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2004-2005",
+		"percent_on_grade_level": 0.748,
+		"percent_black_on_grade_level": 0.558,
+		"percent_hispanic_on_grade_level": 0.637,
+		"percent_freelunch_on_grade_level": 0.609,
+		"percent_notfreelunch_on_grade_level": 0.804
+	}
+},
+{
+	"model": "county_info.StateGradeLevel",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2003-2004",
+		"percent_on_grade_level": 0.74,
+		"percent_black_on_grade_level": 0.547,
+		"percent_hispanic_on_grade_level": 0.624,
+		"percent_freelunch_on_grade_level": null,
+		"percent_notfreelunch_on_grade_level": null
+	}
+},
+{
+	"model": "county_info.StateGradeLevel",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2001-2002",
+		"percent_on_grade_level": 0.689,
+		"percent_black_on_grade_level": 0.476,
+		"percent_hispanic_on_grade_level": 0.583,
+		"percent_freelunch_on_grade_level": null,
+		"percent_notfreelunch_on_grade_level": null
+	}
+},
+{
+	"model": "county_info.StateGradeLevel",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2002-2003",
+		"percent_on_grade_level": 0.71,
+		"percent_black_on_grade_level": 0.51,
+		"percent_hispanic_on_grade_level": 0.599,
+		"percent_freelunch_on_grade_level": null,
+		"percent_notfreelunch_on_grade_level": null
+	}
+},
+{
+	"model": "county_info.StateGradeLevel",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2006-2007",
+		"percent_on_grade_level": 0.664,
+		"percent_black_on_grade_level": 0.457,
+		"percent_hispanic_on_grade_level": 0.55,
+		"percent_freelunch_on_grade_level": 0.507,
+		"percent_notfreelunch_on_grade_level": 0.738
+	}
+},
+{
+	"model": "county_info.StateGradeLevel",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2007-2008",
+		"percent_on_grade_level": 0.684,
+		"percent_black_on_grade_level": 0.486,
+		"percent_hispanic_on_grade_level": 0.591,
+		"percent_freelunch_on_grade_level": 0.536,
+		"percent_notfreelunch_on_grade_level": 0.76
+	}
+},
+{
+	"model": "county_info.StateGradeLevel",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2009-2010",
+		"percent_on_grade_level": 0.807,
+		"percent_black_on_grade_level": 0.67,
+		"percent_hispanic_on_grade_level": 0.741,
+		"percent_freelunch_on_grade_level": 0.709,
+		"percent_notfreelunch_on_grade_level": 0.879
+	}
+},
+{
+	"model": "county_info.StateGradeLevel",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2010-2011",
+		"percent_on_grade_level": 0.797,
+		"percent_black_on_grade_level": 0.66,
+		"percent_hispanic_on_grade_level": 0.74,
+		"percent_freelunch_on_grade_level": 0.694,
+		"percent_notfreelunch_on_grade_level": 0.882
+	}
+},
+{
+	"model": "county_info.StateGradeLevel",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2011-2012",
+		"percent_on_grade_level": 0.814,
+		"percent_black_on_grade_level": 0.686,
+		"percent_hispanic_on_grade_level": 0.751,
+		"percent_freelunch_on_grade_level": 0.718,
+		"percent_notfreelunch_on_grade_level": 0.909
+	}
+},
+{
+	"model": "county_info.StateGradeLevel",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2012-2013",
+		"percent_on_grade_level": 0.441,
+		"percent_black_on_grade_level": 0.245,
+		"percent_hispanic_on_grade_level": 0.335,
+		"percent_freelunch_on_grade_level": 0.284,
+		"percent_notfreelunch_on_grade_level": 0.588
+	}
+}]

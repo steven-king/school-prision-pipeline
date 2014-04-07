@@ -1,0 +1,241 @@
+[
+{
+	"model": "county_info.StateDemographics",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2005-2006",
+		"sat_participation": 0.71,
+		"sat_average_score": 1008,
+		"expenses_per_pupil": 7596.15,
+		"percent_native_american": 0.013,
+		"percent_asian": 0.034,
+		"percent_black": 0.302,
+		"percent_hispanic": 0.122,
+		"percent_multiracial": null,
+		"percent_white": 0.528,
+		"percent_female": 0.533,
+		"percent_male": 0.467,
+		"percent_pacific_islander": null,
+		"percent_needy": null
+	}
+},
+{
+	"model": "county_info.StateDemographics",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2004-2005",
+		"sat_participation": 0.74,
+		"sat_average_score": 1010,
+		"expenses_per_pupil": 7334.88,
+		"percent_native_american": 0.015,
+		"percent_asian": 0.02,
+		"percent_black": 0.314,
+		"percent_hispanic": 0.075,
+		"percent_multiracial": null,
+		"percent_white": 0.576,
+		"percent_female": 0.488,
+		"percent_male": 0.512,
+		"percent_pacific_islander": null,
+		"percent_needy": null
+	}
+},
+{
+	"model": "county_info.StateDemographics",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2001-2002",
+		"sat_participation": 0.67,
+		"sat_average_score": 998,
+		"expenses_per_pupil": null,
+		"percent_native_american": null,
+		"percent_asian": null,
+		"percent_black": null,
+		"percent_hispanic": null,
+		"percent_multiracial": null,
+		"percent_white": null,
+		"percent_female": null,
+		"percent_male": null,
+		"percent_pacific_islander": null,
+		"percent_needy": null
+	}
+},
+{
+	"model": "county_info.StateDemographics",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2002-2003",
+		"sat_participation": 0.68,
+		"sat_average_score": 1001,
+		"expenses_per_pupil": 6750.6,
+		"percent_native_american": 0.015,
+		"percent_asian": 0.02,
+		"percent_black": 0.312,
+		"percent_hispanic": 0.059,
+		"percent_multiracial": null,
+		"percent_white": 0.594,
+		"percent_female": 0.488,
+		"percent_male": 0.512,
+		"percent_pacific_islander": null,
+		"percent_needy": null
+	}
+},
+{
+	"model": "county_info.StateDemographics",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2003-2004",
+		"sat_participation": 0.70,
+		"sat_average_score": 1006,
+		"expenses_per_pupil": 7009.61,
+		"percent_native_american": 0.011,
+		"percent_asian": 0.02,
+		"percent_black": 0.314,
+		"percent_hispanic": 0.067,
+		"percent_multiracial": null,
+		"percent_white": 0.585,
+		"percent_female": 0.484,
+		"percent_male": 0.512,
+		"percent_pacific_islander": null,
+		"percent_needy": null
+	}
+},
+{
+	"model": "county_info.StateDemographics",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2006-2007",
+		"sat_participation": 0.71,
+		"sat_average_score": 1004,
+		"expenses_per_pupil": 8023.39,
+		"percent_native_american": 0.014,
+		"percent_asian": 0.022,
+		"percent_black": 0.313,
+		"percent_hispanic": 0.093,
+		"percent_multiracial": null,
+		"percent_white": 0.558,
+		"percent_female": 0.49,
+		"percent_male": 0.51,
+		"percent_pacific_islander": null,
+		"percent_needy": 0.485
+	}
+},
+{
+	"model": "county_info.StateDemographics",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2007-2008",
+		"sat_participation": 0.63,
+		"sat_average_score": 1007,
+		"expenses_per_pupil": 8521,
+		"percent_native_american": 0.014,
+		"percent_asian": 0.023,
+		"percent_black": 0.313,
+		"percent_hispanic": 0.1,
+		"percent_multiracial": null,
+		"percent_white": 0.55,
+		"percent_female": 0.49,
+		"percent_male": 0.51,
+		"percent_pacific_islander": null,
+		"percent_needy": 0.484
+	}
+},
+{
+	"model": "county_info.StateDemographics",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2008-2009",
+		"sat_participation": 0.63,
+		"sat_average_score": 1006,
+		"expenses_per_pupil": null,
+		"percent_native_american": 0.014,
+		"percent_asian": 0.024,
+		"percent_black": 0.312,
+		"percent_hispanic": 0.105,
+		"percent_multiracial": null,
+		"percent_white": 0.544,
+		"percent_female": 0.49,
+		"percent_male": 0.51,
+		"percent_pacific_islander": null,
+		"percent_needy": 0.499
+	}
+},
+{
+	"model": "county_info.StateDemographics",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2009-2010",
+		"sat_participation": 0.63,
+		"sat_average_score": 1008,
+		"expenses_per_pupil": 8446.18,
+		"percent_native_american": 0.014,
+		"percent_asian": 0.026,
+		"percent_black": 0.311,
+		"percent_hispanic": 0.109,
+		"percent_multiracial": null,
+		"percent_white": 0.541,
+		"percent_female": 0.49,
+		"percent_male": 0.51,
+		"percent_pacific_islander": null,
+		"percent_needy": 0.537
+	}
+},
+{
+	"model": "county_info.StateDemographics",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2010-2011",
+		"sat_participation": 0.67,
+		"sat_average_score": 1001,
+		"expenses_per_pupil": 8398.33,
+		"percent_native_american": 0.015,
+		"percent_asian": 0.025,
+		"percent_black": 0.264,
+		"percent_hispanic": 0.125,
+		"percent_multiracial": 0.037,
+		"percent_white": 0.533,
+		"percent_female": 0.49,
+		"percent_male": 0.51,
+		"percent_pacific_islander": 0.001,
+		"percent_needy": 0.539
+	}
+},
+{
+	"model": "county_info.StateDemographics",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2011-2012",
+		"sat_participation": 0.68,
+		"sat_average_score": 997,
+		"expenses_per_pupil": 8417.5,
+		"percent_native_american": 0.014,
+		"percent_asian": 0.025,
+		"percent_black": 0.263,
+		"percent_hispanic": 0.133,
+		"percent_multiracial": 0.037,
+		"percent_white": 0.527,
+		"percent_female": 0.488,
+		"percent_male": 0.512,
+		"percent_pacific_islander": 0.001,
+		"percent_needy": 0.559
+	}
+},
+{
+	"model": "county_info.StateDemographics",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2012-2013",
+		"sat_participation": 0.62,
+		"sat_average_score": 1001,
+		"expenses_per_pupil": 8497.6,
+		"percent_native_american": 0.014,
+		"percent_asian": 0.026,
+		"percent_black": 0.261,
+		"percent_hispanic": 0.14,
+		"percent_multiracial": null,
+		"percent_white": 0.521,
+		"percent_female": 0.488,
+		"percent_male": 0.512,
+		"percent_pacific_islander": 0.001,
+		"percent_needy": 0.561
+	}
+}]

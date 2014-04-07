@@ -1,0 +1,109 @@
+[
+{
+	"model": "county_info.StateSpecialCourses",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2008-2009",
+		"advanced_course_enrollment": 0.046,
+		"vocational_course_enrollment": 0.154
+	}
+},
+{
+	"model": "county_info.StateSpecialCourses",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2005-2006",
+		"advanced_course_enrollment": 0.035,
+		"vocational_course_enrollment": 0.156
+	}
+},
+{
+	"model": "county_info.StateSpecialCourses",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2004-2005",
+		"advanced_course_enrollment": 0.035,
+		"vocational_course_enrollment": 0.156
+	}
+},
+{
+	"model": "county_info.StateSpecialCourses",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2003-2004",
+		"advanced_course_enrollment": 0.031,
+		"vocational_course_enrollment": 0.155
+	}
+},
+{
+	"model": "county_info.StateSpecialCourses",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2001-2002",
+		"advanced_course_enrollment": 0.026,
+		"vocational_course_enrollment": 0.15
+	}
+},
+{
+	"model": "county_info.StateSpecialCourses",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2002-2003",
+		"advanced_course_enrollment": 0.029,
+		"vocational_course_enrollment": 0.153
+	}
+},
+{
+	"model": "county_info.StateSpecialCourses",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2006-2007",
+		"advanced_course_enrollment": 0.038,
+		"vocational_course_enrollment": 0.155
+	}
+},
+{
+	"model": "county_info.StateSpecialCourses",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2007-2008",
+		"advanced_course_enrollment": 0.041,
+		"vocational_course_enrollment": 0.153
+	}
+},
+{
+	"model": "county_info.StateSpecialCourses",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2009-2010",
+		"advanced_course_enrollment": 0.047,
+		"vocational_course_enrollment": 0.152
+	}
+},
+{
+	"model": "county_info.StateSpecialCourses",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2010-2011",
+		"advanced_course_enrollment": 0.048,
+		"vocational_course_enrollment": 0.154
+	}
+},
+{
+	"model": "county_info.StateSpecialCourses",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2011-2012",
+		"advanced_course_enrollment": 0.054,
+		"vocational_course_enrollment": 0.153
+	}
+},
+{
+	"model": "county_info.StateSpecialCourses",
+	"fields": {
+		"state": "North Carolina",
+		"school_year": "2012-2013",
+		"advanced_course_enrollment": 0.06,
+		"vocational_course_enrollment": 0.152
+	}
+}]

@@ -34,3 +34,10 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+settings_secret.py
+/data_spreadsheets/
+
+venv
+*.pyc
+staticfiles
