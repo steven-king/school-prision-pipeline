@@ -33,10 +33,10 @@
 </div>
 <div id="tabs"class="row">
 	<div class="col-sm-12 col-md-12 col-lg-12" id="tab-view">
-		<div class="tab orange">
+		<div class="tab orange" id="profile">
 			District Profile
 		</div>
-		<div class="tab blue">
+		<div class="tab blue" id="compare">
 			Compare Districts
 		</div>
 		<ul id="profile-list">
@@ -76,9 +76,88 @@
 				<div class="middle">134</div>
 				<div class="right">269</div>
 			</li>
+		</ul>
+		<div id="compare-section">
+			<ul>
+				<li><p>1) </p><div class="styled-select yellow">
+							<select>
+							  <option value="choose">Choose a district</option>
+							  <option value="discipline">Disciplinary Rate</option>
+							  <option value="sat">Average SAT score</option>
+							  <option value="graduation">Graduation Rate</option>
+							  <option value="lunch">Free/reduced lunch rate</option>
+							  <option value="expenses">Expenses per student</option>
+							</select>
+						</div>
+				</li>
+				<li><p>2) </p><div class="styled-select orange">
+							<select>
+							  <option value="choose">Choose a district</option>
+							  <option value="sat">Average SAT score</option>
+							  <option value="graduation">Graduation Rate</option>
+							  <option value="lunch">Free/reduced lunch rate</option>
+							  <option value="expenses">Expenses per student</option>
+							</select>
+						</div>
+				</li>
+				<li><p>3) </p><div class="blue styled-select">
+							<select>
+							  <option value="choose">Choose a district</option>
+							  <option value="discipline">Disciplinary Rate</option>
+							  <option value="sat">Average SAT score</option>
+							  <option value="graduation">Graduation Rate</option>
+							  <option value="lunch">Free/reduced lunch rate</option>
+							  <option value="expenses">Expenses per student</option>
+							</select>
+						</div>
+				</li>
+			</ul>
+			<p>scroll to see more graphs >></p>
+			<div class="graphs-wrapper">
+				<div class="graphs-inner">
+					<div class="lunch graph">
+						<h4>FREE / REDUCED LUNCH</h4>
+					</div>
+					<div class="expenses graph">
+						<h4>EXPENSES PER STUDENT</h4>
+					</div>
+					<div class="discipline graph">
+						<h4>DISCIPLINE RATE PER 100 students</h4>
+					</div>
+					<div class="graduation graph">
+						<h4>GRADUATION RATE</h4>
+					</div>
+					<div class="sat graph">
+						<h4>AVG SAT SCORE</h4>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 
-<div>
+</div>
 
+{% endblock %}
+
+{% block javascript %}
+<script>
+
+$( document ).ready(function() {
+	$("#compare-section").hide();
+})
+
+$("#profile").on("click", function(event){
+		$("#compare-section").hide();
+		$("#profile-list").show();
+		$("#tabs").css("border-color", "#D16436");
+	})
+
+$("#compare").on("click", function(event){
+		$("#profile-list").hide();
+		$("#compare-section").show();
+		$("#tabs").css("border-color", "#004E79");
+	})
+
+</script>
 {% endblock %}
