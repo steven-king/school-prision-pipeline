@@ -7,7 +7,7 @@
 	<div class="col-sm-12 col-md-12 col-lg-12">
 		<h1 class="title">The possibilities are endless</h1>
 		<p id="intro">Introductory text herey herey here. Narwhal trust fund food truck, selfies viral  cliche B banjo dreamcatcher Portland. literally Portland vinyl Echo Park put a bird on it. Blog bitters Tumblr, bicycle rights  deep v High Life dreamcatcher street art Etsy post-ironic Williamsburg biodiesel mixtape.</p>
-		<img src="{{ STATIC_URL }}NC_district_map.svg">
+		<img src="{{ STATIC_URL }}NC_district_map_new.svg">
 		<div id="map-selector">
 			<p>Choose a variable...</p>
 			<div class="styled-select">
@@ -112,23 +112,71 @@
 						</div>
 				</li>
 			</ul>
-			<p>scroll to see more graphs >></p>
+			<h6>scroll to see more graphs >></h6>
 			<div class="graphs-wrapper">
 				<div class="graphs-inner">
 					<div class="lunch graph">
-						<h4>FREE / REDUCED LUNCH</h4>
+						<div class="bar yellow" id="lunch-0">
+							<p id="lunch-p-0">67%</p>
+						</div>
+						<div class="bar orange" id="lunch-1">
+							<p id="lunch-p-1">49%</p>
+						</div>
+						<div class="bar blue" id="lunch-2">
+							<p id="lunch-p-2">53%</p>
+						</div>
+
+						<h4>Students who qualify for free or reduced lunch</h4>
 					</div>
 					<div class="expenses graph">
-						<h4>EXPENSES PER STUDENT</h4>
+						<div class="bar yellow" id="expenses-0">
+							<p id="expenses-p-0">67%</p>
+						</div>
+						<div class="bar orange" id="expenses-1">
+							<p id="expenses-p-1">49%</p>
+						</div>
+						<div class="bar blue" id="expenses-2">
+							<p id="expenses-p-2">53%</p>
+						</div>
+						<h4>Total Expenses per Student<br>
+							<strong>(money from county, state, and federal governments)</strong></h4>
 					</div>
 					<div class="discipline graph">
-						<h4>DISCIPLINE RATE PER 100 students</h4>
+						<div class="bar yellow" id="discipline-0">
+							<p id="discipline-p-0">67%</p>
+						</div>
+						<div class="bar orange" id="discipline-1">
+							<p id="discipline-p-1">49%</p>
+						</div>
+						<div class="bar blue" id="discipline-2">
+							<p id="discipline-p-2">53%</p>
+						</div>
+						<h4>Disciplinary action<br>per 1,000 students<br>
+							<strong>(includes short-, long-term suspension and expulsion)</strong></h4>
 					</div>
 					<div class="graduation graph">
-						<h4>GRADUATION RATE</h4>
+						<div class="bar yellow" id="graduation-0">
+							<p id="graduation-p-0">67%</p>
+						</div>
+						<div class="bar orange" id="graduation-1">
+							<p id="graduation-p-1">49%</p>
+						</div>
+						<div class="bar blue" id="graduation-2">
+							<p id="graduation-p-2">53%</p>
+						</div>
+						<h4>High school<br>graduation rate</h4>
 					</div>
 					<div class="sat graph">
-						<h4>AVG SAT SCORE</h4>
+						<div class="bar yellow" id="sat-0">
+							<p id="sat-p-0">67%</p>
+						</div>
+						<div class="bar orange" id="sat-1">
+							<p id="sat-p-1">49%</p>
+						</div>
+						<div class="bar blue" id="sat-2">
+							<p id="sat-p-2">53%</p>
+						</div>
+						<h4>Average SAT score for graduating seniors</h4>
 					</div>
 				</div>
 			</div>
@@ -145,7 +193,18 @@
 
 $( document ).ready(function() {
 	$("#compare-section").hide();
+	var lunchData = [0.10, 0.57, 0.63];
+	lunchGraph(lunchData);
+	var expensesData = ["10503", "7771.05", "11835"];
+	expensesGraph(expensesData);
+	var graduationData = [0.37, 0.57, 0.9754];
+	graduationGraph(graduationData);
+	var satData = [963, 1149, 835];
+	satGraph(satData);
 })
+
+var districts_name = ["Orange", "Buncombe", "Charlotte-Mecklenburg"];
+var districts_id = ["680", "110", "600"]
 
 $("#profile").on("click", function(event){
 		$("#compare-section").hide();
@@ -160,4 +219,5 @@ $("#compare").on("click", function(event){
 	})
 
 </script>
+<script src="{{ STATIC_URL }}js/dynamic_graphs.js"></script>
 {% endblock %}

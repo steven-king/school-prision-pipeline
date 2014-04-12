@@ -54,7 +54,7 @@ body {
     padding:0;
 }
 #map {
-    height:600px;
+    height:570px;
     z-index:-50;
 }
 h1 {
@@ -82,7 +82,7 @@ img {
 #map-selector {
     z-index:50;
     position:relative;
-    top:-420px;
+    top:-320px;
     
 }
     #map-selector .styled-select {
@@ -109,7 +109,7 @@ img {
 #map-key {
     z-index:50;
     position:relative;
-    top:-360px;
+    top:-260px;
 }
     #map-key ul {
         list-style-type: none;
@@ -237,9 +237,11 @@ img {
                 margin-right:5%;
             }
 
-#compare-section p {
+#compare-section h6 {
     float:right;
     margin:0;
+    font-size:16px;
+    font-weight: normal;
     color:#919191;
 }
 #compare-section ul {
@@ -280,6 +282,12 @@ img {
             background: url(../down-arrow-yellow.png) no-repeat right #C19438;
             border: 1px solid #ccc;
         }
+        #compare-section ul li .blue {
+            background: url(../down-arrow-blue.png) no-repeat right #004E79;
+        }
+        #compare-section ul li .orange {
+            background: url(../down-arrow-orange.png) no-repeat right #D16436;
+        }
 
             #compare-section ul li .styled-select select {
                 font-family:latolight;
@@ -298,8 +306,8 @@ img {
             }
 .graphs-wrapper {
     position:relative;
-    top:10px;
-    height:350px;
+    
+    height:400px;
     width:96%;
     margin:0 2%;
     overflow-x:scroll;
@@ -314,16 +322,50 @@ img {
             height:100%;
             float:left;
         }
+        .graph .bar {
+            width:25%;
+            height:280px;
+            float:left;
+        }
+            .graph .bar:first-child {
+                margin-left:10%;
+            }
+            .graph .bar:last-child {
+                margin-right:18%;
+            }
+            .graph .bar p {
+                text-align:center;
+                font-family:latolight;
+                font-size:20px;
+                position:relative;
+                top:10px;
+                color:#fff;
+            }
+            .expenses .bar p {
+                font-size: 16.5px;
+            }
+        .graph h4 {
+            top:20px;
+            position: relative;
+            margin:0 5%;
+            text-align: center;
+            width:80%;
+        }
+            .graph h4 strong {
+                color:#828282;
+                font-size:16px;
+                font-weight: normal;
+            }
 
 @media screen and (min-width: 1200px) {
     #map {
-        height:700px;
+        height:630px;
     }
     #map-selector {
-        top:-480px;
+        top:-340px;
     }
     #map-key {
-        top:-420px;
+        top:-280px;
     }
     #compare-section ul li {
         height:50px;
@@ -355,13 +397,13 @@ img {
         font-size:14px;
     }
     #map-selector {
-        top:-340px;
+        top:-240px;
     }
         #map-selector .styled-select select {
             font-size: 14px;
         }
      #map-key {
-        top:-300px;
+        top:-200px;
     }
             #profile-list li:nth-child(3) .left {
                 padding-top:0px;
