@@ -614,6 +614,9 @@
 		<circle id="421" class="Roanoke-Rapids" fill="#BDAA91" stroke="#231F20" stroke-miterlimit="10" cx="683.954" cy="139.308" r="7"/>
 </g>
 </svg>
+<div id="tool-tip">
+                The Swede White, $29
+        </div>
 
 		<div id="map-selector">
 			<p>Choose a variable...</p>
@@ -1145,6 +1148,22 @@ $( document ).ready(function() {
 //	$(function() {
 //		$( document ).tooltip();
 //	});
+
+/*$("#010").mouseover(function () {
+    $("#tool-tip").css("display", "inline");
+    $("#tool-tip").html("Iredell: 60%");
+    window.onmousemove = function (e) {
+	    var x = e.clientX,
+	    var	y = e.clientY;
+	    $("#tool-tip").style.top = (y + 20) + 'px';
+	    $("#tool-tip").style.left = (x + 20) + 'px';
+	};
+});
+
+$("#010").mouseout(function () {
+    $("#tool-tip").css("display", "none");
+});
+*/
 
 var districts_name = ["Orange", "Buncombe", "Charlotte-Mecklenburg"];
 var districts_id = ["680", "110", "600"];

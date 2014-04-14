@@ -42,11 +42,11 @@ var brown = "fill:#88765D";
 
 function graduationMap () {
 	$("#map-description").html("Percent who graduated from high school in 2013");
-	$("#key-1").html("50-60%");
-	$("#key-2").html("61-70%");
-	$("#key-3").html("71-80%");
-	$("#key-4").html("81-90%");
-	$("#key-5").html("91-100%");
+	$("#key-1").html("less than 75%");
+	$("#key-2").html("76-80%");
+	$("#key-3").html("81-85%");
+	$("#key-4").html("86-90%");
+	$("#key-5").html("over 90%");
 
 	var data = getGraduation();
 
@@ -56,13 +56,13 @@ function graduationMap () {
 			var currDistrict= "#" + data[i].fields.district;
 			var currGrad = data[i].fields.graduation_rate;
 
-			if (currGrad <=0.6 ) {
+			if (currGrad <=0.75 ) {
 				$(currDistrict).attr('style', gray);
 			}
-			else if (currGrad <=0.7 ) {
+			else if (currGrad <=0.8 ) {
 				$(currDistrict).attr('style', brown);
 			}
-			else if (currGrad <=0.8 ) {
+			else if (currGrad <=0.85 ) {
 				$(currDistrict).attr('style', blue);
 			}
 			else if (currGrad <=0.9 ) {

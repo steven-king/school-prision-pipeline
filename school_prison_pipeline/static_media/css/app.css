@@ -53,12 +53,24 @@ body {
 .container {
     padding:0;
 }
+#tool-tip {
+    border:1px solid black;
+    padding:5px;
+    z-index:50;
+    display:none;
+    width:80px;
+    height:50px;
+    font-family: latoregular;
+    position:absolute;
+    top:0;
+    left:0;
+}
 #map {
     height:570px;
-    z-index:-50;
+    z-index:20;
 }
 #map-description {
-    width:20%;
+    width:80%;
     margin-bottom: 15px
 }
 h1 {
@@ -84,8 +96,9 @@ svg {
     margin-right:-20px;
 }
 #map-selector {
-    z-index:50;
+    z-index:10;
     position:relative;
+    width:20%;
     top:-320px;
     
 }
@@ -111,9 +124,10 @@ svg {
             margin-right:10px;
         }
 #map-key {
-    z-index:50;
+    z-index:10;
     position:relative;
     top:-260px;
+    width:20%;
 }
     #map-key ul {
         list-style-type: none;
