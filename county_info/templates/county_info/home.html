@@ -2,7 +2,6 @@
 {% load humanize %}
 
 {% block content %}
-
 <div id="map"class="row">
 	<div class="col-sm-12 col-md-12 col-lg-12">
 		<h1 class="title">The possibilities are endless</h1>
@@ -11,7 +10,7 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="960px" height="400px" viewBox="0 80 960 400" enable-background="new 0 80 960 400" xml:space="preserve">
 <g>
-	<path id="490" class="Iredell" fill="#D16536" stroke="#231F20" stroke-miterlimit="10" d="M365.966,267.401h23.111l-6.375-21.359
+	<path id="490" class="Iredell" title="Iredell: 50%" fill="#D16536" stroke="#231F20" stroke-miterlimit="10" d="M365.966,267.401h23.111l-6.375-21.359
 		c0,0,7.75-16.766,8.375-32.516c0,0,0.125-8.754-1.25-14.127l-29.763,0.002c0,0,2.263,22.971-10.487,32.61
 		c0,0,5.375,4.64,4.375,9.515c0,0,9-0.5,8.75,5.25c0,0-1.125,2.625,4.75,6c0,0,4.5,2.5-1.75,10L365.966,267.401z"/>
 	<path id="820" class="Sampson" fill="#004F7A" stroke="#231F20" stroke-miterlimit="10" d="M652.202,301.776c0,0-0.375,5.375,0.875,14c0,0,1.125,6.5,0,11.25
@@ -145,9 +144,9 @@
 		c0,0,5.75-1.583,4.712,2.866c0,0-1.374,3.301,2.538,7.051c0,0,6.749,6.331,2.333,17.248c0,0-4.281,10.757-12.057,9.92
 		c0,0-6.352-1.58-8.397-8.125c0,0-0.629-4.711-6.46-4.273c0,0,0.356-7.703-0.27-8.907c0,0-0.785-2.068-2.48-2.359
 		c0,0-3.165-0.416-3.75-0.835C211.199,217.67,212.201,214.007,211.199,200.17z"/>
-	
-	<circle id="610" class="Mitchell" fill="#BDAA91" stroke="#231F20" stroke-miterlimit="10" cx="197.983" cy="247.542" r="7.5"/>
-	<path fill="#88765E" stroke="#231F20" stroke-miterlimit="10" d="M219.948,192.585c0,0-1.746-2.56,5.504-8.435
+
+	<circle id="111" class="Asheville" fill="#BDAA91" stroke="#231F20" stroke-miterlimit="10" cx="197.983" cy="247.542" r="7.5"/>
+	<path id="610" class="Mitchell" fill="#88765E" stroke="#231F20" stroke-miterlimit="10" d="M219.948,192.585c0,0-1.746-2.56,5.504-8.435
 		c0,0,7-6.386,14.875-5.261c0,0,4.875,1.011,6.625,3.636c0,0-1.75,6.25,2.375,9.364c0,0,7.375,4.136,5.737,9.076
 		c0,0-1.737,3.81-0.487,8.935c0,0,2.5,8.75,10,6.5c0,0-1.625,5.5-8.375,7.25c0,0-8.901,1.562-10.75,6.121
 		c0,0,3.286-8.275-3.982-15.636c0,0-2.934-3.384-1.726-6.185c0,0,1.34-3.562-3.164-3.119c0,0-4.471,1.18-4.645-1.328
@@ -181,7 +180,7 @@
 		c0,0-0.382-3.026-3.549-3.942c0,0,2.4-9.206,5.733-7.622c0,0,4.251,4.167,7.667,3c0,0,1.917,4.502,5.417,5.251
 		c0,0,3.167,0.416,3.167,4.666c0,0,0.001,3.167,5.698,3.833c0,0,6.136,6.416,12.552,11l10.75,0.168L321.471,237.786z"/>
 	
-	<circle id="180" class="Newton" fill="#BDAA91" stroke="#231F20" stroke-miterlimit="10" cx="334.16" cy="253.542" r="7.5"/>
+	<circle id="182" class="Newton" fill="#BDAA91" stroke="#231F20" stroke-miterlimit="10" cx="334.16" cy="253.542" r="7.5"/>
 
 	<circle id="491" class="Mooresville" fill="#BDAA91" stroke="#231F20" stroke-miterlimit="10" cx="377.734" cy="258.767" r="7"/>
 
@@ -189,7 +188,7 @@
 
 	<circle id="291" class="Lexington" fill="#BDAA91" stroke="#231F20" stroke-miterlimit="10" cx="443.11" cy="242.651" r="7"/>
 
-	<circle id="291" class="Thomasville" fill="#BDAA91" stroke="#231F20" stroke-miterlimit="10" cx="432.887" cy="221.765" r="7"/>
+	<circle id="292" class="Thomasville" fill="#BDAA91" stroke="#231F20" stroke-miterlimit="10" cx="432.887" cy="221.765" r="7"/>
 	
 	<circle id="761" class="Asheboro" fill="#BDAA91" stroke="#231F20" stroke-miterlimit="10" cx="482.995" cy="251.767" r="7"/>
 
@@ -619,11 +618,11 @@
 		<div id="map-selector">
 			<p>Choose a variable...</p>
 			<div class="styled-select">
-				<select>
+				<select id="map-select">
 				  <option value="discipline">Disciplinary Rate</option>
 				  <option value="sat">Average SAT score</option>
-				  <option value="graduation">Graduation Rate</option>
-				  <option value="lunch" selected>Free/reduced lunch rate</option>
+				  <option value="graduation" selected>Graduation Rate</option>
+				  <option value="lunch">Free/reduced lunch rate</option>
 				  <option value="expenses">Expenses per student</option>
 				</select>
 			</div>
@@ -631,11 +630,12 @@
 		<div id="map-key">
 			<p id="map-description"></p>
 			<ul>
-				<li><div class="yellow key"></div><p id="key-1">0 - 160</p></li>
-				<li><div class="blue key"></div><p id="key-2">161 - 320</p></li>
-				<li><div class="orange key"></div><p id="key-3">321 - 480</p></li>
-				<li><div class="gray key"></div><p id="key-4">481 - 640</p></li>
-				<li><div class="brown key"></div><p id="key-5">641 - 800</p></li>
+				<li><div class="gray key"></div><p id="key-1"></p></li>
+				<li><div class="brown key"></div><p id="key-2"></p></li>
+				<li><div class="blue key"></div><p id="key-3"></p></li>
+				<li><div class="yellow key"></div><p id="key-4"></p></li>				
+				<li><div class="orange key"></div><p id="key-5"></p></li>
+				
 		</div>
 	</div>
 </div>
@@ -1125,11 +1125,12 @@
 {% endblock %}
 
 {% block javascript %}
+
 <script>
 
 $( document ).ready(function() {
 	$("#compare-section").hide();
-	lunchMap();
+	graduationMap();
 	var lunchData = [0.10, 0.57, 0.63];
 	lunchGraph(lunchData);
 	var expensesData = ["10503", "7771.05", "11835"];
@@ -1141,9 +1142,34 @@ $( document ).ready(function() {
 
 })
 
-var districts_name = ["Orange", "Buncombe", "Charlotte-Mecklenburg"];
-var districts_id = ["680", "110", "600"]
+//	$(function() {
+//		$( document ).tooltip();
+//	});
 
+var districts_name = ["Orange", "Buncombe", "Charlotte-Mecklenburg"];
+var districts_id = ["680", "110", "600"];
+
+$("#map-select").change(function () {
+	var currData = $("#map-select").val();
+	if (currData == "discipline") {
+		//disciplineMap();
+	}
+	else if (currData == "sat") {
+		satMap();
+	}
+	else if (currData == "graduation") {
+		graduationMap();
+	}
+	else if (currData == "lunch") {
+		lunchMap();
+	}
+	else if (currData == "expenses") {
+		expensesMap();
+	}
+});
+//	$("#010").hover(function() {
+//		var currName = $(this).attr("class");
+//	})
 $("#profile").on("click", function(event){
 		$("#compare-section").hide();
 		$("#profile-list").show();
@@ -1159,5 +1185,8 @@ $("#compare").on("click", function(event){
 </script>
 <script src="{{ STATIC_URL }}js/dynamic_graphs.js"></script>
 <script src="{{ STATIC_URL }}js/map.js"></script>
+<script src="{{ STATIC_URL }}js/sat.js"></script>
 <script src="{{ STATIC_URL }}js/freelunch.js"></script>
+<script src="{{ STATIC_URL }}js/graduation.js"></script>
+<script src="{{ STATIC_URL }}js/expenses.js"></script>
 {% endblock %}
