@@ -8,7 +8,7 @@ def home(request):
 #	northcarolina = State.objects.get(state_name="North Carolina")
 	context = {
 #		'northcarolina': northcarolina,
-#		'districts': District.objects.all(),
+		'districts': District.objects.all(),
 	}
 	# ipdb.set_trace()
 
