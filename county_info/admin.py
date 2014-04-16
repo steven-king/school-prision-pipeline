@@ -24,7 +24,7 @@ admin.site.register(DisciplineRate, DisciplineRateAdmin)
 
 
 class DemographicsAdmin(admin.ModelAdmin):
-	list_display = ('district', 'school_year', 'sat_average_score', 'percent_native_american', 'percent_asian', 'percent_black', 'percent_hispanic', 'percent_white', 'percent_multiracial')
+	list_display = ('district', 'school_year', 'expenses_per_pupil', 'sat_average_score', 'percent_native_american', 'percent_asian', 'percent_black', 'percent_hispanic', 'percent_white', 'percent_multiracial')
 	search_fields = ('district__lea_name', 'school_year')
 
 admin.site.register(Demographics, DemographicsAdmin)
