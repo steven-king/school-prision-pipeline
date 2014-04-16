@@ -1,0 +1,520 @@
+{% extends "base.html" %}
+{% load humanize %}
+{% block head_info %}
+	<link href="{{ STATIC_URL }}css/mobile.css" rel="stylesheet">
+{% endblock %}
+{% block content %}
+
+<h1 class="title">NC Schools</h1>
+<p id="intro">Compare North Carolina school districts to see how many factors play into the educational environment</p>
+<p id="intro">Tap the arrow to see all of the data for a district</p>
+
+
+<div id="compare-section">
+    <ul>
+        <li><div class="styled-select orange">
+            <select>
+							  <option value="010">Alamance-Burlington</option>
+							  <option value="020">Alexander</option>
+							  <option value="030">Alleghany</option>
+							  <option value="040">Anson</option>
+							  <option value="050">Ashe</option>
+							  	<option value="761">Asheboro</option>
+							  	<option value="111">Asheville</option>
+							  <option value="060">Avery</option>
+							  <option value="070">Beaufort</option>
+							  <option value="080">Bertie</option>
+							  <option value="090">Bladen</option>
+							  <option value="100">Brunswick</option>
+							  <option value="110" selected>Buncombe</option>
+							  <option value="120">Burke</option>
+							  <option value="130">Cabarrus</option>
+							  <option value="140">Caldwell</option>
+							  <option value="150">Camden</option>
+							  <option value="160">Carteret</option>
+							  <option value="170">Caswell</option>
+							  <option value="180">Catawba</option>
+							  	<option value="681">Chapel Hill-Carrboro</option>
+							  <option value="190">Chatham</option>
+							  <option value="200">Cherokee</option>
+							  <option value="210">Edenton-Chowan</option>
+							  <option value="220">Clay</option>
+							  <option value="230">Cleveland</option>
+							  	<option value="821">Clinton</option>
+							  <option value="240">Columbus</option>
+							  <option value="250">Craven</option>
+							  <option value="260">Cumberland</option>
+							  <option value="270">Currituck</option>
+							  <option value="280">Dare</option>
+							  <option value="290">Davidson</option>
+							  <option value="300">Davie</option>
+							  <option value="310">Duplin</option>
+							  <option value="320">Durham</option>
+							  <option value="330">Edgecombe</option>
+							  	<option value="861">Elkin</option>
+							  <option value="340">Forsyth</option>
+							  <option value="350">Franklin</option>
+							  <option value="360">Gaston</option>
+							  <option value="370">Gates</option>
+							  <option value="380">Graham</option>
+							  <option value="390">Granville</option>
+							  <option value="400">Greene</option>
+							  <option value="410">Guilford</option>
+							  <option value="420">Halifax</option>
+							  <option value="430">Harnett</option>
+							  <option value="440">Haywood</option>
+							  <option value="450">Henderson</option>
+							  <option value="460">Hertford</option>
+							  	<option value="181">Hickory</option>
+							  <option value="470">Hoke</option>
+							  <option value="480">Hyde</option>
+							  <option value="490">Iredell-Statesville</option>
+							  <option value="500">Jackson</option>
+							  <option value="510">Johnston</option>
+							  <option value="520">Jones</option>
+							  	<option value="132">Kannapolis</option>
+							  <option value="530">Lee</option>
+							  <option value="540">Lenoir</option>
+							  	<option value="291">Lexington</option>
+							  <option value="550">Lincoln</option>
+							  <option value="560">Macon</option>
+							  <option value="570">Madison</option>
+							  <option value="580">Martin</option>
+							  <option value="590">McDowell</option>
+							  <option value="600">Charlotte-Mecklenburg</option>
+							  <option value="610">Mitchell</option>
+							  <option value="620">Montgomery</option>
+							  <option value="630">Moore</option>
+							  	<option value="491">Mooresville</option>
+							  	<option value="862">Mount Airy</option>
+							  <option value="640">Nash-Rocky Mount</option>
+							  <option value="650">New Hanover</option>
+							  	<option value="182">Newton Conover</option>
+							  <option value="660">Northampton</option>
+							  <option value="670">Onslow</option>
+							  <option value="680">Orange</option>
+							  <option value="690">Pamlico</option>
+							  <option value="700">Pasquotank</option>
+							  <option value="710">Pender</option>
+							  <option value="720">Perquimans</option>
+							  <option value="730">Person</option>
+							  <option value="740">Pitt</option>
+							  <option value="750">Polk</option>
+							  <option value="760">Randolph</option>
+							  <option value="770">Richmond</option>
+							  	<option value="421">Roanoke Rapids</option>
+							  <option value="780">Robeson</option>
+							  <option value="790">Rockingham</option>
+							  <option value="800">Rowan-Salisbury</option>
+							  <option value="810">Rutherford</option>
+							  <option value="820">Sampson</option>
+							  <option value="830">Scotland</option>
+							  <option value="840">Stanly</option>
+							  <option value="850">Stokes</option>
+							  <option value="860">Surry</option>
+							  <option value="870">Swain</option>
+							  	<option value="292">Thomasville</option>
+							  <option value="880">Transylvania</option>
+							  <option value="890">Tyrrell</option>
+							  <option value="900">Union</option>
+							  <option value="910">Vance</option>
+							  <option value="920">Wake</option>
+							  <option value="930">Warren</option>
+							  <option value="940">Washington</option>
+							  <option value="950">Watauga</option>
+							  <option value="960">Wayne</option>
+							  	<option value="422">Weldon</option>
+							  	<option value="241">Whiteville</option>
+							  <option value="970">Wilkes</option>
+							  <option value="980">Wilson</option>
+							  <option value="990">Yadkin</option>
+							  <option value="995">Yancey</option>
+							</select>
+        </div>
+        
+        </li>
+        <li><div class="styled-select yellow">
+            <select>
+							  <option value="010">Alamance-Burlington</option>
+							  <option value="020">Alexander</option>
+							  <option value="030">Alleghany</option>
+							  <option value="040">Anson</option>
+							  <option value="050">Ashe</option>
+							  	<option value="761">Asheboro</option>
+							  	<option value="111">Asheville</option>
+							  <option value="060">Avery</option>
+							  <option value="070">Beaufort</option>
+							  <option value="080">Bertie</option>
+							  <option value="090">Bladen</option>
+							  <option value="100">Brunswick</option>
+							  <option value="110" selected>Buncombe</option>
+							  <option value="120">Burke</option>
+							  <option value="130">Cabarrus</option>
+							  <option value="140">Caldwell</option>
+							  <option value="150">Camden</option>
+							  <option value="160">Carteret</option>
+							  <option value="170">Caswell</option>
+							  <option value="180">Catawba</option>
+							  	<option value="681">Chapel Hill-Carrboro</option>
+							  <option value="190">Chatham</option>
+							  <option value="200">Cherokee</option>
+							  <option value="210">Edenton-Chowan</option>
+							  <option value="220">Clay</option>
+							  <option value="230">Cleveland</option>
+							  	<option value="821">Clinton</option>
+							  <option value="240">Columbus</option>
+							  <option value="250">Craven</option>
+							  <option value="260">Cumberland</option>
+							  <option value="270">Currituck</option>
+							  <option value="280">Dare</option>
+							  <option value="290">Davidson</option>
+							  <option value="300">Davie</option>
+							  <option value="310">Duplin</option>
+							  <option value="320">Durham</option>
+							  <option value="330">Edgecombe</option>
+							  	<option value="861">Elkin</option>
+							  <option value="340">Forsyth</option>
+							  <option value="350">Franklin</option>
+							  <option value="360">Gaston</option>
+							  <option value="370">Gates</option>
+							  <option value="380">Graham</option>
+							  <option value="390">Granville</option>
+							  <option value="400">Greene</option>
+							  <option value="410">Guilford</option>
+							  <option value="420">Halifax</option>
+							  <option value="430">Harnett</option>
+							  <option value="440">Haywood</option>
+							  <option value="450">Henderson</option>
+							  <option value="460">Hertford</option>
+							  	<option value="181">Hickory</option>
+							  <option value="470">Hoke</option>
+							  <option value="480">Hyde</option>
+							  <option value="490">Iredell-Statesville</option>
+							  <option value="500">Jackson</option>
+							  <option value="510">Johnston</option>
+							  <option value="520">Jones</option>
+							  	<option value="132">Kannapolis</option>
+							  <option value="530">Lee</option>
+							  <option value="540">Lenoir</option>
+							  	<option value="291">Lexington</option>
+							  <option value="550">Lincoln</option>
+							  <option value="560">Macon</option>
+							  <option value="570">Madison</option>
+							  <option value="580">Martin</option>
+							  <option value="590">McDowell</option>
+							  <option value="600">Charlotte-Mecklenburg</option>
+							  <option value="610">Mitchell</option>
+							  <option value="620">Montgomery</option>
+							  <option value="630">Moore</option>
+							  	<option value="491">Mooresville</option>
+							  	<option value="862">Mount Airy</option>
+							  <option value="640">Nash-Rocky Mount</option>
+							  <option value="650">New Hanover</option>
+							  	<option value="182">Newton Conover</option>
+							  <option value="660">Northampton</option>
+							  <option value="670">Onslow</option>
+							  <option value="680">Orange</option>
+							  <option value="690">Pamlico</option>
+							  <option value="700">Pasquotank</option>
+							  <option value="710">Pender</option>
+							  <option value="720">Perquimans</option>
+							  <option value="730">Person</option>
+							  <option value="740">Pitt</option>
+							  <option value="750">Polk</option>
+							  <option value="760">Randolph</option>
+							  <option value="770">Richmond</option>
+							  	<option value="421">Roanoke Rapids</option>
+							  <option value="780">Robeson</option>
+							  <option value="790">Rockingham</option>
+							  <option value="800">Rowan-Salisbury</option>
+							  <option value="810">Rutherford</option>
+							  <option value="820">Sampson</option>
+							  <option value="830">Scotland</option>
+							  <option value="840">Stanly</option>
+							  <option value="850">Stokes</option>
+							  <option value="860">Surry</option>
+							  <option value="870">Swain</option>
+							  	<option value="292">Thomasville</option>
+							  <option value="880">Transylvania</option>
+							  <option value="890">Tyrrell</option>
+							  <option value="900">Union</option>
+							  <option value="910">Vance</option>
+							  <option value="920">Wake</option>
+							  <option value="930">Warren</option>
+							  <option value="940">Washington</option>
+							  <option value="950">Watauga</option>
+							  <option value="960">Wayne</option>
+							  	<option value="422">Weldon</option>
+							  	<option value="241">Whiteville</option>
+							  <option value="970">Wilkes</option>
+							  <option value="980">Wilson</option>
+							  <option value="990">Yadkin</option>
+							  <option value="995">Yancey</option>
+            </select>
+            
+        </div>
+        
+        </li>
+        <li><div class="blue styled-select">
+            <select>
+							  <option value="010">Alamance-Burlington</option>
+							  <option value="020">Alexander</option>
+							  <option value="030">Alleghany</option>
+							  <option value="040">Anson</option>
+							  <option value="050">Ashe</option>
+							  	<option value="761">Asheboro</option>
+							  	<option value="111">Asheville</option>
+							  <option value="060">Avery</option>
+							  <option value="070">Beaufort</option>
+							  <option value="080">Bertie</option>
+							  <option value="090">Bladen</option>
+							  <option value="100">Brunswick</option>
+							  <option value="110" selected>Buncombe</option>
+							  <option value="120">Burke</option>
+							  <option value="130">Cabarrus</option>
+							  <option value="140">Caldwell</option>
+							  <option value="150">Camden</option>
+							  <option value="160">Carteret</option>
+							  <option value="170">Caswell</option>
+							  <option value="180">Catawba</option>
+							  	<option value="681">Chapel Hill-Carrboro</option>
+							  <option value="190">Chatham</option>
+							  <option value="200">Cherokee</option>
+							  <option value="210">Edenton-Chowan</option>
+							  <option value="220">Clay</option>
+							  <option value="230">Cleveland</option>
+							  	<option value="821">Clinton</option>
+							  <option value="240">Columbus</option>
+							  <option value="250">Craven</option>
+							  <option value="260">Cumberland</option>
+							  <option value="270">Currituck</option>
+							  <option value="280">Dare</option>
+							  <option value="290">Davidson</option>
+							  <option value="300">Davie</option>
+							  <option value="310">Duplin</option>
+							  <option value="320">Durham</option>
+							  <option value="330">Edgecombe</option>
+							  	<option value="861">Elkin</option>
+							  <option value="340">Forsyth</option>
+							  <option value="350">Franklin</option>
+							  <option value="360">Gaston</option>
+							  <option value="370">Gates</option>
+							  <option value="380">Graham</option>
+							  <option value="390">Granville</option>
+							  <option value="400">Greene</option>
+							  <option value="410">Guilford</option>
+							  <option value="420">Halifax</option>
+							  <option value="430">Harnett</option>
+							  <option value="440">Haywood</option>
+							  <option value="450">Henderson</option>
+							  <option value="460">Hertford</option>
+							  	<option value="181">Hickory</option>
+							  <option value="470">Hoke</option>
+							  <option value="480">Hyde</option>
+							  <option value="490">Iredell-Statesville</option>
+							  <option value="500">Jackson</option>
+							  <option value="510">Johnston</option>
+							  <option value="520">Jones</option>
+							  	<option value="132">Kannapolis</option>
+							  <option value="530">Lee</option>
+							  <option value="540">Lenoir</option>
+							  	<option value="291">Lexington</option>
+							  <option value="550">Lincoln</option>
+							  <option value="560">Macon</option>
+							  <option value="570">Madison</option>
+							  <option value="580">Martin</option>
+							  <option value="590">McDowell</option>
+							  <option value="600">Charlotte-Mecklenburg</option>
+							  <option value="610">Mitchell</option>
+							  <option value="620">Montgomery</option>
+							  <option value="630">Moore</option>
+							  	<option value="491">Mooresville</option>
+							  	<option value="862">Mount Airy</option>
+							  <option value="640">Nash-Rocky Mount</option>
+							  <option value="650">New Hanover</option>
+							  	<option value="182">Newton Conover</option>
+							  <option value="660">Northampton</option>
+							  <option value="670">Onslow</option>
+							  <option value="680">Orange</option>
+							  <option value="690">Pamlico</option>
+							  <option value="700">Pasquotank</option>
+							  <option value="710">Pender</option>
+							  <option value="720">Perquimans</option>
+							  <option value="730">Person</option>
+							  <option value="740">Pitt</option>
+							  <option value="750">Polk</option>
+							  <option value="760">Randolph</option>
+							  <option value="770">Richmond</option>
+							  	<option value="421">Roanoke Rapids</option>
+							  <option value="780">Robeson</option>
+							  <option value="790">Rockingham</option>
+							  <option value="800">Rowan-Salisbury</option>
+							  <option value="810">Rutherford</option>
+							  <option value="820">Sampson</option>
+							  <option value="830">Scotland</option>
+							  <option value="840">Stanly</option>
+							  <option value="850">Stokes</option>
+							  <option value="860">Surry</option>
+							  <option value="870">Swain</option>
+							  	<option value="292">Thomasville</option>
+							  <option value="880">Transylvania</option>
+							  <option value="890">Tyrrell</option>
+							  <option value="900">Union</option>
+							  <option value="910">Vance</option>
+							  <option value="920">Wake</option>
+							  <option value="930">Warren</option>
+							  <option value="940">Washington</option>
+							  <option value="950">Watauga</option>
+							  <option value="960">Wayne</option>
+							  	<option value="422">Weldon</option>
+							  	<option value="241">Whiteville</option>
+							  <option value="970">Wilkes</option>
+							  <option value="980">Wilson</option>
+							  <option value="990">Yadkin</option>
+							  <option value="995">Yancey</option>
+							</select>
+            
+            
+        </div>
+        
+        </li>    
+    </ul>
+    </div>
+<img src="{{ STATIC_URL }}down-arrow.png">
+    <div class="graphs-wrapper">
+            <div class="discipline graph">
+		<div class="bar yellow" id="discipline-0">
+		    <p id="discipline-p-0">67%</p></div>
+		<div class="bar orange" id="discipline-1">
+		    <p id="discipline-p-1">49%</p></div>
+		<div class="bar blue" id="discipline-2">
+		    <p id="discipline-p-2">53%</p></div>
+		<h4>Disciplinary action<br>per 1,000 students<br>
+                    <strong>(includes short-, long-term suspension and expulsion)</strong></h4>
+	    </div>
+        <img src="{{ STATIC_URL }}down-arrow.png">
+            <div class="expenses graph">
+		<div class="bar yellow" id="expenses-0">
+		    <p id="expenses-p-0">67%</p></div>
+		<div class="bar orange" id="expenses-1">
+		    <p id="expenses-p-1">49%</p></div>
+		<div class="bar blue" id="expenses-2">
+		    <p id="expenses-p-2">53%</p></div>
+	    <h4>Total Expenses per Student<br>
+		<strong>(money from county, state, and federal governments)</strong></h4>
+            </div>
+        <img src="{{ STATIC_URL }}down-arrow.png">
+
+            <div class="graduation graph">
+		<div class="bar yellow" id="graduation-0">
+		    <p id="graduation-p-0">67%</p></div>
+		<div class="bar orange" id="graduation-1">
+		    <p id="graduation-p-1">49%</p></div>
+		<div class="bar blue" id="graduation-2">
+		    <p id="graduation-p-2">53%</p></div>
+	    <h4>High school<br>graduation rate</h4>
+	    </div>
+        <img src="{{ STATIC_URL }}down-arrow.png">
+            <div class="lunch graph">
+		<div class="bar yellow" id="lunch-0">
+		    <p id="lunch-p-0">67%</p></div>
+		<div class="bar orange" id="lunch-1">
+		    <p id="lunch-p-1">49%</p></div>
+		<div class="bar blue" id="lunch-2">
+		    <p id="lunch-p-2">53%</p></div>
+	    <h4>Students who qualify for free or reduced lunch</h4>
+	    </div>
+        <img src="{{ STATIC_URL }}down-arrow.png">
+            <div class="sat graph">
+                <div class="bar yellow" id="sat-0">
+                    <p id="sat-p-0">67%</p>
+		</div>
+                <div class="bar orange" id="sat-1">
+		    <p id="sat-p-1">49%</p></div>
+		<div class="bar blue" id="sat-2">
+		    <p id="sat-p-2">53%</p></div>
+	    <h4>Average SAT score for graduating seniors</h4>
+	    </div>
+        </div>    
+    
+    
+    </div>
+    
+{% endblock %}
+
+{% block javascript %}
+
+<script>
+
+$( document ).ready(function() {
+	graduationMap();
+	var lunchData = [0.10, 0.57, 0.63];
+	lunchGraph(lunchData);
+	var expensesData = ["10503", "7771.05", "11835"];
+	expensesGraph(expensesData);
+	var graduationData = [0.37, 0.57, 0.9754];
+	graduationGraph(graduationData);
+	var satData = [963, 1149, 835];
+	satGraph(satData);
+
+})
+
+//	$(function() {
+//		$( document ).tooltip();
+//	});
+
+/*$("#010").mouseover(function () {
+    $("#tool-tip").css("display", "inline");
+    $("#tool-tip").html("Iredell: 60%");
+    window.onmousemove = function (e) {
+	    var x = e.clientX,
+	    var	y = e.clientY;
+	    $("#tool-tip").style.top = (y + 20) + 'px';
+	    $("#tool-tip").style.left = (x + 20) + 'px';
+	};
+});
+
+$("#010").mouseout(function () {
+    $("#tool-tip").css("display", "none");
+});
+*/
+
+var districts_name = ["Orange", "Buncombe", "Charlotte-Mecklenburg"];
+var districts_id = ["680", "110", "600"];
+
+$("#map-select").change(function () {
+	var currData = $("#map-select").val();
+	if (currData == "discipline") {
+		//disciplineMap();
+	}
+	else if (currData == "sat") {
+		satMap();
+	}
+	else if (currData == "graduation") {
+		graduationMap();
+	}
+	else if (currData == "lunch") {
+		lunchMap();
+	}
+	else if (currData == "expenses") {
+		expensesMap();
+	}
+});
+//	$("#010").hover(function() {
+//		var currName = $(this).attr("class");
+//	})
+$("#profile").on("click", function(event){
+		$("#compare-section").hide();
+		$("#profile-list").show();
+		$("#tabs").css("border-color", "#D16436");
+	})
+
+$("#compare").on("click", function(event){
+		$("#profile-list").hide();
+		$("#compare-section").show();
+		$("#tabs").css("border-color", "#004E79");
+	})
+
+</script>
+<script src="{{ STATIC_URL }}js/dynamic_graphs.js"></script>
+{% endblock %}

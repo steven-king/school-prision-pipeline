@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load humanize %}
+{% block head_info %}
+	<link href="{{ STATIC_URL }}css/mobile.css" rel="stylesheet">
+{% endblock %}
+{% block content %}
+
+<h1 class="title">Buncombe</h1>
+
+
+<div id="tabs"class="row">
+	<div class="col-sm-12 col-md-12 col-lg-12" id="tab-view">
+		<div class="tab orange" id="profile">
+			District Profile
+		</div>
+		<ul id="profile-list">
+			<li>
+				<div class="left"></div>
+				<div class="middle">Orange County</div>
+			</li>
+			<li>
+				<div class="left">Total expenses per student:</div>
+				<div class="middle">$8,536</div>
+			</li>
+			<li>
+				<div class="left">Average SAT score:</div>
+				<div class="middle">1570</div>
+			</li>
+			<li>
+				<div class="left">Percent who take the SAT:</div>
+				<div class="middle">67%</div>
+			</li>
+			<li>
+				<div class="left">Percent of students on reduced lunch:</div>
+				<div class="middle">21%</div>
+			</li>
+			<li>
+				<div class="left">Graduation rate of students on reduced lunch:</div>
+				<div class="middle">73%</div>
+			</li>
+			<li>
+				<div class="left">Disciplinary action<br>per 1,000 students:<br>
+					<p id="mini">(includes short- and long-term suspension as well as expulsion)</p></div>
+				<div class="middle">134</div>
+			</li>
+		</ul>
+
+<h1 class="title">Demographic Data</h1>
