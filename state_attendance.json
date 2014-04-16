@@ -3,66 +3,6 @@
 	"model": "county_info.StateAttendance",
 	"fields": {
 		"state": "North Carolina",
-		"school_year": "2003-2004",
-		"total_attendance_rate": 0.954,
-		"native_american_attendance_rate": 0.946,
-		"asian_attendance_rate": 0.974,
-		"black_attendance_rate": 0.954,
-		"hispanic_attendance_rate": 0.955,
-		"multiracial_attendance_rate": 0.952,
-		"white_attendance_rate": 0.953,
-		"freelunch_attendance_rate": 0.946
-	}
-},
-{
-	"model": "county_info.StateAttendance",
-	"fields": {
-		"state": "North Carolina",
-		"school_year": "2004-2005",
-		"total_attendance_rate": 0.955,
-		"native_american_attendance_rate": 0.947,
-		"asian_attendance_rate": 0.975,
-		"black_attendance_rate": 0.955,
-		"hispanic_attendance_rate": 0.957,
-		"multiracial_attendance_rate": 0.953,
-		"white_attendance_rate": 0.954,
-		"freelunch_attendance_rate": 0.947
-	}
-},
-{
-	"model": "county_info.StateAttendance",
-	"fields": {
-		"state": "North Carolina",
-		"school_year": "2005-2006",
-		"total_attendance_rate": 0.954,
-		"native_american_attendance_rate": 0.946,
-		"asian_attendance_rate": 0.975,
-		"black_attendance_rate": 0.955,
-		"hispanic_attendance_rate": 0.956,
-		"multiracial_attendance_rate": 0.953,
-		"white_attendance_rate": 0.954,
-		"freelunch_attendance_rate": 0.947
-	}
-},
-{
-	"model": "county_info.StateAttendance",
-	"fields": {
-		"state": "North Carolina",
-		"school_year": "2006-2007",
-		"total_attendance_rate": 0.953,
-		"native_american_attendance_rate": 0.943,
-		"asian_attendance_rate": 0.972,
-		"black_attendance_rate": 0.953,
-		"hispanic_attendance_rate": 0.955,
-		"multiracial_attendance_rate": 0.951,
-		"white_attendance_rate": 0.952,
-		"freelunch_attendance_rate": 0.946
-	}
-},
-{
-	"model": "county_info.StateAttendance",
-	"fields": {
-		"state": "North Carolina",
 		"school_year": "2007-2008",
 		"total_attendance_rate": 0.956,
 		"native_american_attendance_rate": 0.945,

@@ -418,19 +418,6 @@
 {
 	"model": "county_info.District",
 	"fields": {
-		"lea_code": "269",
-		"lea_state": "North Carolina",
-		"lea_name": "Fort Bragg/Camp Lejeune",
-		"lea_city": "Fort Bragg",
-		"lea_type": "O",
-		"lea_email": "ncddess.supt@am.dodea.edu",
-		"lea_superintendent": "Emily  Marsh",
-		"lea_website": "http://www.am.dodea.edu/bragg/"
-	}
-},
-{
-	"model": "county_info.District",
-	"fields": {
 		"lea_code": "270",
 		"lea_state": "North Carolina",
 		"lea_name": "Currituck County Schools",
@@ -491,32 +478,6 @@
 		"lea_email": "Pitre-Martinm@tcs.k12.nc.us",
 		"lea_superintendent": "Maria  Pitre-Martin",
 		"lea_website": "http://www.tcs.k12.nc.us/"
-	}
-},
-{
-	"model": "county_info.District",
-	"fields": {
-		"lea_code": "298",
-		"lea_state": "North Carolina",
-		"lea_name": "Deaf and Blind Schools",
-		"lea_city": "Raleigh",
-		"lea_type": "O",
-		"lea_email": "Barbria.Bacon@esdb.nc.gov",
-		"lea_superintendent": "Barbria  Bacon",
-		"lea_website": "http://www.ncoes.net/"
-	}
-},
-{
-	"model": "county_info.District",
-	"fields": {
-		"lea_code": "299",
-		"lea_state": "North Carolina",
-		"lea_name": "NC Virtual Public School",
-		"lea_city": "Raleigh",
-		"lea_type": "P",
-		"lea_email": "",
-		"lea_superintendent": "",
-		"lea_website": "http://www.ncvps.org/"
 	}
 },
 {
