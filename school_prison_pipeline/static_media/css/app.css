@@ -53,20 +53,9 @@ body {
 .container {
     padding:0;
 }
-#tool-tip {
-    border:1px solid black;
-    padding:5px;
-    z-index:50;
-    display:none;
-    width:80px;
-    height:50px;
-    font-family: latoregular;
-    position:absolute;
-    top:0;
-    left:0;
-}
+  
 #map {
-    height:570px;
+    height:630px;
     z-index:20;
 }
 #map-description {
@@ -88,7 +77,9 @@ p {
     width:70%;
     margin:20px 15% 0 15%;
 }
-
+select {
+    cursor:pointer;
+}
 svg {
     width:80%;
     margin-left:20%;
@@ -99,7 +90,7 @@ svg {
     z-index:10;
     position:relative;
     width:20%;
-    top:-320px;
+    top:-360px;
     
 }
     #map-selector .styled-select {
@@ -126,7 +117,7 @@ svg {
 #map-key {
     z-index:10;
     position:relative;
-    top:-260px;
+    top:-330px;
     width:20%;
 }
     #map-key ul {
@@ -164,6 +155,7 @@ svg {
         color:#fff;
         font-family:latolight;
         font-size:20px;
+        cursor:pointer;
 
     }
     #tabs .tab:first-child {
@@ -374,6 +366,37 @@ svg {
                 font-size:16px;
                 font-weight: normal;
             }
+.tipsy { 
+    font-size: 12px; 
+    position: absolute; 
+    padding: 5px; 
+    z-index: 100000; 
+    font-family: latoregular;
+}
+  .tipsy-inner { background-color: #000; color: #FFF; max-width: 200px; padding: 5px 8px 4px 8px; text-align: center; }
+
+  /* Rounded corners */
+  .tipsy-inner { border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+  
+  /* Uncomment for shadow */
+  /*.tipsy-inner { box-shadow: 0 0 5px #000000; -webkit-box-shadow: 0 0 5px #000000; -moz-box-shadow: 0 0 5px #000000; }*/
+  
+  .tipsy-arrow { position: absolute; width: 0; height: 0; line-height: 0; border: 5px dashed #000; }
+  
+  /* Rules to colour arrows */
+  .tipsy-arrow-n { border-bottom-color: #000; }
+  .tipsy-arrow-s { border-top-color: #000; }
+  .tipsy-arrow-e { border-left-color: #000; }
+  .tipsy-arrow-w { border-right-color: #000; }
+  
+    .tipsy-n .tipsy-arrow { top: 0px; left: 50%; margin-left: -5px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-nw .tipsy-arrow { top: 0; left: 10px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent;}
+    .tipsy-ne .tipsy-arrow { top: 0; right: 10px; border-bottom-style: solid; border-top: none;  border-left-color: transparent; border-right-color: transparent;}
+  .tipsy-s .tipsy-arrow { bottom: 0; left: 50%; margin-left: -5px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-sw .tipsy-arrow { bottom: 0; left: 10px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-se .tipsy-arrow { bottom: 0; right: 10px; border-top-style: solid; border-bottom: none; border-left-color: transparent; border-right-color: transparent; }
+  .tipsy-e .tipsy-arrow { right: 0; top: 50%; margin-top: -5px; border-left-style: solid; border-right: none; border-top-color: transparent; border-bottom-color: transparent; }
+  .tipsy-w .tipsy-arrow { left: 0; top: 50%; margin-top: -5px; border-right-style: solid; border-left: none; border-top-color: transparent; border-bottom-color: transparent; }
 
 @media screen and (min-width: 1200px) {
     #map {

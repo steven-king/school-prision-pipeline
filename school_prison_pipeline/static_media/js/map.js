@@ -1,5 +1,5 @@
 function lunchMap () {
-	$("#map-description").html("Percentage of students receiving either free or reduced lunch");
+	$("#map-description").html("Percentage who qualify for free or reduced lunch");
 	$("#key-1").html("0-20%");
 	$("#key-2").html("21-40%");
 	$("#key-3").html("41-60%");
@@ -90,6 +90,7 @@ function satMap () {
 		
 			var currDistrict= "#" + data[i].fields.district;
 			var currSat = data[i].fields.sat_average_score;
+			$(currDistrict).attr("title", currSat);
 
 			if (currSat <=800 ) {
 				$(currDistrict).attr('style', gray);
