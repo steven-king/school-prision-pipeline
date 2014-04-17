@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load humanize %}
-
+{% block head_info %}
+	<link href="{{ STATIC_URL }}css/app.css" rel="stylesheet">
+{% endblock %}
 {% block content %}
 <div id="map"class="row">
 	<div class="col-sm-12 col-md-12 col-lg-12">
@@ -1184,6 +1186,8 @@ $("#compare").on("click", function(event){
 	})
 
 </script>
+<script src="{{ STATIC_URL }}js/app.js"></script>
+<script src="{{ STATIC_URL }}js/dynamic_graphs.js"></script>
 <script src="{{ STATIC_URL }}js/map.js"></script>
 <script src="{{ STATIC_URL }}js/tipsy.js"></script>
 <script src="{{ STATIC_URL }}js/sat.js"></script>
