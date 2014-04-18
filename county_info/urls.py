@@ -8,4 +8,5 @@ urlpatterns = patterns('county_info.views',
 	url(r'^api/sat_scores$', 'sat_scores'),
 	url(r'^api/freelunch_rates$', 'freelunch_rates'),
 	url(r'^api/discipline_rates$', 'discipline_rates'),
+	url(r'^api/expenses$', 'expenses'),
 )
