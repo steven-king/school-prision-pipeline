@@ -70,6 +70,37 @@ class DisciplineRate(models.Model):
 		return U'%s (%s) - %s' %(self.district.lea_name, self.school_year, self.category)
 
 
+class DisciplineDemographics(models.Model):
+	district = models.ForeignKey('District', related_name="discipline_demographics")
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
+	total = models.IntegerField(max_length=6)
+	american_indian_female = models.IntegerField(max_length=6, null=True)
+	asian_female = models.IntegerField(max_length=6, null=True)
+	hispanic_female = models.IntegerField(max_length=6, null=True)  
+	black_female = models.IntegerField(max_length=6, null=True)
+	white_female = models.IntegerField(max_length=6, null=True)
+	multiracial_female = models.IntegerField(max_length=6, null=True)   
+	american_indian_male = models.IntegerField(max_length=6, null=True)
+	pacific_islander_male = models.IntegerField(max_length=6, null=True)
+	pacific_islander_female = models.IntegerField(max_length=6, null=True) 
+	asian_male = models.IntegerField(max_length=6, null=True) 
+	hispanic_male = models.IntegerField(max_length=6, null=True)
+	black_male = models.IntegerField(max_length=6, null=True)
+	white_male = models.IntegerField(max_length=6, null=True)
+	multiracial_male  = models.IntegerField(max_length=6, null=True)   
+	other_male = models.IntegerField(max_length=6, null=True)
+	other_female = models.IntegerField(max_length=6, null=True)
+	other = models.IntegerField(max_length=6, null=True)
+
+	class Meta(object):
+		verbose_name = "Discipline Demographics"
+		verbose_name_plural = "Discipline Demographics"
+		ordering = ('district__lea_name', '-school_year')
+
+	def __unicode__(self):
+		return U'%s (%s) - %s' %(self.district.lea_name, self.school_year, self.category)
+
+
 class Demographics(models.Model):
 	district = models.ForeignKey('District', related_name="demographics")
 	school_year = models.CharField(max_length=10, verbose_name="School Year")

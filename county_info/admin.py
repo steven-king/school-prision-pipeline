@@ -1,5 +1,5 @@
 from django.contrib import admin
-from county_info.models import District, Graduation, DisciplineRate, Demographics, Attendance, GradeLevel, SpecialCourses, FreeLunch, State, StateDemographics, StateGraduation, StateAttendance, StateGradeLevel, StateSpecialCourses, StateDiscipline
+from county_info.models import District, Graduation, DisciplineRate, Demographics, Attendance, GradeLevel, SpecialCourses, FreeLunch, State, StateDemographics, StateGraduation, StateAttendance, StateGradeLevel, StateSpecialCourses, StateDiscipline, DisciplineDemographics
 
 # Register your models here.
 class DistrictAdmin(admin.ModelAdmin):
@@ -21,6 +21,12 @@ class DisciplineRateAdmin(admin.ModelAdmin):
 	search_fields = ('district__lea_name', 'school_year')
 
 admin.site.register(DisciplineRate, DisciplineRateAdmin)
+
+class DisciplineDemographicsAdmin(admin.ModelAdmin):
+	list_display = ('district', 'school_year', 'total', 'white_male', 'white_female', 'black_male', 'black_female', 'hispanic_male', 'hispanic_female')
+	search_fields = ('district__lea_name', 'school_year')
+
+admin.site.register(DisciplineDemographics, DisciplineDemographicsAdmin)
 
 
 class DemographicsAdmin(admin.ModelAdmin):

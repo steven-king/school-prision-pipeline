@@ -4,8 +4,8 @@
     "school_year": "2011-2012",
     "district": "010",
     "total": 3227,
-    "american_indian_female": "< 5",
-    "asian_female": "< 5",
+    "american_indian_female": 2.5,
+    "asian_female": 2.5,
     "hispanic_female": 71,
     "black_female": 404,
     "white_female": 208,
@@ -15,8 +15,8 @@
     "hispanic_male": 403,
     "black_male": 994,
     "white_male": 1003,
-    "multracial_male": 89,
-    "other_male": "< 5"
+    "multiracial_male": 89,
+    "other_male": 2.5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -24,15 +24,15 @@
     "school_year": "2011-2012",
     "district": "020",
     "total": 409,
-    "hispanic_female": "< 5",
+    "hispanic_female": 2.5,
     "black_female": 5,
     "white_female": 78,
-    "multiracial_female": "< 5",
-    "asian_male": "< 5",
+    "multiracial_female": 2.5,
+    "asian_male": 2.5,
     "hispanic_male": 16,
     "black_male": 38,
     "white_male": 259,
-    "multiracial_male": 9,
+    "multiracial_male": 9
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -42,9 +42,9 @@
     "total": 164,
     "hispanic_female": 17,
     "white_female": 45,
-    "other": "< 5",
+    "other": 2.5,
     "hispanic_male": 19,
-    "white_male": 79,
+    "white_male": 79
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -52,13 +52,13 @@
     "school_year": "2011-2012",
     "district": "040",
     "total": 1719,
-    "asian_female": "< 5",
+    "asian_female": 2.5,
     "hispanic_female": 12,
     "black_female": 534,
     "white_female": 41,
-    "multiracial_female": "< 5",
+    "multiracial_female": 2.5,
     "american_indian_male": 8,
-    "asian_male": "< 5",
+    "asian_male": 2.5,
     "hispanic_male": 20,
     "black_male": 960,
     "white_male": 114,
@@ -70,13 +70,13 @@
     "school_year": "2011-2012",
     "district": "050",
     "total": 192,
-    "hispanice_female": "< 5",
+    "hispanic_female": 2.5,
     "white_female": 29,
-    "multiracial_female": "< 5",
-    "american_indian_male": "< 5",
-    "hispanice_male": 25,
+    "multiracial_female": 2.5,
+    "american_indian_male": 2.5,
+    "hispanic_male": 25,
     "white_male": 131,
-    "multiracial_male": "< 5",
+    "multiracial_male": 2.5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -86,9 +86,9 @@
     "total": 97,
     "white_female": 11,
     "hispanic_male": 5,
-    "black_male": "< 5",
+    "black_male": 2.5,
     "white_male": 77,
-    "multiracial_male": "< 5",
+    "multiracial_male": 2.5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -100,11 +100,11 @@
     "black_female": 319,
     "white_female": 59,
     "multiracial_female": 43,
-    "other": "< 5",
+    "other": 2.5,
     "hispanic_male": 101,
     "black_male": 802,
     "white_male": 465,
-    "multiracial_male": 55,
+    "multiracial_male": 55
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -118,7 +118,7 @@
     "hispanic_male": 9,
     "black_male": 638,
     "white_male": 26,
-    "other": "< 5"
+    "other": 2.5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -130,7 +130,7 @@
     "black_female": 284,
     "white_female": 100,
     "multiracial_female": 12,
-    "other": "< 5",
+    "other": 2.5,
     "american_indian_male": 6,
     "hispanic_male": 69,
     "black_male": 649,
@@ -141,7 +141,7 @@
 {"model": "county_info.DisciplineDemographics",
 "fields": {
     "school_year": "2011-2012",
-    "district": "Brunswick 100",
+    "district": "100",
     "total": 1332,
     "hispanic_female": 23,
     "black_female": 89,
@@ -158,21 +158,21 @@
 {"model": "county_info.DisciplineDemographics",
 "fields": {
     "school_year": "2011-2012",
-    "district": "Buncombe 110",
+    "district": "110",
     "total": 3350,
-    "american_indian_female": "< 5",
+    "american_indian_female": 2.5,
     "asian_female": 7,
     "hispanic_female": 48,
     "black_female": 163,
     "white_female": 517,
     "multiracial_female": 98,
-    "other_female": "< 5",
+    "other_female": 2.5,
     "american_indian_male": 19,
     "asian_male": 13,
     "hispanic_male": 192,
     "black_male": 413,
     "white_male": 1721,
-    "multiracial_male": 154,
+    "multiracial_male": 154
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -180,22 +180,22 @@
     "school_year": "2011-2012",
     "district": "111",
     "total": 910,
-    "american_indian_female": "< 5",
+    "american_indian_female": 2.5,
     "hispanic_female": 6,
     "black_female": 234,
     "white_female": 25,
     "multiracial_female": 19,
-    "american_indian_male": "< 5",
+    "american_indian_male": 2.5,
     "hispanic_male": 24,
     "black_male": 433,
     "white_male": 122,
-    "multiracial_male": 43,
+    "multiracial_male": 43
 }
 },
 {"model": "county_info.DisciplineDemographics",
 "fields": {
     "school_year": "2011-2012",
-    "district": "Burke 120",
+    "district": "120",
     "total": 1339,
     "hispanic_female": 15,
     "black_female": 32,
@@ -225,7 +225,7 @@
     "hispanic_male": 503,
     "black_male": 1204,
     "white_male": 1265,
-    "multiracial_male": 130,
+    "multiracial_male": 130
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -237,12 +237,12 @@
     "black_female": 86,
     "white_female": 64,
     "multiracial_female": 8,
-    "american_indian_male": "< 5",
-    "asian_male": "< 5",
+    "american_indian_male": 2.5,
+    "asian_male": 2.5,
     "hispanic_male": 139,
     "black_male": 264,
     "white_male": 241,
-    "multiracial_male": 44,
+    "multiracial_male": 44
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -250,17 +250,17 @@
     "school_year": "2011-2012",
     "district": "140",
     "total": 1109,
-    "american_indian_female": "< 5",
+    "american_indian_female": 2.5,
     "hispanic_female": 22,
     "black_female": 28,
     "white_female": 170,
     "multiracial_female": 18,
-    "american_indian_male": "< 5",
-    "asian_male": "< 5",
+    "american_indian_male": 2.5,
+    "asian_male": 2.5,
     "hispanic_male": 99,
     "black_male": 110,
     "white_male": 609,
-    "multiracial_male": 48,
+    "multiracial_male": 48
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -271,7 +271,7 @@
     "white_female": 16,
     "other": 3,
     "black_male": 10,
-    "white_male": 49,
+    "white_male": 49
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -279,8 +279,8 @@
     "school_year": "2011-2012",
     "district": "160",
     "total": 1207,
-    "american_indian_female": "< 5",
-    "asian_female": "< 5",
+    "american_indian_female": 2.5,
+    "asian_female": 2.5,
     "hispanic_female": 10,
     "black_female": 37,
     "white_female": 225,
@@ -289,7 +289,7 @@
     "hispanic_male": 35,
     "black_male": 99,
     "white_male": 696,
-    "multiracial_male": 63,
+    "multiracial_male": 63
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -304,7 +304,7 @@
     "hispanic_male": 9,
     "black_male": 250,    
     "white_male": 139,
-    "multiracial_male": 28,
+    "multiracial_male": 28
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -321,7 +321,7 @@
     "hispanic_male": 164,
     "black_male": 104,
     "white_male": 694,
-    "multiracial_male": 62,
+    "multiracial_male": 62
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -338,7 +338,7 @@
     "hispanic_male": 84,
     "black_male": 381,
     "white_male": 188,
-    "multiracial_male": 67,
+    "multiracial_male": 67
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -354,7 +354,7 @@
     "hispanic_male": 30,
     "black_male": 101,
     "white_male": 67,
-    "multiracial_male": 22,
+    "multiracial_male": 22
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -378,30 +378,30 @@
     "school_year": "2011-2012",
     "district": "200",
     "total": 281,
-    "american_indian_female": "< 5",
-    "black_female": "< 5",
+    "american_indian_female": 2.5,
+    "black_female": 2.5,
     "white_female": 50,
-    "multiracial_female": "< 5",
+    "multiracial_female": 2.5,
     "american_indian_male": 8,
-    "hispanic_male": "< 5",
+    "hispanic_male": 2.5,
     "black_male": 6,
     "white_male": 209,
-    "multiracial_male": "< 5",
+    "multiracial_male": 2.5
 }
 },
 {"model": "county_info.DisciplineDemographics",
 "fields": {
     "school_year": "2011-2012",
-    "district":210,
+    "district":"210",
     "total":200,
     "black_female": 38,
     "white_female": 15,
-    "multiracial_female": "<5",
-    "american_indian_male": "<5",
+    "multiracial_female": 2.5,
+    "american_indian_male": 2.5,
     "hispanic_male": 6,
     "black_male": 98,
     "white_male": 38,
-    "multiracial_male": "<5",
+    "multiracial_male": 2.5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -409,12 +409,12 @@
     "school_year": "2011-2012",
     "district": "220",
     "total": 46,
-    "asian_female": "< 5",
+    "asian_female": 2.5,
     "white_female": 8,
-    "multiracial_female": "< 5",
+    "multiracial_female": 2.5,
     "black_male": 8,
     "white_male": 25,
-    "multiracial_male": "< 5",
+    "multiracial_male": 2.5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -422,18 +422,18 @@
     "school_year": "2011-2012",
     "district": "230",
     "total": 3418,
-    "asian_female": "< 5",
+    "asian_female": 2.5,
     "hispanic_female": 32,
     "black_female": 479,
     "white_female": 437,
     "multiracial_female": 55,
-    "american_indian_male": "< 5",
-    "asian_male": "< 5",
+    "american_indian_male": 2.5,
+    "asian_male": 2.5,
     "hispanic_male": 82,
     "black_male": 867,
     "white_male": 1254,
     "multiracial_male": 207,
-    "other_male": "< 5",
+    "other_male": 2.5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -451,7 +451,7 @@
     "hispanic_male": 51,
     "black_male": 698,
     "white_male": 337,
-    "multiracial_male": 23,
+    "multiracial_male": 23
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -459,16 +459,16 @@
     "school_year": "2011-2012",
     "district": "241",
     "total": 839,
-    "american_indian_female": "< 5",
+    "american_indian_female": 2.5,
     "hispanic_female": 5,
     "black_female": 178,
     "white_female": 35,
-    "multiracial_female": "< 5",
+    "multiracial_female": 2.5,
     "american_indian_male": 13,
     "hispanic_male": 9,
     "black_male": 382,
     "white_male": 176,
-    "multiracial_male": 36,
+    "multiracial_male": 36
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -488,7 +488,7 @@
     "black_male": 1439,
     "white_male": 987,
     "multiracial_male": 95,
-    "other_male": 5,
+    "other_male": 5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -497,19 +497,19 @@
     "district": "260",
     "total": 11482,
     "american_indian_female": 68,
-    "asian_female": "< 5",
+    "asian_female": 2.5,
     "hispanic_female": 218,
     "black_female": 2373,
     "white_female": 413,
     "multiracial_female": 195,
-    "other_female": "< 5",
+    "other_female": 2.5,
     "american_indian_male": 177,
     "asian_male": 17,
     "hispanic_male": 518,
     "black_male": 5660,
     "white_male": 1415,
     "multiracial_male": 407,
-    "other_male": 14,
+    "other_male": 14
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -517,16 +517,16 @@
     "school_year": "2011-2012",
     "district": "270",
     "total": 518,
-    "asian_female": "< 5",
-    "hispanic_female": "< 5",
+    "asian_female": 2.5,
+    "hispanic_female": 2.5,
     "black_female": 8,
     "white_female": 80,
     "multiracial_female": 19,
-    "american_indian_male": "< 5",
+    "american_indian_male": 2.5,
     "hispanic_male": 18,
     "black_male": 31,
     "white_male": 293,
-    "multiracial_male": 63,
+    "multiracial_male": 63
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -541,7 +541,7 @@
     "hispanic_male": 25,
     "black_male": 9,
     "white_male": 221,
-    "multiracial_male": 6,
+    "multiracial_male": 6
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -559,7 +559,7 @@
     "hispanic_male": 80,
     "black_male": 69,
     "white_male": 1284,
-    "multiracial_male": 46,
+    "multiracial_male": 46
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -567,7 +567,7 @@
     "school_year": "2011-2012",
     "district": "291",
     "total": 1,
-    "other": 1,
+    "other": 1
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -585,7 +585,7 @@
     "black_male": 
     363,
     "white_male": 162,
-    "multiracial_male": 41,
+    "multiracial_male": 41
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -593,14 +593,14 @@
     "school_year": "2011-2012",
     "district": "300",
     "total": 317,
-    "hispanic_female": "< 5",
+    "hispanic_female": 2.5,
     "black_female": 8,
     "white_female": 45,
-    "multiracial_female": "< 5",
+    "multiracial_female": 2.5,
     "hispanic_male": 30,
     "black_male": 42,
     "white_male": 178,
-    "multiracial_male": 7,
+    "multiracial_male": 7
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -608,17 +608,17 @@
     "school_year": "2011-2012",
     "district": "310",
     "total": 2187,
-    "american_indian_female": "< 5",
+    "american_indian_female": 2.5,
     "hispanic_female": 175,
     "black_female": 286,
     "white_female": 76,
     "multiracial_female": 23,
     "american_indian_male": 20,
-    "asian_male": "< 5",
+    "asian_male": 2.5,
     "hispanic_male": 515,
     "black_male": 613,
     "white_male": 458,
-    "multiracial_male": 17,
+    "multiracial_male": 17
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -637,7 +637,7 @@
     "hispanic_male": 579,
     "black_male": 3185,
     "white_male": 262,
-    "multiracial_male": 109,
+    "multiracial_male": 109
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -653,7 +653,7 @@
     "hispanic_male": 59,
     "black_male": 1728,
     "white_male": 362,
-    "multiracial_male": 38,
+    "multiracial_male": 38
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -674,7 +674,7 @@
     "hispanic_male": 1357,
     "black_male": 4636,
     "white_male": 1380,
-    "multiracial_male": 298,
+    "multiracial_male": 298
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -686,12 +686,12 @@
     "black_female": 235,
     "white_female": 137,
     "multiracial_female": 21,
-    "american_indian_male": "< 5",
-    "asian_male": "< 5",
+    "american_indian_male": 2.5,
+    "asian_male": 2.5,
     "hispanic_male": 145,
     "black_male": 561,
     "white_male": 496,
-    "multiracial_male": 20,
+    "multiracial_male": 20
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -699,8 +699,8 @@
     "school_year": "2011-2012",
     "district": "360",
     "total": 6811,
-    "american_indian_female": "< 5",
-    "asian_female": "< 5",
+    "american_indian_female": 2.5,
+    "asian_female": 2.5,
     "hispanic_female": 141,
     "black_female": 935,
     "white_female": 789,
@@ -710,7 +710,7 @@
     "hispanic_male": 335,
     "black_male": 1826,
     "white_male": 2396,
-    "multiracial_male": 237,
+    "multiracial_male": 237
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -723,7 +723,7 @@
     "other": 4,
     "black_male": 101,
     "white_male": 69,
-    "multiracial_male": 6,
+    "multiracial_male": 6
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -731,10 +731,10 @@
     "school_year": "2011-2012",
     "district": "380",
     "total": 12,
-    "american_indian_female": "< 5",
-    "white_female": "< 5",
-    "american_indian_male": "< 5",
-    "white_male": 5,
+    "american_indian_female": 2.5,
+    "white_female": 2.5,
+    "american_indian_male": 2.5,
+    "white_male": 5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -742,14 +742,14 @@
     "school_year": "2011-2012",
     "district": "390",
     "total": 735,
-    "hispanic_female": "< 5",
+    "hispanic_female": 2.5,
     "black_female": 96,
     "white_female": 18,
-    "multiracial_female": "< 5",
+    "multiracial_female": 2.5,
     "hispanic_male": 31,
     "black_male": 396,
     "white_male": 171,
-    "multiracial_male": 17,
+    "multiracial_male": 17
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -764,7 +764,7 @@
     "hispanic_male": 141,
     "black_male": 621,
     "white_male": 190,
-    "multiracial_male": 11,
+    "multiracial_male": 11
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -778,15 +778,15 @@
     "black_female": 2128,
     "white_female": 305,
     "multiracial_female": 107,
-    "pacific_islander_female": "< 5",
+    "pacific_islander_female": 2.5,
     "american_indian_male": 44,
     "asian_male": 84,
     "hispanic_male": 481,
     "black_male": 4994,
     "white_male": 1378,
     "multiracial_male": 306,
-    "pacific_islander_male": "< 5",
-    "other_male": "< 5",
+    "pacific_islander_male": 2.5,
+    "other_male": 2.5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -804,7 +804,7 @@
     1368,
     "white_male": 77,
     "multiracial_male": 20,
-    "other_male": 8,
+    "other_male": 8
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -812,16 +812,16 @@
     "school_year": "2011-2012",
     "district": "421",
     "total": 804,
-    "american_indian_female": "< 5",
+    "american_indian_female": 2.5,
     "hispanic_female": 5,
     "black_female": 93,
     "white_female": 89,
-    "multiracial_female": "< 5",
-    "american_indian_male": "< 5",
+    "multiracial_female": 2.5,
+    "american_indian_male": 2.5,
     "hispanic_male": 11,
     "black_male": 216,
     "white_male": 371,
-    "multiracial_male": 13,
+    "multiracial_male": 13
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -830,11 +830,11 @@
     "district": "422",
     "total": 549,
     "black_female": 129,
-    "white_female": "< 5",
+    "white_female": 2.5,
     "hispanic_male":10,
     "black_male": 396,
     "white_male": 9,
-    "multiracial_male": "< 5",
+    "multiracial_male": 2.5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -853,7 +853,7 @@
     "black_male": 1212,
     "white_male": 817,
     "multiracial_male": 105,
-    "other_male": 5,
+    "other_male": 5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -870,7 +870,7 @@
     "hispanic_male": 39,
     "black_male": 18,
     "white_male": 534,
-    "multiracial_male": 21,
+    "multiracial_male": 21
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -878,16 +878,16 @@
     "school_year": "2011-2012",
     "district": "450",
     "total": 992,
-    "american_indian_female": "< 5",
+    "american_indian_female": 2.5,
     "hispanic_female": 27,
     "black_female": 31,
     "white_female": 127,
     "multiracial_female": 38,
-    "american_indian_male": "< 5",
+    "american_indian_male": 2.5,
     "hispanic_male": 104,
     "black_male": 79,
     "white_male": 521,
-    "multiracial_male": 60,
+    "multiracial_male": 60
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -895,14 +895,14 @@
     "school_year": "2011-2012",
     "district": "460",
     "total": 745,
-    "hispanic_female": "< 5",
+    "hispanic_female": 2.5,
     "black_female": 209,
     "white_female": 13,
-    "asian_male": "< 5",
+    "asian_male": 2.5,
     "hispanic_male": 6,
     "black_male": 440,
     "white_male": 68,
-    "multiracial_male": 6,
+    "multiracial_male": 6
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -911,18 +911,18 @@
     "district": "470",
     "total": 1915,
     "american_indian_female": 159,
-    "asian_female": "< 5",
+    "asian_female": 2.5,
     "hispanic_female": 55,
     "black_female": 316,
     "white_female": 40,
     "multiracial_female": 27,
-    "other_female": "< 5",
+    "other_female": 2.5,
     "american_indian_male": 221,
-    "asian_male": "< 5",
+    "asian_male": 2.5,
     "hispanic_male": 77,
     "black_male": 746,
     "white_male": 193,
-    "multiracial_male": 75,
+    "multiracial_male": 75
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -932,11 +932,11 @@
     "total": 98,
     "black_female": 19,
     "white_female": 7,
-    "multiracial_female": "< 5",
-    "hispanic_male": "< 5",
+    "multiracial_female": 2.5,
+    "hispanic_male": 2.5,
     "black_male": 40,
     "white_male": 12,
-    "multiracial_male": 16,
+    "multiracial_male": 16
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -944,19 +944,19 @@
     "school_year": "2011-2012",
     "district": "490",
     "total": 2807,
-    "american_indian_female": "< 5",
+    "american_indian_female": 2.5,
     "asian_female": 8,
     "hispanic_female": 52,
     "black_female": 373,
     "white_female": 281,
     "multiracial_female": 31,
-    "other_female": "< 5",
+    "other_female": 2.5,
     "american_indian_male": 9,
-    "asian_male": "< 5",
+    "asian_male": 2.5,
     "hispanic_male": 215,
     "black_male": 744,
     "white_male": 1042,
-    "multiracial_male": 46,
+    "multiracial_male": 46
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -967,12 +967,12 @@
     "hispanic_female": 11,
     "black_female": 57,
     "white_female": 38,
-    "american_indian_male": "< 5",
+    "american_indian_male": 2.5,
     "hispanic_male": 27,
     "black_male": 93,
     "white_male": 143,
     "multiracial_male": 16,
-    "other_male": "< 5",
+    "other_male": 2.5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -981,14 +981,14 @@
     "district": "500",
     "total": 359,
     "american_indian_female": 16,
-    "hispanic_female": "< 5",
+    "hispanic_female": 2.5,
     "white_female": 40,
-    "multiracial_female": "< 5",
+    "multiracial_female": 2.5,
     "american_indian_male": 27,
     "hispanic_male": 13,
     "black_male": 8,
     "white_male": 248,
-    "multiracial_male": "< 5",
+    "multiracial_male": 2.5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1006,7 +1006,7 @@
     "hispanic_male": 616,
     "black_male": 1248,
     "white_male": 1642,
-    "multiracial_male": 138,
+    "multiracial_male": 138
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1014,14 +1014,14 @@
     "school_year": "2011-2012",
     "district": "520",
     "total": 181,
-    "hispanic_female": "< 5",
+    "hispanic_female": 2.5,
     "black_female": 37,
     "white_female": 13,
-    "multiracial_female": "< 5",
-    "american_indian_male": "< 5",
-    "hispanic_male": "< 5",
+    "multiracial_female": 2.5,
+    "american_indian_male": 2.5,
+    "hispanic_male": 2.5,
     "black_male": 80,
-    "white_male": 44,
+    "white_male": 44
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1039,7 +1039,7 @@
     "hispanic_male": 249,
     "black_male": 587,
     "white_male": 431,
-    "multiracial_male": 46,
+    "multiracial_male": 46
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1056,7 +1056,7 @@
     "hispanic_male":136,
     "black_male": 1341,
     "white_male": 338,
-    "multiracial_male": 43,
+    "multiracial_male": 43
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1072,7 +1072,7 @@
     "hispanic_male": 113,
     "black_male": 145,
     "white_male": 865,
-    "multiracial_male": 56,
+    "multiracial_male": 56
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1080,16 +1080,16 @@
     "school_year": "2011-2012",
     "district": "560",
     "total": 278,
-    "american_indian_female": "< 5",
-    "hispanic_female": "< 5",
+    "american_indian_female": 2.5,
+    "hispanic_female": 2.5,
     "white_female": 32,
-    "multiracial_female": "< 5",
-    "american_indian_male": "< 5",
-    "asian_male": "< 5",
+    "multiracial_female": 2.5,
+    "american_indian_male": 2.5,
+    "asian_male": 2.5,
     "hispanic_male": 19,
-    "black_male": "< 5",
+    "black_male": 2.5,
     "white_male": 204,
-    "multiracial_male": 5,
+    "multiracial_male": 5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1101,7 +1101,7 @@
     "other": 1,
     "american_indian_male": 10,
     "hispanic_male":8,
-    "white_male": 215,
+    "white_male": 215
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1116,7 +1116,7 @@
     "hispanic_male": 17,
     "black_male": 860,
     "white_male": 184,
-    "multiracial_male": 45,
+    "multiracial_male": 45
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1124,17 +1124,17 @@
     "school_year": "2011-2012",
     "district": "590",
     "total": 650,
-    "american_indian_female": "< 5",
+    "american_indian_female": 2.5,
     "hispanic_female": 15,
-    "black_female": "< 5",
+    "black_female": 2.5,
     "white_female": 106,
     "multiracial_female": 11,
-    "american_indian_male": "< 5",
-    "asian_male": "< 5",
+    "american_indian_male": 2.5,
+    "asian_male": 2.5,
     "hispanic_male": 30,
     "black_male": 27,
     "white_male": 432,
-    "multiracial_male": 21,
+    "multiracial_male": 21
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1155,7 +1155,7 @@
     "black_male": 20090,
     "white_male": 2643,
     "multiracial_male": 457,
-    "other_male": 5,
+    "other_male": 5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1163,10 +1163,10 @@
     "school_year": "2011-2012",
     "district": "610",
     "total": 74,
-    "hispanic_female": "< 5",
+    "hispanic_female": 2.5,
     "white_female": 9,
-    "hispanic_male": "< 5",
-    "white_male": 62,
+    "hispanic_male": 2.5,
+    "white_male": 62
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1174,18 +1174,18 @@
     "school_year": "2011-2012",
     "district": "620",
     "total": 687,
-    "american_indian_female": "< 5",
-    "asian_female": "< 5",
+    "american_indian_female": 2.5,
+    "asian_female": 2.5,
     "hispanic_female": 23,
     "black_female": 71,
     "white_female": 69,
-    "multiracial_female": "< 5",
-    "american_indian_male": "< 5",
+    "multiracial_female": 2.5,
+    "american_indian_male": 2.5,
     "asian_male": 5,
     "hispanic_male": 106,
     "black_male": 217,
     "white_male": 182,
-    "multiracial_male": 8,
+    "multiracial_male": 8
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1194,17 +1194,17 @@
     "district": "630",
     "total": 1503,
     "american_indian_female": 5,
-    "asian_female": "< 5",
+    "asian_female": 2.5,
     "hispanic_female": 14,
     "black_female": 204,
     "white_female": 129,
     "multiracial_female": 9,
     "american_indian_male": 24,
-    "asian_male": "< 5",
+    "asian_male": 2.5,
     "hispanic_male": 79,
     "black_male": 544,
     "white_male": 471,
-    "multiracial_male": 21,
+    "multiracial_male": 21
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1213,20 +1213,20 @@
     "district": "640",
     "total": 5005,
     "american_indian_female": 10,
-    "asian_female": "< 5",
+    "asian_female": 2.5,
     "hispanic_female": 43,
     "black_female": 1327,
     "white_female": 127,
     "multiracial_female": 140,
-    "other_female": "< 5",
+    "other_female": 2.5,
     "american_indian_male": 16,
     "asian_male": 5,
     "hispanic_male": 135,
     "black_male": 2555,
     "white_male": 436,
     "multiracial_male": 206,
-    "other_male": "< 5",
-    "other": "< 5",
+    "other_male": 2.5,
+    "other": 2.5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1234,20 +1234,20 @@
     "school_year": "2011-2012",
     "district": "650",
     "total": 4618,
-    "american_indian_female": "< 5",
-    "asian_female": "< 5",
+    "american_indian_female": 2.5,
+    "asian_female": 2.5,
     "hispanic_female": 37,
     "black_female": 928,
     "white_female": 321,
     "multiracial_female": 64,
-    "other_female": "< 5",
+    "other_female": 2.5,
     "american_indian_male": 11,
     "asian_male": 8,
     "hispanic_male": 154,
     "black_male": 1872,
     "white_male": 1055,
     "multiracial_male": 153,
-    "other_male": 6,
+    "other_male": 6
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1255,15 +1255,15 @@
     "school_year": "2011-2012",
     "district": "660",
     "total": 983,
-    "american_indian_female": "< 5",
+    "american_indian_female": 2.5,
     "black_female": 282,
     "white_female": 20,
-    "multiracial_female": "< 5",
+    "multiracial_female": 2.5,
     "asian_male": 5,
     "hispanic_male": 10,
     "black_male": 610,
     "white_male": 47,
-    "multiracial_male": "< 5",
+    "multiracial_male": 2.5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1283,7 +1283,7 @@
     "black_male": 618,
     "white_male": 908,
     "multiracial_male": 122,
-    "other_male": 6,
+    "other_male": 6
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1295,12 +1295,12 @@
     "black_female": 38,
     "white_female": 51,
     "multiracial_female": 7,
-    "american_indian_male": "< 5",
-    "asian_male": "< 5",
+    "american_indian_male": 2.5,
+    "asian_male": 2.5,
     "hispanic_male":35,
     "black_male": 134,
     "white_male": 215,
-    "multiracial_male": 5,
+    "multiracial_male": 5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1317,7 +1317,7 @@
     "hispanic_male": 41,
     "black_male": 190,
     "white_male": 67,
-    "multiracial_male": 17,
+    "multiracial_male": 17
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1327,11 +1327,11 @@
     "total": 316,
     "black_female": 48,
     "white_female": 32,
-    "multiracial_female": "< 5",
-    "american_indian_male": "< 5",
+    "multiracial_female": 2.5,
+    "american_indian_male": 2.5,
     "black_male": 90,
     "white_male": 137,
-    "multiracial_male": 5,
+    "multiracial_male": 5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1339,17 +1339,17 @@
     "school_year": "2011-2012",
     "district": "700",
     "total": 2167,
-    "asian_female": "< 5",
+    "asian_female": 2.5,
     "hispanic_female": 15,
     "black_female": 374,
     "white_female": 127,
     "multiracial_female": 14,
-    "american_indian_male": "< 5",
-    "asian_male": "< 5",
+    "american_indian_male": 2.5,
+    "asian_male": 2.5,
     "hispanic_male": 38,
     "black_male": 989,
     "white_male": 556,
-    "multiracial_male": 47,
+    "multiracial_male": 47
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1357,18 +1357,18 @@
     "school_year": "2011-2012",
     "district": "710",
     "total": 1026,
-    "american_indian_female": "< 5",
+    "american_indian_female": 2.5,
     "hispanic_female": 9,
     "black_female": 97,
     "white_female": 158,
     "multiracial_female": 9,
-    "american_indian_male": "< 5",
-    "asian_male": "< 5",
+    "american_indian_male": 2.5,
+    "asian_male": 2.5,
     "hispanic_male":46,
     "black_male": 251,
     "white_male": 429,
     "multiracial_male": 18,
-    "other_male": "< 5",
+    "other_male": 2.5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1376,13 +1376,13 @@
     "school_year": "2011-2012",
     "district": "720",
     "total": 160,
-    "hispanic_female": "< 5",
+    "hispanic_female": 2.5,
     "black_female": 18,
     "white_female": 14,
-    "hispanic_male":"< 5",
+    "hispanic_male":2.5,
     "black_male": 59,
     "white_male": 62,
-    "multiracial_male": "< 5",
+    "multiracial_male": 2.5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1390,18 +1390,18 @@
     "school_year": "2011-2012",
     "district": "730",
     "total": 1291,
-    "american_indian_female": "< 5",
-    "asian_female": "< 5",
+    "american_indian_female": 2.5,
+    "asian_female": 2.5,
     "hispanic_female": 17,
     "black_female": 225,
     "white_female": 117,
     "multiracial_female": 27,
-    "american_indian_male": "< 5",
-    "asian_male": "< 5",
+    "american_indian_male": 2.5,
+    "asian_male": 2.5,
     "hispanic_male": 61,
     "black_male": 510,
     "white_male": 294,
-    "multiracial_male": 35,
+    "multiracial_male": 35
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1420,7 +1420,7 @@
     "hispanic_male": 312,
     "black_male": 4388,
     "white_male": 829,
-    "multiracial_male": 127,
+    "multiracial_male": 127
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1428,15 +1428,15 @@
     "school_year": "2011-2012",
     "district": "750",
     "total": 97,
-    "american_indian_female": "< 5",
-    "hispanic_female": "< 5",
-    "black_female": "< 5",
+    "american_indian_female": 2.5,
+    "hispanic_female": 2.5,
+    "black_female": 2.5,
     "white_female": 19,
-    "multiracial_female": "< 5",
-    "hispanic_male": "< 5",
-    "black_male": "< 5",
+    "multiracial_female": 2.5,
+    "hispanic_male": 2.5,
+    "black_male": 2.5,
     "white_male": 59,
-    "multiracial_male": 5,
+    "multiracial_male": 5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1453,7 +1453,7 @@
     "hispanic_male": 87,
     "black_male": 76,
     "white_male": 544,
-    "multiracial_male": 18,
+    "multiracial_male": 18
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1468,7 +1468,7 @@
     "hispanic_male":56,
     "black_male": 105,
     "white_male": 106,
-    "multiracial_male": 15,
+    "multiracial_male": 15
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1487,7 +1487,7 @@
     "hispanic_male": 55,
     "black_male": 962,
     "white_male": 432,
-    "multiracial_male": 36,
+    "multiracial_male": 36
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1507,7 +1507,7 @@
     "hispanic_male": 241,
     "black_male": 2315,
     "white_male": 676,
-    "multiracial_male": 138,
+    "multiracial_male": 138
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1515,18 +1515,18 @@
     "school_year": "2011-2012",
     "district": "790",
     "total": 2912,
-    "american_indian_female": "< 5",
+    "american_indian_female": 2.5,
     "hispanic_female": 45,
     "black_female": 259,
     "white_female": 333,
     "multiracial_female": 48,
-    "other_female": "< 5",
+    "other_female": 2.5,
     "american_indian_male": 9,
-    "asian_male": "< 5",
+    "asian_male": 2.5,
     "hispanic_male": 159,
     "black_male": 788,
     "white_male": 1134,
-    "multiracial_male": 133,
+    "multiracial_male": 133
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1544,7 +1544,7 @@
     "hispanic_male": 236,
     "black_male": 1337,
     "white_male": 1721,
-    "multiracial_male": 100,
+    "multiracial_male": 100
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1552,8 +1552,8 @@
     "school_year": "2011-2012",
     "district": "810",
     "total": 1470,
-    "american_indian_female": "< 5",
-    "asian_female": "< 5",
+    "american_indian_female": 2.5,
+    "asian_female": 2.5,
     "hispanic_female": 8,
     "black_female": 106,
     "white_female": 199,
@@ -1562,7 +1562,7 @@
     "hispanic_male": 70,
     "black_male": 273,
     "white_male": 691,
-    "multiracial_male": 93,
+    "multiracial_male": 93
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1579,7 +1579,7 @@
     "hispanic_male":311,
     "black_male": 483,
     "white_male": 401,
-    "multiracial_male": 59,
+    "multiracial_male": 59
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1587,18 +1587,18 @@
     "school_year": "2011-2012",
     "district": "821",
     "total": 242,
-    "american_indian_female": "< 5",
-    "asian_female": "< 5",
-    "hispanic_female": "< 5",
+    "american_indian_female": 2.5,
+    "asian_female": 2.5,
+    "hispanic_female": 2.5,
     "black_female": 29,
     "white_female": 7,
-    "multiracial_female": "< 5",
-    "american_indian_male": "< 5",
-    "asian_male": "< 5",
+    "multiracial_female": 2.5,
+    "american_indian_male": 2.5,
+    "asian_male": 2.5,
     "hispanic_male": 45,
     "black_male": 121,
     "white_male": 17,
-    "multiracial_male": 12,
+    "multiracial_male": 12
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1616,7 +1616,7 @@
     "hispanic_male": 11,
     "black_male": 908,
     "white_male": 180,
-    "multiracial_male": 38,
+    "multiracial_male": 38
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1634,7 +1634,7 @@
     "hispanic_male": 86,
     "black_male": 489,
     "white_male": 1169,
-    "multiracial_male": 42,
+    "multiracial_male": 42
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1645,14 +1645,14 @@
     "hispanic_female": 5,
     "black_female": 7,
     "white_female": 128,
-    "multiracial_female": "< 5",
+    "multiracial_female": 2.5,
     "american_indian_male": 7,
-    "asian_male": "< 5",
+    "asian_male": 2.5,
     "hispanic_male": 28,
     "black_male": 56,
     "white_male": 447,
     "multiracial_male": 33,
-    "other_male": "< 5",
+    "other_male": 2.5
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1663,12 +1663,12 @@
     "hispanic_female": 10,
     "black_female": 7,
     "white_female": 99,
-    "multiracial_female": "< 5",
-    "asian_male": "< 5",
+    "multiracial_female": 2.5,
+    "asian_male": 2.5,
     "hispanic_male": 85,
     "black_male": 38,
     "white_male": 411,
-    "multiracial_male": 19,
+    "multiracial_male": 19
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1676,11 +1676,11 @@
     "school_year": "2011-2012",
     "district": "861",
     "total": 28,
-    "white_female": "< 5",
-    "multiracial_female": "< 5",
-    "hispanic_male": "< 5",
+    "white_female": 2.5,
+    "multiracial_female": 2.5,
+    "hispanic_male": 2.5,
     "black_male": 6,
-    "white_male": 17,
+    "white_male": 17
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1695,7 +1695,7 @@
     "hispanic_male":7,
     "black_male": 24,
     "white_male": 37,
-    "multiracial_male": 10,
+    "multiracial_male": 10
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1707,7 +1707,7 @@
     "white_female": 15,
     "other": 4,
     "american_indian_male": 31,
-    "white_male": 36,
+    "white_male": 36
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1715,15 +1715,15 @@
     "school_year": "2011-2012",
     "district": "880",
     "total": 334,
-    "asian_female": "< 5",
-    "hispanic_female": "< 5",
-    "black_female": "< 5",
+    "asian_female": 2.5,
+    "hispanic_female": 2.5,
+    "black_female": 2.5,
     "white_female": 33,
     "multiracial_female": 12,
     "hispanic_male": 23,
     "black_male": 50,
     "white_male": 182,
-    "multiracial_male": 27,
+    "multiracial_male": 27
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1733,12 +1733,12 @@
     "total": 116,
     "hispanic_female": 5,
     "black_female": 14,
-    "white_female": "< 5",
-    "asian_male": "< 5",
+    "white_female": 2.5,
+    "asian_male": 2.5,
     "hispanic_male": 5,
     "black_male": 45,
     "white_male": 35,
-    "multiracial_male": 7,
+    "multiracial_male": 7
 }
 },
 {"model": "county_info.DisciplineDemographics",
@@ -1746,19 +1746,19 @@
     "school_year": "2011-2012",
     "district": "900",
     "total": 5522,
-    "american_indian_female": "< 5",
-    "asian_female": "< 5",
+    "american_indian_female": 2.5,
+    "asian_female": 2.5,
     "hispanic_female": 248,
     "black_female": 584,
     "white_female":452,
     "multiracial_female": 29,
-    "other_female": "< 5",
+    "other_female": 2.5,
     "american_indian_male": 11,
     "asian_male": 16,
     "hispanic_male": 663,
     "black_male": 1589,
     "white_male": 1830,
-    "multiracial_male": 92,
+    "multiracial_male": 92
 }
 	}
 ]
