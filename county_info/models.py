@@ -57,16 +57,9 @@ class DisciplineRate(models.Model):
 
 	def calculate_composite_rate(self):
 		if self.short_suspensions:
-			short_suspensions = self.short_suspensions
-			if self.long_suspensions:
-				long_suspensions = self.long_suspensions
-				suspensions = short_suspensions + long_suspensions
-				self.composite_rate = suspensions
-				self.save()
-			else:
-				suspensions = short_suspensions
-				self.composite_rate = suspensions
-				self.save()
+			discipline_sum = self.short_suspensions + self.long_suspensions + self.expulsions
+			self.composite_rate = discipline_sum
+			self.save()
 
 	class Meta(object):
 		verbose_name = "Discipline Rates"
