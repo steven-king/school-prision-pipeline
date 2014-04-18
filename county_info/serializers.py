@@ -9,3 +9,10 @@ class GraduationSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Graduation
 		fields = ('district', 'school_year', 'graduation_rate')
+
+
+class SatScoreSerializer(serializers.ModelSerializer):
+
+	class Meta:
+		model = Demographics
+		fields = ('district', 'school_year', 'sat_average_score')

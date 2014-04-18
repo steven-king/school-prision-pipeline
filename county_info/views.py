@@ -6,7 +6,7 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 
 from county_info.models import District, Graduation, DisciplineRate, Demographics, Attendance, GradeLevel, SpecialCourses, FreeLunch, State, StateDemographics, StateGraduation, StateAttendance, StateGradeLevel, StateSpecialCourses, StateDiscipline
-from county_info.serializers import GraduationSerializer
+from county_info.serializers import GraduationSerializer, SatScoreSerializer
 
 
 class JSONResponse(HttpResponse):
@@ -48,6 +48,13 @@ def graduation_rates(request):
 	if request.method == 'GET':
 		graduation_rates = Graduation.objects.filter(school_year='2012-2013')
 		serializer = GraduationSerializer(graduation_rates, many=True)
+		return JSONResponse(serializer.data)
+
+@csrf_exempt
+def sat_scores(request):
+	if request.method == 'GET':
+		sat_scores = Demographics.objects.filter(school_year='2012-2013')
+		serializer = SatScoreSerializer(sat_scores, many=True)
 		return JSONResponse(serializer.data)
 
 
