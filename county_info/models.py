@@ -53,6 +53,20 @@ class DisciplineRate(models.Model):
 	long_suspensions = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")
 	expulsions = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")
 	crime = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")
+	composite_rate = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")
+
+	def calculate_composite_rate(self):
+		if self.short_suspensions:
+			short_suspensions = self.short_suspensions
+			if self.long_suspensions:
+				long_suspensions = self.long_suspensions
+				suspensions = short_suspensions + long_suspensions
+				self.composite_rate = suspensions
+				self.save()
+			else:
+				suspensions = short_suspensions
+				self.composite_rate = suspensions
+				self.save()
 
 	class Meta(object):
 		verbose_name = "Discipline Rates"

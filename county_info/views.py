@@ -69,6 +69,8 @@ def freelunch_rates(request):
 def discipline_rates(request):
 	if request.method == 'GET':
 		discipline_rates = DisciplineRate.objects.filter(school_year='2012-2013')
+		for discipline_rate in discipline_rates:
+			discipline_rate.calculate_composite_rate()
 		serializer = DisciplineRateSerializer(discipline_rates, many=True)
 		return JSONResponse(serializer.data)
 
