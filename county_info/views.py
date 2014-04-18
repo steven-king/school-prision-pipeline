@@ -1,6 +1,22 @@
-from county_info.models import District, Graduation, DisciplineRate, Demographics, Attendance, GradeLevel, SpecialCourses, FreeLunch, State, StateDemographics, StateGraduation, StateAttendance, StateGradeLevel, StateSpecialCourses, StateDiscipline
 from django.shortcuts import render, get_object_or_404, redirect, render_to_response
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
+from rest_framework.renderers import JSONRenderer
+from rest_framework.parsers import JSONParser
+
+from county_info.models import District, Graduation, DisciplineRate, Demographics, Attendance, GradeLevel, SpecialCourses, FreeLunch, State, StateDemographics, StateGraduation, StateAttendance, StateGradeLevel, StateSpecialCourses, StateDiscipline
+from county_info.serializers import GraduationSerializer
+
+
+class JSONResponse(HttpResponse):
+    """
+    An HttpResponse that renders its content into JSON.
+    """
+    def __init__(self, data, **kwargs):
+        content = JSONRenderer().render(data)
+        kwargs['content_type'] = 'application/json'
+        super(JSONResponse, self).__init__(content, **kwargs)
 
 
 # Create your views here.
@@ -20,7 +36,22 @@ def home(request):
 	
 	return render(request, "county_info/home.html", context)
 
+
 def mobile(request):
 	context = {
 	}
 	return render(request, "county_info/mobile.html", context)
+
+
+@csrf_exempt
+def graduation_rates(request):
+	if request.method == 'GET':
+		graduation_rates = Graduation.objects.filter(school_year='2012-2013')
+		serializer = GraduationSerializer(graduation_rates, many=True)
+		return JSONResponse(serializer.data)
+
+
+
+
+
+

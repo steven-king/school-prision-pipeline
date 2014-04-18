@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-#from settings_secret import *
+from settings_secret import *
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admindocs',
     'django.contrib.humanize',
+    'rest_framework',
     'county_info',
 )
 
