@@ -29,3 +29,8 @@ class ExpensesSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Demographics
 		fields = ('district', 'school_year', 'expenses_per_pupil')
+
+class DistrictSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = District
+		fields = ('lea_name', 'lea_code')

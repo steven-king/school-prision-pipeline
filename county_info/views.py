@@ -6,7 +6,7 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 
 from county_info.models import District, Graduation, DisciplineRate, Demographics, Attendance, GradeLevel, SpecialCourses, FreeLunch, State, StateDemographics, StateGraduation, StateAttendance, StateGradeLevel, StateSpecialCourses, StateDiscipline
-from county_info.serializers import GraduationSerializer, SatScoreSerializer, FreeLunchSerializer, DisciplineRateSerializer, ExpensesSerializer
+from county_info.serializers import GraduationSerializer, SatScoreSerializer, FreeLunchSerializer, DisciplineRateSerializer, ExpensesSerializer, DistrictSerializer
 
 
 class JSONResponse(HttpResponse):
@@ -81,6 +81,19 @@ def expenses(request):
 		serializer = ExpensesSerializer(sat_scores, many=True)
 		return JSONResponse(serializer.data)
 
+@csrf_exempt
+def district_detail(request, pk):
+    """
+    Retrieve, update or delete a code district.
+    """
+    try:
+        district = District.objects.get(pk=pk)
+    except District.DoesNotExist:
+        return HttpResponse(status=404)
+
+    if request.method == 'GET':
+        serializer = DistrictSerializer(district)
+        return JSONResponse(serializer.data)
 
 
 

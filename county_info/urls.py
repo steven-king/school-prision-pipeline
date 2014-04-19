@@ -9,4 +9,5 @@ urlpatterns = patterns('county_info.views',
 	url(r'^api/freelunch_rates$', 'freelunch_rates'),
 	url(r'^api/discipline_rates$', 'discipline_rates'),
 	url(r'^api/expenses$', 'expenses'),
+	url(r'^api/districts/(?P<pk>[0-9]+)/$', 'district_detail'),
 )
