@@ -11098,25 +11098,6 @@
 {
 	"model": "county_info.Demographics",
 	"fields": {		
-    	"district": "092",
-    	"school_year": "2012-2013",
-    	"sat_participation": null,
-    	"sat_average_score": null,
-    	"expenses_per_pupil": null,
-    	"percent_native_american": null,
-    	"percent_asian": null,
-    	"percent_black": null,
-    	"percent_hispanic": null,
-    	"percent_multiracial": null,
-    	"percent_white": null,
-    	"percent_female": null,
-    	"percent_male": null,
-    	"percent_pacific_islander": null
-    }
-},
-{
-	"model": "county_info.Demographics",
-	"fields": {		
     	"district": "100",
     	"school_year": "2012-2013",
     	"sat_participation": 0.453,
