@@ -25040,19 +25040,6 @@
 {
 	"model": "county_info.DisciplineRate",
 	"fields": {
-		"district": "298",
-		"school_year": "2011-2012",
-		"category": "A",
-		"school_improvement_percent": 0,
-		"short_suspensions": 0,
-		"long_suspensions": 0,
-		"expulsions": 0,
-		"crime": 0
-	}
-},
-{
-	"model": "county_info.DisciplineRate",
-	"fields": {
 		"district": "300",
 		"school_year": "2011-2012",
 		"category": "E",
@@ -30833,19 +30820,6 @@
 		"long_suspensions": 0,
 		"expulsions": 0,
 		"crime": 0
-	}
-},
-{
-	"model": "county_info.DisciplineRate",
-	"fields": {
-		"district": "298",
-		"school_year": "2012-2013",
-		"category": "A",
-		"school_improvement_percent": 0,
-		"short_suspensions": null,
-		"long_suspensions": null,
-		"expulsions": null,
-		"crime": null
 	}
 },
 {
