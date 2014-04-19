@@ -46,16 +46,16 @@
     background-color: #88765D;
 }
 .orange5 {
-    background-color: #612E19;
+    background-color: #632D1D;
 }
 .orange4 {
-    background-color: #914525;
+    background-color: #99472C;
 }
-.orange3 {
-    background-color: #B2552E;
+.orange2 {
+    background-color: #DA835A;
 }
 .orange1 {
-    background-color: #FF7A42;
+    background-color: #E4A482;
 }
 
 body {
@@ -75,7 +75,7 @@ body {
     margin-bottom: 15px
 }
 h1 {
-	font-family:roboto_slabregular;
+    font-family:roboto_slabregular;
     text-align: center;
     font-size:56px;
 }
@@ -225,30 +225,19 @@ svg {
             font-family:latolight;
             
         }
-            #profile-list li:first-child .left {
-                
-            }
-            #profile-list li:first-child .middle {
+            #profile-list li:first-child .middle, #profile-list li:first-child .right {
                 color:#000;
                 font-size:30px;
             }
-            #profile-list li:first-child .right {
-                color:#000;
-                font-size:30px;
+            #profile-list li:nth-child(4) .left {
+                padding-top:10px;
             }
-
-        #profile-list li:nth-child(3) .left {
-            padding-top:10px;
-        }
-        #profile-list li:nth-child(6) {
+        #profile-list li:nth-child(7) {
             height:90px;
         }
-        #profile-list li:nth-child(6) .middle, #profile-list li:nth-child(6) .right {
-            padding-top: 12px
-        }
-        #profile-list li:nth-child(7) .middle, #profile-list li:nth-child(7) .right {
-            padding-top: 20px;
-        }
+            #profile-list li:nth-child(7) .middle, #profile-list li:nth-child(7) .right, #profile-list li:last-child .middle, #profile-list li:last-child .right {
+                padding-top: 12px;
+            }
 
         #profile-list li:last-child {
             height:110px;
@@ -379,7 +368,7 @@ svg {
                 font-weight: normal;
             }
 .tipsy { 
-    font-size: 12px; 
+    font-size: 14px; 
     position: absolute; 
     padding: 5px; 
     z-index: 100000; 
@@ -420,6 +409,16 @@ svg {
     #map-key {
         top:-280px;
     }
+        #profile-list li:nth-child(2) .left {
+            padding-top: 12px;
+        }
+    #profile-list li:nth-child(7) {
+        height:65px;
+    }
+        #profile-list li:nth-child(7) .middle, #profile-list li:nth-child(7) .right {
+            padding-top: 0px;
+        }
+
     #compare-section ul li {
         height:50px;
     }
