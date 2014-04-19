@@ -1663,17 +1663,6 @@
 {
 	"model": "county_info.FreeLunch",
 	"fields": {
-		"district": "298",
-		"adm":199,
-		"reduced_applications": 0,
-		"free_applications": 0,
-		"percent_needy": 0.000,
-		"school_year": "2011-2012"
-	}
-},
-{
-	"model": "county_info.FreeLunch",
-	"fields": {
 		"district": "300",
 		"adm": 6423,
 		"reduced_applications": 330,
