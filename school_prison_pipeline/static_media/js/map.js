@@ -17,19 +17,19 @@ function lunchMap () {
 //		$("#currDistrict").attr("title", currName+ ": "+readable);
 
 		if (currLunch <=0.2 ) {
-			$(currDistrict).attr('style', gray);
+			$(currDistrict).attr('style', "fill:#FF7A42");
 		}
 		else if (currLunch <=0.4 ) {
-			$(currDistrict).attr('style', brown);
+			$(currDistrict).attr('style', "fill:#D16436");
 		}
 		else if (currLunch <=0.6 ) {
-			$(currDistrict).attr('style', blue);
+			$(currDistrict).attr('style', "fill:#B2552E");
 		}
 		else if (currLunch <=0.8 ) {
-			$(currDistrict).attr('style', yellow);
+			$(currDistrict).attr('style', "fill:#914525");
 		}
 		else if (currLunch <=1 ) {
-			$(currDistrict).attr('style', orange);
+			$(currDistrict).attr('style', "fill:#612E19");
 		}
 
 	}
