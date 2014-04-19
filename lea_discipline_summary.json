@@ -19346,19 +19346,6 @@
 {
 	"model": "county_info.DisciplineRate",
 	"fields": {
-		"district": "298",
-		"school_year": "2010-2011",
-		"category": "A",
-		"school_improvement_percent": 0,
-		"short_suspensions": null,
-		"long_suspensions": null,
-		"expulsions": null,
-		"crime": null
-	}
-},
-{
-	"model": "county_info.DisciplineRate",
-	"fields": {
 		"district": "300",
 		"school_year": "2010-2011",
 		"category": "E",
