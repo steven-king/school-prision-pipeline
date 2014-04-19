@@ -92,14 +92,14 @@ STATICFILES_DIRS = (
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'school_prison_pipeline/templates'),
-# )
+)
 
 
 
 
 
 
-# DATABASES = {}
+DATABASES = {}
 
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
