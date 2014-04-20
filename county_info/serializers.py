@@ -1,7 +1,7 @@
 from django.forms import widgets
 from rest_framework import serializers
 
-from county_info.models import District, Graduation, DisciplineRate, Demographics, Attendance, GradeLevel, SpecialCourses, FreeLunch, State, StateDemographics, StateGraduation, StateAttendance, StateGradeLevel, StateSpecialCourses, StateDiscipline
+from county_info.models import District, Graduation, DisciplineRate, Demographics, Attendance, GradeLevel, SpecialCourses, FreeLunch, State, StateDemographics, StateGraduation, StateAttendance, StateGradeLevel, StateSpecialCourses, StateDiscipline, DisciplineDemographics
 
 
 class GraduationSerializer(serializers.ModelSerializer):
@@ -49,15 +49,21 @@ class DemographicsDetailSerializer(serializers.ModelSerializer):
 		model = Demographics
 		fields = ('school_year', 'expenses_per_pupil', 'sat_participation', 'sat_average_score', 'percent_native_american','percent_asian', 'percent_black', 'percent_hispanic', 'percent_white', 'percent_multiracial', 'percent_pacific_islander')
 
+class DisciplineDemographicsSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = DisciplineDemographics
+		fields = ('total', 'white_male', 'white_female', 'black_male', 'black_female', 'hispanic_male', 'hispanic_female', 'multiracial_male', 'multiracial_female', 'asian_male', 'asian_female', 'pacific_islander_male', 'pacific_islander_female', 'other_male', 'other_female', 'other')
+
 class DistrictSerializer(serializers.ModelSerializer):
 	graduation_rates = GraduationDetailSerializer(many=True)
 	demographics = DemographicsDetailSerializer(many=True)
 	discipline_rates = DisciplineRateDetailSerializer(many=True)
 	freelunch_rates = FreeLunchDetailSerializer(many=True)
+	discipline_demographics = DisciplineDemographicsSerializer(many=True)
 
 	class Meta:
 		model = District
-		fields = ('lea_name', 'lea_code', 'graduation_rates', 'demographics', 'discipline_rates', 'freelunch_rates')
+		fields = ('lea_name', 'lea_code', 'graduation_rates', 'demographics', 'discipline_rates', 'freelunch_rates', 'discipline_demographics')
 
 
 
