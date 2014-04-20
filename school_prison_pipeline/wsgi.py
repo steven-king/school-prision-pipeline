@@ -13,7 +13,7 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "school_prison_pipeline.settings
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
 
-from django.core.wsgi import get_wsgi_application
-from dj_static import Cling
+# from django.core.wsgi import get_wsgi_application
+# from dj_static import Cling
 
-application = Cling(get_wsgi_application())
+# application = Cling(get_wsgi_application())
