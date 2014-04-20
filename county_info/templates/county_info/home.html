@@ -696,7 +696,7 @@
 				</li>
 			</ul>
 			<div id="demographics">
-				<div class="pie" id="district-demographics">
+				<div class="pie" id="district-demographics" style="width:35%; padding-right:5%">
 				</div>
 				<div id="district-discipline">
 					<h4>Discipline by Demographic</h4>
@@ -707,9 +707,9 @@
 					<div id="d-3" rel='tipsy' class="bar yellow transparent" title=""></div>
 					<div id="d-4" rel='tipsy' class="bar orange transparent" title=""></div>
 					<div id="d-5" rel='tipsy' class="bar orange5 transparent" title=""></div>
-					<p>* margin of error is 4 incidents</p>
+					<p>Margin of error = 4 incidents</p>
 				</div>
-				<div class="pie" id="state-demographics">
+				<div class="pie" id="state-demographics" style="padding-left:5%; width:35%">
 				</div>
 			</div>
 		</div>
@@ -1153,7 +1153,7 @@
 {% endblock %}
 
 {% block javascript %}
-
+<script src="http://code.highcharts.com/highcharts.js"></script>
 <script>
 
 $( document ).ready(function() {
@@ -1179,9 +1179,88 @@ $( document ).ready(function() {
 	 });
 
 	demoDisciplineGraph(orange.discipline_demographic);
+
+	$(function () {
+		$('#district-demographics').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+	            plotBorderWidth: null,
+	            plotShadow: false
+            },
+ 	        tooltip: {
+     	    	pointFormat: '{series.data.name}: <b>{point.percentage:.1f}%</b>'
+ 	        },
+        	plotOptions: {
+             	pie: {
+                	allowPointSelect: true,
+                	cursor: 'pointer',
+                 	dataLabels: {
+                    	enabled: false,
+                    	color: '#000000',
+                    	connectorColor: '#000000',
+ 	                  	format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                	}
+ 	         	}
+	       	},
+	       	title: {
+			    text: districts_name[3] + ' Demographics<br>in 2012-2013'
+			},
+        	series: [{
+            	type: 'pie',
+            	name: 'Student Demographics in 2012-2013',
+            	data: [
+            {name: "Native American", y: orange.demographic.percent_native_american*100, color: '#C19438'},
+        	{name: "Asian", y: orange.demographic.percent_asian*100, color: '#004E79'},
+            {name: "Black", y: orange.demographic.percent_black*100, color: '#D16436'},
+            {name: "Hispanic",    y: orange.demographic.percent_hispanic*100, color: '#BDAA91'},
+            {name: "White",     y: orange.demographic.percent_white*100, color: '#88765D'},
+            {name: "Pacific Islander",   y: orange.demographic.percent_pacific_islander*100, color: '#CE7352'}
+			    ]
+        	}]
+    	});
+   	});
+   	$(function () {
+		$('#state-demographics').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+	            plotBorderWidth: null,
+	            plotShadow: false
+            },
+ 	        tooltip: {
+     	    	pointFormat: '{series.data.name}: <b>{point.percentage:.1f}%</b>'
+ 	        },
+        	plotOptions: {
+             	pie: {
+                	allowPointSelect: true,
+                	cursor: 'pointer',
+                 	dataLabels: {
+                    	enabled: false,
+                    	color: '#000000',
+                    	connectorColor: '#000000',
+ 	                  	format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                	}
+ 	         	}
+	       	},
+	       	title: {
+			    text: 'North Carolina Demographics<br>in 2012-2013'
+			},
+        	series: [{
+            	type: 'pie',
+            	name: 'North Carolina Demographics in 2012-2013',
+            	data: [
+            {name: "Native American", y: orange.demographic.percent_native_american*100, color: '#C19438'},
+        	{name: "Asian", y: orange.demographic.percent_asian*100, color: '#004E79'},
+            {name: "Black", y: orange.demographic.percent_black*100, color: '#D16436'},
+            {name: "Hispanic",    y: orange.demographic.percent_hispanic*100, color: '#BDAA91'},
+            {name: "White",     y: orange.demographic.percent_white*100, color: '#88765D'},
+            {name: "Pacific Islander",   y: orange.demographic.percent_pacific_islander*100, color: '#CE7352'}
+			    ]
+        	}]
+    	});
+   	});        
 })
 
-var districts_name = ["Orange", "Buncombe", "Charlotte-Mecklenburg"];
+var districts_name = ["Orange", "Buncombe", "Charlotte-Mecklenburg", "Orange County"];
 var districts_id = ["680", "110", "600"];
 
 $( window ).resize(function() {
@@ -1230,10 +1309,12 @@ function loadDistrict(district) {
 	districts_id[0] = $(district).attr('id');
 	districts_name[0] = $(district).attr('class');
 	if ($(district).is("circle")) {
-		$("#d-name").html(districts_name[0]+' City Schools');
+		districts_name[3] = districts_name[0]+' City Schools';
+		$("#d-name").html(districts_name[3]);
 	}
 	else {
-		$("#d-name").html(districts_name[0]+' County');
+		districts_name[3] = districts_name[0]+' County';
+		$("#d-name").html(districts_name[3]);
 	}
 	console.log(orange);
 	
@@ -1265,8 +1346,8 @@ var orange =
 		    "black_female": 38,
 		    "white_female": 51,
 		    "multiracial_female": 7,
-		    "american_indian_male": 2.5,
-		    "asian_male": 2.5,
+		    "american_indian_male": 30,
+		    "asian_male": 60,
 		    "hispanic_male":35,
 		    "black_male": 134,
 		    "white_male": 215,
