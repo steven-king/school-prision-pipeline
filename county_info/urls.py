@@ -4,6 +4,7 @@ from county_info import views
 urlpatterns = patterns('county_info.views',
 	url(r'^$', views.home, name='map_home'),
 	url(r'^mobile/$', views.mobile, name='mobile_home'),
+	url(r'^mobile/(?P<pk>[0-9]+)/$', views.mobile_detail, name='mobile_detail'),
 	url(r'^api/graduation_rates$', 'graduation_rates'),
 	url(r'^api/sat_scores$', 'sat_scores'),
 	url(r'^api/freelunch_rates$', 'freelunch_rates'),

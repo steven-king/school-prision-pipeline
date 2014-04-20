@@ -42,6 +42,11 @@ def mobile(request):
 	}
 	return render(request, "county_info/mobile.html", context)
 
+def mobile_detail(request, pk):
+	context = {
+	}
+	return render(request, "county_info/mobile_detail.html", context)
+
 
 # API Views
 @csrf_exempt
