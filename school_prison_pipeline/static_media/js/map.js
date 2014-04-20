@@ -15,7 +15,6 @@ function disciplineMap () {
 		if (currDistrictID == data[i].district) {
 			if ((data[i].category == "H") || (data[i].category == "M") || (data[i].category == "E")) {
 				total = total + data[i].composite_rate;
-				console.log(data[i].category);
 			}
 		}
 		else {

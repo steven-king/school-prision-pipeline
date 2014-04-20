@@ -99,4 +99,100 @@ function satGraph (dataArray) {
 	}
 }
 
+function demoDisciplineGraph (district) {
+	console.log(district);
+	console.log(district.american_indian_female);
+	var total = district.total;
+	$("#total-discipline").html(total + " incidents in 2011-2012");
+
+	var incidents = {"Hispanic": 0, "White": 0, "Black": 0, 
+		"Asian": 0, "American_Indian": 0, "Multi_racial": 0, };
+	
+	if (district.hispanic_female == 2.5) {
+		incidents.Hispanic = incidents.Hispanic + 4;
+	} else if (district.hispanic_female == undefined) {
+	} else {incidents.Hispanic = incidents.Hispanic + district.hispanic_female;}
+	if (district.hispanic_male == 2.5) {
+		incidents.Hispanic = incidents.Hispanic + 4;
+	} else if (district.hispanic_male == undefined) {
+	} else {incidents.Hispanic = incidents.Hispanic + district.hispanic_male;}
+	console.log(incidents.Hispanic);
+
+	if (district.white_female == 2.5) {
+		incidents.White = incidents.White + 4;
+	} else if (district.white_female == undefined) {
+	} else {incidents.White = incidents.White + district.white_female;}
+	if (district.white_male == 2.5) {
+		incidents.White = incidents.White + 4;
+	} else if (district.white_male == undefined) {
+	} else {incidents.White = incidents.White + district.white_male;}
+	console.log(incidents.White);
+
+	if (district.black_female == 2.5) {
+		incidents.Black = incidents.Black + 4;
+	} else if (district.black_female == undefined) {
+	} else {incidents.Black = incidents.Black + district.black_female;}
+	if (district.black_male == 2.5) {
+		incidents.Black = incidents.Black + 4;
+	} else if (district.black_male == undefined) {
+	} else {incidents.Black = incidents.Black + district.black_male;}
+	console.log(incidents.Black);
+
+	if (district.asian_female == 2.5) {
+		incidents.Asian = incidents.Asian + 4;
+	} else if (district.asian_female == undefined) {
+	} else {incidents.Asian = incidents.Asian + district.asian_female;}
+	if (district.asian_male == 2.5) {
+		incidents.Asian = incidents.Asian + 4;
+	} else if (district.asian_male == undefined) {
+	} else {incidents.Asian = incidents.Asian + district.asian_male;}
+	console.log(incidents.Asian);
+
+	if (district.american_indian_female == 2.5) {
+		incidents.American_Indian = incidents.American_Indian + 4;
+	} else if (district.american_indian_female == undefined) {
+	} else {incidents.American_Indian = incidents.American_Indian + district.american_indian_female;}
+	if (district.american_indian_male == 2.5) {
+		incidents.American_Indian = incidents.American_Indian + 4;
+	} else if (district.american_indian_male == undefined) {
+	} else {incidents.American_Indian = incidents.American_Indian + district.american_indian_male;}
+	console.log(incidents.American_Indian);
+	
+	if (district.multiracial_female == 2.5) {
+		incidents.Multi_racial = incidents.Multi_racial + 4;
+	} else if (district.multiracial_female == undefined) {
+	} else {incidents.Multi_racial = incidents.Multi_racial + district.multiracial_female;}
+	if (district.multiracial_male == 2.5) {
+		incidents.Multi_racial = incidents.Multi-racial + 4;
+	} else if (district.multiracial_male == undefined) {
+	} else {incidents.Multi_racial = incidents.Multi_racial + district.multiracial_male;}
+	console.log(incidents.Multi_racial);
+
+	var sortable = [];
+	for (var key in incidents) {
+    	sortable.push([key, incidents[key]]);
+    }
+	sortable.sort(function(a, b) {return a[1] - b[1]});
+	console.log(sortable[2][1]);
+
+	for (var i=0; i<6; i++) {
+		if (sortable[i][0] == "Black") {
+			sortable[i][0] = "African American";
+		}
+		else if (sortable[i][0] == "Multi_racial") {
+			sortable[i][0] = "Multi-racial";
+		}
+		else if (sortable[i][0] == "American_Indian") {
+			sortable[i][0] = "American Indian";
+		}
+		$("#d-"+i).attr("title", sortable[i][1] + " - " + sortable[i][0]);
+
+		var width = Math.round((sortable[i][1]/(total/1.5))*100);
+		width = width +"%";
+		console.log(width);
+		$("#d-"+i).css("width", width);
+	}
+
+}
+
 

@@ -6,8 +6,8 @@
 {% block content %}
 
 <h1 class="title">NC Schools</h1>
-<p id="intro">Compare North Carolina school districts to see how many factors play into the educational environment</p>
-<p id="intro">Tap the arrow to see all of the data for a district</p>
+<p class="intro">Compare North Carolina school districts to see how many factors play into the educational environment</p>
+<p class="intro">Tap the arrow to see all of the data for a district</p>
 
 
 <div id="compare-section">
@@ -131,7 +131,7 @@
 							  <option value="995">Yancey</option>
 							</select>
         </div>
-        
+        <div class="orange-profile go-to"></div>
         </li>
         <li><div class="styled-select yellow">
             <select>
@@ -253,7 +253,7 @@
             </select>
             
         </div>
-        
+        <div class="yellow go-to"></div>
         </li>
         <li><div class="blue styled-select">
             <select>
@@ -376,11 +376,11 @@
             
             
         </div>
-        
+        <div class="blue-profile go-to"></div>
         </li>    
     </ul>
     </div>
-<img src="{{ STATIC_URL }}down-arrow.png">
+<img src="{{ STATIC_URL }}mobile_arrow.png">
     <div class="graphs-wrapper">
             <div class="discipline graph">
 		<div class="bar yellow" id="discipline-0">
@@ -392,7 +392,7 @@
 		<h4>Disciplinary action<br>per 1,000 students<br>
                     <strong>(includes short-, long-term suspension and expulsion)</strong></h4>
 	    </div>
-        <img src="{{ STATIC_URL }}down-arrow.png">
+<img src="{{ STATIC_URL }}mobile_arrow.png">
             <div class="expenses graph">
 		<div class="bar yellow" id="expenses-0">
 		    <p id="expenses-p-0">67%</p></div>
@@ -403,7 +403,7 @@
 	    <h4>Total Expenses per Student<br>
 		<strong>(money from county, state, and federal governments)</strong></h4>
             </div>
-        <img src="{{ STATIC_URL }}down-arrow.png">
+<img src="{{ STATIC_URL }}mobile_arrow.png">
 
             <div class="graduation graph">
 		<div class="bar yellow" id="graduation-0">
@@ -414,7 +414,7 @@
 		    <p id="graduation-p-2">53%</p></div>
 	    <h4>High school<br>graduation rate</h4>
 	    </div>
-        <img src="{{ STATIC_URL }}down-arrow.png">
+<img src="{{ STATIC_URL }}mobile_arrow.png">
             <div class="lunch graph">
 		<div class="bar yellow" id="lunch-0">
 		    <p id="lunch-p-0">67%</p></div>
@@ -424,7 +424,7 @@
 		    <p id="lunch-p-2">53%</p></div>
 	    <h4>Students who qualify for free or reduced lunch</h4>
 	    </div>
-        <img src="{{ STATIC_URL }}down-arrow.png">
+<img src="{{ STATIC_URL }}mobile_arrow.png">
             <div class="sat graph">
                 <div class="bar yellow" id="sat-0">
                     <p id="sat-p-0">67%</p>
