@@ -33,7 +33,11 @@ def mobile(request):
 	return render(request, "county_info/mobile.html", context)
 
 def mobile_detail(request, pk):
+	district = District.objects.get(pk=pk)
+	demographics = district.demographics.get(school_year='2012-2013')
 	context = {
+		'district': district,
+		'demographics': demographics,
 	}
 	return render(request, "county_info/mobile_detail.html", context)
 

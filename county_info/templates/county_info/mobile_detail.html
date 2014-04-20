@@ -5,7 +5,7 @@
 {% endblock %}
 {% block content %}
 
-<h1 class="title">Buncombe</h1>
+<h1 class="title">{{ district.lea_name }}</h1>
 
 
 <div id="tabs"class="row">
@@ -16,19 +16,19 @@
 		<ul id="profile-list">
 			<li>
 				<div class="left"></div>
-				<div class="middle">Orange County</div>
+				<div class="middle">{{ district.lea_name }}</div>
 			</li>
 			<li>
 				<div class="left">Total expenses per student:</div>
-				<div class="middle">$8,536</div>
+				<div class="middle">${{ demographics.expenses_per_pupil }}</div>
 			</li>
 			<li>
 				<div class="left">Average SAT score:</div>
-				<div class="middle">1570</div>
+				<div class="middle">{{ demographics.sat_average_score }}</div>
 			</li>
 			<li>
 				<div class="left">Percent who take the SAT:</div>
-				<div class="middle">67%</div>
+				<div class="middle">{{ demographics.sat_participation }}%</div>
 			</li>
 			<li>
 				<div class="left">Percent of students on reduced lunch:</div>
