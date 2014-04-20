@@ -194,8 +194,8 @@ class FreeLunch(models.Model):
 
 
 class State(models.Model):
-	state_name = models.CharField(max_length=150, verbose_name="Name", primary_key=True)
-	state_abbreviation = models.CharField(max_length=150, verbose_name="Abbreviation")
+	state_name = models.CharField(max_length=150, verbose_name="Name")
+	state_abbreviation = models.CharField(max_length=150, verbose_name="Abbreviation", primary_key=True)
 
 	class Meta(object):
 		ordering = ('state_name',)
@@ -316,6 +316,13 @@ class StateDiscipline(models.Model):
 	long_suspensions = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")
 	expulsions = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")
 	crime = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")
+	composite_rate = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")
+
+	def calculate_composite_rate(self):
+		if self.short_suspensions:
+			discipline_sum = self.short_suspensions + self.long_suspensions + self.expulsions
+			self.composite_rate = discipline_sum
+			self.save()
 
 	class Meta(object):
 		verbose_name = "State Average Discipline Rates"

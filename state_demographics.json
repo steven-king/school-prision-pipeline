@@ -2,7 +2,7 @@
 {
 	"model": "county_info.StateDemographics",
 	"fields": {
-		"state": "North Carolina",
+		"state": "NC",
 		"school_year": "2007-2008",
 		"sat_participation": 0.63,
 		"sat_average_score": 1007,
@@ -22,7 +22,7 @@
 {
 	"model": "county_info.StateDemographics",
 	"fields": {
-		"state": "North Carolina",
+		"state": "NC",
 		"school_year": "2008-2009",
 		"sat_participation": 0.63,
 		"sat_average_score": 1006,
@@ -42,7 +42,7 @@
 {
 	"model": "county_info.StateDemographics",
 	"fields": {
-		"state": "North Carolina",
+		"state": "NC",
 		"school_year": "2009-2010",
 		"sat_participation": 0.63,
 		"sat_average_score": 1008,
@@ -62,7 +62,7 @@
 {
 	"model": "county_info.StateDemographics",
 	"fields": {
-		"state": "North Carolina",
+		"state": "NC",
 		"school_year": "2010-2011",
 		"sat_participation": 0.67,
 		"sat_average_score": 1001,
@@ -82,7 +82,7 @@
 {
 	"model": "county_info.StateDemographics",
 	"fields": {
-		"state": "North Carolina",
+		"state": "NC",
 		"school_year": "2011-2012",
 		"sat_participation": 0.68,
 		"sat_average_score": 997,
@@ -102,7 +102,7 @@
 {
 	"model": "county_info.StateDemographics",
 	"fields": {
-		"state": "North Carolina",
+		"state": "NC",
 		"school_year": "2012-2013",
 		"sat_participation": 0.62,
 		"sat_average_score": 1001,

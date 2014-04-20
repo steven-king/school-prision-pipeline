@@ -10,4 +10,5 @@ urlpatterns = patterns('county_info.views',
 	url(r'^api/discipline_rates$', 'discipline_rates'),
 	url(r'^api/expenses$', 'expenses'),
 	url(r'^api/districts/(?P<pk>[0-9]+)/$', 'district_detail'),
+	url(r'^api/states/(?P<pk>\S+)/$', 'state_detail'),
 )

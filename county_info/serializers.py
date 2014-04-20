@@ -66,4 +66,36 @@ class DistrictSerializer(serializers.ModelSerializer):
 		fields = ('lea_name', 'lea_code', 'graduation_rates', 'demographics', 'discipline_rates', 'freelunch_rates', 'discipline_demographics')
 
 
+class StateDemographicsSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = StateDemographics
+		fields = ('school_year', 'expenses_per_pupil', 'sat_participation', 'sat_average_score', 'percent_native_american','percent_asian', 'percent_black', 'percent_hispanic', 'percent_white', 'percent_multiracial', 'percent_pacific_islander')
+
+class StateGraduationSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = StateGraduation
+		fields = ('school_year', 'graduation_rate', 'freelunch_graduation_rate')
+
+class StateDisciplineSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = StateDiscipline
+		fields = ('school_year', 'category', 'composite_rate')
+
+class StateSerializer(serializers.ModelSerializer):
+	statedemographics = StateDemographicsSerializer(many=True)
+	stategraduation_rates = StateGraduationSerializer(many=True)
+	statediscipline_rates = StateDisciplineSerializer(many=True)
+
+	class Meta:
+		model = State
+		fields = ('state_name', 'state_abbreviation', 'statedemographics', 'stategraduation_rates', 'statediscipline_rates')
+
+
+
+
+
+
+
+
+
 

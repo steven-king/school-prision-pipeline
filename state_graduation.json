@@ -2,7 +2,7 @@
 {
 	"model": "county_info.StateGraduation",
 	"fields": {
-		"state": "North Carolina",
+		"state": "NC",
 		"school_year": "2008-2009",
 		"graduation_rate": 0.717,
 		"native_american_graduation_rate": 0.6,
@@ -18,7 +18,7 @@
 {
 	"model": "county_info.StateGraduation",
 	"fields": {
-		"state": "North Carolina",
+		"state": "NC",
 		"school_year": "2007-2008",
 		"graduation_rate": 0.703,
 		"native_american_graduation_rate": 0.538,
@@ -34,7 +34,7 @@
 {
 	"model": "county_info.StateGraduation",
 	"fields": {
-		"state": "North Carolina",
+		"state": "NC",
 		"school_year": "2009-2010",
 		"graduation_rate": 0.742,
 		"native_american_graduation_rate": 0.68,
@@ -50,7 +50,7 @@
 {
 	"model": "county_info.StateGraduation",
 	"fields": {
-		"state": "North Carolina",
+		"state": "NC",
 		"school_year": "2010-2011",
 		"graduation_rate": 0.779,
 		"native_american_graduation_rate": 0.697,
@@ -66,7 +66,7 @@
 {
 	"model": "county_info.StateGraduation",
 	"fields": {
-		"state": "North Carolina",
+		"state": "NC",
 		"school_year": "2011-2012",
 		"graduation_rate": 0.804,
 		"native_american_graduation_rate": 0.737,
@@ -82,7 +82,7 @@
 {
 	"model": "county_info.StateGraduation",
 	"fields": {
-		"state": "North Carolina",
+		"state": "NC",
 		"school_year": "2012-2013",
 		"graduation_rate": 0.825,
 		"native_american_graduation_rate": 0.773,
