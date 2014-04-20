@@ -69,7 +69,7 @@ class DistrictSerializer(serializers.ModelSerializer):
 class StateDemographicsSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = StateDemographics
-		fields = ('school_year', 'expenses_per_pupil', 'sat_participation', 'sat_average_score', 'percent_native_american','percent_asian', 'percent_black', 'percent_hispanic', 'percent_white', 'percent_multiracial', 'percent_pacific_islander')
+		fields = ('school_year', 'expenses_per_pupil', 'percent_needy', 'sat_participation', 'sat_average_score', 'percent_native_american','percent_asian', 'percent_black', 'percent_hispanic', 'percent_white', 'percent_multiracial', 'percent_pacific_islander')
 
 class StateGraduationSerializer(serializers.ModelSerializer):
 	class Meta:
