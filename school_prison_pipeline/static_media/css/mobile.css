@@ -55,7 +55,7 @@ body {
 }
 
 h1 {
-	font-family:roboto_slabregular;
+    font-family:roboto_slabregular;
     text-align: center;
     font-size:56px;
 }
@@ -64,6 +64,12 @@ p {
    font-size:16px;
    margin-bottom:5px;
    color:#626262;
+}
+.intro {
+    font-family: latolight;
+    font-size:18px;
+    padding:10px 10%;
+    text-align: center;
 }
 
 #compare-section ul {
@@ -87,16 +93,25 @@ p {
             display: inline;
             font-size:30px;
             position:relative;
-            top:-7px;
         }
         #compare-section ul li .styled-select {
             display: inline-block;
-            width: 75%;
-            height: 34px;
+            float:left;
+            width: 85%;
+            height: 40px;
             margin-left:7px;
+            margin-bottom:6px;
+            padding-top:3px;
             overflow: hidden;
             background: url(../down-arrow-yellow.png) no-repeat right #C19438;
-            border: 1px solid #ccc;
+        }
+
+        #compare-section ul li .go-to {
+            float:left;
+            width: 11%;
+            height: 40px;
+            border-left:1px solid #ccc;
+            background: url(../right-arrow-yellow.svg) no-repeat right #C19438;
         }
         #compare-section ul li .blue {
             background: url(../down-arrow-blue.png) no-repeat right #004E79;
@@ -104,11 +119,17 @@ p {
         #compare-section ul li .orange {
             background: url(../down-arrow-orange.png) no-repeat right #D16436;
         }
+        #compare-section ul li .orange-profile {
+            background: url(../right-arrow-orange.svg) no-repeat right #D16436;
+        }
+        #compare-section ul li .blue-profile {
+            background: url(../right-arrow-blue.svg) no-repeat right #004E79;
+        }
 
             #compare-section ul li .styled-select select {
                 font-family:latolight;
                 background: transparent;
-                width: 238px;
+                width: 100%;
                 
                 padding: 3px 0px 3px 10px;
                 font-size: 17px;
@@ -120,6 +141,10 @@ p {
                 margin:0;
                 -webkit-appearance: none;
             }
+
+        select {
+            cursor:pointer;
+        }
             
 .graphs-wrapper {
     height: 2000px;
@@ -165,3 +190,8 @@ p {
                 font-size:16px;
                 font-weight: normal;
             }
+    
+img {
+    text-align: center;
+    position: relative;
+    }
