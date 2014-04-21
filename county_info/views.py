@@ -57,28 +57,24 @@ def mobile_detail(request, pk):
 
 
 # API Views
-@csrf_exempt
 def graduation_rates(request):
 	if request.method == 'GET':
 		graduation_rates = Graduation.objects.filter(school_year='2012-2013')
 		serializer = GraduationSerializer(graduation_rates, many=True)
 		return JSONResponse(serializer.data)
 
-@csrf_exempt
 def sat_scores(request):
 	if request.method == 'GET':
 		sat_scores = Demographics.objects.filter(school_year='2012-2013')
 		serializer = SatScoreSerializer(sat_scores, many=True)
 		return JSONResponse(serializer.data)
 
-@csrf_exempt
 def freelunch_rates(request):
 	if request.method == 'GET':
 		freelunch_rates = FreeLunch.objects.filter(school_year='2012-2013')
 		serializer = FreeLunchSerializer(freelunch_rates, many=True)
 		return JSONResponse(serializer.data)
 
-@csrf_exempt
 def discipline_rates(request):
 	if request.method == 'GET':
 		discipline_rates = DisciplineRate.objects.filter(school_year='2012-2013')
@@ -87,14 +83,12 @@ def discipline_rates(request):
 		serializer = DisciplineRateSerializer(discipline_rates, many=True)
 		return JSONResponse(serializer.data)
 
-@csrf_exempt
 def expenses(request):
 	if request.method == 'GET':
 		sat_scores = Demographics.objects.filter(school_year='2012-2013')
 		serializer = ExpensesSerializer(sat_scores, many=True)
 		return JSONResponse(serializer.data)
 
-@csrf_exempt
 def district_detail(request, pk):
     """
     Retrieve, update or delete a code district.
@@ -111,7 +105,6 @@ def district_detail(request, pk):
         serializer = DistrictSerializer(district)
         return JSONResponse(serializer.data)
 
-@csrf_exempt
 def state_detail(request, pk):
     """
     Retrieve, update or delete a code district.
