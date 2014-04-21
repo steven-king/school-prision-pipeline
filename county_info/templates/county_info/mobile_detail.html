@@ -11,14 +11,8 @@
 
 <div id="tabs"class="row">
 	<div class="col-sm-12 col-md-12 col-lg-12" id="tab-view">
-		<div class="tab orange" id="profile">
-			District Profile
-		</div>
+		
 		<ul id="profile-list">
-			<li>
-				<div class="left"></div>
-				<div class="middle">{{ district.lea_name }}</div>
-			</li>
 			<li>
 				<div class="left">Total expenses per student:</div>
 				<div class="middle">${{ demographics.expenses_per_pupil|floatformat:2 }}</div>
@@ -77,4 +71,6 @@ Asian: {{ demographics.percent_asian|multiply:100|floatformat:1 }}%<br />
 Native American: {{ demographics.percent_native_american|multiply:100|floatformat:1 }}%<br />
 Pacific Islander: {{ demographics.percent_pacific_islander|multiply:100|floatformat:1 }}%
 </div>
+
 {% endblock %}
+	

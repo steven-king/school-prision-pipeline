@@ -1160,6 +1160,15 @@ $( document ).ready(function() {
 	if ($(window).width() <= 700) {
 		window.location.href = "http://school-discipline.herokuapp.com/mobile";
 	}
+	$.ajax({
+		url: "http://school-discipline.herokuapp.com/api/districts/680",
+		dataType: "json",
+		success: function(data) {
+			districtA = data;
+			console.log(districtA);
+			loadDistrictPie(districtA);
+		}
+	});
 	$("#compare-section").hide();
 	disciplineMap();
 	var lunchData = [0.10, 0.57, 0.63];
@@ -1178,8 +1187,7 @@ $( document ).ready(function() {
 	   $('div[rel=tipsy]').tipsy({gravity: 'w'});
 	 });
 
-	demoDisciplineGraph(districtA.discipline_demographic);
-	loadDistrictPie(districtA);
+	demoDisciplineGraph(orange.discipline_demographic);
 	
    	$(function () {
 		$('#state-demographics').highcharts({
@@ -1283,46 +1291,36 @@ function loadDistrict(district) {
 		districts_name[3] = districts_name[0]+' County';
 		$("#d-name").html(districts_name[3]);
 	}
-	
-	//loadPieChart(id);
-}
-var districtA = 
-	{
-		"district": "010",
-		"name": "Orange",
-		"school_year": "2012-2013",
-		"sat_participation": 0.656,
-    	"sat_average_score": 1038,
-    	"expenses_per_pupil": 9745.94,
-		"percent_needy": 0.419,
-		"disciplinary": {"H": 9, "M": 15, "E": 2},
-		"graduation_rate": 0.825,
-		"freelunch_graduation_rate": 0.68,
-		"demographic": {
-			"percent_native_american": 0.004,
-	    	"percent_asian": 0.007,
-	    	"percent_black": 0.162,
-	    	"percent_hispanic": 0.157,
-	    	"percent_multiracial": null,
-	    	"percent_white": 0.637,
-	    	"percent_pacific_islander": 0
-		},
-		"discipline_demographic": {
-			"total": 499,
-		    "hispanic_female": 11,
-		    "black_female": 38,
-		    "white_female": 51,
-		    "multiracial_female": 7,
-		    "american_indian_male": 30,
-		    "asian_male": 60,
-		    "hispanic_male":35,
-		    "black_male": 134,
-		    "white_male": 215,
-		    "multiracial_male": 5
+
+	$.ajax({
+		url: "http://school-discipline.herokuapp.com/api/districts/"+districts_id[0],
+		dataType: "json",
+		success: function(data) {
+			console.log(data);
+			districtA = data;
+			//$("#d-expenses").
+		    //$("#d-take-sat").
+		    //$("$d-sat-score").
+		    var percent_needy = Math.round(districtA.freelunch_rates[0].percent_needy *100);
+		    percent_needy = percent_needy + "%";
+		    $("#d-lunch").html(percent_needy);
+		    var gradLunch = Math.round(districtA.graduation_rates[0].freelunch_graduation_rate *100);
+		    gradLunch = gradLunch + "%";
+		    $("#d-grad-lunch").html(gradLunch);
+		    var graduation = Math.round(districtA.graduation_rates[0].graduation_rate *100);
+		    graduation = graduation + "%";
+		    $("#d-graduation").html(graduation);
+		    
+			loadDistrictPie(districtA);
+			var chart = $('#district-demographics').highcharts();
+		    chart.series[0].setData([districtA.demographics[0].percent_pacific_islander*100, districtA.demographics[0].percent_native_american*100, districtA.demographics[0].percent_asian*100, districtA.demographics[0].percent_black*100, districtA.demographics[0].percent_hispanic*100, districtA.demographics[0].percent_white*100]);
 		}
-	};
+	})
+}
+var districtA = {};
 
 	function loadDistrictPie(district) {
+		var demographics = district.demographics[0];
 		$('#district-demographics').highcharts({
             chart: {
                 plotBackgroundColor: null,
@@ -1351,22 +1349,56 @@ var districtA =
  	         	}
 	       	},
 	       	title: {
-			    text: districts_name[3] + ' Demographics<br>in 2012-2013'
+			    text: district.lea_name + ' Demographics<br>in 2012-2013'
 			},
         	series: [{
             	type: 'pie',
             	name: 'Student Demographics in 2012-2013',
             	data: [
-            {name: "Pacific Islander",   y: district.demographic.percent_pacific_islander*100, color: '#CE7352'},
-            {name: "Native American", y: district.demographic.percent_native_american*100, color: '#BDAA91'},
-        	{name: "Asian", y: district.demographic.percent_asian*100, color: '#88765D'},
-            {name: "Black", y: district.demographic.percent_black*100, color: '#C19438'},
-            {name: "Hispanic",    y: district.demographic.percent_hispanic*100, color: '#D16436'},
-            {name: "White",     y: district.demographic.percent_white*100, color: '#004E79'}
+            {name: "Pacific Islander",   y: demographics.percent_pacific_islander*100, color: '#CE7352'},
+            {name: "Native American", y: demographics.percent_native_american*100, color: '#BDAA91'},
+        	{name: "Asian", y: demographics.percent_asian*100, color: '#88765D'},
+            {name: "Black", y: demographics.percent_black*100, color: '#C19438'},
+            {name: "Hispanic",    y: demographics.percent_hispanic*100, color: '#D16436'},
+            {name: "White",     y: demographics.percent_white*100, color: '#004E79'}
 			    ]
         	}]
     	});
    	};
+var orange = 
+	{
+		"district": "010",
+		"name": "Orange",
+		"school_year": "2012-2013",
+		"sat_participation": 0.656,
+    	"sat_average_score": 1038,
+    	"expenses_per_pupil": 9745.94,
+		"percent_needy": 0.419,
+		"disciplinary": {"H": 9, "M": 15, "E": 2},
+		"graduation_rate": 0.825,
+		"freelunch_graduation_rate": 0.68,
+		"demographic": {
+			"percent_native_american": 0.004,
+	    	"percent_asian": 0.007,
+	    	"percent_black": 0.162,
+	    	"percent_hispanic": 0.157,
+	    	"percent_white": 0.637,
+	    	"percent_pacific_islander": 0
+		},
+		"discipline_demographic": {
+			"total": 499,
+		    "hispanic_female": 11,
+		    "black_female": 38,
+		    "white_female": 51,
+		    "multiracial_female": 7,
+		    "american_indian_male": 30,
+		    "asian_male": 60,
+		    "hispanic_male":35,
+		    "black_male": 134,
+		    "white_male": 215,
+		    "multiracial_male": 5
+		}
+	};
 
 </script>
 <script src="{{ STATIC_URL }}js/app.js"></script>
