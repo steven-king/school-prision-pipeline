@@ -13,7 +13,7 @@
 <div id="compare-section">
     <ul>
         <li><div class="styled-select orange">
-            <select>
+            <select id="select-orange">
 							  <option value="010">Alamance-Burlington</option>
 							  <option value="020">Alexander</option>
 							  <option value="030">Alleghany</option>
@@ -131,10 +131,10 @@
 							  <option value="995">Yancey</option>
 							</select>
         </div>
-        <div class="orange-profile go-to"></div>
+        <div class="orange-profile go-to" onclick="loadOrange()"></div>
         </li>
         <li><div class="styled-select yellow">
-            <select>
+            <select id="select-yellow">
 							  <option value="010">Alamance-Burlington</option>
 							  <option value="020">Alexander</option>
 							  <option value="030">Alleghany</option>
@@ -253,10 +253,10 @@
             </select>
             
         </div>
-        <div class="yellow go-to"></div>
+        <div class="yellow go-to" onclick="loadYellow()"></div>
         </li>
         <li><div class="blue styled-select">
-            <select>
+            <select id="select-blue">
 							  <option value="010">Alamance-Burlington</option>
 							  <option value="020">Alexander</option>
 							  <option value="030">Alleghany</option>
@@ -376,13 +376,13 @@
             
             
         </div>
-        <div class="blue-profile go-to"></div>
+        <div class="blue-profile go-to" onclick="loadBlue()"></div>
         </li>    
     </ul>
     </div>
 <img src="{{ STATIC_URL }}mobile_arrow.png">
     <div class="graphs-wrapper">
-            <div class="discipline graph">
+            <div class="discipline graph" style="display:none">
 		<div class="bar yellow" id="discipline-0">
 		    <p id="discipline-p-0">67%</p></div>
 		<div class="bar orange" id="discipline-1">
@@ -392,7 +392,7 @@
 		<h4>Disciplinary action<br>per 1,000 students<br>
                     <strong>(includes short-, long-term suspension and expulsion)</strong></h4>
 	    </div>
-<img src="{{ STATIC_URL }}mobile_arrow.png">
+<img src="{{ STATIC_URL }}mobile_arrow.png" style="display:none">
             <div class="expenses graph">
 		<div class="bar yellow" id="expenses-0">
 		    <p id="expenses-p-0">67%</p></div>
@@ -447,7 +447,7 @@
 <script>
 
 $( document ).ready(function() {
-	graduationMap();
+	
 	var lunchData = [0.10, 0.57, 0.63];
 	lunchGraph(lunchData);
 	var expensesData = ["10503", "7771.05", "11835"];
@@ -514,6 +514,20 @@ $("#compare").on("click", function(event){
 		$("#compare-section").show();
 		$("#tabs").css("border-color", "#004E79");
 	})
+
+function loadOrange () {
+	var detail_id = $("#select-orange").val();
+	window.location.href = "http://school-discipline.herokuapp.com/mobile/"+detail_id;
+}
+function loadBlue () {
+	var detail_id = $("#select-blue").val();
+	window.location.href = "http://school-discipline.herokuapp.com/mobile/"+detail_id;
+}
+function loadYellow () {
+	var detail_id = $("#select-yellow").val();
+	window.location.href = "http://school-discipline.herokuapp.com/mobile/"+detail_id;
+}
+
 
 </script>
 <script src="{{ STATIC_URL }}js/dynamic_graphs.js"></script>

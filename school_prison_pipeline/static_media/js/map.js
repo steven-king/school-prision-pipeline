@@ -152,12 +152,12 @@ function graduationMap () {
 }
 
 function satMap () {
-	/*$.ajax({
+	$.ajax({
 		url: "http://school-discipline.herokuapp.com/api/sat_scores",
 		dataType: "json",
 		success: function(data) {
 			console.log(data);
-			*/
+			
 
 			//set up map key
 			$("#map-description").html("Average SAT scores from 2013 (out of 1600)");
@@ -167,13 +167,13 @@ function satMap () {
 			$("#key-4").html("1001-1100");
 			$("#key-5").html("1101-1200");
 
-			var data = getSat();
+			//var data = getSat();
 
 			for (var i=0; i < data.length; i++) {
-				if (data[i].fields.school_year == "2012-2013") {
+				if (data[i].school_year == "2012-2013") {
 				
-					var currDistrict= "#" + data[i].fields.district;
-					var currSat = data[i].fields.sat_average_score;
+					var currDistrict= "#" + data[i].district;
+					var currSat = data[i].sat_average_score;
 
 					//tooltip
 					var districtName = $(currDistrict).attr('class');
@@ -197,8 +197,8 @@ function satMap () {
 					}
 				}
 			}
-	/*	}
-	});*/
+		}
+	});
 }
 
 function expensesMap () {
