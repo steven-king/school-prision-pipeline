@@ -1178,56 +1178,23 @@ $( document ).ready(function() {
 	   $('div[rel=tipsy]').tipsy({gravity: 'w'});
 	 });
 
-	demoDisciplineGraph(orange.discipline_demographic);
-
-	$(function () {
-		$('#district-demographics').highcharts({
-            chart: {
-                plotBackgroundColor: null,
-	            plotBorderWidth: null,
-	            plotShadow: false
-            },
- 	        tooltip: {
-     	    	pointFormat: '{series.data.name}: <b>{point.percentage:.1f}%</b>'
- 	        },
-        	plotOptions: {
-             	pie: {
-                	allowPointSelect: true,
-                	cursor: 'pointer',
-                 	dataLabels: {
-                    	enabled: false,
-                    	color: '#000000',
-                    	connectorColor: '#000000',
- 	                  	format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-                	}
- 	         	}
-	       	},
-	       	title: {
-			    text: districts_name[3] + ' Demographics<br>in 2012-2013'
-			},
-        	series: [{
-            	type: 'pie',
-            	name: 'Student Demographics in 2012-2013',
-            	data: [
-            {name: "Native American", y: orange.demographic.percent_native_american*100, color: '#C19438'},
-        	{name: "Asian", y: orange.demographic.percent_asian*100, color: '#004E79'},
-            {name: "Black", y: orange.demographic.percent_black*100, color: '#D16436'},
-            {name: "Hispanic",    y: orange.demographic.percent_hispanic*100, color: '#BDAA91'},
-            {name: "White",     y: orange.demographic.percent_white*100, color: '#88765D'},
-            {name: "Pacific Islander",   y: orange.demographic.percent_pacific_islander*100, color: '#CE7352'}
-			    ]
-        	}]
-    	});
-   	});
+	demoDisciplineGraph(districtA.discipline_demographic);
+	loadDistrictPie(districtA);
+	
    	$(function () {
 		$('#state-demographics').highcharts({
             chart: {
                 plotBackgroundColor: null,
 	            plotBorderWidth: null,
-	            plotShadow: false
+	            plotShadow: false,
             },
  	        tooltip: {
-     	    	pointFormat: '{series.data.name}: <b>{point.percentage:.1f}%</b>'
+ 	        	backgroundColor: '#000',
+ 	        	style: {
+ 	        		color:'#fff'
+ 	        	},
+ 	        	borderWidth: 0,
+     	    	pointFormat: '<b>{point.percentage:.1f}%</b>{series.data.name}'
  	        },
         	plotOptions: {
              	pie: {
@@ -1248,12 +1215,12 @@ $( document ).ready(function() {
             	type: 'pie',
             	name: 'North Carolina Demographics in 2012-2013',
             	data: [
-            {name: "Native American", y: orange.demographic.percent_native_american*100, color: '#C19438'},
-        	{name: "Asian", y: orange.demographic.percent_asian*100, color: '#004E79'},
-            {name: "Black", y: orange.demographic.percent_black*100, color: '#D16436'},
-            {name: "Hispanic",    y: orange.demographic.percent_hispanic*100, color: '#BDAA91'},
-            {name: "White",     y: orange.demographic.percent_white*100, color: '#88765D'},
-            {name: "Pacific Islander",   y: orange.demographic.percent_pacific_islander*100, color: '#CE7352'}
+            {name: "Pacific Islander",   y: 0.001*100, color: '#CE7352'},
+            {name: "Native American", y: 0.014*100, color: '#BDAA91'},
+            {name: "Asian", y: 0.026*100, color: '#88765D'},
+            {name: "Hispanic",    y: 0.14*100, color: '#C19438'},
+            {name: "Black", y: 0.261*100, color: '#D16436'},
+            {name: "White",     y: 0.521*100, color: '#004E79'}
 			    ]
         	}]
     	});
@@ -1316,11 +1283,10 @@ function loadDistrict(district) {
 		districts_name[3] = districts_name[0]+' County';
 		$("#d-name").html(districts_name[3]);
 	}
-	console.log(orange);
 	
 	//loadPieChart(id);
 }
-var orange = 
+var districtA = 
 	{
 		"district": "010",
 		"name": "Orange",
@@ -1337,6 +1303,7 @@ var orange =
 	    	"percent_asian": 0.007,
 	    	"percent_black": 0.162,
 	    	"percent_hispanic": 0.157,
+	    	"percent_multiracial": null,
 	    	"percent_white": 0.637,
 	    	"percent_pacific_islander": 0
 		},
@@ -1354,6 +1321,52 @@ var orange =
 		    "multiracial_male": 5
 		}
 	};
+
+	function loadDistrictPie(district) {
+		$('#district-demographics').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+	            plotBorderWidth: null,
+	            plotShadow: false
+            },
+ 	        tooltip: {
+ 	        	backgroundColor: '#000',
+ 	        	style: {
+ 	        		color:'#fff',
+ 	        		width: '100px'
+ 	        	},
+ 	        	borderWidth: 0,
+     	    	pointFormat: '<b>{point.percentage:.1f}%</b>{series.data.name}'
+ 	        },
+        	plotOptions: {
+             	pie: {
+                	allowPointSelect: true,
+                	cursor: 'pointer',
+                 	dataLabels: {
+                    	enabled: false,
+                    	color: '#000000',
+                    	connectorColor: '#000000',
+ 	                  	format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                	}
+ 	         	}
+	       	},
+	       	title: {
+			    text: districts_name[3] + ' Demographics<br>in 2012-2013'
+			},
+        	series: [{
+            	type: 'pie',
+            	name: 'Student Demographics in 2012-2013',
+            	data: [
+            {name: "Pacific Islander",   y: district.demographic.percent_pacific_islander*100, color: '#CE7352'},
+            {name: "Native American", y: district.demographic.percent_native_american*100, color: '#BDAA91'},
+        	{name: "Asian", y: district.demographic.percent_asian*100, color: '#88765D'},
+            {name: "Black", y: district.demographic.percent_black*100, color: '#C19438'},
+            {name: "Hispanic",    y: district.demographic.percent_hispanic*100, color: '#D16436'},
+            {name: "White",     y: district.demographic.percent_white*100, color: '#004E79'}
+			    ]
+        	}]
+    	});
+   	};
 
 </script>
 <script src="{{ STATIC_URL }}js/app.js"></script>
