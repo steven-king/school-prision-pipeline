@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load humanize %}
+{% load county_info_extras %}
 {% block head_info %}
 	<link href="{{ STATIC_URL }}css/mobile.css" rel="stylesheet">
 {% endblock %}
@@ -20,7 +21,7 @@
 			</li>
 			<li>
 				<div class="left">Total expenses per student:</div>
-				<div class="middle">${{ demographics.expenses_per_pupil }}</div>
+				<div class="middle">${{ demographics.expenses_per_pupil|floatformat:2 }}</div>
 			</li>
 			<li>
 				<div class="left">Average SAT score:</div>
@@ -28,20 +29,20 @@
 			</li>
 			<li>
 				<div class="left">Percent who take the SAT:</div>
-				<div class="middle">{{ demographics.sat_participation }}%</div>
+				<div class="middle">{{ demographics.sat_participation|multiply:100|floatformat:1 }}%</div>
 			</li>
 			<li>
 				<div class="left">Percent of students on reduced lunch:</div>
-				<div class="middle">21%</div>
+				<div class="middle">{{ freelunch_rates.percent_needy|multiply:100|floatformat:1 }}%</div>
 			</li>
 			<li>
 				<div class="left">Graduation rate of students on reduced lunch:</div>
-				<div class="middle">73%</div>
+				<div class="middle">{{ graduation_rates.freelunch_graduation_rate|multiply:100|floatformat:1 }}%</div>
 			</li>
 			<li>
 				<div class="left">Disciplinary action<br>per 1,000 students:<br>
 					<p id="mini">(includes short- and long-term suspension as well as expulsion)</p></div>
-				<div class="middle">134</div>
+				<div class="middle">{{ discipline_rates }}</div>
 			</li>
 		</ul>
 

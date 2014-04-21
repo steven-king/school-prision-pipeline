@@ -35,9 +35,21 @@ def mobile(request):
 def mobile_detail(request, pk):
 	district = District.objects.get(pk=pk)
 	demographics = district.demographics.get(school_year='2012-2013')
+	freelunch = district.freelunch_rates.get(school_year='2012-2013')
+	graduation = district.graduation_rates.get(school_year='2012-2013')
+	discipline_e = district.discipline_rates.get(school_year='2012-2013', category='E')
+	discipline_e.calculate_composite_rate()
+	discipline_m = district.discipline_rates.get(school_year='2012-2013', category='M')
+	discipline_m.calculate_composite_rate()
+	discipline_h = district.discipline_rates.get(school_year='2012-2013', category='H')
+	discipline_h.calculate_composite_rate()
+	discipline = discipline_e.composite_rate + discipline_m.composite_rate + discipline_h.composite_rate
 	context = {
 		'district': district,
 		'demographics': demographics,
+		'freelunch_rates': freelunch,
+		'graduation_rates': graduation,
+		'discipline_rates': discipline,
 	}
 	return render(request, "county_info/mobile_detail.html", context)
 
