@@ -47,5 +47,34 @@
 		</ul>
 
 <h1 class="title">Demographic Data</h1>
-
+<div class="col-md-6">
+<h3>Discipline</h3>
+Total: {{ discipline_demographics.total }}<br />
+White Male: {{ discipline_demographics.white_male }}<br />
+White Female: {{ discipline_demographics.white_female }}<br />
+Black Male: {{ discipline_demographics.black_male }}<br />
+Black Female: {{ discipline_demographics.black_female }}<br />
+Hispanic Male: {{ discipline_demographics.hispanic_male }}<br />
+Hispanic Female: {{ discipline_demographics.hispanic_female }}<br />
+Multiracial Male: {{ discipline_demographics.multiracial_male }}<br />
+Multiracial Female: {{ discipline_demographics.multiracial_female }}<br />
+Asian Male: {{ discipline_demographics.asian_male }}<br />
+Asian Female: {{ discipline_demographics.asian_female }}<br />
+Native American Male: {{ discipline_demographics.american_indian_male }}<br />
+Native American Female: {{ discipline_demographics.american_indian_female }}<br />
+Pacific Islander Male: {{ discipline_demographics.pacific_islander_male }}<br />
+Pacific Islander Female: {{ discipline_demographics.pacific_islander_female }}<br />
+Other Male: {{ discipline_demographics.other_male }}<br />
+Other Female: {{ discipline_demographics.other_female }}<br />
+Other: {{ discipline_demographics.other }}
+</div>
+<div class="col-md-6">
+<h3>Makeup</h3>
+White: {{ demographics.percent_white|multiply:100|floatformat:1 }}%<br />
+Black: {{ demographics.percent_black|multiply:100|floatformat:1 }}%<br />
+Hispanic: {{ demographics.percent_hispanic|multiply:100|floatformat:1 }}%<br />
+Asian: {{ demographics.percent_asian|multiply:100|floatformat:1 }}%<br />
+Native American: {{ demographics.percent_native_american|multiply:100|floatformat:1 }}%<br />
+Pacific Islander: {{ demographics.percent_pacific_islander|multiply:100|floatformat:1 }}%
+</div>
 {% endblock %}

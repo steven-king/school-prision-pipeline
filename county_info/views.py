@@ -44,12 +44,14 @@ def mobile_detail(request, pk):
 	discipline_h = district.discipline_rates.get(school_year='2012-2013', category='H')
 	discipline_h.calculate_composite_rate()
 	discipline = discipline_e.composite_rate + discipline_m.composite_rate + discipline_h.composite_rate
+	discipline_demographics = district.discipline_demographics.get(district=district)
 	context = {
 		'district': district,
 		'demographics': demographics,
 		'freelunch_rates': freelunch,
 		'graduation_rates': graduation,
 		'discipline_rates': discipline,
+		'discipline_demographics': discipline_demographics,
 	}
 	return render(request, "county_info/mobile_detail.html", context)
 

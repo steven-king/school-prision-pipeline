@@ -52,7 +52,7 @@ class DemographicsDetailSerializer(serializers.ModelSerializer):
 class DisciplineDemographicsSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = DisciplineDemographics
-		fields = ('total', 'white_male', 'white_female', 'black_male', 'black_female', 'hispanic_male', 'hispanic_female', 'multiracial_male', 'multiracial_female', 'asian_male', 'asian_female', 'pacific_islander_male', 'pacific_islander_female', 'other_male', 'other_female', 'other')
+		fields = ('total', 'white_male', 'white_female', 'black_male', 'black_female', 'hispanic_male', 'hispanic_female', 'multiracial_male', 'multiracial_female', 'asian_male', 'asian_female', 'pacific_islander_male', 'pacific_islander_female', 'other_male', 'other_female', 'american_indian_male', 'american_indian_female', 'other')
 
 class DistrictSerializer(serializers.ModelSerializer):
 	graduation_rates = GraduationDetailSerializer(many=True)
