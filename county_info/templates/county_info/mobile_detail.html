@@ -18,12 +18,17 @@
 				<div class="middle">${{ demographics.expenses_per_pupil|floatformat:2 }}</div>
 			</li>
 			<li>
+				<div class="left">Percent who take the SAT:</div>
+				<div class="middle">{{ demographics.sat_participation|multiply:100|floatformat:1 }}%</div>
+			</li>
+			<li>
 				<div class="left">Average SAT score:</div>
 				<div class="middle">{{ demographics.sat_average_score }}</div>
 			</li>
 			<li>
-				<div class="left">Percent who take the SAT:</div>
-				<div class="middle">{{ demographics.sat_participation|multiply:100|floatformat:1 }}%</div>
+				<div class="left">High school graduation rate:</div>
+				<div class="middle">{{ graduation_rates[0].graduation_rate|multiply:100|floatformat:1 }}%</div>
+					
 			</li>
 			<li>
 				<div class="left">Percent of students on reduced lunch:</div>
