@@ -1224,7 +1224,7 @@ $( document ).ready(function() {
             chart: {
                 plotBackgroundColor: null,
 	            plotBorderWidth: null,
-	            plotShadow: false
+	            plotShadow: false,
             },
  	        tooltip: {
      	    	pointFormat: '{series.data.name}: <b>{point.percentage:.1f}%</b>'
@@ -1248,12 +1248,12 @@ $( document ).ready(function() {
             	type: 'pie',
             	name: 'North Carolina Demographics in 2012-2013',
             	data: [
-            {name: "Native American", y: orange.demographic.percent_native_american*100, color: '#C19438'},
-        	{name: "Asian", y: orange.demographic.percent_asian*100, color: '#004E79'},
-            {name: "Black", y: orange.demographic.percent_black*100, color: '#D16436'},
-            {name: "Hispanic",    y: orange.demographic.percent_hispanic*100, color: '#BDAA91'},
-            {name: "White",     y: orange.demographic.percent_white*100, color: '#88765D'},
-            {name: "Pacific Islander",   y: orange.demographic.percent_pacific_islander*100, color: '#CE7352'}
+            {name: "Native American", y: 0.014*100, color: '#BDAA91'},
+            {name: "Asian", y: 0.026*100, color: '#88765D'},
+            {name: "Hispanic",    y: 0.14*100, color: '#C19438'},
+            {name: "Black", y: 0.261*100, color: '#D16436'},
+            {name: "White",     y: 0.521*100, color: '#004E79'},
+            {name: "Pacific Islander",   y: 0.001*100, color: '#CE7352'}
 			    ]
         	}]
     	});
