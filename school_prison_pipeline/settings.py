@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.humanize',
     'rest_framework',
+    'corsheaders',
     'county_info',
 )
 
@@ -54,6 +55,11 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+)
+
+CORS_ORIGIN_WHITELIST = (
+    'localhost:8000',
 )
 
 ROOT_URLCONF = 'school_prison_pipeline.urls'
