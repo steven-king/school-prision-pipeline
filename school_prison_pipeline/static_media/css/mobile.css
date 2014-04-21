@@ -57,7 +57,7 @@ body {
 h1 {
     font-family:roboto_slabregular;
     text-align: center;
-    font-size:56px;
+    font-size:36px;
 }
 p {
    font-family:latoregular; 
@@ -90,7 +90,7 @@ img {
         #profile-list li {
             padding:10px;
             border-bottom:2px solid #919191;
-            height:45px;
+            height:65px;
             width:98%;
             margin:0 1%;
             font-family:latoregular;
@@ -115,22 +115,19 @@ img {
                 margin:00px 10% 0 2%;
 
             }
-            #profile-list li .middle,  #profile-list li .right {
+            #profile-list li .middle {
                 font-family: latoregular;
                 color:#D16436;
                 font-size:30px;
-                width:35%;
+                width:45%;
                 text-align: center;
-            }
-
-            #profile-list li:nth-child(2) .left {
-                padding-top:10px;
+                padding-top:3px;
             }
         
-        #profile-list li:nth-child(5) {
-            height:65px;
+        #profile-list li:nth-child(5), #profile-list li:nth-child(6) {
+            height:89px;
         }
-            #profile-list li:nth-child(5) .middle, #profile-list li:last-child .middle {
+            #profile-list li:nth-child(5) .middle, #profile-list li:nth-child(6) .middle, #profile-list li:last-child .middle {
                 padding-top: 12px;
             }
 
@@ -141,6 +138,9 @@ img {
             #profile-list li:last-child .left {
                 width:50%;
                 margin-right:5%;
+            }
+            #profile-list li:last-child .middle {
+                width:35%;
             }
     #profile-list #demographics {
         width:100%;
