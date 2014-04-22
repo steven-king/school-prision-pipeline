@@ -78,4 +78,19 @@ Pacific Islander: {{ demographics.percent_pacific_islander|multiply:100|floatfor
 </div>
 
 {% endblock %}
+{% block javascript %}
+<script>
+$( document ).ready(function() {
+	if ($(window).width() > 700) {
+			window.location.href = "http://school-discipline.herokuapp.com";
+		}
+	});
+$( window ).resize(function() {
+  if ($(window).width() > 700) {
+		window.location.href = "http://school-discipline.herokuapp.com";
+	}
+});
+
+</script>
+{% endblock %}
 	

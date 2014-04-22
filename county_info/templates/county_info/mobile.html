@@ -447,7 +447,10 @@
 <script>
 
 $( document ).ready(function() {
-	
+	if ($(window).width() > 700) {
+			window.location.href = "http://school-discipline.herokuapp.com";
+		}
+	});
 	var lunchData = [0.10, 0.57, 0.63];
 	lunchGraph(lunchData);
 	var expensesData = ["10503", "7771.05", "11835"];
@@ -458,6 +461,14 @@ $( document ).ready(function() {
 	satGraph(satData);
 
 })
+
+	
+$( window ).resize(function() {
+  if ($(window).width() > 700) {
+		window.location.href = "http://school-discipline.herokuapp.com";
+	}
+});
+
 
 //	$(function() {
 //		$( document ).tooltip();
