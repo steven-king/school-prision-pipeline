@@ -67,17 +67,24 @@ body {
 }
   
 #map {
-    height:630px;
+    height:690px;
     z-index:20;
 }
 #map-description {
     width:80%;
-    margin-bottom: 15px
+    margin-bottom: 15px;
+    line-height: 18px
 }
 h1 {
     font-family:roboto_slabregular;
     text-align: center;
     font-size:56px;
+}
+h2 {
+    font-family:roboto_slabregular;
+    text-align: center;
+    font-size:30px;
+    line-height:.7em;
 }
 p {
    font-family:latoregular; 
@@ -85,24 +92,37 @@ p {
    margin-bottom:5px;
    color:#626262;
 }
+#instructions {
+    width:30%;
+    margin:28px 2.5% 0 2.5%%;
+    float:left;
+    color:#424242;
+    margin-bottom: 0;
+}
 #intro {
-    width:70%;
-    margin:20px 15% 0 15%;
+    width:60%;
+    margin:20px 0 0 2.5%;
+    padding:0 5% 0 2.5%;
+    float:left;
+    border-left:2px solid #919191;
+    margin-bottom: 0;
 }
 select {
     cursor:pointer;
 }
 #map svg {
-    width:80%;
+    width:85%;
     margin-left:20%;
     z-index:1;
     margin-right:-20px;
+    position: relative;
+    top:-20px;
 }
 #map-selector {
     z-index:10;
     position:relative;
     width:20%;
-    top:-360px;
+    top:-380px;
     
 }
     #map-selector .styled-select {
@@ -129,7 +149,7 @@ select {
 #map-key {
     z-index:10;
     position:relative;
-    top:-330px;
+    top:-350px;
     width:20%;
 }
     #map-key ul {
@@ -148,7 +168,7 @@ select {
 #tabs {
     border:4px solid #D16436;
     width:100%;
-    margin-left:1%;
+    margin-left:0;
     height:1000px;
     background-color:#fff;
     z-index:50;
@@ -257,9 +277,15 @@ select {
     }
     #profile-list .pie {
         float:left;
-        width:35%;
+        width:30%;
         height:370px;
     }
+        #district-demographics {
+            margin-right:7%;
+        }
+        #state-demographics {
+            margin-left: 3%;
+        }
     #profile-list #district-discipline {
         float:left;
         width:30%;
@@ -278,15 +304,10 @@ select {
             margin:10px 0;
         }
         #profile-list #district-discipline .transparent { 
-            border-right: 13px solid rgba(0, 0, 0, 0.5);
+            border-right: 10px solid rgba(0, 0, 0, 0.5);
         }
-#compare-section h6 {
-    float:right;
-    margin:0;
-    font-size:16px;
-    font-weight: normal;
-    color:#919191;
-}
+
+
 #compare-section ul {
     list-style-type: none;
     padding-left:2%;
@@ -294,7 +315,7 @@ select {
     top:0px;
     float:left;
     width:100%;
-    padding-bottom:25px;
+    padding-bottom:35px;
     border-bottom:2px solid #ccc;
 
 }
@@ -321,6 +342,7 @@ select {
             width: 75%;
             height: 34px;
             margin-left:7px;
+            z-index:80;
             overflow: hidden;
             background: url(../down-arrow-yellow.png) no-repeat right #C19438;
             border: 1px solid #ccc;
@@ -347,28 +369,30 @@ select {
                 margin:0;
                 -webkit-appearance: none;
             }
-.graphs-wrapper {
-    position:relative;
-    
-    height:400px;
+.graphs-wrapper {   
+    top:80px;    
+    height:900px;
     width:96%;
-    margin:0 2%;
-    overflow-x:scroll;
-    overflow-y:hidden;
+    margin:0px 2%;
+   
 }
-    .graphs-inner {
-        height:100%;
-        width:1500px;
-    }
         .graph {
-            width:20%;
-            height:100%;
+            width:33.333%;
+            height:400px;
             float:left;
+        }
+        .graph:nth-child(1), .graph:nth-child(2), .graph:nth-child(3) {
+            margin-top:30px;
+        }
+        .graph:nth-child(4) {
+            margin-left:12%;
+            margin-right:10%;
         }
         .graph .bar {
             width:25%;
             height:280px;
             float:left;
+            z-index:90;
         }
             .graph .bar:first-child {
                 margin-left:10%;
@@ -393,11 +417,15 @@ select {
             margin:0 5%;
             text-align: center;
             width:80%;
+            z-index:40;
         }
             .graph h4 strong {
                 color:#828282;
                 font-size:16px;
                 font-weight: normal;
+            }
+            #total-discipline {
+                line-height: 18px
             }
 .tipsy { 
     font-size: 14px; 
@@ -432,14 +460,28 @@ select {
   .tipsy-w .tipsy-arrow { left: 0; top: 50%; margin-top: -5px; border-right-style: solid; border-left: none; border-top-color: transparent; border-bottom-color: transparent; }
 
 @media screen and (min-width: 1200px) {
+    #instructions {
+        width:30%;
+        margin:23px 1.5% 0 6%;
+    }
+    #intro {
+        width:57%;
+        margin:20px 0 0 2.5%;
+        padding:0 5% 0 3.2%;
+    }
     #map {
-        height:630px;
+        height:700px;
+    }
+    #map svg {
+        top:0;
     }
     #map-selector {
-        top:-340px;
+        top:-370px;
+        margin-left:3%;
     }
     #map-key {
-        top:-280px;
+        top:-340px;
+        margin-left:3%;
     }
         #profile-list li:nth-child(2) .left {
             padding-top: 12px;
@@ -470,9 +512,24 @@ select {
             }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 995px) {
+    #instructions {
+        width:33%;
+        margin:23px 1.5% 0 0;
+        font-size:14px;
+        line-height: 1.3em;
+    }
+    #intro {
+        width:63%;
+        margin:20px 0 0 2.5%;
+        padding:0 0 0 3%;
+    }
     #map {
-        height:520px;
+        height:660px;
+    }
+    #map svg{
+        top:-20px;
+        width:90%;
     }
     h1 {
         font-size:52px;
@@ -481,23 +538,49 @@ select {
         font-size:14px;
     }
     #map-selector {
-        top:-240px;
+        top:-380px;
+        margin-left:-10px;
     }
         #map-selector .styled-select select {
             font-size: 14px;
         }
-     #map-key {
-        top:-200px;
+    #map-description {
+        width:100%;
+        margin-left:5px;
     }
-            #profile-list li:nth-child(3) .left {
-                padding-top:0px;
-            }
-        #profile-list li:nth-child(5){
+    #map-key {
+        top:-350px;
+        margin-left:-18px;
+    }
+    #tabs {
+        width:106%;
+        margin-left:-3%;
+        height:1030px;
+    }
+    #profile-list li:first-child .middle, #profile-list li:first-child .right {
+        font-size:24px;
+    }
+    #profile-list li .left {
+        padding-left: 1%;
+        width:23%;
+        margin-right:7%;
+    }
+    
+        #profile-list li:nth-child(3) .left {
+            padding-top:0px;
+        }
+       
+        #profile-list li:nth-child(6) {
             height:90px;
         }
-            #profile-list li:nth-child(5) .middle, #profile-list li:nth-child(5) .right{
-                padding-top: 12px
-            }
-
+        #profile-list li:nth-child(6) .middle, #profile-list li:nth-child(6) .right {
+            padding-top:12px;
+        }
+    #district-demographics {
+       margin-right: 7%;
+    }
+    #state-demographics {
+        margin-left: 2%;
+    }
 }
 

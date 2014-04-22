@@ -1,5 +1,5 @@
 function disciplineMap () {
-	$("#map-description").html("Discipline rate per 1000 students");
+	$("#map-description").html("Short-/long-term suspensions and expulsions per 1000 students");
 	$("#key-1").html("less than 20");
 	$("#key-2").html("21-40");
 	$("#key-3").html("41-100");

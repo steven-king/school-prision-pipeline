@@ -6,8 +6,10 @@
 {% block content %}
 <div id="map"class="row">
 	<div class="col-sm-12 col-md-12 col-lg-12">
-		<h1 class="title">The possibilities are endless</h1>
-		<p id="intro">Introductory text herey herey here. Narwhal trust fund food truck, selfies viral  cliche B banjo dreamcatcher Portland. literally Portland vinyl Echo Park put a bird on it. Blog bitters Tumblr, bicycle rights  deep v High Life dreamcatcher street art Etsy post-ironic Williamsburg biodiesel mixtape.</p>
+		<h1 class="title">Making the Grade</h1>
+		<h2>Adding up the factors for student success</h2>
+		<p id="instructions">Select a category on the left to see how school districts in North Carolina stack up. Click a district on the map for more details, and click the "Compare Districts" tab to compare up to three different districts.</p>
+		<p id="intro">Many factors contribute to a child's success in public school: the amount of resources schools spend, how many needy students each school has, how often those students are disciplined. Which North Carolina schools are making the grade and which are failing their students? It is obvious that many factors play a part in this story of poverty, discipline, and student success.</p>
 		
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="960px" height="400px" viewBox="0 80 960 400" enable-background="new 0 80 960 400" xml:space="preserve">
@@ -231,7 +233,7 @@
 	<!--
 	<path fill="#004F7A" stroke="#231F20" stroke-miterlimit="10" d="M336.327,239.808"/>-->
 	
-	<path id="600" class="Charlotte-Mecklenburg" rel='tipsy' title="" onclick="loadDistrict(this)" fill="#004F7A" stroke="#231F20" stroke-miterlimit="10" d="M408.119,305.735c0,0-3.167,1.166-5.994,5.5
+	<path id="600" class="Mecklenburg" rel='tipsy' title="" onclick="loadDistrict(this)" fill="#004F7A" stroke="#231F20" stroke-miterlimit="10" d="M408.119,305.735c0,0-3.167,1.166-5.994,5.5
 		c0,0-2.798,5.541-7.673,6.5c0,0-5.125,0.916-7.123,6.301c0,0-2.377,6.365-8.377,6.365c0,0-1.375-0.625-4.125-7.125
 		c0,0-4.25-2.5-6.375-7.5c0,0-2.5,6-10.125,5.625v-8.25c0,0,0.283-1.416,3.142-3.209c0,0,1.956-1.578-0.218-5.686
 		c0,0-4.049-10.355,5.201-15.105c0,0,2.375-1.25,0-3.25c0,0-3.38-1.73-1.565-8.49c0,0,0.717-3.26,1.079-10.01h17.257
@@ -643,7 +645,7 @@
 		</div>
 	</div>
 </div>
-<div id="tabs"class="row">
+<div id="tabs" class="row">
 	<div class="col-sm-12 col-md-12 col-lg-12" id="tab-view">
 		<div class="tab orange" id="profile">
 			District Profile
@@ -679,12 +681,12 @@
 					<div class="right">82.5%</div>
 				</li>
 				<li>
-					<div class="left">Percent of students on reduced lunch:</div>
+					<div class="left">Percent of students on free/reduced lunch:</div>
 					<div class="middle" id="d-lunch">21%</div>
 					<div class="right">56.1%</div>
 				</li>
 				<li>
-					<div class="left">Graduation rate of students on reduced lunch:</div>
+					<div class="left">Graduation rate of students on free/reduced lunch:</div>
 					<div class="middle" id="d-grad-lunch">73%</div>
 					<div class="right">76.1%</div>
 				</li>
@@ -696,7 +698,7 @@
 				</li>
 			</ul>
 			<div id="demographics">
-				<div class="pie" id="district-demographics" style="width:35%; padding-right:5%">
+				<div class="pie" id="district-demographics">
 				</div>
 				<div id="district-discipline">
 					<h4>Discipline by Demographic</h4>
@@ -707,9 +709,9 @@
 					<div id="d-3" rel='tipsy' class="bar yellow transparent" title=""></div>
 					<div id="d-4" rel='tipsy' class="bar orange transparent" title=""></div>
 					<div id="d-5" rel='tipsy' class="bar orange5 transparent" title=""></div>
-					<p>Margin of error = 4 incidents</p>
+					<p id="margin-error">Margin of error = &#177; 2 incidents</p>
 				</div>
-				<div class="pie" id="state-demographics" style="padding-left:5%; width:35%">
+				<div class="pie" id="state-demographics">
 				</div>
 			</div>
 		</div>
@@ -737,7 +739,7 @@
 							  <option value="160">Carteret</option>
 							  <option value="170">Caswell</option>
 							  <option value="180">Catawba</option>
-							  	<option value="681">Chapel Hill-Carrboro</option>
+							  	<option value="681" selected>Chapel Hill-Carrboro</option>
 							  <option value="190">Chatham</option>
 							  <option value="200">Cherokee</option>
 							  <option value="210">Edenton-Chowan</option>
@@ -795,7 +797,7 @@
 							  	<option value="182">Newton Conover</option>
 							  <option value="660">Northampton</option>
 							  <option value="670">Onslow</option>
-							  <option value="680" selected>Orange</option>
+							  <option value="680">Orange</option>
 							  <option value="690">Pamlico</option>
 							  <option value="700">Pasquotank</option>
 							  <option value="710">Pender</option>
@@ -915,7 +917,7 @@
 							  	<option value="182">Newton Conover</option>
 							  <option value="660">Northampton</option>
 							  <option value="670">Onslow</option>
-							  <option value="680">Orange</option>
+							  <option value="680" selected>Orange</option>
 							  <option value="690">Pamlico</option>
 							  <option value="700">Pasquotank</option>
 							  <option value="710">Pender</option>
@@ -992,7 +994,7 @@
 							  <option value="290">Davidson</option>
 							  <option value="300">Davie</option>
 							  <option value="310">Duplin</option>
-							  <option value="320">Durham</option>
+							  <option value="320" selected>Durham</option>
 							  <option value="330">Edgecombe</option>
 							  	<option value="861">Elkin</option>
 							  <option value="340">Forsyth</option>
@@ -1024,7 +1026,7 @@
 							  <option value="570">Madison</option>
 							  <option value="580">Martin</option>
 							  <option value="590">McDowell</option>
-							  <option value="600" selected>Charlotte-Mecklenburg</option>
+							  <option value="600">Charlotte-Mecklenburg</option>
 							  <option value="610">Mitchell</option>
 							  <option value="620">Montgomery</option>
 							  <option value="630">Moore</option>
@@ -1076,72 +1078,69 @@
 						</div>
 				</li>
 			</ul>
-			<h6>scroll right to see more graphs >></h6>
 			<div class="graphs-wrapper">
-				<div class="graphs-inner">
-					<div class="lunch graph">
-						<div class="bar yellow" id="lunch-0">
-							<p id="lunch-p-0">67%</p>
-						</div>
-						<div class="bar orange" id="lunch-1">
-							<p id="lunch-p-1">49%</p>
-						</div>
-						<div class="bar blue" id="lunch-2">
-							<p id="lunch-p-2">53%</p>
-						</div>
+				<div class="discipline graph">
+					<div rel='tipsy' title="" class="bar yellow" id="discipline-0">
+						<p id="discipline-p-0">67%</p>
+					</div>
+					<div rel='tipsy' title="" class="bar orange" id="discipline-1">
+						<p id="discipline-p-1">49%</p>
+					</div>
+					<div rel='tipsy' title="" class="bar blue" id="discipline-2">
+						<p id="discipline-p-2">53%</p>
+					</div>
+					<h4>Disciplinary action<br>per 1,000 students<br>
+						<strong>(includes short-, long-term suspension and expulsion)</strong></h4>
+				</div>
+				<div class="sat graph">
+					<div rel='tipsy' title="" class="bar yellow" id="sat-0">
+						<p id="sat-p-0">67%</p>
+					</div>
+					<div rel='tipsy' title="" class="bar orange" id="sat-1">
+						<p id="sat-p-1">49%</p>
+					</div>
+					<div rel='tipsy' title="" class="bar blue" id="sat-2">
+						<p id="sat-p-2">53%</p>
+					</div>
+					<h4>Average SAT score for graduating seniors</h4>
+				</div>
+				<div class="graduation graph">
+					<div rel='tipsy' title="" class="bar yellow" id="graduation-0">
+						<p id="graduation-p-0">67%</p>
+					</div>
+					<div rel='tipsy' title="" class="bar orange" id="graduation-1">
+						<p id="graduation-p-1">49%</p>
+					</div>
+					<div rel='tipsy' title="" class="bar blue" id="graduation-2">
+						<p id="graduation-p-2">53%</p>
+					</div>
+					<h4>High school<br>graduation rate</h4>
+				</div>
+				<div class="lunch graph">
+					<div rel='tipsy' title="" class="bar yellow" id="lunch-0">
+						<p id="lunch-p-0">67%</p>
+					</div>
+					<div rel='tipsy' title="" class="bar orange" id="lunch-1">
+						<p id="lunch-p-1">49%</p>
+					</div>
+					<div rel='tipsy' title="" class="bar blue" id="lunch-2">
+						<p id="lunch-p-2">53%</p>
+					</div>
 
-						<h4>Students who qualify for free or reduced lunch</h4>
+					<h4>Students who qualify for free or reduced lunch</h4>
+				</div>
+				<div class="expenses graph">
+					<div rel='tipsy' title="" class="bar yellow" id="expenses-0">
+						<p id="expenses-p-0">67%</p>
 					</div>
-					<div class="expenses graph">
-						<div class="bar yellow" id="expenses-0">
-							<p id="expenses-p-0">67%</p>
-						</div>
-						<div class="bar orange" id="expenses-1">
-							<p id="expenses-p-1">49%</p>
-						</div>
-						<div class="bar blue" id="expenses-2">
-							<p id="expenses-p-2">53%</p>
-						</div>
-						<h4>Total Expenses per Student<br>
-							<strong>(money from county, state, and federal governments)</strong></h4>
+					<div rel='tipsy' title="" class="bar orange" id="expenses-1">
+						<p id="expenses-p-1">49%</p>
 					</div>
-					<div class="discipline graph">
-						<div class="bar yellow" id="discipline-0">
-							<p id="discipline-p-0">67%</p>
-						</div>
-						<div class="bar orange" id="discipline-1">
-							<p id="discipline-p-1">49%</p>
-						</div>
-						<div class="bar blue" id="discipline-2">
-							<p id="discipline-p-2">53%</p>
-						</div>
-						<h4>Disciplinary action<br>per 1,000 students<br>
-							<strong>(includes short-, long-term suspension and expulsion)</strong></h4>
+					<div rel='tipsy' title="" class="bar blue" id="expenses-2">
+						<p id="expenses-p-2">53%</p>
 					</div>
-					<div class="graduation graph">
-						<div class="bar yellow" id="graduation-0">
-							<p id="graduation-p-0">67%</p>
-						</div>
-						<div class="bar orange" id="graduation-1">
-							<p id="graduation-p-1">49%</p>
-						</div>
-						<div class="bar blue" id="graduation-2">
-							<p id="graduation-p-2">53%</p>
-						</div>
-						<h4>High school<br>graduation rate</h4>
-					</div>
-					<div class="sat graph">
-						<div class="bar yellow" id="sat-0">
-							<p id="sat-p-0">67%</p>
-						</div>
-						<div class="bar orange" id="sat-1">
-							<p id="sat-p-1">49%</p>
-						</div>
-						<div class="bar blue" id="sat-2">
-							<p id="sat-p-2">53%</p>
-						</div>
-						<h4>Average SAT score for graduating seniors</h4>
-					</div>
+					<h4>Total Expenses per Student<br>
+						<strong>(money from county, state, and federal governments)</strong></h4>
 				</div>
 			</div>
 		</div>
@@ -1157,38 +1156,29 @@
 <script>
 
 $( document ).ready(function() {
+	//adapt for mobile view
 	if ($(window).width() <= 700) {
 		window.location.href = "http://school-discipline.herokuapp.com/mobile";
 	}
-	$.ajax({
-		url: "http://school-discipline.herokuapp.com/api/districts/680",
-		dataType: "json",
-		success: function(data) {
-			districtA = data;
-			console.log(districtA);
-			loadDistrictPie(districtA);
-		}
-	});
+
 	$("#compare-section").hide();
+	//load first dataset in map
 	disciplineMap();
-	var lunchData = [0.10, 0.57, 0.63];
-	lunchGraph(lunchData);
-	var expensesData = ["10503", "7771.05", "11835"];
-	expensesGraph(expensesData);
-	var graduationData = [0.37, 0.57, 0.9754];
-	graduationGraph(graduationData);
-	var satData = [963, 1149, 835];
-	satGraph(satData);
 	
+	//initialize tooltips as the title attribute of any element with "rel=tipsy"
 	$(function() {
 	   $('path[rel=tipsy]').tipsy({gravity: 'e'});
 	   $('circle[rel=tipsy]').tipsy({gravity: 'e'});
 	   $('polygon[rel=tipsy]').tipsy({gravity: 'e'});
 	   $('div[rel=tipsy]').tipsy({gravity: 'w'});
-	 });
+	});
 
-	demoDisciplineGraph(orange.discipline_demographic);
+	loadDistrictProfile();    //see below
+	loadDistrictPie();        //see below
+	loadDisciplineProfile();  //see below
 	
+	// initialize high-charts NC state demographics breakdown
+	// *** WON'T CHANGE *** //
    	$(function () {
 		$('#state-demographics').highcharts({
             chart: {
@@ -1217,14 +1207,14 @@ $( document ).ready(function() {
  	         	}
 	       	},
 	       	title: {
-			    text: 'North Carolina Demographics<br>in 2012-2013'
+			    text: 'North Carolina Demographics in 2012-13 by race and ethnicity'
 			},
         	series: [{
             	type: 'pie',
             	name: 'North Carolina Demographics in 2012-2013',
             	data: [
             {name: "Pacific Islander",   y: 0.001*100, color: '#CE7352'},
-            {name: "Native American", y: 0.014*100, color: '#BDAA91'},
+            {name: "American Indian", y: 0.014*100, color: '#BDAA91'},
             {name: "Asian", y: 0.026*100, color: '#88765D'},
             {name: "Hispanic",    y: 0.14*100, color: '#C19438'},
             {name: "Black", y: 0.261*100, color: '#D16436'},
@@ -1232,18 +1222,24 @@ $( document ).ready(function() {
 			    ]
         	}]
     	});
-   	});        
+   	});
+   	loadCompareGraphs();   //for compare tab, see below
 })
+// *** GLOBAL VARS *** //
+// see also districtA, districtB, districtC below - store current object data
+// index 0 is most recently selected district in all
+var districts_name = ["Chapel Hill City Schools", "Orange County", "Durham County", "Orange County"];
+var districts_id = ["681", "680", "340"];
 
-var districts_name = ["Orange", "Buncombe", "Charlotte-Mecklenburg", "Orange County"];
-var districts_id = ["680", "110", "600"];
-
+// adjust for mobile on resize
 $( window ).resize(function() {
   if ($(window).width() <= 700) {
 		window.location.href = "http://school-discipline.herokuapp.com/mobile";
 	}
 });
 
+// load new dataset when selected on left
+// see map.js for all functions
 $("#map-select").change(function () {
 	var currData = $("#map-select").val();
 	if (currData == "discipline") {
@@ -1263,11 +1259,55 @@ $("#map-select").change(function () {
 	}
 });
 
+// listener for yellow select on compare tab - request data for new district
+// reload compare tab graphs + update district info on profile tab
 $("#district-1").change(function () {
 	districts_id[0]= $("#district-1").val();
-
+	$.ajax({
+		url: "http://school-discipline.herokuapp.com/api/districts/"+districts_id[0],
+		dataType: "json",
+		success: function(data) {
+			console.log(data);
+			districtA = data;
+			loadDistrictProfile();
+			loadDistrictPie();
+			loadDisciplineProfile();
+			loadCompareGraphs();    //see line 1552
+		}
+	})
 });
 
+// listener for orange select on compare tab - request data for new district
+$("#district-2").change(function () {
+	districts_id[1]= $("#district-2").val();
+	$.ajax({
+		url: "http://school-discipline.herokuapp.com/api/districts/"+districts_id[1],
+		dataType: "json",
+		success: function(data) {
+			console.log(data);
+			districtB = data;
+			// reload compare tab graphs
+			loadCompareGraphs();    //see line 1552
+		}
+	})
+});
+
+// listener for blue select on compare tab - request data for new district
+$("#district-3").change(function () {
+	districts_id[2]= $("#district-3").val();
+	$.ajax({
+		url: "http://school-discipline.herokuapp.com/api/districts/"+districts_id[2],
+		dataType: "json",
+		success: function(data) {
+			console.log(data);
+			districtC = data;
+			// reload compare tab graphs
+			loadCompareGraphs();    //see line 1552
+		}
+	})
+});
+
+// basic hide/show functionality for tabs
 $("#profile").on("click", function(event){
 		$("#compare-section").hide();
 		$("#profile-list").show();
@@ -1275,22 +1315,27 @@ $("#profile").on("click", function(event){
 	})
 
 $("#compare").on("click", function(event){
+		$('div[rel=tipsy]').tipsy({gravity: 'w'});
 		$("#profile-list").hide();
 		$("#compare-section").show();
 		$("#tabs").css("border-color", "#004E79");
 	})
 
+// listener for click on a district on the map
 function loadDistrict(district) {
+	// update GLOBAL VARS, newest at front, others move down a slot
+	districts_id[2] = districts_id[1];
+	districts_id[1] = districts_id[0];
 	districts_id[0] = $(district).attr('id');
-	districts_name[0] = $(district).attr('class');
-	if ($(district).is("circle")) {
-		districts_name[3] = districts_name[0]+' City Schools';
-		$("#d-name").html(districts_name[3]);
-	}
-	else {
-		districts_name[3] = districts_name[0]+' County';
-		$("#d-name").html(districts_name[3]);
-	}
+	districts_name[2] = districts_name[1];
+	districts_name[1] = districts_name[0];
+	districts_name[0] = $(district).html();
+	districtC = districtB;
+	districtB = districtA;
+	//update compare tab select elements
+    $("#district-1").val(districts_id[0]);
+    $("#district-2").val(districts_id[1]);
+    $("#district-3").val(districts_id[2]);
 
 	$.ajax({
 		url: "http://school-discipline.herokuapp.com/api/districts/"+districts_id[0],
@@ -1298,107 +1343,285 @@ function loadDistrict(district) {
 		success: function(data) {
 			console.log(data);
 			districtA = data;
-			//$("#d-expenses").
-		    //$("#d-take-sat").
-		    //$("$d-sat-score").
-		    var percent_needy = Math.round(districtA.freelunch_rates[0].percent_needy *100);
-		    percent_needy = percent_needy + "%";
-		    $("#d-lunch").html(percent_needy);
-		    var gradLunch = Math.round(districtA.graduation_rates[0].freelunch_graduation_rate *100);
-		    gradLunch = gradLunch + "%";
-		    $("#d-grad-lunch").html(gradLunch);
-		    var graduation = Math.round(districtA.graduation_rates[0].graduation_rate *100);
-		    graduation = graduation + "%";
-		    $("#d-graduation").html(graduation);
-		    
-			loadDistrictPie(districtA);
+
+			//update profile tab
+		    loadDistrictProfile();
+			loadDistrictPie();
+			loadDisciplineProfile();
 			var chart = $('#district-demographics').highcharts();
 		    chart.series[0].setData([districtA.demographics[0].percent_pacific_islander*100, districtA.demographics[0].percent_native_american*100, districtA.demographics[0].percent_asian*100, districtA.demographics[0].percent_black*100, districtA.demographics[0].percent_hispanic*100, districtA.demographics[0].percent_white*100]);
+
+		    // update compare tab
+		    loadCompareGraphs();    //see line 1552
 		}
 	})
 }
-var districtA = {};
 
-	function loadDistrictPie(district) {
-		var demographics = district.demographics[0];
-		$('#district-demographics').highcharts({
-            chart: {
-                plotBackgroundColor: null,
-	            plotBorderWidth: null,
-	            plotShadow: false
-            },
- 	        tooltip: {
- 	        	backgroundColor: '#000',
- 	        	style: {
- 	        		color:'#fff',
- 	        		width: '100px'
- 	        	},
- 	        	borderWidth: 0,
-     	    	pointFormat: '<b>{point.percentage:.1f}%</b>{series.data.name}'
- 	        },
-        	plotOptions: {
-             	pie: {
-                	allowPointSelect: true,
-                	cursor: 'pointer',
-                 	dataLabels: {
-                    	enabled: false,
-                    	color: '#000000',
-                    	connectorColor: '#000000',
- 	                  	format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-                	}
- 	         	}
-	       	},
-	       	title: {
-			    text: district.lea_name + ' Demographics<br>in 2012-2013'
-			},
-        	series: [{
-            	type: 'pie',
-            	name: 'Student Demographics in 2012-2013',
-            	data: [
-            {name: "Pacific Islander",   y: demographics.percent_pacific_islander*100, color: '#CE7352'},
-            {name: "Native American", y: demographics.percent_native_american*100, color: '#BDAA91'},
-        	{name: "Asian", y: demographics.percent_asian*100, color: '#88765D'},
-            {name: "Black", y: demographics.percent_black*100, color: '#C19438'},
-            {name: "Hispanic",    y: demographics.percent_hispanic*100, color: '#D16436'},
-            {name: "White",     y: demographics.percent_white*100, color: '#004E79'}
-			    ]
-        	}]
-    	});
-   	};
-var orange = 
-	{
-		"district": "010",
-		"name": "Orange",
-		"school_year": "2012-2013",
-		"sat_participation": 0.656,
-    	"sat_average_score": 1038,
-    	"expenses_per_pupil": 9745.94,
-		"percent_needy": 0.419,
-		"disciplinary": {"H": 9, "M": 15, "E": 2},
-		"graduation_rate": 0.825,
-		"freelunch_graduation_rate": 0.68,
-		"demographic": {
-			"percent_native_american": 0.004,
-	    	"percent_asian": 0.007,
-	    	"percent_black": 0.162,
-	    	"percent_hispanic": 0.157,
-	    	"percent_white": 0.637,
-	    	"percent_pacific_islander": 0
-		},
-		"discipline_demographic": {
-			"total": 499,
-		    "hispanic_female": 11,
-		    "black_female": 38,
-		    "white_female": 51,
-		    "multiracial_female": 7,
-		    "american_indian_male": 30,
-		    "asian_male": 60,
-		    "hispanic_male":35,
-		    "black_male": 134,
-		    "white_male": 215,
-		    "multiracial_male": 5
+// *** MORE GLOBAL VARS *** //
+var districtA = {"lea_name": "Chapel Hill-Carrboro City Schools", "lea_code": "681", "graduation_rates": [{"school_year": "2012-2013", "graduation_rate": "0.926", "freelunch_graduation_rate": "0.754"}, {"school_year": "2011-2012", "graduation_rate": "0.900", "freelunch_graduation_rate": "0.667"}, {"school_year": "2010-2011", "graduation_rate": "0.883", "freelunch_graduation_rate": "0.634"}, {"school_year": "2009-2010", "graduation_rate": "0.890", "freelunch_graduation_rate": "0.656"}, {"school_year": "2008-2009", "graduation_rate": "0.883", "freelunch_graduation_rate": "0.640"}, {"school_year": "2007-2008", "graduation_rate": "0.879", "freelunch_graduation_rate": "0.595"}], "demographics": [{"school_year": "2012-2013", "expenses_per_pupil": "10734.80", "sat_participation": "0.829", "sat_average_score": 1192, "percent_native_american": "0.005", "percent_asian": "0.151", "percent_black": "0.118", "percent_hispanic": "0.143", "percent_white": "0.515", "percent_multiracial": null, "percent_pacific_islander": "0.000"}, {"school_year": "2011-2012", "expenses_per_pupil": "10548.32", "sat_participation": "0.897", "sat_average_score": 1194, "percent_native_american": "0.006", "percent_asian": "0.131", "percent_black": "0.108", "percent_hispanic": "0.141", "percent_white": "0.495", "percent_multiracial": "0.075", "percent_pacific_islander": "0.000"}, {"school_year": "2010-2011", "expenses_per_pupil": "10566.88", "sat_participation": "0.859", "sat_average_score": 1182, "percent_native_american": "0.008", "percent_asian": "0.144", "percent_black": "0.120", "percent_hispanic": "0.133", "percent_white": "0.521", "percent_multiracial": "0.075", "percent_pacific_islander": "0.000"}, {"school_year": "2009-2010", "expenses_per_pupil": "10604.53", "sat_participation": "0.866", "sat_average_score": 1194, "percent_native_american": "0.002", "percent_asian": "0.143", "percent_black": "0.193", "percent_hispanic": "0.109", "percent_white": "0.553", "percent_multiracial": null, "percent_pacific_islander": null}, {"school_year": "2008-2009", "expenses_per_pupil": "10940.56", "sat_participation": "0.830", "sat_average_score": 1179, "percent_native_american": "0.001", "percent_asian": "0.135", "percent_black": "0.200", "percent_hispanic": "0.104", "percent_white": "0.560", "percent_multiracial": null, "percent_pacific_islander": null}, {"school_year": "2007-2008", "expenses_per_pupil": "10578.00", "sat_participation": "0.931", "sat_average_score": 1179, "percent_native_american": "0.002", "percent_asian": "0.126", "percent_black": "0.197", "percent_hispanic": "0.099", "percent_white": "0.576", "percent_multiracial": null, "percent_pacific_islander": null}], "discipline_rates": [{"school_year": "2012-2013", "category": "E", "composite_rate": 1}, {"school_year": "2012-2013", "category": "H", "composite_rate": 5}, {"school_year": "2012-2013", "category": "M", "composite_rate": 4}, {"school_year": "2011-2012", "category": "M", "composite_rate": null}, {"school_year": "2011-2012", "category": "E", "composite_rate": null}, {"school_year": "2011-2012", "category": "H", "composite_rate": null}, {"school_year": "2010-2011", "category": "M", "composite_rate": null}, {"school_year": "2010-2011", "category": "E", "composite_rate": null}, {"school_year": "2010-2011", "category": "H", "composite_rate": null}, {"school_year": "2009-2010", "category": "H", "composite_rate": null}, {"school_year": "2009-2010", "category": "E", "composite_rate": null}, {"school_year": "2009-2010", "category": "M", "composite_rate": null}, {"school_year": "2008-2009", "category": "H", "composite_rate": null}, {"school_year": "2008-2009", "category": "E", "composite_rate": null}, {"school_year": "2008-2009", "category": "M", "composite_rate": null}, {"school_year": "2008-2009", "category": "A", "composite_rate": null}, {"school_year": "2007-2008", "category": "H", "composite_rate": null}, {"school_year": "2007-2008", "category": "A", "composite_rate": null}, {"school_year": "2007-2008", "category": "E", "composite_rate": null}, {"school_year": "2007-2008", "category": "M", "composite_rate": null}], "freelunch_rates": [{"school_year": "2012-2013", "percent_needy": "0.271"}, {"school_year": "2011-2012", "percent_needy": "0.264"}, {"school_year": "2010-2011", "percent_needy": "0.235"}, {"school_year": "2009-2010", "percent_needy": "0.256"}], "discipline_demographics": [{"total": 427, "white_male": 67, "white_female": 15, "black_male": 190, "black_female": 70, "hispanic_male": 41, "hispanic_female": 7, "multiracial_male": 17, "multiracial_female": 10, "asian_male": 8, "asian_female": null, "pacific_islander_male": null, "pacific_islander_female": null, "other_male": null, "other_female": null, "american_indian_male": null, "american_indian_female": null, "other": 2}]};
+var districtB = {"lea_name": "Orange County Schools", "lea_code": "680", "graduation_rates": [{"school_year": "2012-2013", "graduation_rate": "0.825", "freelunch_graduation_rate": "0.680"}, {"school_year": "2011-2012", "graduation_rate": "0.854", "freelunch_graduation_rate": "0.715"}, {"school_year": "2010-2011", "graduation_rate": "0.828", "freelunch_graduation_rate": "0.720"}, {"school_year": "2009-2010", "graduation_rate": "0.831", "freelunch_graduation_rate": "0.690"}, {"school_year": "2008-2009", "graduation_rate": "0.814", "freelunch_graduation_rate": "0.732"}, {"school_year": "2007-2008", "graduation_rate": "0.763", "freelunch_graduation_rate": "0.583"}], "demographics": [{"school_year": "2012-2013", "expenses_per_pupil": "9745.94", "sat_participation": "0.656", "sat_average_score": 1038, "percent_native_american": "0.004", "percent_asian": "0.007", "percent_black": "0.162", "percent_hispanic": "0.157", "percent_white": "0.637", "percent_multiracial": null, "percent_pacific_islander": "0.000"}, {"school_year": "2011-2012", "expenses_per_pupil": "9354.40", "sat_participation": "0.696", "sat_average_score": 1044, "percent_native_american": "0.004", "percent_asian": "0.007", "percent_black": "0.161", "percent_hispanic": "0.140", "percent_white": "0.657", "percent_multiracial": "0.027", "percent_pacific_islander": "0.001"}, {"school_year": "2010-2011", "expenses_per_pupil": "9477.49", "sat_participation": "0.740", "sat_average_score": 1043, "percent_native_american": "0.004", "percent_asian": "0.006", "percent_black": "0.170", "percent_hispanic": "0.125", "percent_white": "0.667", "percent_multiracial": "0.027", "percent_pacific_islander": "0.001"}, {"school_year": "2009-2010", "expenses_per_pupil": "9348.05", "sat_participation": "0.731", "sat_average_score": 1044, "percent_native_american": "0.003", "percent_asian": "0.009", "percent_black": "0.207", "percent_hispanic": "0.109", "percent_white": "0.671", "percent_multiracial": null, "percent_pacific_islander": null}, {"school_year": "2008-2009", "expenses_per_pupil": "9861.69", "sat_participation": "0.639", "sat_average_score": 1039, "percent_native_american": "0.003", "percent_asian": "0.010", "percent_black": "0.210", "percent_hispanic": "0.092", "percent_white": "0.684", "percent_multiracial": null, "percent_pacific_islander": null}, {"school_year": "2007-2008", "expenses_per_pupil": "9796.00", "sat_participation": "0.775", "sat_average_score": 1043, "percent_native_american": "0.003", "percent_asian": "0.009", "percent_black": "0.215", "percent_hispanic": "0.081", "percent_white": "0.692", "percent_multiracial": null, "percent_pacific_islander": null}], "discipline_rates": [{"school_year": "2012-2013", "category": "E", "composite_rate": 2}, {"school_year": "2012-2013", "category": "T", "composite_rate": 145}, {"school_year": "2012-2013", "category": "M", "composite_rate": 15}, {"school_year": "2012-2013", "category": "H", "composite_rate": 9}, {"school_year": "2011-2012", "category": "T", "composite_rate": null}, {"school_year": "2011-2012", "category": "E", "composite_rate": null}, {"school_year": "2011-2012", "category": "H", "composite_rate": null}, {"school_year": "2011-2012", "category": "M", "composite_rate": null}, {"school_year": "2010-2011", "category": "E", "composite_rate": null}, {"school_year": "2010-2011", "category": "H", "composite_rate": null}, {"school_year": "2010-2011", "category": "M", "composite_rate": null}, {"school_year": "2010-2011", "category": "T", "composite_rate": null}, {"school_year": "2009-2010", "category": "E", "composite_rate": null}, {"school_year": "2009-2010", "category": "H", "composite_rate": null}, {"school_year": "2009-2010", "category": "M", "composite_rate": null}, {"school_year": "2009-2010", "category": "T", "composite_rate": null}, {"school_year": "2008-2009", "category": "E", "composite_rate": null}, {"school_year": "2008-2009", "category": "H", "composite_rate": null}, {"school_year": "2008-2009", "category": "M", "composite_rate": null}, {"school_year": "2008-2009", "category": "T", "composite_rate": null}, {"school_year": "2007-2008", "category": "E", "composite_rate": null}, {"school_year": "2007-2008", "category": "H", "composite_rate": null}, {"school_year": "2007-2008", "category": "M", "composite_rate": null}, {"school_year": "2007-2008", "category": "T", "composite_rate": null}], "freelunch_rates": [{"school_year": "2012-2013", "percent_needy": "0.419"}, {"school_year": "2011-2012", "percent_needy": "0.416"}, {"school_year": "2010-2011", "percent_needy": "0.398"}, {"school_year": "2009-2010", "percent_needy": "0.390"}], "discipline_demographics": [{"total": 499, "white_male": 215, "white_female": 51, "black_male": 134, "black_female": 38, "hispanic_male": 35, "hispanic_female": 11, "multiracial_male": 5, "multiracial_female": 7, "asian_male": 2, "asian_female": null, "pacific_islander_male": null, "pacific_islander_female": null, "other_male": null, "other_female": null, "american_indian_male": 2, "american_indian_female": null, "other": null}]};
+var districtC = {"lea_name": "Durham Public Schools", "lea_code": "320", "graduation_rates": [{"school_year": "2012-2013", "graduation_rate": "0.796", "freelunch_graduation_rate": "0.726"}, {"school_year": "2011-2012", "graduation_rate": "0.769", "freelunch_graduation_rate": "0.715"}, {"school_year": "2010-2011", "graduation_rate": "0.739", "freelunch_graduation_rate": "0.687"}, {"school_year": "2009-2010", "graduation_rate": "0.698", "freelunch_graduation_rate": "0.633"}, {"school_year": "2008-2009", "graduation_rate": "0.640", "freelunch_graduation_rate": "0.511"}, {"school_year": "2007-2008", "graduation_rate": "0.630", "freelunch_graduation_rate": "0.483"}], "demographics": [{"school_year": "2012-2013", "expenses_per_pupil": "10141.14", "sat_participation": "0.645", "sat_average_score": 965, "percent_native_american": "0.003", "percent_asian": "0.025", "percent_black": "0.507", "percent_hispanic": "0.241", "percent_white": "0.193", "percent_multiracial": null, "percent_pacific_islander": "0.001"}, {"school_year": "2011-2012", "expenses_per_pupil": "10129.80", "sat_participation": "0.725", "sat_average_score": 951, "percent_native_american": "0.003", "percent_asian": "0.024", "percent_black": "0.513", "percent_hispanic": "0.223", "percent_white": "0.206", "percent_multiracial": "0.028", "percent_pacific_islander": "0.001"}, {"school_year": "2010-2011", "expenses_per_pupil": "9230.40", "sat_participation": "0.731", "sat_average_score": 951, "percent_native_american": "0.003", "percent_asian": "0.023", "percent_black": "0.522", "percent_hispanic": "0.211", "percent_white": "0.212", "percent_multiracial": "0.028", "percent_pacific_islander": "0.001"}, {"school_year": "2009-2010", "expenses_per_pupil": "9454.01", "sat_participation": "0.716", "sat_average_score": 963, "percent_native_american": "0.002", "percent_asian": "0.026", "percent_black": "0.568", "percent_hispanic": "0.191", "percent_white": "0.213", "percent_multiracial": null, "percent_pacific_islander": null}, {"school_year": "2008-2009", "expenses_per_pupil": "10000.73", "sat_participation": "0.632", "sat_average_score": 965, "percent_native_american": "0.002", "percent_asian": "0.027", "percent_black": "0.570", "percent_hispanic": "0.183", "percent_white": "0.218", "percent_multiracial": null, "percent_pacific_islander": null}, {"school_year": "2007-2008", "expenses_per_pupil": "9700.00", "sat_participation": "0.684", "sat_average_score": 967, "percent_native_american": "0.002", "percent_asian": "0.026", "percent_black": "0.576", "percent_hispanic": "0.170", "percent_white": "0.226", "percent_multiracial": null, "percent_pacific_islander": null}], "discipline_rates": [{"school_year": "2012-2013", "category": "E", "composite_rate": 7}, {"school_year": "2012-2013", "category": "T", "composite_rate": 25}, {"school_year": "2012-2013", "category": "H", "composite_rate": 29}, {"school_year": "2012-2013", "category": "M", "composite_rate": 28}, {"school_year": "2012-2013", "category": "A", "composite_rate": null}, {"school_year": "2011-2012", "category": "E", "composite_rate": null}, {"school_year": "2011-2012", "category": "H", "composite_rate": null}, {"school_year": "2011-2012", "category": "M", "composite_rate": null}, {"school_year": "2011-2012", "category": "T", "composite_rate": null}, {"school_year": "2010-2011", "category": "T", "composite_rate": null}, {"school_year": "2010-2011", "category": "E", "composite_rate": null}, {"school_year": "2010-2011", "category": "H", "composite_rate": null}, {"school_year": "2010-2011", "category": "M", "composite_rate": null}, {"school_year": "2009-2010", "category": "E", "composite_rate": null}, {"school_year": "2009-2010", "category": "H", "composite_rate": null}, {"school_year": "2009-2010", "category": "M", "composite_rate": null}, {"school_year": "2009-2010", "category": "T", "composite_rate": null}, {"school_year": "2008-2009", "category": "T", "composite_rate": null}, {"school_year": "2008-2009", "category": "M", "composite_rate": null}, {"school_year": "2008-2009", "category": "A", "composite_rate": null}, {"school_year": "2008-2009", "category": "E", "composite_rate": null}, {"school_year": "2008-2009", "category": "H", "composite_rate": null}, {"school_year": "2007-2008", "category": "A", "composite_rate": null}, {"school_year": "2007-2008", "category": "H", "composite_rate": null}, {"school_year": "2007-2008", "category": "M", "composite_rate": null}, {"school_year": "2007-2008", "category": "T", "composite_rate": null}, {"school_year": "2007-2008", "category": "E", "composite_rate": null}], "freelunch_rates": [{"school_year": "2012-2013", "percent_needy": "0.659"}, {"school_year": "2011-2012", "percent_needy": "0.636"}, {"school_year": "2010-2011", "percent_needy": "0.620"}, {"school_year": "2009-2010", "percent_needy": "0.633"}], "discipline_demographics": [{"total": 5934, "white_male": 262, "white_female": 50, "black_male": 3185, "black_female": 1469, "hispanic_male": 579, "hispanic_female": 209, "multiracial_male": 109, "multiracial_female": 36, "asian_male": 13, "asian_female": null, "pacific_islander_male": null, "pacific_islander_female": null, "other_male": null, "other_female": null, "american_indian_male": 14, "american_indian_female": 6, "other": 2}]};
+
+// Step 2 in updating profile tab on map click or select-1 change
+function loadDistrictProfile() {
+	// name = li:first-child .middle
+	var name = "";
+	//figure out whether is county or city school district and append accordingly
+	if ($("#"+districtA.lea_code).is("circle")) {
+		name = $("#"+districtA.lea_code).attr("class") +' City Schools';
+	}
+	else {
+		name = $("#"+districtA.lea_code).attr("class") +' County';
+	}
+	$("#d-name").html(name);
+
+	// name = li:nth-child(2) .middle
+	// incoming format - i.e. "11675" - convert to readable money
+	var readable = "$"+ districtA.demographics[0].expenses_per_pupil;
+	var periods = readable.split(".");
+	var length = periods[0].length-3;
+	var first = periods[0].substr(0,length);
+	var last = periods[0].substr(length, periods[0].length);
+	var final = first + "," + last;
+	$("#d-expenses").html(final);
+
+	// name = li:nth-child(3) .middle
+	// incoming format - i.e. "0.675" - convert to percent
+    var satPart = Math.round(districtA.demographics[0].sat_participation *100);
+    satPart = satPart + "%";
+    $("#d-take-sat").html(satPart);
+
+    // name = li:nth-child(4) .middle
+    $("#d-sat-score").html(districtA.demographics[0].sat_average_score);
+
+    // name = li:nth-child(5) .middle
+    // incoming format - i.e. "0.675" - convert to percent
+    var percent_needy = Math.round(districtA.freelunch_rates[0].percent_needy *100);
+    percent_needy = percent_needy + "%";
+    $("#d-lunch").html(percent_needy);
+
+    // name = li:nth-child(6) .middle
+    // incoming format - i.e. "0.675" - convert to percent
+    var graduation = Math.round(districtA.graduation_rates[0].graduation_rate *100);
+    graduation = graduation + "%";
+    $("#d-graduation").html(graduation);
+
+    // name = li:nth-child(7) .middle
+    // incoming format - i.e. "0.675" - convert to percent
+    var gradLunch = Math.round(districtA.graduation_rates[0].freelunch_graduation_rate *100);
+    gradLunch = gradLunch + "%";
+    $("#d-grad-lunch").html(gradLunch);
+
+    // name = li:last-child .middle
+    var total = 0;
+    // add up High, Middle, Elementary rates per 1000 in 2012-2013
+	for (var i=0; i<districtA.discipline_rates.length; i++) {
+		if (districtA.discipline_rates[i].school_year == "2012-2013") {
+			if ((districtA.discipline_rates[i].category == "H") || (districtA.discipline_rates[i].category == "M") || (districtA.discipline_rates[i].category == "E")) {
+				total = total + districtA.discipline_rates[i].composite_rate;
+			}
 		}
-	};
+	}
+	$("#d-discipline").html(total);
+}
+
+function loadDistrictPie() {
+	var demographics = districtA.demographics[0];
+	$('#district-demographics').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+        },
+	        tooltip: {
+	        	backgroundColor: '#000',
+	        	style: {
+	        		color:'#fff',
+	        		width: '100px'
+	        	},
+	        	borderWidth: 0,
+ 	    	pointFormat: '<b>{point.percentage:.1f}%</b>{series.data.name}'
+	        },
+    	plotOptions: {
+         	pie: {
+            	allowPointSelect: true,
+            	cursor: 'pointer',
+             	dataLabels: {
+                	enabled: false,
+                	color: '#000000',
+                	connectorColor: '#000000',
+	                  	format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+            	}
+	         	}
+       	},
+       	title: {
+		    text: districts_name[0] + ' Demographics in 2012-13 by race and ethnicity'
+		},
+    	series: [{
+        	type: 'pie',
+        	name: 'Student Demographics in 2012-2013 by race and ethnicity',
+        	data: [
+        {name: "Pacific Islander",   y: demographics.percent_pacific_islander*100, color: '#CE7352'},
+        {name: "American Indian", y: demographics.percent_native_american*100, color: '#BDAA91'},
+    	{name: "Asian", y: demographics.percent_asian*100, color: '#88765D'},
+        {name: "Black", y: demographics.percent_black*100, color: '#C19438'},
+        {name: "Hispanic",    y: demographics.percent_hispanic*100, color: '#D16436'},
+        {name: "White",     y: demographics.percent_white*100, color: '#004E79'}
+		    ]
+    	}]
+	});
+};
+function loadDisciplineProfile () {
+	var district = districtA.discipline_demographics[0];
+	if (district == undefined) {
+		$("#total-discipline").html("The discipline rate breakdown by race and ethnicity is not available for "+districtA.lea_name+". Please choose another district.");
+		$(".bar").hide();
+		$("#margin-error").hide();
+
+	}
+	else {
+		// initialize vars
+		var total = district.total;
+		$("#total-discipline").html(total + " short-term suspensions in<br>2011-2012 by race and ethnicity");
+		var incidents = {"Hispanic": 0, "White": 0, "Black": 0, 
+			"Asian": 0, "American_Indian": 0, "Multi_racial": 0, };
+
+		// algorithm adding genders together for each race
+		// conditionals deal with the 0, <5 (shown here as 2.5), undefined or normal cases
+		// HISPANIC
+		if (district.hispanic_female == 2.5) {
+			incidents.Hispanic = incidents.Hispanic + 4;
+		} else if (district.hispanic_female == undefined) {
+		} else {incidents.Hispanic = incidents.Hispanic + district.hispanic_female;}
+		if (district.hispanic_male == 2.5) {
+			incidents.Hispanic = incidents.Hispanic + 4;
+		} else if (district.hispanic_male == undefined) {
+		} else {incidents.Hispanic = incidents.Hispanic + district.hispanic_male;}
+
+		// WHITE
+		if (district.white_female == 2.5) {
+			incidents.White = incidents.White + 4;
+		} else if (district.white_female == undefined) {
+		} else {incidents.White = incidents.White + district.white_female;}
+		if (district.white_male == 2.5) {
+			incidents.White = incidents.White + 4;
+		} else if (district.white_male == undefined) {
+		} else {incidents.White = incidents.White + district.white_male;}
+		
+		// AFRICAN AMERICAN
+		if (district.black_female == 2.5) {
+			incidents.Black = incidents.Black + 4;
+		} else if (district.black_female == undefined) {
+		} else {incidents.Black = incidents.Black + district.black_female;}
+		if (district.black_male == 2.5) {
+			incidents.Black = incidents.Black + 4;
+		} else if (district.black_male == undefined) {
+		} else {incidents.Black = incidents.Black + district.black_male;}
+		
+		// ASIAN
+		if (district.asian_female == 2.5) {
+			incidents.Asian = incidents.Asian + 4;
+		} else if (district.asian_female == undefined) {
+		} else {incidents.Asian = incidents.Asian + district.asian_female;}
+		if (district.asian_male == 2.5) {
+			incidents.Asian = incidents.Asian + 4;
+		} else if (district.asian_male == undefined) {
+		} else {incidents.Asian = incidents.Asian + district.asian_male;}
+
+		// AMERICAN INDIAN
+		if (district.american_indian_female == 2.5) {
+			incidents.American_Indian = incidents.American_Indian + 4;
+		} else if (district.american_indian_female == undefined) {
+		} else {incidents.American_Indian = incidents.American_Indian + district.american_indian_female;}
+		if (district.american_indian_male == 2.5) {
+			incidents.American_Indian = incidents.American_Indian + 4;
+		} else if (district.american_indian_male == undefined) {
+		} else {incidents.American_Indian = incidents.American_Indian + district.american_indian_male;}
+
+		// MULTI-RACIAL
+		if (district.multiracial_female == 2.5) {
+			incidents.Multi_racial = incidents.Multi_racial + 4;
+		} else if (district.multiracial_female == undefined) {
+		} else {incidents.Multi_racial = incidents.Multi_racial + district.multiracial_female;}
+		if (district.multiracial_male == 2.5) {
+			incidents.Multi_racial = incidents.Multi-racial + 4;
+		} else if (district.multiracial_male == undefined) {
+		} else {incidents.Multi_racial = incidents.Multi_racial + district.multiracial_male;}
+
+		// put the demographics in order from lowest to highest disciplinary incidents
+		var sortable = [];
+		for (var key in incidents) {
+	    	sortable.push([key, incidents[key]]);
+	    }
+		sortable.sort(function(a, b) {return a[1] - b[1]});
+
+		// correctly name and color each bar
+		for (var i=0; i<6; i++) {
+			if (sortable[i][0] == "Black") {
+				sortable[i][0] = "African American";
+				$("#d-"+i).css("background-color", "#D16436");
+			}
+			else if (sortable[i][0] == "Multi_racial") {
+				sortable[i][0] = "Multi-racial";
+				$("#d-"+i).css("background-color", "#632D1D");
+			}
+			else if (sortable[i][0] == "American_Indian") {
+				sortable[i][0] = "American Indian";
+				$("#d-"+i).css("background-color", "#BDAA91");
+			}
+			else if (sortable[i][0] == "White") {
+				$("#d-"+i).css("background-color", "#004E79");
+			}
+			else if (sortable[i][0] == "Hispanic") {
+				$("#d-"+i).css("background-color", "#C19438");
+			}
+			else if (sortable[i][0] == "Asian") {
+				$("#d-"+i).css("background-color", "#88765D");
+			}
+			$("#d-"+i).attr("title", sortable[i][0] +": "+sortable[i][1] + " +/- 2");
+
+			// set width of bar based on value
+			var width = Math.round((sortable[i][1]/(total/1.5))*100);
+			width = width +"%";
+			$("#d-"+i).css("width", width);
+		}
+	}
+}
+
+//calls functions in dynamic_graphs.js
+function loadCompareGraphs() {
+	var lunchData = [districtA.freelunch_rates[0].percent_needy, districtB.freelunch_rates[0].percent_needy, districtC.freelunch_rates[0].percent_needy];
+	lunchGraph(lunchData);
+
+	var expensesData = [districtA.demographics[0].expenses_per_pupil, districtB.demographics[0].expenses_per_pupil, districtC.demographics[0].expenses_per_pupil];
+	expensesGraph(expensesData);
+
+	disciplineGraph();
+
+	var graduationData = [districtA.graduation_rates[0].graduation_rate, districtB.graduation_rates[0].graduation_rate, districtC.graduation_rates[0].graduation_rate];
+	graduationGraph(graduationData);
+
+	var satData = [963, 1149, 835];
+	satGraph(satData);
+
+	// updating tooltips on compare tab graphs to current district names
+	// not working right now
+	$("#discipline-0").attr("title", districts_name[0]);  
+	$("#discipline-1").attr("title", districts_name[1]);
+	$("#discipline-2").attr("title", districts_name[2]);
+	$("#graduation-0").attr("title", districts_name[0]);  
+	$("#graduation-1").attr("title", districts_name[1]);
+	$("#graduation-2").attr("title", districts_name[2]);
+	$("#lunch-0").attr("title", districts_name[0]);  
+	$("#lunch-1").attr("title", districts_name[1]);
+	$("#lunch-2").attr("title", districts_name[2]);
+	$("#sat-0").attr("title", districts_name[0]);  
+	$("#sat-1").attr("title", districts_name[1]);
+	$("#sat-2").attr("title", districts_name[2]);
+	$("#expenses-0").attr("title", districts_name[0]);  
+	$("#expenses-1").attr("title", districts_name[1]);
+	$("#expenses-2").attr("title", districts_name[2]);
+}
 
 </script>
 <script src="{{ STATIC_URL }}js/app.js"></script>
