@@ -107,10 +107,7 @@ p {
     border-left:2px solid #919191;
     margin-bottom: 0;
 }
-select {
-    cursor:pointer;
-}
-svg path:hover, svg polygon:hover, svg circle:hover {
+select, svg path:hover, svg polygon:hover, svg circle:hover {
     cursor:pointer;
 }
 #map svg {
