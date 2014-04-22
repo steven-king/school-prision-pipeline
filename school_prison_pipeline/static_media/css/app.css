@@ -477,11 +477,11 @@ select {
     }
     #map-selector {
         top:-370px;
-        margin-left:15%;
+        margin-left:3%;
     }
     #map-key {
         top:-340px;
-        margin-left:10%;
+        margin-left:3%;
     }
         #profile-list li:nth-child(2) .left {
             padding-top: 12px;
