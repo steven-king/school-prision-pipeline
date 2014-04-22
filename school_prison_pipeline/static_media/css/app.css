@@ -399,9 +399,9 @@ select {
             #compare-section ul li .styled-select select {
                 font-family:latolight;
                 background: transparent;
-                width: 238px;
+                width: 100%;
                 
-                padding: 3px 0px 3px 10px;
+                padding: 0;
                 font-size: 17px;
                 line-height: 1;
                 border: 0;
