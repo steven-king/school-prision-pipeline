@@ -214,7 +214,7 @@
 		c0,0,11.042-2.25,28.146,0c0,0,13.269,2.631,19.562,14.44c0,0-2.958,6.185-0.833,11.435c0,0,1.625,2.625-0.375,7.375
 		c0,0-1.471,2.32,0.327,5.223l-4.309,7.537l-4.894-3.76l-10.792,0.124c0,0-7.021-5.251-12.552-11c0,0-5.239-0.792-5.698-3.833
 		c0,0,0.792-3.791-3.458-5.036C284.077,214.281,281.202,213.651,278.952,209.4z"/>
-	<circle id="181" class="Hickory" rel='tipsy' title="" onclick="loadDistrict(this.id)" fill="#BDAA91" stroke="#231F20" stroke-miterlimit="10" cx="328.471" cy="236.776" r="7.5"/>
+	<circle id="181" class="Hickory" rel='tipsy' title="" onclick="loadDistrict(this)" fill="#BDAA91" stroke="#231F20" stroke-miterlimit="10" cx="328.471" cy="236.776" r="7.5"/>
 
 	<path id="060" class="Avery" rel='tipsy' title="" onclick="loadDistrict(this)" fill="#C3943C" stroke="#231F20" stroke-linejoin="round" stroke-miterlimit="10" d="M246.952,182.526
 		c0,0,5.375-6.75,6.625-12.125l11.75-5.125l4,6.25c0,0-2.375,8.125,1.5,9.75c0,0,6.375,0.625,6.292,6.78c0,0-0.667,2.938,3.21,4.529
@@ -697,6 +697,9 @@
 					<div class="right">16</div>
 				</li>
 			</ul>
+			<div class="preloader" >
+				<img src="{{ STATIC_URL }}preloader.gif">
+			</div>
 			<div id="demographics">
 				<div class="pie" id="district-demographics">
 				</div>
@@ -710,6 +713,9 @@
 					<div id="d-4" rel='tipsy' class="bar orange transparent" title=""></div>
 					<div id="d-5" rel='tipsy' class="bar orange5 transparent" title=""></div>
 					<p id="margin-error">Margin of error = &#177; 2 incidents</p>
+				</div>
+				<div class="preloader" >
+					<img src="{{ STATIC_URL }}preloader.gif">
 				</div>
 				<div class="pie" id="state-demographics">
 				</div>
@@ -1142,6 +1148,9 @@
 					<h4>Total Expenses per Student<br>
 						<strong>(money from county, state, and federal governments)</strong></h4>
 				</div>
+				<div class="preloader-c" >
+					<img src="{{ STATIC_URL }}preloader.gif">
+				</div>
 			</div>
 		</div>
 	</div>
@@ -1161,6 +1170,8 @@ $( document ).ready(function() {
 		window.location.href = "http://school-discipline.herokuapp.com/mobile";
 	}
 
+	$(".preloader").hide();
+	$(".preloader-c").hide();
 	$("#compare-section").hide();
 	//load first dataset in map
 	disciplineMap();
@@ -1262,6 +1273,8 @@ $("#map-select").change(function () {
 // listener for yellow select on compare tab - request data for new district
 // reload compare tab graphs + update district info on profile tab
 $("#district-1").change(function () {
+	$(".preloader").show();
+	$(".preloader-c").show();
 	districts_id[0]= $("#district-1").val();
 	$.ajax({
 		url: "http://school-discipline.herokuapp.com/api/districts/"+districts_id[0],
@@ -1279,6 +1292,7 @@ $("#district-1").change(function () {
 
 // listener for orange select on compare tab - request data for new district
 $("#district-2").change(function () {
+	$(".preloader-c").show();
 	districts_id[1]= $("#district-2").val();
 	$.ajax({
 		url: "http://school-discipline.herokuapp.com/api/districts/"+districts_id[1],
@@ -1294,6 +1308,7 @@ $("#district-2").change(function () {
 
 // listener for blue select on compare tab - request data for new district
 $("#district-3").change(function () {
+	$(".preloader-c").show();
 	districts_id[2]= $("#district-3").val();
 	$.ajax({
 		url: "http://school-discipline.herokuapp.com/api/districts/"+districts_id[2],
@@ -1323,6 +1338,8 @@ $("#compare").on("click", function(event){
 
 // listener for click on a district on the map
 function loadDistrict(district) {
+	$(".preloader").show();
+	$(".preloader-c").show();
 	// update GLOBAL VARS, newest at front, others move down a slot
 	districts_id[2] = districts_id[1];
 	districts_id[1] = districts_id[0];
@@ -1584,6 +1601,7 @@ function loadDisciplineProfile () {
 			var width = Math.round((sortable[i][1]/(total/1.5))*100);
 			width = width +"%";
 			$("#d-"+i).css("width", width);
+			$(".preloader").hide();
 		}
 	}
 }
@@ -1601,7 +1619,7 @@ function loadCompareGraphs() {
 	var graduationData = [districtA.graduation_rates[0].graduation_rate, districtB.graduation_rates[0].graduation_rate, districtC.graduation_rates[0].graduation_rate];
 	graduationGraph(graduationData);
 
-	var satData = [963, 1149, 835];
+	var satData = [districtA.demographics[0].sat_average_score, districtB.demographics[0].sat_average_score, districtC.demographics[0].sat_average_score];
 	satGraph(satData);
 
 	// updating tooltips on compare tab graphs to current district names

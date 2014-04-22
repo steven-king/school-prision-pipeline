@@ -271,6 +271,48 @@ select {
                 width:25%;
                 margin-right:5%;
             }
+
+    #profile-list .preloader {
+        width:320px;
+        height:550px;
+        position:absolute;
+        left:390px;
+        z-index:90;
+        opacity:.8;
+        background-color: #fff;
+    }
+        #profile-list .preloader img{
+            width:60%;
+            margin:150px 20%;
+        }
+    #demographics .preloader {
+        width:700px;
+        height:350px;
+        position:absolute;
+        top:600px;
+        left:50px;
+        z-index:90;
+        opacity:.8;
+        background-color: #fff;
+    }
+        #demographics .preloader img{
+            width:30%;
+            margin:50px 35%;
+        }
+    .preloader-c {
+        width:90%;
+        height:850px;
+        position:absolute;
+        top:130px;
+        left:50px;
+        z-index:90;
+        opacity:.8;
+        background-color: #fff;
+    }
+        .preloader-c img{
+            width:20%;
+            margin:150px 40%;
+        }
     #profile-list #demographics {
         width:100%;
         height:300px;

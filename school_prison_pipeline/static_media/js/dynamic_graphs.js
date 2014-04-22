@@ -150,6 +150,7 @@ function satGraph (dataArray) {
 			$("#sat-p-"+i).css("font-family", "latolight");
 		}
 	}
+	$(".preloader-c").hide();
 }
 
 
