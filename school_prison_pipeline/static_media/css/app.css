@@ -110,6 +110,9 @@ p {
 select {
     cursor:pointer;
 }
+svg path:hover, svg polygon:hover, svg circle:hover {
+    cursor:pointer;
+}
 #map svg {
     width:85%;
     margin-left:20%;
