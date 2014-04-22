@@ -6,8 +6,10 @@
 {% block content %}
 <div id="map"class="row">
 	<div class="col-sm-12 col-md-12 col-lg-12">
-		<h1 class="title">The possibilities are endless</h1>
-		<p id="intro">Introductory text herey herey here. Narwhal trust fund food truck, selfies viral  cliche B banjo dreamcatcher Portland. literally Portland vinyl Echo Park put a bird on it. Blog bitters Tumblr, bicycle rights  deep v High Life dreamcatcher street art Etsy post-ironic Williamsburg biodiesel mixtape.</p>
+		<h1 class="title">Making the Grade</h1>
+		<h2>Adding up the factors for student success</h2>
+		<p id="instructions">Select a category on the left to see how school districts in North Carolina stack up. Click a district on the map for more details, and click the "Compare Districts" tab to compare up to three different districts.</p>
+		<p id="intro">Many factors contribute to a child's success in public school: the amount of resources schools spend, how many needy students each school has, how often those students are disciplined. Which North Carolina schools are making the grade and which are failing their students? It is obvious that many factors play a part in this story of poverty, discipline, and student success.</p>
 		
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="960px" height="400px" viewBox="0 80 960 400" enable-background="new 0 80 960 400" xml:space="preserve">
@@ -643,7 +645,7 @@
 		</div>
 	</div>
 </div>
-<div id="tabs"class="row">
+<div id="tabs" class="row">
 	<div class="col-sm-12 col-md-12 col-lg-12" id="tab-view">
 		<div class="tab orange" id="profile">
 			District Profile
@@ -679,12 +681,12 @@
 					<div class="right">82.5%</div>
 				</li>
 				<li>
-					<div class="left">Percent of students on reduced lunch:</div>
+					<div class="left">Percent of students on free/reduced lunch:</div>
 					<div class="middle" id="d-lunch">21%</div>
 					<div class="right">56.1%</div>
 				</li>
 				<li>
-					<div class="left">Graduation rate of students on reduced lunch:</div>
+					<div class="left">Graduation rate of students on free/reduced lunch:</div>
 					<div class="middle" id="d-grad-lunch">73%</div>
 					<div class="right">76.1%</div>
 				</li>
@@ -696,7 +698,7 @@
 				</li>
 			</ul>
 			<div id="demographics">
-				<div class="pie" id="district-demographics" style="width:35%; padding-right:5%">
+				<div class="pie" id="district-demographics">
 				</div>
 				<div id="district-discipline">
 					<h4>Discipline by Demographic</h4>
@@ -709,7 +711,7 @@
 					<div id="d-5" rel='tipsy' class="bar orange5 transparent" title=""></div>
 					<p id="margin-error">Margin of error = &#177; 2 incidents</p>
 				</div>
-				<div class="pie" id="state-demographics" style="padding-left:5%; width:35%">
+				<div class="pie" id="state-demographics">
 				</div>
 			</div>
 		</div>
@@ -1453,7 +1455,7 @@ function loadDistrictPie() {
 	         	}
        	},
        	title: {
-		    text: districtA.lea_name + ' Demographics in 2012-13 by race and ethnicity'
+		    text: districts_name[0] + ' Demographics in 2012-13 by race and ethnicity'
 		},
     	series: [{
         	type: 'pie',
