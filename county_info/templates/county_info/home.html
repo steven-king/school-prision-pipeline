@@ -1329,7 +1329,7 @@ function loadDistrict(district) {
 	districts_id[0] = $(district).attr('id');
 	districts_name[2] = districts_name[1];
 	districts_name[1] = districts_name[0];
-	districts_name[0] = $(district).html();
+	districts_name[0] = $(district).attr("class");
 	districtC = districtB;
 	districtB = districtA;
 	//update compare tab select elements
@@ -1455,7 +1455,7 @@ function loadDistrictPie() {
 	         	}
        	},
        	title: {
-		    text: districts_name[0] + ' Demographics in 2012-13 by race and ethnicity'
+		    text: districtA.lea_name + ' Demographics in 2012-13 by race and ethnicity'
 		},
     	series: [{
         	type: 'pie',
