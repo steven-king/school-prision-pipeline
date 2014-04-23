@@ -745,7 +745,7 @@
 							  <option value="160">Carteret</option>
 							  <option value="170">Caswell</option>
 							  <option value="180">Catawba</option>
-							  	<option value="681" selected>Chapel Hill-Carrboro</option>
+							  	<option value="681" selected>Chapel Hill</option>
 							  <option value="190">Chatham</option>
 							  <option value="200">Cherokee</option>
 							  <option value="210">Edenton-Chowan</option>
@@ -779,7 +779,7 @@
 							  	<option value="181">Hickory</option>
 							  <option value="470">Hoke</option>
 							  <option value="480">Hyde</option>
-							  <option value="490">Iredell-Statesville</option>
+							  <option value="490">Iredell</option>
 							  <option value="500">Jackson</option>
 							  <option value="510">Johnston</option>
 							  <option value="520">Jones</option>
@@ -792,7 +792,7 @@
 							  <option value="570">Madison</option>
 							  <option value="580">Martin</option>
 							  <option value="590">McDowell</option>
-							  <option value="600">Charlotte-Mecklenburg</option>
+							  <option value="600">Mecklenburg</option>
 							  <option value="610">Mitchell</option>
 							  <option value="620">Montgomery</option>
 							  <option value="630">Moore</option>
@@ -865,7 +865,7 @@
 							  <option value="160">Carteret</option>
 							  <option value="170">Caswell</option>
 							  <option value="180">Catawba</option>
-							  	<option value="681">Chapel Hill-Carrboro</option>
+							  	<option value="681">Chapel Hill</option>
 							  <option value="190">Chatham</option>
 							  <option value="200">Cherokee</option>
 							  <option value="210">Edenton-Chowan</option>
@@ -899,7 +899,7 @@
 							  	<option value="181">Hickory</option>
 							  <option value="470">Hoke</option>
 							  <option value="480">Hyde</option>
-							  <option value="490">Iredell-Statesville</option>
+							  <option value="490">Iredell</option>
 							  <option value="500">Jackson</option>
 							  <option value="510">Johnston</option>
 							  <option value="520">Jones</option>
@@ -912,7 +912,7 @@
 							  <option value="570">Madison</option>
 							  <option value="580">Martin</option>
 							  <option value="590">McDowell</option>
-							  <option value="600">Charlotte-Mecklenburg</option>
+							  <option value="600">Mecklenburg</option>
 							  <option value="610">Mitchell</option>
 							  <option value="620">Montgomery</option>
 							  <option value="630">Moore</option>
@@ -985,7 +985,7 @@
 							  <option value="160">Carteret</option>
 							  <option value="170">Caswell</option>
 							  <option value="180">Catawba</option>
-							  	<option value="681">Chapel Hill-Carrboro</option>
+							  	<option value="681">Chapel Hill</option>
 							  <option value="190">Chatham</option>
 							  <option value="200">Cherokee</option>
 							  <option value="210">Edenton-Chowan</option>
@@ -1019,7 +1019,7 @@
 							  	<option value="181">Hickory</option>
 							  <option value="470">Hoke</option>
 							  <option value="480">Hyde</option>
-							  <option value="490">Iredell-Statesville</option>
+							  <option value="490">Iredell</option>
 							  <option value="500">Jackson</option>
 							  <option value="510">Johnston</option>
 							  <option value="520">Jones</option>
@@ -1032,7 +1032,7 @@
 							  <option value="570">Madison</option>
 							  <option value="580">Martin</option>
 							  <option value="590">McDowell</option>
-							  <option value="600">Charlotte-Mecklenburg</option>
+							  <option value="600">Mecklenburg</option>
 							  <option value="610">Mitchell</option>
 							  <option value="620">Montgomery</option>
 							  <option value="630">Moore</option>
@@ -1494,12 +1494,16 @@ function loadDisciplineProfile () {
 		$("#total-discipline").html("The discipline rate breakdown by race and ethnicity is not available for "+districtA.lea_name+". Please choose another district.");
 		$(".bar").hide();
 		$("#margin-error").hide();
+		$(".preloader").hide();
 
 	}
 	else {
 		// initialize vars
 		var total = district.total;
 		$("#total-discipline").html(total + " short-term suspensions in<br>2011-2012 by race and ethnicity");
+		$(".bar").show();
+		$("#margin-error").show();
+		$(".preloader").show();
 		var incidents = {"Hispanic": 0, "White": 0, "Black": 0, 
 			"Asian": 0, "American_Indian": 0, "Multi_racial": 0, };
 

@@ -151,6 +151,7 @@ function satGraph (dataArray) {
 		}
 	}
 	$(".preloader-c").hide();
+	$(".preloader").hide();
 }
 
 
