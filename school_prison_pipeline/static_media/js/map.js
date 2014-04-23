@@ -69,7 +69,7 @@ function lunchMap () {
 	$("#key-2").html("21-40%");
 	$("#key-3").html("41-60%");
 	$("#key-4").html("61-80%");
-	$("#key-5").html("81-100%");
+	$("#key-5").html("over 80%");
 
 	var data = getFreeLunch();
 	for (var i=0; i < data.length; i++) {
