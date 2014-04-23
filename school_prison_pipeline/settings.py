@@ -62,6 +62,7 @@ MIDDLEWARE_CLASSES = (
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = (
     'localhost:8000',
+    'faultlinesnc.com',
 )
 
 ROOT_URLCONF = 'school_prison_pipeline.urls'
