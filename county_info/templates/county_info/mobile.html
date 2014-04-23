@@ -397,9 +397,9 @@
 			</div>
 			<h4>Disciplinary action<br>per 1,000 students<br>
 				<strong>(includes short-, long-term suspension and expulsion)</strong></h4>
-			
+
 		</div>
-		
+
 	<img src="{{ STATIC_URL }}mobile_arrow.png">
 		<div class="lunch graph">
 			<div class="preloader" >
@@ -415,7 +415,7 @@
 				<p id="lunch-p-2">53%</p>
 			</div>
 			<h4>Students who qualify for free or reduced lunch</h4>
-		
+
 	</div>
 	<img src="{{ STATIC_URL }}mobile_arrow.png">
 		<div class="graduation graph">
@@ -432,7 +432,7 @@
 				<p id="graduation-p-2">53%</p>
 			</div>
 			<h4>High school<br>graduation rate</h4>
-			
+
 		</div>
 	<img src="{{ STATIC_URL }}mobile_arrow.png">
 		<div class="sat graph">
@@ -449,7 +449,7 @@
 				<p id="sat-p-2">53%</p>
 			</div>
 			<h4>Average SAT score for graduating seniors</h4>
-			
+
 		</div>		
 	<img src="{{ STATIC_URL }}mobile_arrow.png">
 		<div class="expenses graph">
@@ -467,7 +467,7 @@
 			</div>
 			<h4>Total Expenses per Student<br>
 				<strong>(money from county, state, and federal governments)</strong></h4>
-			
+
 		</div>
     </div>    
 </div>
@@ -483,12 +483,12 @@ $( document ).ready(function() {
 		window.location.href = "http://school-discipline.herokuapp.com";
 	}
 	$(".preloader").hide();
-	
+
 	loadCompareGraphs();   //for compare tab, see below
 
 });
 
-	
+
 $( window ).resize(function() {
   if ($(window).width() > 700) {
 		window.location.href = "http://school-discipline.herokuapp.com";
