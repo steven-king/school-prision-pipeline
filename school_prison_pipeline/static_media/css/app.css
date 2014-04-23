@@ -30,22 +30,22 @@
     font-weight: normal;
     font-style: normal;
 }
-.yellow {
+.yellow, .bar[title*='Hispanic'] {
     background-color: #C19438;
 }
-.blue {
+.blue, .bar[title*='White'] {
     background-color: #004E79;
 }
-.orange {
+.orange, .bar[title*='Black'] {
     background-color: #D16436;
 }
-.gray {
+.gray, .bar[title*='American Indian'] {
     background-color: #BDAA91;
 }
-.brown {
+.brown, .bar[title*='Asian'] {
     background-color: #88765D;
 }
-.orange5 {
+.orange5, .bar[title*='Multi-racial'] {
     background-color: #632D1D;
 }
 .orange4 {
