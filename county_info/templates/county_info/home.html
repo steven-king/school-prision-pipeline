@@ -1384,9 +1384,13 @@ function loadDistrictProfile() {
 	var name = "";
 	//figure out whether is county or city school district and append accordingly
 	if ($("#"+districtA.lea_code).is("circle")) {
-		name = $("#"+districtA.lea_code).attr("class") +' City Schools';
+		name = $("#"+districtA.lea_code).attr("class");
+		name = name.replace("-"," ");
+		name = name +' City Schools';
 	}
 	else {
+		name = $("#"+districtA.lea_code).attr("class");
+		name = name.replace("-"," ");
 		name = $("#"+districtA.lea_code).attr("class") +' County';
 	}
 	$("#d-name").html(name);

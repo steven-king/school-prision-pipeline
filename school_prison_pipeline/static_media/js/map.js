@@ -80,7 +80,7 @@ function lunchMap () {
 		var readable = Math.round(currLunch*100);
 		readable = readable + "%";
 		var districtName = $(currDistrict).attr('class');
-		$("#currDistrict").attr("title", districtName+ ": "+readable);
+		$(currDistrict).attr("title", districtName+ ": "+readable);
 
 		//fill shapes
 		if (currLunch <=0.2 ) {

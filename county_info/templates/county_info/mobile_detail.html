@@ -152,7 +152,7 @@ Other: {{ discipline_demographics.other }}*/
 
 function loadDisciplineProfile () {
 	
-	if (district == undefined) {
+	if ("{{ discipline_demographics }}" == undefined) {
 		$("#total-discipline").html("The discipline rate breakdown by race and ethnicity is not available for "+"{{ district.lea_name }}"+". Please choose another district.");
 		$(".bar").hide();
 		$("#margin-error").hide();
