@@ -339,9 +339,24 @@ img {
 #district-discipline {
     width:100%;
 }
+#district-discipline .bar {
+    color:#fff;
+}
+#district-discipline h4 {
+    text-align: center;
+}
+#district-total {
+    text-align: center;
+    line-height: 1.2em;
+    margin-bottom: 10px
+}
 #district-discipline .bar{
     color:#fff;
 }
+.left {
+    float:left;
+}
+
 img {
     text-align: center;
     position: relative;
