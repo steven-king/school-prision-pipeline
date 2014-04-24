@@ -12,7 +12,7 @@
 
 <div id="compare-section">
     <ul>
-        <li><div class="styled-select yellow">
+        <li id="district-yellow"><div class="styled-select yellow">
             <select id="district-1">
 							  <option value="010">Alamance-Burlington</option>
 							  <option value="020">Alexander</option>
@@ -133,7 +133,7 @@
         </div>
         <div class="yellow go-to" onclick="loadYellow()"></div>
         </li>
-        <li><div class="styled-select orange">
+        <li id="district-orange"><div class="styled-select orange">
             <select id="district-2">
 							  <option value="010">Alamance-Burlington</option>
 							  <option value="020">Alexander</option>
@@ -255,7 +255,7 @@
         </div>
         <div class="orange-profile go-to" onclick="loadOrange()"></div>
         </li>
-        <li><div class="blue styled-select">
+        <li id="district-blue"><div class="blue styled-select">
             <select id="district-3">
 							  <option value="010">Alamance-Burlington</option>
 							  <option value="020">Alexander</option>
@@ -485,6 +485,24 @@ $( document ).ready(function() {
 	$(".preloader").hide();
 
 	loadCompareGraphs();   //for compare tab, see below
+
+	$(window).scroll(function () { 
+
+	    console.log("top" + $(window).scrollTop());
+
+	    if ($(window).scrollTop() > 243) {
+	      $('#district-yellow').addClass('fixed-yellow');
+	      $('#district-orange').addClass('fixed-orange');
+	      $('#district-blue').addClass('fixed-blue');
+	    }
+
+	    if ($(window).scrollTop() < 244) {
+	      $('#district-yellow').removeClass('fixed-yellow');
+	      $('#district-orange').removeClass('fixed-orange');
+	      $('#district-blue').removeClass('fixed-blue');
+	    }
+
+	});
 
 });
 
