@@ -52,6 +52,9 @@ body {
 .container {
     padding:0;
 }
+.row {
+    max-width: 100%;
+}
 
 h1 {
     font-family:roboto_slabregular;
