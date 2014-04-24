@@ -44,10 +44,21 @@
 				<div class="middle">{{ discipline_rates }}</div>
 			</li>
 		</ul>
-
+		<div id="demographics">
 		<h1 class="title">Demographic Data</h1>
 		<div id="district-demographics">
 		</div>
+		<div id="demographics-key">
+			<ul>
+				<li id="d-white" class="blue"></li>
+				<li id="d-black" class="orange"></li>
+				<li id="d-hispanic" class="yellow"></li>
+				<li id="d-asian" class="brown"></li>
+				<li id="d-am-ind" class="gray"></li>
+				<li id="d-pac-isl" class="orange5"></li>
+			</ul>
+		</div>
+		<div>
 		<div id="district-discipline">
 			<h4>Discipline by Demographic</h4>
 			<p id="total-discipline"></p>
@@ -88,7 +99,7 @@ function loadDistrictPie() {
 	var pieValues = [{{ demographics.percent_pacific_islander|multiply:100|floatformat:1 }}, {{ demographics.percent_native_american|multiply:100|floatformat:1 }}, {{ demographics.percent_asian|multiply:100|floatformat:1 }}, {{ demographics.percent_hispanic|multiply:100|floatformat:1 }}, {{ demographics.percent_black|multiply:100|floatformat:1 }}, {{ demographics.percent_white|multiply:100|floatformat:1 }}];
 	$('#district-demographics').highcharts({
         chart: {
-            plotBackgroundColor: null,
+            plotBackgroundColor: #C2D1D9,
             plotBorderWidth: null,
             plotShadow: false
         },
@@ -103,7 +114,7 @@ function loadDistrictPie() {
 	        },
     	plotOptions: {
          	pie: {
-            	allowPointSelect: true,
+            	allowPointSelect: false,
             	cursor: 'pointer',
              	dataLabels: {
                 	enabled: true,
@@ -129,6 +140,16 @@ function loadDistrictPie() {
 		    ]
     	}]
 	});
+
+	$("#d-white").html("White: "+Math.round(pieValues[5])+"%");
+	$("#d-black").html("Black: "+Math.round(pieValues[4])+"%");
+	$("#d-black").html("Hispanic: "+Math.round(pieValues[3])+"%");
+	$("#d-asian").html("Asian: "+Math.round(pieValues[2])+"%");
+	$("#d-am-ind").html("American Indian: "+Math.round(pieValues[1])+"%");
+	if (pieValues[0] > 10){
+		$("#d-pac-isl").html("Black: "+Math.round(pieValues[4])+"%");
+	}
+	else {$("#d-pac-isl").hide(); }
 };
 
 /*Total: {{ discipline_demographics.total }}<br />
