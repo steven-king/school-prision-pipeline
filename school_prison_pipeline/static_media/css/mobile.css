@@ -53,7 +53,10 @@ body {
     padding:0;
 }
 .row {
-    max-width: 100%;
+    margin: 0;
+}
+.col-sm-12, .col-md-12, .col-lg-12 {
+    padding: 0;
 }
 
 h1 {
