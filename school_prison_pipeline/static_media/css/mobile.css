@@ -53,10 +53,10 @@ body {
     padding:0;
 }
 .row {
-    margin: 0;
+    margin: 0 !important;
 }
 .col-sm-12, .col-md-12, .col-lg-12 {
-    padding: 0;
+    padding: 0 !important;
 }
 
 h1 {
