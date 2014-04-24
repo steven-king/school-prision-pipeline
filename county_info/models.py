@@ -98,7 +98,7 @@ class DisciplineDemographics(models.Model):
 		ordering = ('district__lea_name', '-school_year')
 
 	def __unicode__(self):
-		return U'%s (%s) - %s' %(self.district.lea_name, self.school_year, self.category)
+		return U'%s (%s)' %(self.district.lea_name, self.school_year)
 
 
 class Demographics(models.Model):
