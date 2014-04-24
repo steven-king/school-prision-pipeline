@@ -44,25 +44,36 @@
 				<div class="middle">{{ discipline_rates }}</div>
 			</li>
 		</ul>
-
+		<div id="demographics">
 		<h1 class="title">Demographic Data</h1>
 		<div id="district-demographics">
 		</div>
+		<div id="demographics-key">
+			<ul>
+				<li id="d-white" class="blue"></li>
+				<li id="d-black" class="orange"></li>
+				<li id="d-hispanic" class="yellow"></li>
+				<li id="d-asian" class="brown"></li>
+				<li id="d-am-ind" class="gray"></li>
+				<li id="d-pac-isl" class="orange5"></li>
+			</ul>
+		</div>
+		<div>
 		<div id="district-discipline">
 			<h4>Discipline by Demographic</h4>
 			<p id="total-discipline"></p>
 			<p id="d-0-p"></p>
-			<div id="d-0" class="bar gray transparent" title=""></div>
+			<div id="d-0" class="bar gray transparent" title=""></div><p class="left" id="d-0-r"></p>
 			<p id="d-1-p"></p>
-			<div id="d-1" class="bar brown transparent" title=""></div>
+			<div id="d-1" class="bar brown transparent" title=""></div><p class="left" id="d-0-r"></p>
 			<p id="d-2-p"></p>
-			<div id="d-2" class="bar blue transparent" title=""></div>
+			<div id="d-2" class="bar blue transparent" title=""></div><p class="left" id="d-0-r"></p>
 			<p id="d-3-p"></p>
-			<div id="d-3" class="bar yellow transparent" title=""></div>
+			<div id="d-3" class="bar yellow transparent" title=""></div><p class="left" id="d-0-r"></p>
 			<p id="d-4-p"></p>
-			<div id="d-4" class="bar orange transparent" title=""></div>
+			<div id="d-4" class="bar orange transparent" title=""></div><p class="left" id="d-0-r"></p>
 			<p id="d-5-p"></p>
-			<div id="d-5" class="bar orange5 transparent" title=""></div>
+			<div id="d-5" class="bar orange5 transparent" title=""></div><p class="left" id="d-0-r"></p>
 			<p id="margin-error">Margin of error = &#177; 2 incidents</p>
 		</div>
 	</div>
@@ -88,7 +99,7 @@ function loadDistrictPie() {
 	var pieValues = [{{ demographics.percent_pacific_islander|multiply:100|floatformat:1 }}, {{ demographics.percent_native_american|multiply:100|floatformat:1 }}, {{ demographics.percent_asian|multiply:100|floatformat:1 }}, {{ demographics.percent_hispanic|multiply:100|floatformat:1 }}, {{ demographics.percent_black|multiply:100|floatformat:1 }}, {{ demographics.percent_white|multiply:100|floatformat:1 }}];
 	$('#district-demographics').highcharts({
         chart: {
-            plotBackgroundColor: null,
+            plotBackgroundColor: #C2D1D9,
             plotBorderWidth: null,
             plotShadow: false
         },
@@ -103,7 +114,7 @@ function loadDistrictPie() {
 	        },
     	plotOptions: {
          	pie: {
-            	allowPointSelect: true,
+            	allowPointSelect: false,
             	cursor: 'pointer',
              	dataLabels: {
                 	enabled: true,
@@ -129,6 +140,16 @@ function loadDistrictPie() {
 		    ]
     	}]
 	});
+
+	$("#d-white").html("White: "+Math.round(pieValues[5])+"%");
+	$("#d-black").html("Black: "+Math.round(pieValues[4])+"%");
+	$("#d-black").html("Hispanic: "+Math.round(pieValues[3])+"%");
+	$("#d-asian").html("Asian: "+Math.round(pieValues[2])+"%");
+	$("#d-am-ind").html("American Indian: "+Math.round(pieValues[1])+"%");
+	if (pieValues[0] > 10){
+		$("#d-pac-isl").html("Black: "+Math.round(pieValues[4])+"%");
+	}
+	else {$("#d-pac-isl").hide(); }
 };
 
 /*Total: {{ discipline_demographics.total }}<br />
@@ -273,13 +294,20 @@ function loadDisciplineProfile () {
 			}
 			console.log(sortable);
 
-			
-			$("#d-"+i+"-p").html(sortable[i][0] +": "+sortable[i][1] + " +/- 2");
 
 			// set width of bar based on value
 			var width = Math.round((sortable[i][1]/(total/1.5))*100);
+			if (width <40%) {
+				$("#d-"+i+"-r").html(sortable[i][0] +": "+sortable[i][1] + " +/- 2");
+				$("#d-"+i).addClass("left");
+			}
+			else {
+				$("#d-"+i).removeClass("left");
+				$("#d-"+i).html(sortable[i][0] +": "+sortable[i][1] + " +/- 2");
+			}
 			width = width +"%";
 			$("#d-"+i).css("width", width);
+
 		}
 	}
 }
