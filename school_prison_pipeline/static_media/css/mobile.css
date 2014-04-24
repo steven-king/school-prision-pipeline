@@ -45,9 +45,6 @@
 .brown {
     background-color: #88765D;
 }
-.row {
-    margin: 0;
-}
 body {
   
     background-color: #C2D1D9;
@@ -159,6 +156,7 @@ img {
         float:left;
         width:30%;
         height:100%;
+        padding: 10px;
     }
     #district-discipline h4 {
         font-family: latoregular;
@@ -169,6 +167,7 @@ img {
             color:#fff;
             font-family: latoregular;
             width:100%;
+            max-width: 100%;
             height:30px;
             margin:10px 0;
         }
