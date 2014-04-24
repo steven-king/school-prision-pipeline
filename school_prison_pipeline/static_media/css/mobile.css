@@ -342,13 +342,50 @@ img {
                 font-size:16px;
                 font-weight: normal;
             }
-
+#district-demographics {
+    width:60%;
+    float:left;
+}
+#demographics-key {
+    width:40%;
+   float:left;
+   }
+    #demographics-key ul {
+        list-style-type: none;
+        padding:0;
+        margin:0;
+    }
+    #demographics-key ul li {
+        color:#fff;
+        font-size: 16px;
+        font-family: latoregular;
+        padding:5px 10px;
+    }
 #district-discipline {
     width:100%;
+}
+#district-discipline .bar {
+    color:#fff;
+}
+#district-discipline h4 {
+    text-align: center;
+}
+#district-total {
+    text-align: center;
+    line-height: 1.2em;
+    margin-bottom: 10px
 }
 #district-discipline .bar{
     color:#fff;
 }
+
+#demographics {
+    width:100%;
+}
+.left {
+    float:left;
+}
+
 img {
     text-align: center;
     position: relative;
