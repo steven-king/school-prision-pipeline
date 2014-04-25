@@ -15,7 +15,7 @@
 		<ul id="profile-list">
 			<li>
 				<div class="left">Total expenses per student:</div>
-				<div class="middle">${{ demographics.expenses_per_pupil|floatformat:2 }}</div>
+				<div class="middle">${{ demographics.expenses_per_pupil|floatformat:0 }}</div>
 			</li>
 			<li>
 				<div class="left">Percent who take the SAT:</div>
@@ -45,7 +45,8 @@
 			</li>
 		</ul>
 		<div id="demographics">
-		<h1 class="title">{{ district.lea_name }} Demographics<br><p>in 2012-13 by race and ethnicity</p></h1>
+		<h1 class="title">Demographics</h1>
+		<p>by race and ethnicity in 2012-2013</p>
 		<div id="district-demographics">
 		</div>
 		<div id="demographics-key">
@@ -103,7 +104,8 @@ function loadDistrictPie() {
         chart: {
             plotBackgroundColor: '#C2D1D9',
             plotBorderWidth: null,
-            plotShadow: false
+            plotShadow: false,
+
         },
 	        tooltip: {
 	        	backgroundColor: '#000',
@@ -124,8 +126,11 @@ function loadDistrictPie() {
                 	connectorColor: '#000000',
 	                  	format: '<b>{point.name}</b>: {point.percentage:.1f} %'
             	}
-	         	}
+	        }
        	},
+       	title: {
+		    text: ''
+		},
        	
     	series: [{
         	type: 'pie',
@@ -140,6 +145,9 @@ function loadDistrictPie() {
 		    ]
     	}]
 	});
+
+	$(".highcharts-background").hide();
+
 
 	$("#d-white").html("White: "+Math.round(pieValues[5])+"%");
 	$("#d-black").html("Black: "+Math.round(pieValues[4])+"%");
