@@ -99,7 +99,7 @@ function loadDistrictPie() {
 	var pieValues = [{{ demographics.percent_pacific_islander|multiply:100|floatformat:1 }}, {{ demographics.percent_native_american|multiply:100|floatformat:1 }}, {{ demographics.percent_asian|multiply:100|floatformat:1 }}, {{ demographics.percent_hispanic|multiply:100|floatformat:1 }}, {{ demographics.percent_black|multiply:100|floatformat:1 }}, {{ demographics.percent_white|multiply:100|floatformat:1 }}];
 	$('#district-demographics').highcharts({
         chart: {
-            plotBackgroundColor: #C2D1D9,
+            plotBackgroundColor: '#C2D1D9',
             plotBorderWidth: null,
             plotShadow: false
         },
@@ -117,7 +117,7 @@ function loadDistrictPie() {
             	allowPointSelect: false,
             	cursor: 'pointer',
              	dataLabels: {
-                	enabled: true,
+                	enabled: false,
                 	color: '#000000',
                 	connectorColor: '#000000',
 	                  	format: '<b>{point.name}</b>: {point.percentage:.1f} %'
@@ -292,12 +292,12 @@ function loadDisciplineProfile () {
 			else if (sortable[i][0] == "Asian") {
 				$("#d-"+i).css("background-color", "#88765D");
 			}
-			console.log(sortable);
 
 
 			// set width of bar based on value
 			var width = Math.round((sortable[i][1]/(total/1.5))*100);
-			if (width <40%) {
+			var limit = $(window).width()*0.4;
+			if (width < limit) {
 				$("#d-"+i+"-r").html(sortable[i][0] +": "+sortable[i][1] + " +/- 2");
 				$("#d-"+i).addClass("left");
 			}
