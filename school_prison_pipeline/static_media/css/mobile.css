@@ -143,7 +143,7 @@ img {
             border:none;
         }
             #profile-list li:last-child .left {
-                width:50%;
+                width:55%;
                 margin-right:5%;
             }
             #profile-list li:last-child .middle {
@@ -397,7 +397,14 @@ img {
     position: relative;
     }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 350px) {
+     #profile-list li .left {
+        width:45%;
+
+    }
+    #profile-list li .middle {
+        width:40%;
+    }
     #profile-list li:nth-child(1), #profile-list li:nth-child(4) {
             height:89px;
         }
