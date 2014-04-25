@@ -45,13 +45,18 @@
 .brown {
     background-color: #88765D;
 }
-
 body {
   
     background-color: #C2D1D9;
 }
 .container {
     padding:0;
+}
+.row {
+    margin: 0 !important;
+}
+.col-sm-12, .col-md-12, .col-lg-12 {
+    padding: 0 !important;
 }
 
 h1 {
@@ -153,24 +158,26 @@ img {
         width:35%;
         height:370px;
     }
-    #profile-list #district-discipline {
+    #district-discipline {
         float:left;
         width:30%;
         height:100%;
+        padding: 10px;
     }
-    #profile-list #district-discipline h4 {
+    #district-discipline h4 {
         font-family: latoregular;
         margin: 5px 0;
         font-size: 22px;
     }
-        #profile-list #district-discipline .bar {
+        #district-discipline .bar {
             color:#fff;
             font-family: latoregular;
             width:100%;
+            max-width: 100%;
             height:30px;
             margin:10px 0;
         }
-        #profile-list #district-discipline .transparent { 
+        #district-discipline .transparent { 
             border-right: 13px solid rgba(0, 0, 0, 0.5);
         }
 
