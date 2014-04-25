@@ -108,7 +108,7 @@ function disciplineGraph () {
 
 function graduationGraph (dataArray) {
 	for (i=0; i < 3; i++) {
-		var height = 250 * dataArray[i];
+		var height = 250 * dataArray[i] - 30;
 		var top = 280 - height;
 		$("#graduation-"+i).css("height", height);
 		$("#graduation-"+i).css("margin-top", top);
@@ -155,69 +155,4 @@ function satGraph (dataArray) {
 }
 
 
-
-/*var orange = 
-{
-	"lea_name": "Orange County Schools",
-	"lea_code": "680", 
-	"graduation_rates": [
-		{	"school_year": "2012-2013", 
-			"graduation_rate": "0.825", 
-			"freelunch_graduation_rate": "0.680"
-		}, {
-			"school_year": "2011-2012", 
-			"graduation_rate": "0.854", 
-			"freelunch_graduation_rate": "0.715"
-		}, {
-			"school_year": "2010-2011", 
-			"graduation_rate": "0.828", 
-			"freelunch_graduation_rate": "0.720"
-		}, {
-			"school_year": "2009-2010", 
-			"graduation_rate": "0.831", 
-			"freelunch_graduation_rate": "0.690"
-		}, {
-			"school_year": "2008-2009", 
-			"graduation_rate": "0.814", 
-			"freelunch_graduation_rate": "0.732"
-		}, {
-			"school_year": "2007-2008", 
-			"graduation_rate": "0.763", 
-			"freelunch_graduation_rate": "0.583"
-		}], 
-	"demographics": [
-		{	"school_year": "2012-2013", 
-			"expenses_per_pupil": "9745.94", 
-			"sat_participation": "0.656", 
-			"sat_average_score": 1038, 
-			"percent_native_american": "0.004", 
-			"percent_asian": "0.007", 
-			"percent_black": "0.162", 
-			"percent_hispanic": "0.157", 
-			"percent_white": "0.637", 
-			"percent_multiracial": null, 
-			"percent_pacific_islander": "0.000"}, {"school_year": "2011-2012", "expenses_per_pupil": "9354.40", "sat_participation": "0.696", "sat_average_score": 1044, "percent_native_american": "0.004", "percent_asian": "0.007", "percent_black": "0.161", "percent_hispanic": "0.140", "percent_white": "0.657", "percent_multiracial": "0.027", "percent_pacific_islander": "0.001"}, {"school_year": "2010-2011", "expenses_per_pupil": "9477.49", "sat_participation": "0.740", "sat_average_score": 1043, "percent_native_american": "0.004", "percent_asian": "0.006", "percent_black": "0.170", "percent_hispanic": "0.125", "percent_white": "0.667", "percent_multiracial": "0.027", "percent_pacific_islander": "0.001"}, {"school_year": "2009-2010", "expenses_per_pupil": "9348.05", "sat_participation": "0.731", "sat_average_score": 1044, "percent_native_american": "0.003", "percent_asian": "0.009", "percent_black": "0.207", "percent_hispanic": "0.109", "percent_white": "0.671", "percent_multiracial": null, "percent_pacific_islander": null}, {"school_year": "2008-2009", "expenses_per_pupil": "9861.69", "sat_participation": "0.639", "sat_average_score": 1039, "percent_native_american": "0.003", "percent_asian": "0.010", "percent_black": "0.210", "percent_hispanic": "0.092", "percent_white": "0.684", "percent_multiracial": null, "percent_pacific_islander": null}, {"school_year": "2007-2008", "expenses_per_pupil": "9796.00", "sat_participation": "0.775", "sat_average_score": 1043, "percent_native_american": "0.003", "percent_asian": "0.009", "percent_black": "0.215", "percent_hispanic": "0.081", "percent_white": "0.692", "percent_multiracial": null, "percent_pacific_islander": null}
-		], 
-	"discipline_rates": [
-		{	"school_year": "2012-2013", 
-			"category": "H", 
-			"composite_rate": 9
-		}, {
-			"school_year": "2012-2013", 
-			"category": "E", 
-			"composite_rate": 2
-		}, {
-			"school_year": "2012-2013", 
-			"category": "T", 
-			"composite_rate": 145
-		}, {
-			"school_year": "2012-2013", 
-			"category": "M", 
-			"composite_rate": 15
-		}, {
-			"school_year": "2011-2012", "category": "T", "composite_rate": null}, {"school_year": "2011-2012", "category": "E", "composite_rate": null}, {"school_year": "2011-2012", "category": "H", "composite_rate": null}, {"school_year": "2011-2012", "category": "M", "composite_rate": null}, {"school_year": "2010-2011", "category": "T", "composite_rate": null}, {"school_year": "2010-2011", "category": "E", "composite_rate": null}, {"school_year": "2010-2011", "category": "H", "composite_rate": null}, {"school_year": "2010-2011", "category": "M", "composite_rate": null}, {"school_year": "2009-2010", "category": "T", "composite_rate": null}, {"school_year": "2009-2010", "category": "E", "composite_rate": null}, {"school_year": "2009-2010", "category": "H", "composite_rate": null}, {"school_year": "2009-2010", "category": "M", "composite_rate": null}, {"school_year": "2008-2009", "category": "M", "composite_rate": null}, {"school_year": "2008-2009", "category": "E", "composite_rate": null}, {"school_year": "2008-2009", "category": "H", "composite_rate": null}, {"school_year": "2008-2009", "category": "T", "composite_rate": null}, {"school_year": "2007-2008", "category": "M", "composite_rate": null}, {"school_year": "2007-2008", "category": "E", "composite_rate": null}, {"school_year": "2007-2008", "category": "H", "composite_rate": null}, {"school_year": "2007-2008", "category": "T", "composite_rate": null}], "freelunch_rates": [{"school_year": "2012-2013", "percent_needy": "0.419"}, {"school_year": "2011-2012", "percent_needy": "0.416"}, {"school_year": "2010-2011", "percent_needy": "0.398"}, {"school_year": "2009-2010", "percent_needy": "0.390"}], 
-	
-	"discipline_demographics": [
-				{"total": 499, "white_male": 215, "white_female": 51, "black_male": 134, "black_female": 38, "hispanic_male": 35, "hispanic_female": 11, "multiracial_male": 5, "multiracial_female": 7, "asian_male": 2, "asian_female": null, "pacific_islander_male": null, "pacific_islander_female": null, "other_male": null, "other_female": null, "american_indian_male": 2, "american_indian_female": null, "other": null}]}
-*/
 

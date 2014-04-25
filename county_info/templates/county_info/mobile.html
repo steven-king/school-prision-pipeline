@@ -5,7 +5,7 @@
 {% endblock %}
 {% block content %}
 
-<h1 class="title">NC Schools</h1>
+<h1 class="title">Making the Grade</h1>
 <p id="intro-1" class="intro">Compare North Carolina school districts to see how many factors play into the educational environment. Tap the arrow to see all of the data for a district.</p>
 
 
@@ -379,9 +379,9 @@
         </li>    
     </ul>
     </div>
-<img src="{{ STATIC_URL }}mobile_arrow.png">
+<a href="#graph-1"><img src="{{ STATIC_URL }}mobile_arrow.png"></a>
     <div class="graphs-wrapper">
-		<div class="discipline graph">
+		<div name="graph-1" class="discipline graph">
 			<div class="preloader" >
 				<img src="{{ STATIC_URL }}preloader.gif">
 			</div>
@@ -394,13 +394,13 @@
 			<div rel='tipsy' title="" class="bar blue" id="discipline-2">
 				<p id="discipline-p-2">53%</p>
 			</div>
-			<h4>Disciplinary action<br>per 1,000 students<br>
-				<strong>(includes short-, long-term suspension and expulsion)</strong></h4>
+			<h4>Disciplinary incidents<br>
+				<strong>(number of suspensions or<br>expulsions per 1,000 students)</strong></h4>
 
 		</div>
 
-	<img src="{{ STATIC_URL }}mobile_arrow.png">
-		<div class="lunch graph">
+<a href="#graph-2">	<img src="{{ STATIC_URL }}mobile_arrow.png"></a>
+		<div name="graph-2" class="lunch graph">
 			<div class="preloader" >
 				<img src="{{ STATIC_URL }}preloader.gif">
 			</div>
@@ -416,8 +416,8 @@
 			<h4>Students who qualify for free or reduced lunch</h4>
 
 	</div>
-	<img src="{{ STATIC_URL }}mobile_arrow.png">
-		<div class="graduation graph">
+<a href="#graph-3">	<img src="{{ STATIC_URL }}mobile_arrow.png"></a>
+		<div name="graph-3" class="graduation graph">
 			<div class="preloader" >
 				<img src="{{ STATIC_URL }}preloader.gif">
 			</div>
@@ -433,8 +433,8 @@
 			<h4>High school<br>graduation rate</h4>
 
 		</div>
-	<img src="{{ STATIC_URL }}mobile_arrow.png">
-		<div class="sat graph">
+	<a href="#graph-4"><img src="{{ STATIC_URL }}mobile_arrow.png"></a>
+		<div name="graph-4" class="sat graph">
 			<div class="preloader" >
 				<img src="{{ STATIC_URL }}preloader.gif">
 			</div>
@@ -450,8 +450,8 @@
 			<h4>Average SAT score for graduating seniors</h4>
 
 		</div>		
-	<img src="{{ STATIC_URL }}mobile_arrow.png">
-		<div class="expenses graph">
+<a href="#graph-5">	<img src="{{ STATIC_URL }}mobile_arrow.png"></a>
+		<div name="graph-5" class="expenses graph">
 			<div class="preloader" >
 				<img src="{{ STATIC_URL }}preloader.gif">
 			</div>
@@ -490,13 +490,13 @@ $( document ).ready(function() {
 	$(window).scroll(function () { 
 
 
-	    if ($(window).scrollTop() > 243) {
+	    if ($(window).scrollTop() > 220) {
 	      $('#district-yellow').addClass('fixed-yellow');
 	      $('#district-orange').addClass('fixed-orange');
 	      $('#district-blue').addClass('fixed-blue');
 	    }
 
-	    if ($(window).scrollTop() < 244) {
+	    if ($(window).scrollTop() < 221) {
 	      $('#district-yellow').removeClass('fixed-yellow');
 	      $('#district-orange').removeClass('fixed-orange');
 	      $('#district-blue').removeClass('fixed-blue');
@@ -648,5 +648,5 @@ function loadBlue () {
 }
 
 </script>
-<script src="{{ STATIC_URL }}js/dynamic_graphs.js"></script>
+<script src="{{ STATIC_URL }}js/dynamic-graphs-m.js"></script>
 {% endblock %}
