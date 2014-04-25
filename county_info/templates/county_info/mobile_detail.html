@@ -95,6 +95,8 @@ $( window ).resize(function() {
 	}
 });
 
+
+
 function loadDistrictPie() {
 	var pieValues = [{{ demographics.percent_pacific_islander|multiply:100|floatformat:1 }}, {{ demographics.percent_native_american|multiply:100|floatformat:1 }}, {{ demographics.percent_asian|multiply:100|floatformat:1 }}, {{ demographics.percent_hispanic|multiply:100|floatformat:1 }}, {{ demographics.percent_black|multiply:100|floatformat:1 }}, {{ demographics.percent_white|multiply:100|floatformat:1 }}];
 	$('#district-demographics').highcharts({

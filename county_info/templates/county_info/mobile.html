@@ -6,8 +6,7 @@
 {% block content %}
 
 <h1 class="title">NC Schools</h1>
-<p class="intro">Compare North Carolina school districts to see how many factors play into the educational environment</p>
-<p class="intro">Tap the arrow to see all of the data for a district</p>
+<p id="intro-1" class="intro">Compare North Carolina school districts to see how many factors play into the educational environment. Tap the arrow to see all of the data for a district.</p>
 
 
 <div id="compare-section">
@@ -479,6 +478,8 @@
 <script>
 
 $( document ).ready(function() {
+	height = $(window).height();
+	console.log(height);
 	if ($(window).width() > 700) {
 		window.location.href = "http://school-discipline.herokuapp.com";
 	}
@@ -488,7 +489,6 @@ $( document ).ready(function() {
 
 	$(window).scroll(function () { 
 
-	    console.log("top" + $(window).scrollTop());
 
 	    if ($(window).scrollTop() > 243) {
 	      $('#district-yellow').addClass('fixed-yellow');
@@ -507,11 +507,35 @@ $( document ).ready(function() {
 });
 
 
+var height="";
+
 $( window ).resize(function() {
-  if ($(window).width() > 700) {
+	height = $(window).height();
+	console.log(height);
+	if ($(window).width() > 700) {
 		window.location.href = "http://school-discipline.herokuapp.com";
 	}
+	if (height <190) {
+		console.log("heyo");
+		
+	}
 });
+
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+
 
 // *** GLOBAL VARS *** //
 var districts_name = ["Buncombe", "Asheville", "Madison"];
