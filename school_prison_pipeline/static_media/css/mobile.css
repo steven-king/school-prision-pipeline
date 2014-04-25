@@ -345,6 +345,7 @@ img {
 #district-demographics {
     width:60%;
     float:left;
+    height:250px;
 }
 #demographics-key {
     width:40%;
@@ -367,7 +368,7 @@ img {
 #district-discipline .bar {
     color:#fff;
 }
-#district-discipline h4 {
+#district-discipline h4, #district-discipline #total-discipline {
     text-align: center;
 }
 #district-total {
@@ -381,6 +382,11 @@ img {
 
 #demographics {
     width:100%;
+}
+
+#demographics p {
+    margin-bottom:30px;
+    font-size:18px;
 }
 .left {
     float:left;
