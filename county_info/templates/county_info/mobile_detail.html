@@ -15,7 +15,7 @@
 		<ul id="profile-list">
 			<li>
 				<div class="left">Total expenses per student:</div>
-				<div class="middle">${{ demographics.expenses_per_pupil|floatformat:0 }}</div>
+				<div class="middle" id-"expenses">${{ demographics.expenses_per_pupil|floatformat:0 }}</div>
 			</li>
 			<li>
 				<div class="left">Percent who take the SAT:</div>
@@ -63,18 +63,17 @@
 		<div id="district-discipline">
 			<h4>Discipline by Demographic</h4>
 			<p id="total-discipline"></p>
-			<p id="d-0-p"></p>
-			<div id="d-0" class="bar gray transparent" title=""></div>
-			<p id="d-1-p"></p>
-			<div id="d-1" class="bar brown transparent" title=""></div>
-			<p id="d-2-p"></p>
-			<div id="d-2" class="bar blue transparent" title=""></div>
-			<p id="d-3-p"></p>
-			<div id="d-3" class="bar yellow transparent" title=""></div>
-			<p id="d-4-p"></p>
-			<div id="d-4" class="bar orange transparent" title=""></div>
-			<p id="d-5-p"></p>
-			<div id="d-5" class="bar orange5 transparent" title=""></div>
+			<div class="bar-wrap"><div id="d-0" class="bar gray transparent" title=""></div><p id="d-0-p"></p></div>
+			
+			<div class="bar-wrap"><div id="d-1" class="bar brown transparent" title=""></div><p id="d-1-p"></p></div>
+			
+			<div class="bar-wrap"><div id="d-2" class="bar blue transparent" title=""></div><p id="d-2-p"></p></div>
+			
+			<div class="bar-wrap"><div id="d-3" class="bar yellow transparent" title=""></div><p id="d-3-p"></p></div>
+			
+			<div class="bar-wrap"><div id="d-4" class="bar orange transparent" title=""></div><p id="d-4-p"></p></div>
+			
+			<div class="bar-wrap"><div id="d-5" class="bar orange5 transparent" title=""></div><p id="d-5-p"></p></div>
 			<p id="margin-error">Margin of error = &#177; 2 incidents</p>
 		</div>
 	</div>
@@ -87,6 +86,9 @@ $( document ).ready(function() {
 	if ($(window).width() > 700) {
 			window.location.href = "http://school-discipline.herokuapp.com";
 	}
+	var expenses = $("#expenses").html();
+	var length = expenses.length;
+	expenses = expenses.substr(0,length-4)+","+expenses.substr(length-4, length-1),
 	loadDistrictPie();        //see below
 	loadDisciplineProfile();  //see below
 });
@@ -190,7 +192,7 @@ function loadDisciplineProfile () {
 	else {
 		// initialize vars
 		var total = "{{ discipline_demographics.total }}";
-		$("#total-discipline").html(total + " short-term suspensions in<br>2011-2012 by race and ethnicity");
+		$("#total-discipline").html(total + " short-term suspensions by<br>race and ethnicity in 2011-2012");
 		$(".bar").show();
 		$("#margin-error").show();
 		var incidents = {"Hispanic": 0, "White": 0, "Black": 0, 
@@ -202,72 +204,72 @@ function loadDisciplineProfile () {
 		if ("{{ discipline_demographics.hispanic_female }}" == "None") {
 		} 
 		else if ({{ discipline_demographics.hispanic_female }} == 2) {
-			incidents.Hispanic = incidents.Hispanic + 4;
+			incidents.Hispanic = incidents.Hispanic + 2;
 		} else {incidents.Hispanic = incidents.Hispanic + {{ discipline_demographics.hispanic_female }};}
 		if ("{{ discipline_demographics.hispanic_male }}" == "None") {
 		}
 		else if ({{ discipline_demographics.hispanic_male }} == 2) {
-			incidents.Hispanic = incidents.Hispanic + 4;
+			incidents.Hispanic = incidents.Hispanic + 2;
 		} else {incidents.Hispanic = incidents.Hispanic + {{ discipline_demographics.hispanic_male }};}
 
 		// WHITE
 		if ("{{ discipline_demographics.white_female }}" == "None") {
 		} 
 		else if ({{ discipline_demographics.white_female }} == 2) {
-			incidents.White = incidents.White + 4;
+			incidents.White = incidents.White + 2;
 		} else {incidents.White = incidents.White + {{ discipline_demographics.white_female }};}
 		if ("{{ discipline_demographics.white_male }}" == "None") {
 		} 
 		else if ({{ discipline_demographics.white_male }} == 2) {
-			incidents.White = incidents.White + 4;
+			incidents.White = incidents.White + 2;
 		} else {incidents.White = incidents.White + {{ discipline_demographics.white_male }};}
 		
 		// AFRICAN AMERICAN
 		if ("{{ discipline_demographics.black_female }}" == "None") {
 		} 
 		else if ({{ discipline_demographics.black_female }} == 2) {
-			incidents.Black = incidents.Black + 4;
+			incidents.Black = incidents.Black + 2;
 		} else {incidents.Black = incidents.Black + {{ discipline_demographics.black_female }};}
 		if ("{{ discipline_demographics.black_male }}" == "None") {
 		} 
 		else if ({{ discipline_demographics.black_male }} == 2) {
-			incidents.Black = incidents.Black + 4;
+			incidents.Black = incidents.Black + 2;
 		} else {incidents.Black = incidents.Black + {{ discipline_demographics.black_male }};}
 		
 		// ASIAN
 		if ("{{ discipline_demographics.asian_female }}" == "None") {
 		} 
 		else if ({{ discipline_demographics.asian_female }} == 2) {
-			incidents.Asian = incidents.Asian + 4;
+			incidents.Asian = incidents.Asian + 2;
 		} else {incidents.Asian = incidents.Asian + {{ discipline_demographics.asian_female }};}
 		if ("{{ discipline_demographics.asian_male }}" == "None") {
 		} 
 		else if ({{ discipline_demographics.asian_male }} == 2) {
-			incidents.Asian = incidents.Asian + 4;
+			incidents.Asian = incidents.Asian + 2;
 		} else {incidents.Asian = incidents.Asian + {{ discipline_demographics.asian_male }};}
 
 		// AMERICAN INDIAN
 		if ("{{ discipline_demographics.american_indian_female }}" == "None") {
 		} 
 		else if ({{ discipline_demographics.american_indian_female }} == 2) {
-			incidents.American_Indian = incidents.American_Indian + 4;
+			incidents.American_Indian = incidents.American_Indian + 2;
 		} else {incidents.American_Indian = incidents.American_Indian + {{ discipline_demographics.american_indian_female }};}
 		if ("{{ discipline_demographics.american_indian_male }}" == "None") {
 		} 
 		else if ({{ discipline_demographics.american_indian_male }} == 2) {
-			incidents.American_Indian = incidents.American_Indian + 4;
+			incidents.American_Indian = incidents.American_Indian + 2;
 		} else {incidents.American_Indian = incidents.American_Indian + {{ discipline_demographics.american_indian_male }};}
 
 		// MULTI-RACIAL
 		if ("{{ discipline_demographics.multiracial_female }}" == "None") {
 		} 
 		else if ({{ discipline_demographics.multiracial_female }} == 2) {
-			incidents.Multi_racial = incidents.Multi_racial + 4;
+			incidents.Multi_racial = incidents.Multi_racial + 2;
 		} else {incidents.Multi_racial = incidents.Multi_racial + {{ discipline_demographics.multiracial_female }};}
 		if ("{{ discipline_demographics.multiracial_male }}" == "None") {
 		} 
 		else if ({{ discipline_demographics.multiracial_male }} == 2) {
-			incidents.Multi_racial = incidents.Multi-racial + 4;
+			incidents.Multi_racial = incidents.Multi-racial + 2;
 		} else {incidents.Multi_racial = incidents.Multi_racial + {{ discipline_demographics.multiracial_male }};}
 
 		// put the demographics in order from lowest to highest disciplinary incidents
@@ -303,13 +305,19 @@ function loadDisciplineProfile () {
 
 
 
-			$("#d-"+i+"-p").html(sortable[i][0] +": "+sortable[i][1] + " +/- 2");
 
 			// set width of bar based on value
 			var width = Math.round((sortable[i][1]/(total/1.5))*100);
-			width = width +"%";
-			$("#d-"+i).css("width", width);
-
+			if (width > 40) {
+				$("#d-"+i).html(sortable[i][0] +": "+sortable[i][1] + " +/- 2");
+				width = width +"%";
+				$("#d-"+i).css("width", width);
+			}
+			else {
+				$("#d-"+i+"-p").html(sortable[i][0] +": "+sortable[i][1] + " +/- 2");
+				width = width +"%";
+				$("#d-"+i).css("width", width);
+			}
 		}
 	}
 }

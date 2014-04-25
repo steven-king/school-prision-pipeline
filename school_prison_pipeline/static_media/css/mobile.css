@@ -62,14 +62,15 @@ body {
 h1 {
     font-family:roboto_slabregular;
     text-align: center;
-    font-size:36px;
+    font-size:34px;
     margin-left:5%;
     margin-right:5%;
+    margin-bottom: 5px;
 }
 p {
    font-family:latoregular; 
    font-size:16px;
-   margin-bottom:5px;
+   margin-bottom:10px;
    color:#626262;
 }
 .intro {
@@ -81,7 +82,7 @@ p {
 
 img {
     width:20%;
-    margin:10px 40%;
+    margin:0px 40%;
 }
 
     #profile-list {
@@ -183,7 +184,7 @@ img {
 
 #compare-section ul {
     list-style-type: none;
-    padding-left:2%;
+    padding-left:0;
     top:0px;
     width:100%;
     padding-bottom:25px;
@@ -207,7 +208,7 @@ img {
         .styled-select {
             display: inline-block;
             float:left;
-            width: 85%;
+            width: 81%;
             height: 40px;
             margin-left:7px;
             margin-bottom:6px;
@@ -219,7 +220,7 @@ img {
         #compare-section ul li .go-to {
             cursor:pointer;
             float:left;
-            width: 11%;
+            width: 14%;
             height: 40px;
             border-left:1px solid #ccc;
             background: url(../right-arrow-yellow.svg) no-repeat right #C19438;
@@ -267,9 +268,12 @@ img {
             z-index:85;
             background-color: #C2D1D9;
         }    
+        .preloader:first-child {
+            margin-top:150px;
+        }
             .preloader img {
-                width:64%;
-                margin:50px 17%;
+                width:60%;
+                margin:0px 15%;
             }
 
 #compare-section ul .fixed-yellow {
@@ -306,7 +310,10 @@ img {
         .graph {
             width:90%;
             margin:0 5%;
-            height:400px;
+            height:380px;
+        }
+        .discipline {
+            height:500px;
         }
         .graph .bar {
             width:25%;
@@ -345,7 +352,8 @@ img {
 #district-demographics {
     width:60%;
     float:left;
-    height:250px;
+    height:200px;
+    margin-bottom:30px;
 }
 #demographics-key {
     width:40%;
@@ -367,8 +375,20 @@ img {
 }
 #district-discipline .bar {
     color:#fff;
+    float:left;
+    padding: 5px 10px;
 }
-#district-discipline h4, #district-discipline #total-discipline {
+#district-discipline .bar-wrap {
+    color:#626262;
+    width:100%;
+
+}
+#district-discipline .bar-wrap p {
+   float:left;
+
+}
+#district-discipline h4 {
+    font-family: roboto_slabregular;
     text-align: center;
 }
 #district-total {
@@ -376,17 +396,16 @@ img {
     line-height: 1.2em;
     margin-bottom: 10px
 }
-#district-discipline .bar{
-    color:#fff;
-}
 
 #demographics {
     width:100%;
 }
 
-#demographics p {
-    margin-bottom:30px;
+#demographics p, #district-discipline #total-discipline {
+    margin-bottom:10px;
     font-size:18px;
+    text-align: center;
+    color:#000;
 }
 .left {
     float:left;
@@ -405,20 +424,7 @@ img {
     #profile-list li .middle {
         width:40%;
     }
-    #profile-list li:nth-child(1), #profile-list li:nth-child(4) {
-            height:89px;
-        }
-            #profile-list li:nth-child(1) .middle, #profile-list li:nth-child(4) .middle, #profile-list li:last-child .middle {
-                padding-top: 12px;
-            }
-     #profile-list li:nth-child(6) {
-            height:110px;
-        }
-     #profile-list li:last-child {
-            height:130px;
-            margin-bottom: 10px;
-            border:none;
-        }
+  
             #profile-list li:last-child .left {
                 width:60%;
                 margin-right:5%;
