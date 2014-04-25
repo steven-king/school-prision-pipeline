@@ -81,7 +81,7 @@ p {
 
 img {
     width:20%;
-    margin:30px 40%;
+    margin:10px 40%;
 }
 
     #profile-list {
@@ -390,3 +390,27 @@ img {
     text-align: center;
     position: relative;
     }
+
+@media screen and (max-width: 300px) {
+    #profile-list li:nth-child(1), #profile-list li:nth-child(4) {
+            height:89px;
+        }
+            #profile-list li:nth-child(1) .middle, #profile-list li:nth-child(4) .middle, #profile-list li:last-child .middle {
+                padding-top: 12px;
+            }
+     #profile-list li:nth-child(6) {
+            height:110px;
+        }
+     #profile-list li:last-child {
+            height:130px;
+            margin-bottom: 10px;
+            border:none;
+        }
+            #profile-list li:last-child .left {
+                width:60%;
+                margin-right:5%;
+            }
+            #profile-list li:last-child .middle {
+                width:25%;
+            }
+}
