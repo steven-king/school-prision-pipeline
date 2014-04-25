@@ -1,0 +1,652 @@
+{% extends "base.html" %}
+{% load humanize %}
+{% block head_info %}
+	<link href="{{ STATIC_URL }}css/mobile.css" rel="stylesheet">
+{% endblock %}
+{% block content %}
+
+<h1 class="title">Making the Grade</h1>
+<p id="intro-1" class="intro">Compare North Carolina school districts to see how many factors play into the educational environment. Tap the arrow to see all of the data for a district.</p>
+
+
+<div id="compare-section">
+    <ul>
+        <li id="district-yellow"><div class="styled-select yellow">
+            <select id="district-1">
+							  <option value="010">Alamance-Burlington</option>
+							  <option value="020">Alexander</option>
+							  <option value="030">Alleghany</option>
+							  <option value="040">Anson</option>
+							  <option value="050">Ashe</option>
+							  	<option value="761">Asheboro</option>
+							  	<option value="111">Asheville</option>
+							  <option value="060">Avery</option>
+							  <option value="070">Beaufort</option>
+							  <option value="080">Bertie</option>
+							  <option value="090">Bladen</option>
+							  <option value="100">Brunswick</option>
+							  <option value="110" selected>Buncombe</option>
+							  <option value="120">Burke</option>
+							  <option value="130">Cabarrus</option>
+							  <option value="140">Caldwell</option>
+							  <option value="150">Camden</option>
+							  <option value="160">Carteret</option>
+							  <option value="170">Caswell</option>
+							  <option value="180">Catawba</option>
+							  	<option value="681">Chapel Hill-Carrboro</option>
+							  <option value="190">Chatham</option>
+							  <option value="200">Cherokee</option>
+							  <option value="210">Edenton-Chowan</option>
+							  <option value="220">Clay</option>
+							  <option value="230">Cleveland</option>
+							  	<option value="821">Clinton</option>
+							  <option value="240">Columbus</option>
+							  <option value="250">Craven</option>
+							  <option value="260">Cumberland</option>
+							  <option value="270">Currituck</option>
+							  <option value="280">Dare</option>
+							  <option value="290">Davidson</option>
+							  <option value="300">Davie</option>
+							  <option value="310">Duplin</option>
+							  <option value="320">Durham</option>
+							  <option value="330">Edgecombe</option>
+							  	<option value="861">Elkin</option>
+							  <option value="340">Forsyth</option>
+							  <option value="350">Franklin</option>
+							  <option value="360">Gaston</option>
+							  <option value="370">Gates</option>
+							  <option value="380">Graham</option>
+							  <option value="390">Granville</option>
+							  <option value="400">Greene</option>
+							  <option value="410">Guilford</option>
+							  <option value="420">Halifax</option>
+							  <option value="430">Harnett</option>
+							  <option value="440">Haywood</option>
+							  <option value="450">Henderson</option>
+							  <option value="460">Hertford</option>
+							  	<option value="181">Hickory</option>
+							  <option value="470">Hoke</option>
+							  <option value="480">Hyde</option>
+							  <option value="490">Iredell-Statesville</option>
+							  <option value="500">Jackson</option>
+							  <option value="510">Johnston</option>
+							  <option value="520">Jones</option>
+							  	<option value="132">Kannapolis</option>
+							  <option value="530">Lee</option>
+							  <option value="540">Lenoir</option>
+							  	<option value="291">Lexington</option>
+							  <option value="550">Lincoln</option>
+							  <option value="560">Macon</option>
+							  <option value="570">Madison</option>
+							  <option value="580">Martin</option>
+							  <option value="590">McDowell</option>
+							  <option value="600">Charlotte-Mecklenburg</option>
+							  <option value="610">Mitchell</option>
+							  <option value="620">Montgomery</option>
+							  <option value="630">Moore</option>
+							  	<option value="491">Mooresville</option>
+							  	<option value="862">Mount Airy</option>
+							  <option value="640">Nash-Rocky Mount</option>
+							  <option value="650">New Hanover</option>
+							  	<option value="182">Newton Conover</option>
+							  <option value="660">Northampton</option>
+							  <option value="670">Onslow</option>
+							  <option value="680">Orange</option>
+							  <option value="690">Pamlico</option>
+							  <option value="700">Pasquotank</option>
+							  <option value="710">Pender</option>
+							  <option value="720">Perquimans</option>
+							  <option value="730">Person</option>
+							  <option value="740">Pitt</option>
+							  <option value="750">Polk</option>
+							  <option value="760">Randolph</option>
+							  <option value="770">Richmond</option>
+							  	<option value="421">Roanoke Rapids</option>
+							  <option value="780">Robeson</option>
+							  <option value="790">Rockingham</option>
+							  <option value="800">Rowan-Salisbury</option>
+							  <option value="810">Rutherford</option>
+							  <option value="820">Sampson</option>
+							  <option value="830">Scotland</option>
+							  <option value="840">Stanly</option>
+							  <option value="850">Stokes</option>
+							  <option value="860">Surry</option>
+							  <option value="870">Swain</option>
+							  	<option value="292">Thomasville</option>
+							  <option value="880">Transylvania</option>
+							  <option value="890">Tyrrell</option>
+							  <option value="900">Union</option>
+							  <option value="910">Vance</option>
+							  <option value="920">Wake</option>
+							  <option value="930">Warren</option>
+							  <option value="940">Washington</option>
+							  <option value="950">Watauga</option>
+							  <option value="960">Wayne</option>
+							  	<option value="422">Weldon</option>
+							  	<option value="241">Whiteville</option>
+							  <option value="970">Wilkes</option>
+							  <option value="980">Wilson</option>
+							  <option value="990">Yadkin</option>
+							  <option value="995">Yancey</option>
+							</select>
+        </div>
+        <div class="yellow go-to" onclick="loadYellow()"></div>
+        </li>
+        <li id="district-orange"><div class="styled-select orange">
+            <select id="district-2">
+							  <option value="010">Alamance-Burlington</option>
+							  <option value="020">Alexander</option>
+							  <option value="030">Alleghany</option>
+							  <option value="040">Anson</option>
+							  <option value="050">Ashe</option>
+							  	<option value="761">Asheboro</option>
+							  	<option value="111" selected>Asheville</option>
+							  <option value="060">Avery</option>
+							  <option value="070">Beaufort</option>
+							  <option value="080">Bertie</option>
+							  <option value="090">Bladen</option>
+							  <option value="100">Brunswick</option>
+							  <option value="110">Buncombe</option>
+							  <option value="120">Burke</option>
+							  <option value="130">Cabarrus</option>
+							  <option value="140">Caldwell</option>
+							  <option value="150">Camden</option>
+							  <option value="160">Carteret</option>
+							  <option value="170">Caswell</option>
+							  <option value="180">Catawba</option>
+							  	<option value="681">Chapel Hill-Carrboro</option>
+							  <option value="190">Chatham</option>
+							  <option value="200">Cherokee</option>
+							  <option value="210">Edenton-Chowan</option>
+							  <option value="220">Clay</option>
+							  <option value="230">Cleveland</option>
+							  	<option value="821">Clinton</option>
+							  <option value="240">Columbus</option>
+							  <option value="250">Craven</option>
+							  <option value="260">Cumberland</option>
+							  <option value="270">Currituck</option>
+							  <option value="280">Dare</option>
+							  <option value="290">Davidson</option>
+							  <option value="300">Davie</option>
+							  <option value="310">Duplin</option>
+							  <option value="320">Durham</option>
+							  <option value="330">Edgecombe</option>
+							  	<option value="861">Elkin</option>
+							  <option value="340">Forsyth</option>
+							  <option value="350">Franklin</option>
+							  <option value="360">Gaston</option>
+							  <option value="370">Gates</option>
+							  <option value="380">Graham</option>
+							  <option value="390">Granville</option>
+							  <option value="400">Greene</option>
+							  <option value="410">Guilford</option>
+							  <option value="420">Halifax</option>
+							  <option value="430">Harnett</option>
+							  <option value="440">Haywood</option>
+							  <option value="450">Henderson</option>
+							  <option value="460">Hertford</option>
+							  	<option value="181">Hickory</option>
+							  <option value="470">Hoke</option>
+							  <option value="480">Hyde</option>
+							  <option value="490">Iredell-Statesville</option>
+							  <option value="500">Jackson</option>
+							  <option value="510">Johnston</option>
+							  <option value="520">Jones</option>
+							  	<option value="132">Kannapolis</option>
+							  <option value="530">Lee</option>
+							  <option value="540">Lenoir</option>
+							  	<option value="291">Lexington</option>
+							  <option value="550">Lincoln</option>
+							  <option value="560">Macon</option>
+							  <option value="570">Madison</option>
+							  <option value="580">Martin</option>
+							  <option value="590">McDowell</option>
+							  <option value="600">Charlotte-Mecklenburg</option>
+							  <option value="610">Mitchell</option>
+							  <option value="620">Montgomery</option>
+							  <option value="630">Moore</option>
+							  	<option value="491">Mooresville</option>
+							  	<option value="862">Mount Airy</option>
+							  <option value="640">Nash-Rocky Mount</option>
+							  <option value="650">New Hanover</option>
+							  	<option value="182">Newton Conover</option>
+							  <option value="660">Northampton</option>
+							  <option value="670">Onslow</option>
+							  <option value="680">Orange</option>
+							  <option value="690">Pamlico</option>
+							  <option value="700">Pasquotank</option>
+							  <option value="710">Pender</option>
+							  <option value="720">Perquimans</option>
+							  <option value="730">Person</option>
+							  <option value="740">Pitt</option>
+							  <option value="750">Polk</option>
+							  <option value="760">Randolph</option>
+							  <option value="770">Richmond</option>
+							  	<option value="421">Roanoke Rapids</option>
+							  <option value="780">Robeson</option>
+							  <option value="790">Rockingham</option>
+							  <option value="800">Rowan-Salisbury</option>
+							  <option value="810">Rutherford</option>
+							  <option value="820">Sampson</option>
+							  <option value="830">Scotland</option>
+							  <option value="840">Stanly</option>
+							  <option value="850">Stokes</option>
+							  <option value="860">Surry</option>
+							  <option value="870">Swain</option>
+							  	<option value="292">Thomasville</option>
+							  <option value="880">Transylvania</option>
+							  <option value="890">Tyrrell</option>
+							  <option value="900">Union</option>
+							  <option value="910">Vance</option>
+							  <option value="920">Wake</option>
+							  <option value="930">Warren</option>
+							  <option value="940">Washington</option>
+							  <option value="950">Watauga</option>
+							  <option value="960">Wayne</option>
+							  	<option value="422">Weldon</option>
+							  	<option value="241">Whiteville</option>
+							  <option value="970">Wilkes</option>
+							  <option value="980">Wilson</option>
+							  <option value="990">Yadkin</option>
+							  <option value="995">Yancey</option>
+            </select>
+            
+        </div>
+        <div class="orange-profile go-to" onclick="loadOrange()"></div>
+        </li>
+        <li id="district-blue"><div class="blue styled-select">
+            <select id="district-3">
+							  <option value="010">Alamance-Burlington</option>
+							  <option value="020">Alexander</option>
+							  <option value="030">Alleghany</option>
+							  <option value="040">Anson</option>
+							  <option value="050">Ashe</option>
+							  	<option value="761">Asheboro</option>
+							  	<option value="111">Asheville</option>
+							  <option value="060">Avery</option>
+							  <option value="070">Beaufort</option>
+							  <option value="080">Bertie</option>
+							  <option value="090">Bladen</option>
+							  <option value="100">Brunswick</option>
+							  <option value="110">Buncombe</option>
+							  <option value="120">Burke</option>
+							  <option value="130">Cabarrus</option>
+							  <option value="140">Caldwell</option>
+							  <option value="150">Camden</option>
+							  <option value="160">Carteret</option>
+							  <option value="170">Caswell</option>
+							  <option value="180">Catawba</option>
+							  	<option value="681">Chapel Hill-Carrboro</option>
+							  <option value="190">Chatham</option>
+							  <option value="200">Cherokee</option>
+							  <option value="210">Edenton-Chowan</option>
+							  <option value="220">Clay</option>
+							  <option value="230">Cleveland</option>
+							  	<option value="821">Clinton</option>
+							  <option value="240">Columbus</option>
+							  <option value="250">Craven</option>
+							  <option value="260">Cumberland</option>
+							  <option value="270">Currituck</option>
+							  <option value="280">Dare</option>
+							  <option value="290">Davidson</option>
+							  <option value="300">Davie</option>
+							  <option value="310">Duplin</option>
+							  <option value="320">Durham</option>
+							  <option value="330">Edgecombe</option>
+							  	<option value="861">Elkin</option>
+							  <option value="340">Forsyth</option>
+							  <option value="350">Franklin</option>
+							  <option value="360">Gaston</option>
+							  <option value="370">Gates</option>
+							  <option value="380">Graham</option>
+							  <option value="390">Granville</option>
+							  <option value="400">Greene</option>
+							  <option value="410">Guilford</option>
+							  <option value="420">Halifax</option>
+							  <option value="430">Harnett</option>
+							  <option value="440">Haywood</option>
+							  <option value="450">Henderson</option>
+							  <option value="460">Hertford</option>
+							  	<option value="181">Hickory</option>
+							  <option value="470">Hoke</option>
+							  <option value="480">Hyde</option>
+							  <option value="490">Iredell-Statesville</option>
+							  <option value="500">Jackson</option>
+							  <option value="510">Johnston</option>
+							  <option value="520">Jones</option>
+							  	<option value="132">Kannapolis</option>
+							  <option value="530">Lee</option>
+							  <option value="540">Lenoir</option>
+							  	<option value="291">Lexington</option>
+							  <option value="550">Lincoln</option>
+							  <option value="560">Macon</option>
+							  <option value="570"  selected>Madison</option>
+							  <option value="580">Martin</option>
+							  <option value="590">McDowell</option>
+							  <option value="600">Charlotte-Mecklenburg</option>
+							  <option value="610">Mitchell</option>
+							  <option value="620">Montgomery</option>
+							  <option value="630">Moore</option>
+							  	<option value="491">Mooresville</option>
+							  	<option value="862">Mount Airy</option>
+							  <option value="640">Nash-Rocky Mount</option>
+							  <option value="650">New Hanover</option>
+							  	<option value="182">Newton Conover</option>
+							  <option value="660">Northampton</option>
+							  <option value="670">Onslow</option>
+							  <option value="680">Orange</option>
+							  <option value="690">Pamlico</option>
+							  <option value="700">Pasquotank</option>
+							  <option value="710">Pender</option>
+							  <option value="720">Perquimans</option>
+							  <option value="730">Person</option>
+							  <option value="740">Pitt</option>
+							  <option value="750">Polk</option>
+							  <option value="760">Randolph</option>
+							  <option value="770">Richmond</option>
+							  	<option value="421">Roanoke Rapids</option>
+							  <option value="780">Robeson</option>
+							  <option value="790">Rockingham</option>
+							  <option value="800">Rowan-Salisbury</option>
+							  <option value="810">Rutherford</option>
+							  <option value="820">Sampson</option>
+							  <option value="830">Scotland</option>
+							  <option value="840">Stanly</option>
+							  <option value="850">Stokes</option>
+							  <option value="860">Surry</option>
+							  <option value="870">Swain</option>
+							  	<option value="292">Thomasville</option>
+							  <option value="880">Transylvania</option>
+							  <option value="890">Tyrrell</option>
+							  <option value="900">Union</option>
+							  <option value="910">Vance</option>
+							  <option value="920">Wake</option>
+							  <option value="930">Warren</option>
+							  <option value="940">Washington</option>
+							  <option value="950">Watauga</option>
+							  <option value="960">Wayne</option>
+							  	<option value="422">Weldon</option>
+							  	<option value="241">Whiteville</option>
+							  <option value="970">Wilkes</option>
+							  <option value="980">Wilson</option>
+							  <option value="990">Yadkin</option>
+							  <option value="995">Yancey</option>
+							</select>
+            
+            
+        </div>
+        <div class="blue-profile go-to" onclick="loadBlue()"></div>
+        </li>    
+    </ul>
+    </div>
+<a href="#graph-1"><img src="{{ STATIC_URL }}mobile_arrow.png"></a>
+    <div class="graphs-wrapper">
+		<div name="graph-1" class="discipline graph">
+			<div class="preloader" >
+				<img src="{{ STATIC_URL }}preloader.gif">
+			</div>
+			<div rel='tipsy' title="" class="bar yellow" id="discipline-0">
+				<p id="discipline-p-0">67%</p>
+			</div>
+			<div rel='tipsy' title="" class="bar orange" id="discipline-1">
+				<p id="discipline-p-1">49%</p>
+			</div>
+			<div rel='tipsy' title="" class="bar blue" id="discipline-2">
+				<p id="discipline-p-2">53%</p>
+			</div>
+			<h4>Disciplinary incidents<br>
+				<strong>(number of suspensions or<br>expulsions per 1,000 students)</strong></h4>
+
+		</div>
+
+<a href="#graph-2">	<img src="{{ STATIC_URL }}mobile_arrow.png"></a>
+		<div name="graph-2" class="lunch graph">
+			<div class="preloader" >
+				<img src="{{ STATIC_URL }}preloader.gif">
+			</div>
+			<div rel='tipsy' title="" class="bar yellow" id="lunch-0">
+				<p id="lunch-p-0">67%</p>
+			</div>
+			<div rel='tipsy' title="" class="bar orange" id="lunch-1">
+				<p id="lunch-p-1">49%</p>
+			</div>
+			<div rel='tipsy' title="" class="bar blue" id="lunch-2">
+				<p id="lunch-p-2">53%</p>
+			</div>
+			<h4>Students who qualify for free or reduced lunch</h4>
+
+	</div>
+<a href="#graph-3">	<img src="{{ STATIC_URL }}mobile_arrow.png"></a>
+		<div name="graph-3" class="graduation graph">
+			<div class="preloader" >
+				<img src="{{ STATIC_URL }}preloader.gif">
+			</div>
+			<div rel='tipsy' title="" class="bar yellow" id="graduation-0">
+				<p id="graduation-p-0">67%</p>
+			</div>
+			<div rel='tipsy' title="" class="bar orange" id="graduation-1">
+				<p id="graduation-p-1">49%</p>
+			</div>
+			<div rel='tipsy' title="" class="bar blue" id="graduation-2">
+				<p id="graduation-p-2">53%</p>
+			</div>
+			<h4>High school<br>graduation rate</h4>
+
+		</div>
+	<a href="#graph-4"><img src="{{ STATIC_URL }}mobile_arrow.png"></a>
+		<div name="graph-4" class="sat graph">
+			<div class="preloader" >
+				<img src="{{ STATIC_URL }}preloader.gif">
+			</div>
+			<div rel='tipsy' title="" class="bar yellow" id="sat-0">
+				<p id="sat-p-0">67%</p>
+			</div>
+			<div rel='tipsy' title="" class="bar orange" id="sat-1">
+				<p id="sat-p-1">49%</p>
+			</div>
+			<div rel='tipsy' title="" class="bar blue" id="sat-2">
+				<p id="sat-p-2">53%</p>
+			</div>
+			<h4>Average SAT score for graduating seniors</h4>
+
+		</div>		
+<a href="#graph-5">	<img src="{{ STATIC_URL }}mobile_arrow.png"></a>
+		<div name="graph-5" class="expenses graph">
+			<div class="preloader" >
+				<img src="{{ STATIC_URL }}preloader.gif">
+			</div>
+			<div rel='tipsy' title="" class="bar yellow" id="expenses-0">
+				<p id="expenses-p-0">67%</p>
+			</div>
+			<div rel='tipsy' title="" class="bar orange" id="expenses-1">
+				<p id="expenses-p-1">49%</p>
+			</div>
+			<div rel='tipsy' title="" class="bar blue" id="expenses-2">
+				<p id="expenses-p-2">53%</p>
+			</div>
+			<h4>Total Expenses per Student<br>
+				<strong>(money from county, state, and federal governments)</strong></h4>
+
+		</div>
+    </div>    
+</div>
+    
+{% endblock %}
+
+{% block javascript %}
+
+<script>
+
+$( document ).ready(function() {
+	height = $(window).height();
+	console.log(height);
+	if ($(window).width() > 700) {
+		window.location.href = "http://school-discipline.herokuapp.com";
+	}
+	$(".preloader").hide();
+
+	loadCompareGraphs();   //for compare tab, see below
+
+	$(window).scroll(function () { 
+
+
+	    if ($(window).scrollTop() > 220) {
+	      $('#district-yellow').addClass('fixed-yellow');
+	      $('#district-orange').addClass('fixed-orange');
+	      $('#district-blue').addClass('fixed-blue');
+	    }
+
+	    if ($(window).scrollTop() < 221) {
+	      $('#district-yellow').removeClass('fixed-yellow');
+	      $('#district-orange').removeClass('fixed-orange');
+	      $('#district-blue').removeClass('fixed-blue');
+	    }
+
+	});
+
+});
+
+
+var height="";
+
+$( window ).resize(function() {
+	height = $(window).height();
+	console.log(height);
+	if ($(window).width() > 700) {
+		window.location.href = "http://school-discipline.herokuapp.com";
+	}
+	if (height <190) {
+		console.log("heyo");
+		
+	}
+});
+
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+
+
+// *** GLOBAL VARS *** //
+var districts_name = ["Buncombe", "Asheville", "Madison"];
+var districts_id = ["110", "111", "570"];
+var districtA = {"lea_name": "Buncombe County Schools", "lea_code": "110", "graduation_rates": [{"school_year": "2012-2013", "graduation_rate": "0.803", "freelunch_graduation_rate": "0.710"}, {"school_year": "2011-2012", "graduation_rate": "0.800", "freelunch_graduation_rate": "0.731"}, {"school_year": "2010-2011", "graduation_rate": "0.779", "freelunch_graduation_rate": "0.697"}, {"school_year": "2009-2010", "graduation_rate": "0.731", "freelunch_graduation_rate": "0.634"}, {"school_year": "2008-2009", "graduation_rate": "0.740", "freelunch_graduation_rate": "0.625"}, {"school_year": "2007-2008", "graduation_rate": "0.721", "freelunch_graduation_rate": "0.580"}], "demographics": [{"school_year": "2012-2013", "expenses_per_pupil": "8522.74", "sat_participation": "0.483", "sat_average_score": 1053, "percent_native_american": "0.003", "percent_asian": "0.014", "percent_black": "0.061", "percent_hispanic": "0.128", "percent_white": "0.749", "percent_multiracial": null, "percent_pacific_islander": "0.002"}, {"school_year": "2011-2012", "expenses_per_pupil": "8332.37", "sat_participation": "0.576", "sat_average_score": 1049, "percent_native_american": "0.003", "percent_asian": "0.013", "percent_black": "0.059", "percent_hispanic": "0.120", "percent_white": "0.756", "percent_multiracial": "0.045", "percent_pacific_islander": "0.002"}, {"school_year": "2010-2011", "expenses_per_pupil": "8349.78", "sat_participation": "0.597", "sat_average_score": 1055, "percent_native_american": "0.003", "percent_asian": "0.014", "percent_black": "0.060", "percent_hispanic": "0.114", "percent_white": "0.764", "percent_multiracial": "0.045", "percent_pacific_islander": "0.001"}, {"school_year": "2009-2010", "expenses_per_pupil": "8355.69", "sat_participation": "0.548", "sat_average_score": 1073, "percent_native_american": "0.004", "percent_asian": "0.016", "percent_black": "0.108", "percent_hispanic": "0.091", "percent_white": "0.782", "percent_multiracial": null, "percent_pacific_islander": null}, {"school_year": "2008-2009", "expenses_per_pupil": "8526.67", "sat_participation": "0.522", "sat_average_score": 1055, "percent_native_american": "0.004", "percent_asian": "0.014", "percent_black": "0.105", "percent_hispanic": "0.085", "percent_white": "0.792", "percent_multiracial": null, "percent_pacific_islander": null}, {"school_year": "2007-2008", "expenses_per_pupil": "8431.00", "sat_participation": "0.551", "sat_average_score": 1064, "percent_native_american": "0.004", "percent_asian": "0.013", "percent_black": "0.101", "percent_hispanic": "0.080", "percent_white": "0.802", "percent_multiracial": null, "percent_pacific_islander": null}], "discipline_rates": [{"school_year": "2012-2013", "category": "M", "composite_rate": 14}, {"school_year": "2012-2013", "category": "E", "composite_rate": 1}, {"school_year": "2012-2013", "category": "H", "composite_rate": 24}, {"school_year": "2011-2012", "category": "M", "composite_rate": null}, {"school_year": "2011-2012", "category": "E", "composite_rate": null}, {"school_year": "2011-2012", "category": "H", "composite_rate": null}, {"school_year": "2010-2011", "category": "E", "composite_rate": null}, {"school_year": "2010-2011", "category": "H", "composite_rate": null}, {"school_year": "2010-2011", "category": "M", "composite_rate": null}, {"school_year": "2009-2010", "category": "H", "composite_rate": null}, {"school_year": "2009-2010", "category": "M", "composite_rate": null}, {"school_year": "2009-2010", "category": "E", "composite_rate": null}, {"school_year": "2008-2009", "category": "A", "composite_rate": null}, {"school_year": "2008-2009", "category": "E", "composite_rate": null}, {"school_year": "2008-2009", "category": "H", "composite_rate": null}, {"school_year": "2008-2009", "category": "I", "composite_rate": null}, {"school_year": "2008-2009", "category": "M", "composite_rate": null}, {"school_year": "2007-2008", "category": "E", "composite_rate": null}, {"school_year": "2007-2008", "category": "H", "composite_rate": null}, {"school_year": "2007-2008", "category": "M", "composite_rate": null}], "freelunch_rates": [{"school_year": "2012-2013", "percent_needy": "0.560"}, {"school_year": "2011-2012", "percent_needy": "0.562"}, {"school_year": "2010-2011", "percent_needy": "0.530"}, {"school_year": "2009-2010", "percent_needy": "0.501"}], "discipline_demographics": [{"total": 3350, "white_male": 1721, "white_female": 517, "black_male": 413, "black_female": 163, "hispanic_male": 192, "hispanic_female": 48, "multiracial_male": 154, "multiracial_female": 98, "asian_male": 13, "asian_female": 7, "pacific_islander_male": null, "pacific_islander_female": null, "other_male": null, "other_female": 2, "american_indian_male": 19, "american_indian_female": 2, "other": null}]};
+var districtB = {"lea_name": "Asheville City Schools", "lea_code": "111", "graduation_rates": [{"school_year": "2012-2013", "graduation_rate": "0.816", "freelunch_graduation_rate": "0.679"}, {"school_year": "2011-2012", "graduation_rate": "0.859", "freelunch_graduation_rate": "0.810"}, {"school_year": "2010-2011", "graduation_rate": "0.807", "freelunch_graduation_rate": "0.717"}, {"school_year": "2009-2010", "graduation_rate": "0.737", "freelunch_graduation_rate": "0.574"}, {"school_year": "2008-2009", "graduation_rate": "0.738", "freelunch_graduation_rate": "0.519"}, {"school_year": "2007-2008", "graduation_rate": "0.687", "freelunch_graduation_rate": "0.621"}], "demographics": [{"school_year": "2012-2013", "expenses_per_pupil": "11243.20", "sat_participation": "0.737", "sat_average_score": 1072, "percent_native_american": "0.002", "percent_asian": "0.013", "percent_black": "0.260", "percent_hispanic": "0.065", "percent_white": "0.590", "percent_multiracial": null, "percent_pacific_islander": "0.001"}, {"school_year": "2011-2012", "expenses_per_pupil": "11333.73", "sat_participation": "0.768", "sat_average_score": 1077, "percent_native_american": "0.002", "percent_asian": "0.011", "percent_black": "0.279", "percent_hispanic": "0.063", "percent_white": "0.575", "percent_multiracial": "0.075", "percent_pacific_islander": "0.000"}, {"school_year": "2010-2011", "expenses_per_pupil": "11894.14", "sat_participation": "0.700", "sat_average_score": 1063, "percent_native_american": "0.002", "percent_asian": "0.011", "percent_black": "0.287", "percent_hispanic": "0.068", "percent_white": "0.557", "percent_multiracial": "0.075", "percent_pacific_islander": "0.000"}, {"school_year": "2009-2010", "expenses_per_pupil": "12512.61", "sat_participation": "0.700", "sat_average_score": 1105, "percent_native_american": "0.002", "percent_asian": "0.011", "percent_black": "0.393", "percent_hispanic": "0.047", "percent_white": "0.547", "percent_multiracial": null, "percent_pacific_islander": null}, {"school_year": "2008-2009", "expenses_per_pupil": "12716.81", "sat_participation": "0.742", "sat_average_score": 1047, "percent_native_american": "0.003", "percent_asian": "0.017", "percent_black": "0.407", "percent_hispanic": "0.050", "percent_white": "0.523", "percent_multiracial": null, "percent_pacific_islander": null}, {"school_year": "2007-2008", "expenses_per_pupil": "12209.00", "sat_participation": "0.819", "sat_average_score": 1066, "percent_native_american": "0.002", "percent_asian": "0.014", "percent_black": "0.421", "percent_hispanic": "0.052", "percent_white": "0.512", "percent_multiracial": null, "percent_pacific_islander": null}], "discipline_rates": [{"school_year": "2012-2013", "category": "M", "composite_rate": 43}, {"school_year": "2012-2013", "category": "E", "composite_rate": 11}, {"school_year": "2012-2013", "category": "H", "composite_rate": 30}, {"school_year": "2012-2013", "category": "T", "composite_rate": null}, {"school_year": "2011-2012", "category": "H", "composite_rate": null}, {"school_year": "2011-2012", "category": "M", "composite_rate": null}, {"school_year": "2011-2012", "category": "T", "composite_rate": null}, {"school_year": "2011-2012", "category": "E", "composite_rate": null}, {"school_year": "2010-2011", "category": "H", "composite_rate": null}, {"school_year": "2010-2011", "category": "M", "composite_rate": null}, {"school_year": "2010-2011", "category": "T", "composite_rate": null}, {"school_year": "2010-2011", "category": "E", "composite_rate": null}, {"school_year": "2009-2010", "category": "H", "composite_rate": null}, {"school_year": "2009-2010", "category": "M", "composite_rate": null}, {"school_year": "2009-2010", "category": "T", "composite_rate": null}, {"school_year": "2009-2010", "category": "E", "composite_rate": null}, {"school_year": "2008-2009", "category": "E", "composite_rate": null}, {"school_year": "2008-2009", "category": "M", "composite_rate": null}, {"school_year": "2008-2009", "category": "T", "composite_rate": null}, {"school_year": "2008-2009", "category": "H", "composite_rate": null}, {"school_year": "2007-2008", "category": "E", "composite_rate": null}, {"school_year": "2007-2008", "category": "M", "composite_rate": null}, {"school_year": "2007-2008", "category": "T", "composite_rate": null}, {"school_year": "2007-2008", "category": "H", "composite_rate": null}], "freelunch_rates": [{"school_year": "2012-2013", "percent_needy": "0.469"}, {"school_year": "2011-2012", "percent_needy": "0.508"}, {"school_year": "2010-2011", "percent_needy": "0.494"}, {"school_year": "2009-2010", "percent_needy": "0.484"}], "discipline_demographics": [{"total": 910, "white_male": 122, "white_female": 25, "black_male": 433, "black_female": 234, "hispanic_male": 24, "hispanic_female": 6, "multiracial_male": 43, "multiracial_female": 19, "asian_male": null, "asian_female": null, "pacific_islander_male": null, "pacific_islander_female": null, "other_male": null, "other_female": null, "american_indian_male": 2, "american_indian_female": 2, "other": null}]};
+var districtC = {"lea_name": "Madison County Schools", "lea_code": "570", "graduation_rates": [{"school_year": "2012-2013", "graduation_rate": "0.859", "freelunch_graduation_rate": "0.846"}, {"school_year": "2011-2012", "graduation_rate": "0.824", "freelunch_graduation_rate": "0.747"}, {"school_year": "2010-2011", "graduation_rate": "0.818", "freelunch_graduation_rate": "0.778"}, {"school_year": "2009-2010", "graduation_rate": "0.626", "freelunch_graduation_rate": "0.509"}, {"school_year": "2008-2009", "graduation_rate": "0.640", "freelunch_graduation_rate": "0.511"}, {"school_year": "2007-2008", "graduation_rate": "0.740", "freelunch_graduation_rate": "0.618"}], "demographics": [{"school_year": "2012-2013", "expenses_per_pupil": "9131.69", "sat_participation": "0.418", "sat_average_score": 983, "percent_native_american": "0.005", "percent_asian": "0.004", "percent_black": "0.003", "percent_hispanic": "0.036", "percent_white": "0.940", "percent_multiracial": null, "percent_pacific_islander": "0.000"}, {"school_year": "2011-2012", "expenses_per_pupil": "9533.89", "sat_participation": "0.413", "sat_average_score": 979, "percent_native_american": "0.004", "percent_asian": "0.005", "percent_black": "0.002", "percent_hispanic": "0.032", "percent_white": "0.949", "percent_multiracial": "0.009", "percent_pacific_islander": "0.000"}, {"school_year": "2010-2011", "expenses_per_pupil": "9557.05", "sat_participation": "0.392", "sat_average_score": 1008, "percent_native_american": "0.005", "percent_asian": "0.005", "percent_black": "0.002", "percent_hispanic": "0.031", "percent_white": "0.949", "percent_multiracial": "0.009", "percent_pacific_islander": "0.000"}, {"school_year": "2009-2010", "expenses_per_pupil": "9260.46", "sat_participation": "0.511", "sat_average_score": 1063, "percent_native_american": "0.003", "percent_asian": "0.005", "percent_black": "0.019", "percent_hispanic": "0.021", "percent_white": "0.950", "percent_multiracial": null, "percent_pacific_islander": null}, {"school_year": "2008-2009", "expenses_per_pupil": "9276.00", "sat_participation": "0.507", "sat_average_score": 1033, "percent_native_american": "0.003", "percent_asian": "0.005", "percent_black": "0.016", "percent_hispanic": "0.021", "percent_white": "0.954", "percent_multiracial": null, "percent_pacific_islander": null}, {"school_year": "2007-2008", "expenses_per_pupil": "9058.00", "sat_participation": "0.466", "sat_average_score": 991, "percent_native_american": "0.002", "percent_asian": "0.004", "percent_black": "0.013", "percent_hispanic": "0.023", "percent_white": "0.958", "percent_multiracial": null, "percent_pacific_islander": null}], "discipline_rates": [{"school_year": "2012-2013", "category": "E", "composite_rate": 2}, {"school_year": "2012-2013", "category": "H", "composite_rate": 16}, {"school_year": "2012-2013", "category": "M", "composite_rate": 11}, {"school_year": "2011-2012", "category": "M", "composite_rate": null}, {"school_year": "2011-2012", "category": "E", "composite_rate": null}, {"school_year": "2011-2012", "category": "H", "composite_rate": null}, {"school_year": "2010-2011", "category": "E", "composite_rate": null}, {"school_year": "2010-2011", "category": "H", "composite_rate": null}, {"school_year": "2010-2011", "category": "M", "composite_rate": null}, {"school_year": "2009-2010", "category": "E", "composite_rate": null}, {"school_year": "2009-2010", "category": "H", "composite_rate": null}, {"school_year": "2009-2010", "category": "M", "composite_rate": null}, {"school_year": "2008-2009", "category": "E", "composite_rate": null}, {"school_year": "2008-2009", "category": "H", "composite_rate": null}, {"school_year": "2008-2009", "category": "M", "composite_rate": null}, {"school_year": "2007-2008", "category": "E", "composite_rate": null}, {"school_year": "2007-2008", "category": "H", "composite_rate": null}, {"school_year": "2007-2008", "category": "M", "composite_rate": null}], "freelunch_rates": [{"school_year": "2012-2013", "percent_needy": "0.625"}, {"school_year": "2011-2012", "percent_needy": "0.630"}, {"school_year": "2010-2011", "percent_needy": "0.621"}, {"school_year": "2009-2010", "percent_needy": "0.577"}], "discipline_demographics": [{"total": 287, "white_male": 215, "white_female": 53, "black_male": null, "black_female": null, "hispanic_male": 8, "hispanic_female": null, "multiracial_male": null, "multiracial_female": null, "asian_male": null, "asian_female": null, "pacific_islander_male": null, "pacific_islander_female": null, "other_male": null, "other_female": null, "american_indian_male": 10, "american_indian_female": null, "other": 1}]};
+
+
+// listener for yellow select on compare tab - request data for new district
+// reload compare tab graphs + update district info on profile tab
+$("#district-1").change(function () {
+	$(".preloader").show();
+	districts_id[0]= $("#district-1").val();
+	districts_name[0]= $("#district-1").html();
+	$.ajax({
+		url: "http://school-discipline.herokuapp.com/api/districts/"+districts_id[0],
+		dataType: "json",
+		success: function(data) {
+			console.log(data);
+			districtA = data;
+			loadCompareGraphs();    //see line 1552
+		}
+	})
+});
+
+// listener for orange select on compare tab - request data for new district
+$("#district-2").change(function () {
+	$(".preloader").show();
+	districts_id[1]= $("#district-2").val();
+	districts_name[1]= $("#district-2").html();
+	$.ajax({
+		url: "http://school-discipline.herokuapp.com/api/districts/"+districts_id[1],
+		dataType: "json",
+		success: function(data) {
+			console.log(data);
+			districtB = data;
+			// reload compare tab graphs
+			loadCompareGraphs();    //see line 1552
+		}
+	})
+});
+
+// listener for blue select on compare tab - request data for new district
+$("#district-3").change(function () {
+	$(".preloader").show();
+	districts_id[2]= $("#district-3").val();
+	districts_name[2]= $("#district-3").html();
+	console.log(districts_id[2]);
+	$.ajax({
+		url: "http://school-discipline.herokuapp.com/api/districts/"+districts_id[2],
+		dataType: "json",
+		success: function(data) {
+			console.log(data);
+			districtC = data;
+			// reload compare tab graphs
+			loadCompareGraphs();    //see line 1552
+		}
+	})
+});
+
+//calls functions in dynamic_graphs.js
+function loadCompareGraphs() {
+	var lunchData = [districtA.freelunch_rates[0].percent_needy, districtB.freelunch_rates[0].percent_needy, districtC.freelunch_rates[0].percent_needy];
+	lunchGraph(lunchData);
+
+	var expensesData = [districtA.demographics[0].expenses_per_pupil, districtB.demographics[0].expenses_per_pupil, districtC.demographics[0].expenses_per_pupil];
+	expensesGraph(expensesData);
+
+	disciplineGraph();
+
+	var graduationData = [districtA.graduation_rates[0].graduation_rate, districtB.graduation_rates[0].graduation_rate, districtC.graduation_rates[0].graduation_rate];
+	graduationGraph(graduationData);
+
+	var satData = [districtA.demographics[0].sat_average_score, districtB.demographics[0].sat_average_score, districtC.demographics[0].sat_average_score];
+	satGraph(satData);
+
+	// updating tooltips on compare tab graphs to current district names
+	// not working right now
+	$("#discipline-0").attr("title", districts_name[0]);  
+	$("#discipline-1").attr("title", districts_name[1]);
+	$("#discipline-2").attr("title", districts_name[2]);
+	$("#graduation-0").attr("title", districts_name[0]);  
+	$("#graduation-1").attr("title", districts_name[1]);
+	$("#graduation-2").attr("title", districts_name[2]);
+	$("#lunch-0").attr("title", districts_name[0]);  
+	$("#lunch-1").attr("title", districts_name[1]);
+	$("#lunch-2").attr("title", districts_name[2]);
+	$("#sat-0").attr("title", districts_name[0]);  
+	$("#sat-1").attr("title", districts_name[1]);
+	$("#sat-2").attr("title", districts_name[2]);
+	$("#expenses-0").attr("title", districts_name[0]);  
+	$("#expenses-1").attr("title", districts_name[1]);
+	$("#expenses-2").attr("title", districts_name[2]);
+}
+
+//go to district profile for the selected school district
+
+function loadYellow () {
+	var detail_id = $("#district-1").val();
+	window.location.href = "http://school-discipline.herokuapp.com/mobile/"+detail_id;
+}
+function loadOrange () {
+	var detail_id = $("#district-2").val();
+	window.location.href = "http://school-discipline.herokuapp.com/mobile/"+detail_id;
+}
+function loadBlue () {
+	var detail_id = $("#district-3").val();
+	window.location.href = "http://school-discipline.herokuapp.com/mobile/"+detail_id;
+}
+
+</script>
+<script src="{{ STATIC_URL }}js/dynamic-graphs-m.js"></script>
+{% endblock %}

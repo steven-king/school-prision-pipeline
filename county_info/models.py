@@ -53,6 +53,13 @@ class DisciplineRate(models.Model):
 	long_suspensions = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")
 	expulsions = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")
 	crime = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")
+	composite_rate = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")
+
+	def calculate_composite_rate(self):
+		if self.short_suspensions:
+			discipline_sum = self.short_suspensions + self.long_suspensions + self.expulsions
+			self.composite_rate = discipline_sum
+			self.save()
 
 	class Meta(object):
 		verbose_name = "Discipline Rates"
@@ -61,6 +68,37 @@ class DisciplineRate(models.Model):
 
 	def __unicode__(self):
 		return U'%s (%s) - %s' %(self.district.lea_name, self.school_year, self.category)
+
+
+class DisciplineDemographics(models.Model):
+	district = models.ForeignKey('District', related_name="discipline_demographics")
+	school_year = models.CharField(max_length=10, verbose_name="School Year")
+	total = models.IntegerField(max_length=6)
+	american_indian_female = models.IntegerField(max_length=6, null=True)
+	asian_female = models.IntegerField(max_length=6, null=True)
+	hispanic_female = models.IntegerField(max_length=6, null=True)  
+	black_female = models.IntegerField(max_length=6, null=True)
+	white_female = models.IntegerField(max_length=6, null=True)
+	multiracial_female = models.IntegerField(max_length=6, null=True)   
+	american_indian_male = models.IntegerField(max_length=6, null=True)
+	pacific_islander_male = models.IntegerField(max_length=6, null=True)
+	pacific_islander_female = models.IntegerField(max_length=6, null=True) 
+	asian_male = models.IntegerField(max_length=6, null=True) 
+	hispanic_male = models.IntegerField(max_length=6, null=True)
+	black_male = models.IntegerField(max_length=6, null=True)
+	white_male = models.IntegerField(max_length=6, null=True)
+	multiracial_male  = models.IntegerField(max_length=6, null=True)   
+	other_male = models.IntegerField(max_length=6, null=True)
+	other_female = models.IntegerField(max_length=6, null=True)
+	other = models.IntegerField(max_length=6, null=True)
+
+	class Meta(object):
+		verbose_name = "Discipline Demographics"
+		verbose_name_plural = "Discipline Demographics"
+		ordering = ('district__lea_name', '-school_year')
+
+	def __unicode__(self):
+		return U'%s (%s)' %(self.district.lea_name, self.school_year)
 
 
 class Demographics(models.Model):
@@ -156,8 +194,8 @@ class FreeLunch(models.Model):
 
 
 class State(models.Model):
-	state_name = models.CharField(max_length=150, verbose_name="Name", primary_key=True)
-	state_abbreviation = models.CharField(max_length=150, verbose_name="Abbreviation")
+	state_name = models.CharField(max_length=150, verbose_name="Name")
+	state_abbreviation = models.CharField(max_length=150, verbose_name="Abbreviation", primary_key=True)
 
 	class Meta(object):
 		ordering = ('state_name',)
@@ -278,6 +316,13 @@ class StateDiscipline(models.Model):
 	long_suspensions = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")
 	expulsions = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")
 	crime = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")
+	composite_rate = models.IntegerField(max_length=4, null=True, help_text="Number Per 1000 Students")
+
+	def calculate_composite_rate(self):
+		if self.short_suspensions:
+			discipline_sum = self.short_suspensions + self.long_suspensions + self.expulsions
+			self.composite_rate = discipline_sum
+			self.save()
 
 	class Meta(object):
 		verbose_name = "State Average Discipline Rates"

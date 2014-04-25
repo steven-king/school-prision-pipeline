@@ -1,0 +1,327 @@
+{% extends "base.html" %}
+{% load humanize %}
+{% load county_info_extras %}
+{% block head_info %}
+	<link href="{{ STATIC_URL }}css/mobile.css" rel="stylesheet">
+{% endblock %}
+{% block content %}
+
+<h1 class="title">{{ district.lea_name }}</h1>
+
+
+<div id="tabs" class="row">
+	<div class="col-sm-12 col-md-12 col-lg-12" id="tab-view">
+		
+		<ul id="profile-list">
+			<li>
+				<div class="left">Total expenses per student:</div>
+				<div class="middle" id-"expenses">${{ demographics.expenses_per_pupil|floatformat:0 }}</div>
+			</li>
+			<li>
+				<div class="left">Percent who take the SAT:</div>
+				<div class="middle">{{ demographics.sat_participation|multiply:100|floatformat:1 }}%</div>
+			</li>
+			<li>
+				<div class="left">Average SAT score:</div>
+				<div class="middle">{{ demographics.sat_average_score }}</div>
+			</li>
+			<li>
+				<div class="left">High school graduation rate:</div>
+				<div class="middle">{{ graduation_rates.graduation_rate|multiply:100|floatformat:1 }}%</div>
+					
+			</li>
+			<li>
+				<div class="left">Percent of students on reduced lunch:</div>
+				<div class="middle">{{ freelunch_rates.percent_needy|multiply:100|floatformat:1 }}%</div>
+			</li>
+			<li>
+				<div class="left">Graduation rate of students on reduced lunch:</div>
+				<div class="middle">{{ graduation_rates.freelunch_graduation_rate|multiply:100|floatformat:1 }}%</div>
+			</li>
+			<li>
+				<div class="left">Disciplinary action<br>per 1,000 students:<br>
+					<p class="mini">(includes short- and long-term suspension as well as expulsion)</p></div>
+				<div class="middle">{{ discipline_rates }}</div>
+			</li>
+		</ul>
+		<div id="demographics">
+		<h1 class="title">Demographics</h1>
+		<p>by race and ethnicity in 2012-2013</p>
+		<div id="district-demographics">
+		</div>
+		<div id="demographics-key">
+			<ul>
+				<li id="d-white" class="blue"></li>
+				<li id="d-black" class="orange"></li>
+				<li id="d-hispanic" class="yellow"></li>
+				<li id="d-asian" class="brown"></li>
+				<li id="d-am-ind" class="gray"></li>
+				<li id="d-pac-isl" class="orange5"></li>
+			</ul>
+		</div>
+		<div>
+		<div id="district-discipline">
+			<h4>Discipline by Demographic</h4>
+			<p id="total-discipline"></p>
+			<div class="bar-wrap"><div id="d-0" class="bar gray transparent" title=""></div><p id="d-0-p"></p></div>
+			
+			<div class="bar-wrap"><div id="d-1" class="bar brown transparent" title=""></div><p id="d-1-p"></p></div>
+			
+			<div class="bar-wrap"><div id="d-2" class="bar blue transparent" title=""></div><p id="d-2-p"></p></div>
+			
+			<div class="bar-wrap"><div id="d-3" class="bar yellow transparent" title=""></div><p id="d-3-p"></p></div>
+			
+			<div class="bar-wrap"><div id="d-4" class="bar orange transparent" title=""></div><p id="d-4-p"></p></div>
+			
+			<div class="bar-wrap"><div id="d-5" class="bar orange5 transparent" title=""></div><p id="d-5-p"></p></div>
+			<p id="margin-error">Margin of error = &#177; 2 incidents</p>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+{% block javascript %}
+<script>
+$( document ).ready(function() {
+	if ($(window).width() > 700) {
+			window.location.href = "http://school-discipline.herokuapp.com";
+	}
+	var expenses = $("#expenses").html();
+	var length = expenses.length;
+	expenses = expenses.substr(0,length-4)+","+expenses.substr(length-4, length-1),
+	loadDistrictPie();        //see below
+	loadDisciplineProfile();  //see below
+});
+$( window ).resize(function() {
+  if ($(window).width() > 700) {
+		window.location.href = "http://school-discipline.herokuapp.com";
+	}
+});
+
+
+
+function loadDistrictPie() {
+	var pieValues = [{{ demographics.percent_pacific_islander|multiply:100|floatformat:1 }}, {{ demographics.percent_native_american|multiply:100|floatformat:1 }}, {{ demographics.percent_asian|multiply:100|floatformat:1 }}, {{ demographics.percent_hispanic|multiply:100|floatformat:1 }}, {{ demographics.percent_black|multiply:100|floatformat:1 }}, {{ demographics.percent_white|multiply:100|floatformat:1 }}];
+	$('#district-demographics').highcharts({
+        chart: {
+            plotBackgroundColor: '#C2D1D9',
+            plotBorderWidth: null,
+            plotShadow: false,
+
+        },
+	        tooltip: {
+	        	backgroundColor: '#000',
+	        	style: {
+	        		color:'#fff',
+	        		width: '100px'
+	        	},
+	        	borderWidth: 0,
+ 	    	pointFormat: '<b>{point.percentage:.1f}%</b>{series.data.name}'
+	        },
+    	plotOptions: {
+         	pie: {
+            	allowPointSelect: false,
+            	cursor: 'pointer',
+             	dataLabels: {
+                	enabled: false,
+                	color: '#000000',
+                	connectorColor: '#000000',
+	                  	format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+            	}
+	        }
+       	},
+       	title: {
+		    text: ''
+		},
+       	
+    	series: [{
+        	type: 'pie',
+        	name: 'Student Demographics in 2012-2013 by race and ethnicity',
+        	data: [
+        {name: "Pacific Islander",   y: pieValues[0], color: '#CE7352'},
+        {name: "American Indian", y: pieValues[1], color: '#BDAA91'},
+    	{name: "Asian", y: pieValues[2], color: '#88765D'},
+        {name: "African American", y: pieValues[3], color: '#C19438'},
+        {name: "Hispanic",    y: pieValues[4], color: '#D16436'},
+        {name: "White",     y: pieValues[5], color: '#004E79'}
+		    ]
+    	}]
+	});
+
+	$(".highcharts-background").hide();
+
+
+	$("#d-white").html("White: "+Math.round(pieValues[5])+"%");
+	$("#d-black").html("Black: "+Math.round(pieValues[4])+"%");
+	$("#d-hispanic").html("Hispanic: "+Math.round(pieValues[3])+"%");
+	$("#d-asian").html("Asian: "+Math.round(pieValues[2])+"%");
+	$("#d-am-ind").html("American Indian: "+Math.round(pieValues[1])+"%");
+	if (pieValues[0] > 10){
+		$("#d-pac-isl").html("Black: "+Math.round(pieValues[4])+"%");
+	}
+	else {$("#d-pac-isl").hide(); }
+};
+
+/*Total: {{ discipline_demographics.total }}<br />
+White Male: {{ discipline_demographics.white_male }}<br />
+White Female: {{ discipline_demographics.white_female }}<br />
+Black Male: {{ discipline_demographics.black_male }}<br />
+Black Female: {{ discipline_demographics.black_female }}<br />
+Hispanic Male: {{ discipline_demographics.hispanic_male }}<br />
+Hispanic Female: {{ discipline_demographics.hispanic_female }}<br />
+Multiracial Male: {{ discipline_demographics.multiracial_male }}<br />
+Multiracial Female: {{ discipline_demographics.multiracial_female }}<br />
+Asian Male: {{ discipline_demographics.asian_male }}<br />
+Asian Female: {{ discipline_demographics.asian_female }}<br />
+Native American Male: {{ discipline_demographics.american_indian_male }}<br />
+Native American Female: {{ discipline_demographics.american_indian_female }}<br />
+Pacific Islander Male: {{ discipline_demographics.pacific_islander_male }}<br />
+Pacific Islander Female: {{ discipline_demographics.pacific_islander_female }}<br />
+Other Male: {{ discipline_demographics.other_male }}<br />
+Other Female: {{ discipline_demographics.other_female }}<br />
+Other: {{ discipline_demographics.other }}*/
+
+function loadDisciplineProfile () {
+	
+	if ("{{ discipline_demographics }}" == undefined) {
+		$("#total-discipline").html("The discipline rate breakdown by race and ethnicity is not available for "+"{{ district.lea_name }}"+". Please choose another district.");
+		$(".bar").hide();
+		$("#margin-error").hide();
+		
+	}
+	else {
+		// initialize vars
+		var total = "{{ discipline_demographics.total }}";
+		$("#total-discipline").html(total + " short-term suspensions by<br>race and ethnicity in 2011-2012");
+		$(".bar").show();
+		$("#margin-error").show();
+		var incidents = {"Hispanic": 0, "White": 0, "Black": 0, 
+			"Asian": 0, "American_Indian": 0, "Multi_racial": 0, };
+
+		// algorithm adding genders together for each race
+		// conditionals deal with the 0, <5 (shown here as 2.5), undefined or normal cases
+		// HISPANIC
+		if ("{{ discipline_demographics.hispanic_female }}" == "None") {
+		} 
+		else if ({{ discipline_demographics.hispanic_female }} == 2) {
+			incidents.Hispanic = incidents.Hispanic + 2;
+		} else {incidents.Hispanic = incidents.Hispanic + {{ discipline_demographics.hispanic_female }};}
+		if ("{{ discipline_demographics.hispanic_male }}" == "None") {
+		}
+		else if ({{ discipline_demographics.hispanic_male }} == 2) {
+			incidents.Hispanic = incidents.Hispanic + 2;
+		} else {incidents.Hispanic = incidents.Hispanic + {{ discipline_demographics.hispanic_male }};}
+
+		// WHITE
+		if ("{{ discipline_demographics.white_female }}" == "None") {
+		} 
+		else if ({{ discipline_demographics.white_female }} == 2) {
+			incidents.White = incidents.White + 2;
+		} else {incidents.White = incidents.White + {{ discipline_demographics.white_female }};}
+		if ("{{ discipline_demographics.white_male }}" == "None") {
+		} 
+		else if ({{ discipline_demographics.white_male }} == 2) {
+			incidents.White = incidents.White + 2;
+		} else {incidents.White = incidents.White + {{ discipline_demographics.white_male }};}
+		
+		// AFRICAN AMERICAN
+		if ("{{ discipline_demographics.black_female }}" == "None") {
+		} 
+		else if ({{ discipline_demographics.black_female }} == 2) {
+			incidents.Black = incidents.Black + 2;
+		} else {incidents.Black = incidents.Black + {{ discipline_demographics.black_female }};}
+		if ("{{ discipline_demographics.black_male }}" == "None") {
+		} 
+		else if ({{ discipline_demographics.black_male }} == 2) {
+			incidents.Black = incidents.Black + 2;
+		} else {incidents.Black = incidents.Black + {{ discipline_demographics.black_male }};}
+		
+		// ASIAN
+		if ("{{ discipline_demographics.asian_female }}" == "None") {
+		} 
+		else if ({{ discipline_demographics.asian_female }} == 2) {
+			incidents.Asian = incidents.Asian + 2;
+		} else {incidents.Asian = incidents.Asian + {{ discipline_demographics.asian_female }};}
+		if ("{{ discipline_demographics.asian_male }}" == "None") {
+		} 
+		else if ({{ discipline_demographics.asian_male }} == 2) {
+			incidents.Asian = incidents.Asian + 2;
+		} else {incidents.Asian = incidents.Asian + {{ discipline_demographics.asian_male }};}
+
+		// AMERICAN INDIAN
+		if ("{{ discipline_demographics.american_indian_female }}" == "None") {
+		} 
+		else if ({{ discipline_demographics.american_indian_female }} == 2) {
+			incidents.American_Indian = incidents.American_Indian + 2;
+		} else {incidents.American_Indian = incidents.American_Indian + {{ discipline_demographics.american_indian_female }};}
+		if ("{{ discipline_demographics.american_indian_male }}" == "None") {
+		} 
+		else if ({{ discipline_demographics.american_indian_male }} == 2) {
+			incidents.American_Indian = incidents.American_Indian + 2;
+		} else {incidents.American_Indian = incidents.American_Indian + {{ discipline_demographics.american_indian_male }};}
+
+		// MULTI-RACIAL
+		if ("{{ discipline_demographics.multiracial_female }}" == "None") {
+		} 
+		else if ({{ discipline_demographics.multiracial_female }} == 2) {
+			incidents.Multi_racial = incidents.Multi_racial + 2;
+		} else {incidents.Multi_racial = incidents.Multi_racial + {{ discipline_demographics.multiracial_female }};}
+		if ("{{ discipline_demographics.multiracial_male }}" == "None") {
+		} 
+		else if ({{ discipline_demographics.multiracial_male }} == 2) {
+			incidents.Multi_racial = incidents.Multi-racial + 2;
+		} else {incidents.Multi_racial = incidents.Multi_racial + {{ discipline_demographics.multiracial_male }};}
+
+		// put the demographics in order from lowest to highest disciplinary incidents
+		var sortable = [];
+		for (var key in incidents) {
+	    	sortable.push([key, incidents[key]]);
+	    }
+		sortable.sort(function(a, b) {return a[1] - b[1]});
+
+		// correctly name and color each bar
+		for (var i=0; i<6; i++) {
+			if (sortable[i][0] == "Black") {
+				sortable[i][0] = "African American";
+				$("#d-"+i).css("background-color", "#D16436");
+			}
+			else if (sortable[i][0] == "Multi_racial") {
+				sortable[i][0] = "Multi-racial";
+				$("#d-"+i).css("background-color", "#632D1D");
+			}
+			else if (sortable[i][0] == "American_Indian") {
+				sortable[i][0] = "American Indian";
+				$("#d-"+i).css("background-color", "#BDAA91");
+			}
+			else if (sortable[i][0] == "White") {
+				$("#d-"+i).css("background-color", "#004E79");
+			}
+			else if (sortable[i][0] == "Hispanic") {
+				$("#d-"+i).css("background-color", "#C19438");
+			}
+			else if (sortable[i][0] == "Asian") {
+				$("#d-"+i).css("background-color", "#88765D");
+			}
+
+
+
+
+			// set width of bar based on value
+			var width = Math.round((sortable[i][1]/(total/1.5))*100);
+			if (width > 40) {
+				$("#d-"+i).html(sortable[i][0] +": "+sortable[i][1] + " +/- 2");
+				width = width +"%";
+				$("#d-"+i).css("width", width);
+			}
+			else {
+				$("#d-"+i+"-p").html(sortable[i][0] +": "+sortable[i][1] + " +/- 2");
+				width = width +"%";
+				$("#d-"+i).css("width", width);
+			}
+		}
+	}
+}
+
+</script>
+{% endblock %}
+	

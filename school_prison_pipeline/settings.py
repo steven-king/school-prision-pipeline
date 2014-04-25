@@ -37,6 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admindocs',
     'django.contrib.humanize',
+    'rest_framework',
+    'corsheaders',
     'county_info',
 )
 
@@ -46,6 +48,7 @@ TEMPLATE_LOADERS = (
     # 'django.template.Loaders.eggs.Loader',
 )
 
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -53,6 +56,12 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+)
+
+CORS_ORIGIN_WHITELIST = (
+    'localhost:8000',
+    'faultlinesnc.com',
 )
 
 ROOT_URLCONF = 'school_prison_pipeline.urls'

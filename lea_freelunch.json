@@ -398,17 +398,6 @@
 {
 	"model": "county_info.FreeLunch",
 	"fields": {
-		"district": "298",
-		"adm":185,
-		"reduced_applications": 19,
-		"free_applications": 119,
-		"percent_needy": 0.746,
-		"school_year": "2012-2013"
-	}
-},
-{
-	"model": "county_info.FreeLunch",
-	"fields": {
 		"district": "300",
 		"adm": 6429,
 		"reduced_applications": 413,
@@ -1668,17 +1657,6 @@
 		"reduced_applications": 149,
 		"free_applications": 2.039,
 		"percent_needy": 0.905,
-		"school_year": "2011-2012"
-	}
-},
-{
-	"model": "county_info.FreeLunch",
-	"fields": {
-		"district": "298",
-		"adm":199,
-		"reduced_applications": 0,
-		"free_applications": 0,
-		"percent_needy": 0.000,
 		"school_year": "2011-2012"
 	}
 },
